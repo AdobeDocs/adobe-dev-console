@@ -12,145 +12,183 @@
 
 module.exports = {
   siteMetadata: {
-    versions: [
-      {
-        title: 'v2.0',
-        selected: true
-      },
-      {
-        title: 'v1.4',
-        path: 'https://github.com/AdobeDocs/analytics-1.4-apis'
-      }
-    ],
     pages: [
       {
-        title: 'Adobe Analytics',
-        path: '/'
+        title: 'Overview',
+        path: 'index.md'
       },
       {
         title: 'Guides',
-        path: '/guides/'
-      },
-      {
-        title: 'API Reference',
-        menu: [{
-          title: 'API Reference v2.0',
-          description: 'Adobe Analytics Reporting API',
-          path: '/api/index.md'
-        }, {
-          title: 'API Reference v1.4',
-          description: 'API Spec for the Adobe Marketing Cloud',
-          path: '/api/1.4.md'
-        }]
+        path: 'guides/index.md'
       },
       {
         title: 'Support',
-        path: '/support/'
+        path: 'support.md'
       }
     ],
     subPages: [
       {
-        title: 'Get Started',
-        path: '/guides/',
-        pages: [
-          {
-            title: 'Overview',
-            path: '/guides/'
-          },
-          {
-            title: 'Creating an OAuth Client',
-            path: '/guides/creating_oauth_client/'
-          },
-          {
-            title: 'OAuth using cURL',
-            path: '/guides/oauth_using_curl/'
-          },
-          {
-            title: 'OAuth using POSTMAN',
-            path: '/guides/oauth_using_postman/'
-          },
-          {
-            title: 'JWT Authentication',
-            path: '/guides/jwt_authentication/'
-          }
-        ]
+        "path": "guides/index.md",
+        "title": "Console Overview"
       },
       {
-        title: 'Reporting API',
-        path: '/guides/reporting_api/',
+        path: 'guides/authentication/index.md',
+        title: 'Authentication Overview',
         pages: [
           {
-            title: 'Overview',
-            path: '/guides/reporting_api/'
+            "path": "guides/authentication/APIKeyIntegration.md",
+            "title": "API Key Integration"
           },
           {
-            title: 'Reporting with breakdowns',
-            path: '/guides/reporting_api/reporting_breakdowns/',
-            pages: [
+            "path": "guides/authentication/OAuthIntegration.md",
+            "title": "OAuth Integration"
+          },
+          {
+            "path": "guides/authentication/ServiceAccountIntegration.md",
+            "title": "Service Account Integration"
+          },
+          {
+            "pages": [
               {
-                title: 'Reporting with single breakdowns',
-                path: '/guides/reporting_api/reporting_breakdowns/',
+                "path": "guides/authentication/OAuth/Scopes.md",
+                "title": "OAuth Scopes"
               },
               {
-                title: 'Reporting with multiple breakdowns',
-                path: '/guides/reporting_api/reporting_breakdowns/reporting_multiple_breakdowns/',
+                "path": "guides/authentication/OAuth/samples.md",
+                "title": "OAuth Sample Code"
+              }
+            ],
+            "path": "guides/authentication/OAuth/index.md",
+            "title": "OAuth Authentication"
+          },
+          {
+            "pages": [
+              {
+                "path": "guides/authentication/JWT/JWTCertificate.md",
+                "title": "Create a Public Key Certificate"
               },
-            ]
+              {
+                "path": "guides/authentication/JWT/Scopes.md",
+                "title": "JWT Metascopes"
+              },
+              {
+                "path": "guides/authentication/JWT/samples.md",
+                "title": "JWT Sample Code"
+              }
+            ],
+            "path": "guides/authentication/JWT/index.md",
+            "title": "JWT (Service Account) Authentication"
           },
           {
-            title: 'Reporting tips and tricks',
-            path: '/guides/reporting_api/reporting_tips_tricks/'
+            "path": "guides/authentication/IMS.md",
+            "title": "IMS APIs"
+          },
+          {
+            "pages": [
+              {
+                "path": "guides/authentication/Tools/OAuthPlayground.md",
+                "title": "OAuth 2.0 Playground"
+              },
+              {
+                "path": "guides/authentication/Tools/Postman.md",
+                "title": "Postman"
+              }
+            ],
+            "path": "guides/authentication/Tools/index.md",
+            "title": "Tools"
           }
         ]
       },
       {
-        title: 'Discovery API',
-        path: '/guides/discovery_api/'
+        "path": "guides/getting-started.md",
+        "title": "Getting Started"
       },
       {
-        title: 'Segments API',
-        path: '/guides/segments_api/'
-      },
-      {
-        title: 'Calculated Metrics API',
-        path: '/guides/calculated_metrics_api/'
-      },
-      {
-        title: 'Migrating',
-        path: '/guides/migrating/'
-      },
-      {
-        title: 'Overview',
-        path: '/support/',
-        header: true,
-        pages: [
+        "path": "guides/projects/index.md",
+        "title": "Projects",
+        "pages": [
           {
-            title: 'Help',
-            path: '/support/'
+            "path": "guides/projects/projects-empty.md",
+            "title": "Create an Empty Project"
           },
           {
-            title: 'FAQ',
-            path: '/support/FAQ/'
+            "path": "guides/projects/projects-template.md",
+            "title": "Create a Templated Project"
           },
           {
-            title: 'How to contribute',
-            path: '/support/contribute/'
+            "path": "guides/projects/approval.md",
+            "title": "Projects Approval"
+          },
+          {
+            "path": "guides/projects/beta-users.md",
+            "title": "Beta Users"
           }
         ]
       },
       {
-        title: 'Community',
-        path: '/support/community/',
-        header: true,
+        "path": "guides/plugins/index.md",
+        "title": "Plugins",
+        "pages": [
+          {
+            "path": "guides/plugins/plugin-distribution.md",
+            "title": "Distribute a Plugin"
+          },
+          {
+            "path": "guides/plugins/plugin-update.md",
+            "title": "Update a Plugin"
+          }
+        ]
+      },
+      {
+        "path": "guides/services/index.md",
+        "title": "Services",
+        "pages": [
+          {
+            "path": "guides/services/services-add-api-jwt.md",
+            "title": "Add API using Service Account (JWT)"
+          },
+          {
+            "path": "guides/services/services-add-api-key.md",
+            "title": "Add API using API Key"
+          },
+          {
+            "path": "guides/services/services-add-api-oauth.md",
+            "title": "Add API using Oauth"
+          },
+          {
+            "path": "guides/services/services-add-event.md",
+            "title": "Add Events"
+          },
+          {
+            "path": "guides/services/services-enable-runtime.md",
+            "title": "Enable Runtime"
+          }
+        ]
+      },
+      {
+        "path": "guides/credentials.md",
+        "title": "Credentials"
+      },
+      {
+        "path": "guides/insights.md",
+        "title": "Insights"
+      },
+      {
+        "path": "guides/apis-and-services.md",
+        "title": "APIs and services"
+      },
+      {
+        "path": "support/index.md",
+        "title": "Support",
         pages: [
           {
-            title: 'Information',
-            path: '/support/community/'
+            "path": "support/faq.md",
+            "title": "FAQ"
           }
         ]
       }
     ]
   },
   plugins: [`@adobe/gatsby-theme-aio`],
-  pathPrefix: process.env.PATH_PREFIX || '/dev-site-documentation-template/'
+  pathPrefix: process.env.PATH_PREFIX || '/console/docs/'
 };

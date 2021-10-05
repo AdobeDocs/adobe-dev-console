@@ -1,51 +1,21 @@
----
-title: Support - Adobe Analytics
-description: This is the support page of Adobe Analytics 
----
+<Hero slots="heading, text"/>
 
-<Hero slots="heading, text" background="rgb(19, 93, 183)"/>
+# Adobe Developer Console Support
 
-# Support
+If you have questions about how to use Adobe Developer Console or you are looking to report bugs, make feature requests, and more, Console provides multiple resources that can help.
 
-Learn where to ask questions, report bugs, make feature requests, and spark discussions.
+## Frequently Asked Questions
 
-## Feedback
+Access a knowledge base of frequently asked questions and find answers to some of the most common questions asked by Adobe Developer Console users. This is a great place to start when needing answer to questions. 
 
-You've got a place to start discussions.
+Visit the [Adobe Developer Console FAQ](faq.md) to learn more.
 
-<DiscoverBlock slots="image, heading, link, text" width="25%"/>
+## GitHub Issues
 
-![Adobe Experience Cloud](experience_cloud.png)
+Visit <https://github.com/AdobeDocs/adobe-dev-console/issues> to report bugs, ask questions, make feature requests, or start a discussion. You'll find official Adobe developers and community members available to help you out.
 
-### Developer forum
+## Adobe Experience League
 
-[Get started](https://adobe.io)
+To report bugs, ask questions, make feature requests, or start a discussion, visit the [Adobe Developer Console Community](https://www.adobe.com/go/devs_console_exl) on Experience League. 
 
-Open discussion and support with community experts and Adobe staff.
-
-<DiscoverBlock slots="link, text" width="25%"/>
-
-[Experience league](https://adobe.io) 
-
-Tutorials and videos for the whole community.
-
-<DiscoverBlock slots="link, text" width="25%"/>
-
-[Experience forum](https://adobe.io) 
-
-Forum to get help and help others
-
-## Community
-
-You've got a place to join the conversation.
-
-<DiscoverBlock slots="image, heading, link, text" width="100%"/>
-
-![Stack Overflow](stack-overflow.png)
-
-### Stack Overflow
-
-[Explore](https://adobe.io)
-
-Developer Q&A using a specific tag.
-
+In Experience League you will find official Adobe developers and knowledgeable community members who are ready and available to help you find the information you need.

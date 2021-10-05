@@ -1,0 +1,13 @@
+{
+  "name": "adobe-jwt-node",
+  "version": "1.0.0",
+  "description": "This is a sample code",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Hiren Shah",
+  "license": "MIT",
+  "dependencies": {
+    "@adobe/jwt-auth": "^0.3.0"
+  }
+}

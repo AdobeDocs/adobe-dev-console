@@ -1,32 +1,22 @@
----
-title: Guides - Adobe Analytics
-description: This is the guides overview page of Adobe Analytics 
----
+# Welcome to Adobe Developer Console
 
-# Get Started
+Adobe Developer Console allows you and your team to flexibly and easily connect to Adobe services, enable I/O Runtime, and manage your projects with new insights. Here are some of the exciting updates to Adobe Developer Console:
 
-To get started with Analytics 2.0 APIs you must first decide whether your application will need
-an OAuth client or a JWT client.
+## Introducing developer orgs and unified public profile
+    
+All Adobe ID accounts now have access to advanced developer features, such as building service-to-service integrations, journaling for event subscriptions, and access to I/O Runtime (license permitting).
 
-## Authentication
+## A new era of Photoshop extensibility 
+    
+Adobe is making the Photoshop host app APIs more modern and introducing UXP, our new cross-app API platform. Add a Photoshop plugin to your project, download the starter template, then return to the Developer Console when you’re ready to distribute it.
 
-There are multiple type of authentication for authenticating with the analytics APIs. General information
-about authenticating with Adobe's APIs is located here. Specific information related to authenticating
-with the analytics APIs is available in the sections below
+## Add beta users
 
-## OAuth
+Select and manage a group of beta users who will have access to your integration while it’s still in development.
 
-Use an OAuth client if you are creating an application that requires an end use to authenticate before
-calling the Adobe Analytics APIs. The OAuth tokens expire after 24 hours and the end user must then
-re-authenticate before they will be able to call the APIs. To authenticate with an OAuth client, you first
-create an OAuth client on the [Adobe I/O Console](https://console.adobe.io).
+## Next steps
 
-<InlineAlert variant="info" slots="text"/>
+Now that you're familiar with the new features in Adobe Developer Console, read the [getting started guide](getting-started.md) to begin creating your own projects and building your own apps and plugins.
 
-The refresh token grant type is automatically added to OAuth clients created after September 18, 2019
+![](../images/developer-console-home.png)
 
-## JWT
-
-A JWT client is best if you are creating an application that needs to programmatically authenticate calls to 
-the Adobe Analytics APIs. A new JWT token can be generated whenever the old one is about to expire so your application
-can continue to make API calls.  
