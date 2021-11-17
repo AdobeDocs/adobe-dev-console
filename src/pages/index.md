@@ -26,9 +26,9 @@ Applications you create that leverage the power of Adobe products and technologi
 
 <DiscoverBlock slots="link, text"/>
 
-[Project Firefly template](guides/projects/projects-template.md)
+[App Builder template](guides/projects/projects-template.md)
 
-The Project Firefly template provides all of the developer tools you need to build Single Page Applications with Adobe's UI toolkit, create microservices, and orchestrate APIs in Adobe Experience Cloud. Collaborate with your team in dedicated workspaces and deploy to your organization seamlessly. 
+The App Builder template provides all of the developer tools you need to build Single Page Applications with Adobe's UI toolkit, create microservices, and orchestrate APIs in Adobe Experience Cloud. Collaborate with your team in dedicated workspaces and deploy to your organization seamlessly. 
 
 
 <DiscoverBlock slots="link, text"/>  
