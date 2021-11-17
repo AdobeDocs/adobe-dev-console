@@ -24,7 +24,7 @@ Once you have found and chosen an API that you would like to add, select **Next*
 
 ## Configure API
 
-A service account (JWT) integration lets your application call Adobe services on its own behalf, or on the behalf of an enterprise organization. For this type of integration, a JSON Web Token (JWT) must be created that includes your credentials. You will then begin each session by exchanging the JWT for an access token. For more information, please read the [JWT Authentication documentation](https://www.adobe.com/go/devs_jwt).
+A service account (JWT) integration lets your application call Adobe services on its own behalf, or on the behalf of an enterprise organization. For this type of integration, a JSON Web Token (JWT) must be created that includes your credentials. You will then begin each session by exchanging the JWT for an access token. For more information, please read the [JWT Authentication documentation](../authentication/JWT/index.md).
 
 ### Create a new service account (JWT) credential
 
@@ -34,7 +34,7 @@ There are two options for creating the necessary credentials:
 
     In order to proceed with generating a key pair, choose Option 1 and then select **Generate keypair**.
 
-2. **Upload your public key:** Create your own public/private key pair through terminal and upload your public key. To learn more, see the documentation on [creating a private key and public certificate](https://www.adobe.com/go/devs_key_pair).
+2. **Upload your public key:** Create your own public/private key pair through terminal and upload your public key. To learn more, see the documentation on [creating a private key and public certificate](../authentication/JWT/JWTCertificate.md).
 
     To upload your own public key, drag and drop a file from your computer or use *Select a File* to choose the file that you would like to use. Then select **Next** to proceed.
 

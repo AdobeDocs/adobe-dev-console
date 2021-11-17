@@ -1,6 +1,6 @@
 # Frequently Asked Questions
 
-This document provides answers to frequently asked questions about Adobe Developer Console. This is a great place to start when troubleshooting a problem with Console. If you are unable to find the answer you're looking for, please refer to the [Support overview](support.md) for additional resources.
+This document provides answers to frequently asked questions about Adobe Developer Console. This is a great place to start when troubleshooting a problem with Console. If you are unable to find the answer you're looking for, please refer to the [Support overview](index.md) for additional resources.
 
 ## Questions
 
@@ -116,7 +116,7 @@ Certain Adobe products may need to create projects in Developer Console inside y
 
 ### How do I know if I should use JWT or OAuth?	
 
-The authentication method depends on the type of app you're building. To learn more about authentication and authorization, read the [authentication documentation](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/AuthenticationGuide.md).
+The authentication method depends on the type of app you're building. To learn more about authentication and authorization, read the [authentication documentation](../guides/authentication/index.md).
 
 ### Why can't I change the name of my App Builder app?
 

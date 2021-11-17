@@ -24,7 +24,7 @@ Using APIs allows your application to makes call to Adobe services by means of a
 
 Access to some APIs is based on licenses. Meaning either the licenses your company holds or your personal licenses if you are building a personal project. Due to this you may not have access to every API that you wish to use.
 
-APIs can be connected to your app in multiple ways, depending on the API or the type of app that you are building. Occasionally APIs will provide multiple connection options, allowing you to choose the type of connection that works best for your application. To learn more about each of these authentication methods or API connections, read the [authentication documentation](https://www.adobe.com/go/devs_authentication).
+APIs can be connected to your app in multiple ways, depending on the API or the type of app that you are building. Occasionally APIs will provide multiple connection options, allowing you to choose the type of connection that works best for your application. To learn more about each of these authentication methods or API connections, read the [authentication documentation](../authentication/index.md).
 
 * [Add an API using Service Account (JWT) authentication](services-add-api-jwt.md)
 * [Add an API using OAuth authentication](services-add-api-oauth.md)
