@@ -22,7 +22,7 @@ Once you have found and chosen an API that you would like to add, select **Next*
 
 ## Configure API
 
-User authentication using OAuth allows your end users to sign in to your integration with an Adobe ID. With an OAuth token, your integration will be able to access Adobe services and content on behalf of the logged in user. For more information, read the [OAuth Authentication and Authorization documentation](https://www.adobe.com/go/devs_oauth).
+User authentication using OAuth allows your end users to sign in to your integration with an Adobe ID. With an OAuth token, your integration will be able to access Adobe services and content on behalf of the logged in user. For more information, read the [OAuth Authentication and Authorization documentation](../authentication/OAuth/index.md).
 
 To configure an API using OAuth 2.0 authentication and authorization, you must first select the platforms where you want to use this integration: Web, iOS, or Android. 
 

@@ -24,7 +24,7 @@ To begin the distribution process, select **Distribute** from the left navigatio
 
 ### Public profile
 
-Distributing a plugin requires you to complete a public profile before you can submit your plugin listing. The information in your public profile tells users about who created your plugin. A commerce account can also be set up for paid plugins. If you have not already created a public profile, select **Complete your public profile** and read the [public profile overview](public-profile.md) for more information.
+Distributing a plugin requires you to complete a public profile before you can submit your plugin listing. The information in your public profile tells users about who created your plugin. A commerce account can also be set up for paid plugins. If you have not already created a public profile, select **Complete your public profile** and read the [public profile overview](../public-profile.md) for more information.
 
 ![](../../images/plugin-distribute.png)
 

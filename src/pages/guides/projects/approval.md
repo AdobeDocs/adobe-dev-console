@@ -4,15 +4,15 @@ Once you have completed development on your project, your application is ready f
 
 There are three different approval processes within Adobe Developer Console, depending on the type of application that you have built:
 
-1. **Project Firefly applications:** Projects built using the Project Firefly template are built by an organization for use within that organization. Therefore, Firefly applications require approvals by the enterprise organization administrator only. Please follow the approval process for [Project Firefly applications](#project-firefly-applications-approval-process) outlined in this document.
+1. **App Builder applications:** Projects built using the App Builder template are built by an organization for use within that organization. Therefore, App Builder applications require approvals by the enterprise organization administrator only. Please follow the approval process for [App Builder applications](#app-builder-applications-approval-process) outlined in this document.
 
 2. **Applications for publication:** Building an application for distribution to general users on the Adobe Exchange requires approval from the Adobe Review team before it can be published. Please refer to the [applications for publication](#applications-for-publication) approval process outlined in this document.
 
 3. **Plugin distribution:** Plugins must be submitted for review and approval before they can be published to the plugin marketplace. For detailed instructions on how to submit a plugin for approval, follow the steps provided in the [plugin distribution guide](../plugins/plugin-distribution.md).
 
-## Project Firefly applications approval process
+## App Builder applications approval process
 
-Once you have completed development on a Project Firefly application, it is time to submit the application to your administrators for review and approval. The final app is based on the **Production** workspace, therefore it is important to ensure that the production workspace contains all of the necessary APIs, Events, and Runtime code that it needs before submitting for approval.
+Once you have completed development on an App Builder application, it is time to submit the application to your administrators for review and approval. The final app is based on the **Production** workspace, therefore it is important to ensure that the production workspace contains all of the necessary APIs, Events, and Runtime code that it needs before submitting for approval.
 
 To begin the approval process, navigate to the **Production** workspace and select **Submit for approval** in the top-right corner of the screen or select **Approval** in the left navigation.
 
@@ -54,6 +54,6 @@ After submitting, your application status will be updated to **In Review** and t
 
 ## Next steps
 
-Once an application has been approved, either by internal reviewers or the Adobe Review team, its status will be updated to **Published** and the application will be available for use either by employees within your enterprise organization (for Project Firefly applications) or for the general public through Adobe Exchange.
+Once an application has been approved, either by internal reviewers or the Adobe Review team, its status will be updated to **Published** and the application will be available for use either by employees within your enterprise organization (for App Builder applications) or for the general public through Adobe Exchange.
 
 ![](../../images/approval-public-profile-published.png)

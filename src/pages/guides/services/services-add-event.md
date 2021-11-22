@@ -30,7 +30,7 @@ The next step in configuring your event registration is to configure the authent
 
 <InlineAlert slots="text"/>
 
-To learn more about authentication and available types, visit the [authentication documentation](https://www.adobe.com/go/devs_authentication).
+To learn more about authentication and available types, visit the [authentication documentation](../authentication/index.md).
 
 To configure an Event using OAuth 2.0 authentication and authorization, you must first select the platform where you want to use this integration: Web, iOS, or Android. 
 
