@@ -190,5 +190,5 @@ module.exports = {
     ]
   },
   plugins: [`@adobe/gatsby-theme-aio`],
-  pathPrefix: process.env.PATH_PREFIX || '/console/docs/'
+  pathPrefix: process.env.PATH_PREFIX || '/developer-console/docs/'
 };
