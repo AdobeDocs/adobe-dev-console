@@ -35,8 +35,11 @@
       case "#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/APIKeyIntegration.md":
         redirectPath = prefixPath + "guides/authentication/APIKeyIntegration/";
         break;
-      case "#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/OAuthIntegration.md'":
+      case "#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/OAuthIntegration.md":
         redirectPath = prefixPath + "guides/authentication/OAuthIntegration/";
+        break;
+      case "#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/ServiceAccountIntegration.md":
+        redirectPath = prefixPath + "guides/authentication/ServiceAccountIntegration/";
         break;
       case "#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md":
         redirectPath = prefixPath + "guides/authentication/OAuth/";
@@ -50,7 +53,7 @@
       case "#!AdobeDocs/adobeio-auth/master/JWT/JWT.md":
         redirectPath = prefixPath + "guides/authentication/JWT/";
         break;
-      case "#!AdobeDocs/adobeio-auth/master/JWT/JWTCertificate.md'":
+      case "#!AdobeDocs/adobeio-auth/master/JWT/JWTCertificate.md":
         redirectPath = prefixPath + "guides/authentication/JWT/JWTCertificate/";
         break;
       case "#!AdobeDocs/adobeio-auth/master/JWT/Scopes.md":
