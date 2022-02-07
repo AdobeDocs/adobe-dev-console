@@ -43,12 +43,8 @@ Metascopes for Experience Cloud Service Account APIs
 | Experience Platform                              | `https://ims-na1.adobelogin.com/s/ent_dataservices_sdk`                |
 | Campaign                                         | `https://ims-na1.adobelogin.com/s/ent_campaign_sdk`                    |
 | Target                                           | `https://ims-na1.adobelogin.com/s/ent_marketing_sdk`                   |
-| Experience Platform Launch (Admin)               | `https://ims-na1.adobelogin.com/s/ent_reactor_admin_sdk`               |
-| Experience Platform Launch (IT Admin)            | `https://ims-na1.adobelogin.com/s/ent_reactor_it_admin_sdk`            |
-| Experience Platform Launch (Developer)           | `https://ims-na1.adobelogin.com/s/ent_reactor_developer_sdk`           |
-| Experience Platform Launch (Approver)            | `https://ims-na1.adobelogin.com/s/ent_reactor_approver_sdk`            |
-| Experience Platform Launch (Publisher)           | `https://ims-na1.adobelogin.com/s/ent_reactor_publisher_sdk`           |
-| Experience Platform Launch (Extension developer) | `https://ims-na1.adobelogin.com/s/ent_reactor_extension_developer_sdk` |
+| Experience Platform Launch (Admin)               | `https://ims-na1.adobelogin.com/s/ent_reactor_sdk`               |
+
 
 ## GDPR
 
