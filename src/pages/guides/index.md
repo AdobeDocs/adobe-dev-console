@@ -1,22 +1,69 @@
-# Welcome to Adobe Developer Console
+<Hero slots="heading, text"/>
 
-Adobe Developer Console allows you and your team to flexibly and easily connect to Adobe services, enable I/O Runtime, and manage your projects with new insights. Here are some of the exciting updates to Adobe Developer Console:
+# Adobe Developer Console
 
-## Introducing developer orgs and unified public profile
+Adobe Developer Console is the ultimate developer destination to access Adobe APIs & SDKs, listen to near real-time Events, run functions on Runtime, or build plugins or App Builder apps.
+
+<Resources slots="heading, links"/>
+
+#### Quickstart
+
+* [Getting Started](guides/getting-started.md)
+* [Authentication Guide](guides/authentication/index.md)
+* [App Builder Projects](guides/projects/projects-template.md)
+
+
+## Overview
+
+This documentation shows you how to use Adobe Developer Console to create projects in order to access Adobe products and services.
+
+<DiscoverBlock slots="link, text"/>
+
+[Projects](guides/projects/index.md)
+
+Applications you create that leverage the power of Adobe products and technologies through services such as APIs, Events, and Runtime.
+
+
+<DiscoverBlock slots="link, text"/>
+
+[App Builder template](guides/projects/projects-template.md)
+
+The App Builder template provides all of the developer tools you need to build Single Page Applications with Adobe's UI toolkit, create microservices, and orchestrate APIs in Adobe Experience Cloud. Collaborate with your team in dedicated workspaces and deploy to your organization seamlessly. 
+
+
+<DiscoverBlock slots="link, text"/>  
+
+[Plugins](guides/plugins/index.md)
+
+Created as part of a project, plugins enhance the functionality of Adobe products and are accessed through the UI of those products. These are typically available through the Adobe Marketplace.
+
+
+<DiscoverBlock slots="link, text"/>
+
+[APIs and services](guides/apis-and-services.md)
+
+Browse available APIs, Events and services for Adobe products and technologies, with which you can develop applications.
+
+
+<DiscoverBlock slots="link, text"/>
+
+[Authentication](guides/authentication/index.md)
+
+This guide contains all you need to know to authenticate your apps with Adobe services.
+
+
+## What's new on Adobe Developer Console
+
+Adobe Developer Console is the ultimate developer destination to access Adobe APIs & SDKs, listen to near real-time Events, run functions on Runtime, or build plugins or App Builder apps.
+
+### Introducing developer orgs and unified public profile
     
 All Adobe ID accounts now have access to advanced developer features, such as building service-to-service integrations, journaling for event subscriptions, and access to I/O Runtime (license permitting).
 
-## A new era of Photoshop extensibility 
+### A new era of Photoshop extensibility 
     
 Adobe is making the Photoshop host app APIs more modern and introducing UXP, our new cross-app API platform. Add a Photoshop plugin to your project, download the starter template, then return to the Developer Console when you’re ready to distribute it.
 
-## Add beta users
+### Add beta users
 
 Select and manage a group of beta users who will have access to your integration while it’s still in development.
-
-## Next steps
-
-Now that you're familiar with the new features in Adobe Developer Console, read the [getting started guide](getting-started.md) to begin creating your own projects and building your own apps and plugins.
-
-![](../images/developer-console-home.png)
-
