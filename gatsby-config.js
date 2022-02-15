@@ -112,6 +112,14 @@ module.exports = {
           {
             path: "guides/apis-and-services.md",
             title: "APIs and services"
+          },
+          {
+            path: "guides/public-profile.md",
+            title: "Public Profile"
+          },
+          {
+            path: "guides/quota.md",
+            title: "Quota"
           }
         ]
       },
