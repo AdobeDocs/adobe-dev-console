@@ -14,16 +14,20 @@ module.exports = {
   siteMetadata: {
     pages: [
       {
-        path: "index.md",
-        title: "Overview"
-      },
-      {
-        path: "guides/index.md",
-        title: "Guides"
+        path: "../",
+        title: "Developer Console"
       },
       {
         path: "support.md",
         title: "Support"
+      },
+      {
+        path: "guides/index.md",
+        title: "View Authentication Guide"
+      },
+      {
+        path: "guides/index.md",
+        title: "View Docs"
       }
     ],
     subPages: [
