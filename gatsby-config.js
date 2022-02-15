@@ -14,181 +14,185 @@ module.exports = {
   siteMetadata: {
     pages: [
       {
-        title: 'Overview',
-        path: 'index.md'
+        path: "../",
+        title: "Developer Console"
       },
       {
-        title: 'Guides',
-        path: 'guides/index.md'
+        path: "support.md",
+        title: "Support"
       },
       {
-        title: 'Support',
-        path: 'support.md'
+        path: "guides/index.md",
+        title: "View Authentication Guide"
+      },
+      {
+        path: "guides/index.md",
+        title: "View Docs"
       }
     ],
     subPages: [
       {
-        "path": "guides/index.md",
-        "title": "Console Overview"
+        path: "guides/index.md",
+        title: "Console Overview"
       },
       {
-        path: 'guides/authentication/index.md',
-        title: 'Authentication Overview',
+        path: "guides/authentication/index.md",
+        title: "Authentication Overview",
         pages: [
           {
-            "path": "guides/authentication/APIKeyIntegration.md",
-            "title": "API Key Integration"
+            path: "guides/authentication/APIKeyIntegration.md",
+            title: "API Key Integration"
           },
           {
-            "path": "guides/authentication/OAuthIntegration.md",
-            "title": "OAuth Integration"
+            path: "guides/authentication/OAuthIntegration.md",
+            title: "OAuth Integration"
           },
           {
-            "path": "guides/authentication/ServiceAccountIntegration.md",
-            "title": "Service Account Integration"
+            path: "guides/authentication/ServiceAccountIntegration.md",
+            title: "Service Account Integration"
           },
           {
-            "pages": [
+            pages: [
               {
-                "path": "guides/authentication/OAuth/Scopes.md",
-                "title": "OAuth Scopes"
+                path: "guides/authentication/OAuth/Scopes.md",
+                title: "OAuth Scopes"
               },
               {
-                "path": "guides/authentication/OAuth/samples.md",
-                "title": "OAuth Sample Code"
+                path: "guides/authentication/OAuth/samples.md",
+                title: "OAuth Sample Code"
               }
             ],
-            "path": "guides/authentication/OAuth/index.md",
-            "title": "OAuth Authentication"
+            path: "guides/authentication/OAuth/index.md",
+            title: "OAuth Authentication"
           },
           {
-            "pages": [
+            pages: [
               {
-                "path": "guides/authentication/JWT/JWTCertificate.md",
-                "title": "Create a Public Key Certificate"
+                path: "guides/authentication/JWT/JWTCertificate.md",
+                title: "Create a Public Key Certificate"
               },
               {
-                "path": "guides/authentication/JWT/Scopes.md",
-                "title": "JWT Metascopes"
+                path: "guides/authentication/JWT/Scopes.md",
+                title: "JWT Metascopes"
               },
               {
-                "path": "guides/authentication/JWT/samples.md",
-                "title": "JWT Sample Code"
+                path: "guides/authentication/JWT/samples.md",
+                title: "JWT Sample Code"
               }
             ],
-            "path": "guides/authentication/JWT/index.md",
-            "title": "JWT (Service Account) Authentication"
+            path: "guides/authentication/JWT/index.md",
+            title: "JWT (Service Account) Authentication"
           },
           {
-            "path": "guides/authentication/IMS.md",
-            "title": "IMS APIs"
+            path: "guides/authentication/IMS.md",
+            title: "IMS APIs"
           },
           {
-            "pages": [
+            pages: [
               {
-                "path": "guides/authentication/Tools/OAuthPlayground.md",
-                "title": "OAuth 2.0 Playground"
+                path: "guides/authentication/Tools/OAuthPlayground.md",
+                title: "OAuth 2.0 Playground"
               },
               {
-                "path": "guides/authentication/Tools/Postman.md",
-                "title": "Postman"
+                path: "guides/authentication/Tools/Postman.md",
+                title: "Postman"
               }
             ],
-            "path": "guides/authentication/Tools/index.md",
-            "title": "Tools"
+            path: "guides/authentication/Tools/index.md",
+            title: "Tools"
           }
         ]
       },
       {
-        "path": "guides/getting-started.md",
-        "title": "Getting Started"
+        path: "guides/getting-started.md",
+        title: "Getting Started"
       },
       {
-        "path": "guides/projects/index.md",
-        "title": "Projects",
-        "pages": [
-          {
-            "path": "guides/projects/projects-empty.md",
-            "title": "Create an Empty Project"
-          },
-          {
-            "path": "guides/projects/projects-template.md",
-            "title": "Create a Templated Project"
-          },
-          {
-            "path": "guides/projects/approval.md",
-            "title": "Projects Approval"
-          },
-          {
-            "path": "guides/projects/beta-users.md",
-            "title": "Beta Users"
-          }
-        ]
-      },
-      {
-        "path": "guides/plugins/index.md",
-        "title": "Plugins",
-        "pages": [
-          {
-            "path": "guides/plugins/plugin-distribution.md",
-            "title": "Distribute a Plugin"
-          },
-          {
-            "path": "guides/plugins/plugin-update.md",
-            "title": "Update a Plugin"
-          }
-        ]
-      },
-      {
-        "path": "guides/services/index.md",
-        "title": "Services",
-        "pages": [
-          {
-            "path": "guides/services/services-add-api-jwt.md",
-            "title": "Add API using Service Account (JWT)"
-          },
-          {
-            "path": "guides/services/services-add-api-key.md",
-            "title": "Add API using API Key"
-          },
-          {
-            "path": "guides/services/services-add-api-oauth.md",
-            "title": "Add API using Oauth"
-          },
-          {
-            "path": "guides/services/services-add-event.md",
-            "title": "Add Events"
-          },
-          {
-            "path": "guides/services/services-enable-runtime.md",
-            "title": "Enable Runtime"
-          }
-        ]
-      },
-      {
-        "path": "guides/credentials.md",
-        "title": "Credentials"
-      },
-      {
-        "path": "guides/insights.md",
-        "title": "Insights"
-      },
-      {
-        "path": "guides/apis-and-services.md",
-        "title": "APIs and services"
-      },
-      {
-        "path": "support/index.md",
-        "title": "Support",
+        path: "guides/projects/index.md",
+        title: "Projects",
         pages: [
           {
-            "path": "support/faq.md",
-            "title": "FAQ"
+            path: "guides/projects/projects-empty.md",
+            title: "Create an Empty Project"
+          },
+          {
+            path: "guides/projects/projects-template.md",
+            title: "Create a Templated Project"
+          },
+          {
+            path: "guides/projects/approval.md",
+            title: "Projects Approval"
+          },
+          {
+            path: "guides/projects/beta-users.md",
+            title: "Beta Users"
+          }
+        ]
+      },
+      {
+        path: "guides/plugins/index.md",
+        title: "Plugins",
+        pages: [
+          {
+            path: "guides/plugins/plugin-distribution.md",
+            title: "Distribute a Plugin"
+          },
+          {
+            path: "guides/plugins/plugin-update.md",
+            title: "Update a Plugin"
+          }
+        ]
+      },
+      {
+        path: "guides/services/index.md",
+        title: "Services",
+        pages: [
+          {
+            path: "guides/services/services-add-api-jwt.md",
+            title: "Add API using Service Account (JWT)"
+          },
+          {
+            path: "guides/services/services-add-api-key.md",
+            title: "Add API using API Key"
+          },
+          {
+            path: "guides/services/services-add-api-oauth.md",
+            title: "Add API using Oauth"
+          },
+          {
+            path: "guides/services/services-add-event.md",
+            title: "Add Events"
+          },
+          {
+            path: "guides/services/services-enable-runtime.md",
+            title: "Enable Runtime"
+          }
+        ]
+      },
+      {
+        path: "guides/credentials.md",
+        title: "Credentials"
+      },
+      {
+        path: "guides/insights.md",
+        title: "Insights"
+      },
+      {
+        path: "guides/apis-and-services.md",
+        title: "APIs and services"
+      },
+      {
+        path: "support/index.md",
+        title: "Support",
+        pages: [
+          {
+            path: "support/faq.md",
+            title: "FAQ"
           }
         ]
       }
     ]
   },
   plugins: [`@adobe/gatsby-theme-aio`],
-  pathPrefix: process.env.PATH_PREFIX || '/developer-console/docs/'
+  pathPrefix: process.env.PATH_PREFIX || "/developer-console/docs/"
 };
