@@ -2,16 +2,7 @@
 
 # Adobe Developer Console
 
-Adobe Developer Console is the ultimate developer destination to access Adobe APIs & SDKs, listen to near real-time Events, run functions on Runtime, or build plugins or App Builder apps.
-
-<Resources slots="heading, links"/>
-
-#### Quickstart
-
-* [Getting Started](guides/getting-started.md)
-* [Authentication Guide](guides/authentication/index.md)
-* [App Builder Projects](guides/projects/projects-template.md)
-
+The ultimate developer destination to access Adobe APIs & SDKs, listen to near real-time Events, run functions on Runtime, or build plugins or App Builder apps.
 
 ## Overview
 
@@ -53,8 +44,6 @@ This guide contains all you need to know to authenticate your apps with Adobe se
 
 
 ## What's new on Adobe Developer Console
-
-Adobe Developer Console is the ultimate developer destination to access Adobe APIs & SDKs, listen to near real-time Events, run functions on Runtime, or build plugins or App Builder apps.
 
 ### Introducing developer orgs and unified public profile
     

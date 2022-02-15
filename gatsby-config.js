@@ -22,7 +22,7 @@ module.exports = {
         title: "Support"
       },
       {
-        path: "guides/authentication/index.md",
+        path: "authentication/index.md",
         title: "View Authentication Guide"
       },
       {
@@ -124,69 +124,69 @@ module.exports = {
         ]
       },
       {
-        path: "guides/authentication/index.md",
+        path: "authentication/index.md",
         title: "Authentication",
         pages: [
           {
-            path: "guides/authentication/APIKeyIntegration.md",
+            path: "authentication/APIKeyIntegration.md",
             title: "API Key Integration"
           },
           {
-            path: "guides/authentication/OAuthIntegration.md",
+            path: "authentication/OAuthIntegration.md",
             title: "OAuth Integration"
           },
           {
-            path: "guides/authentication/ServiceAccountIntegration.md",
+            path: "authentication/ServiceAccountIntegration.md",
             title: "Service Account Integration"
           },
           {
             pages: [
               {
-                path: "guides/authentication/OAuth/Scopes.md",
+                path: "authentication/OAuth/Scopes.md",
                 title: "OAuth Scopes"
               },
               {
-                path: "guides/authentication/OAuth/samples.md",
+                path: "authentication/OAuth/samples.md",
                 title: "OAuth Sample Code"
               }
             ],
-            path: "guides/authentication/OAuth/index.md",
+            path: "authentication/OAuth/index.md",
             title: "OAuth Authentication"
           },
           {
             pages: [
               {
-                path: "guides/authentication/JWT/JWTCertificate.md",
+                path: "authentication/JWT/JWTCertificate.md",
                 title: "Create a Public Key Certificate"
               },
               {
-                path: "guides/authentication/JWT/Scopes.md",
+                path: "authentication/JWT/Scopes.md",
                 title: "JWT Metascopes"
               },
               {
-                path: "guides/authentication/JWT/samples.md",
+                path: "authentication/JWT/samples.md",
                 title: "JWT Sample Code"
               }
             ],
-            path: "guides/authentication/JWT/index.md",
+            path: "authentication/JWT/index.md",
             title: "JWT (Service Account) Authentication"
           },
           {
-            path: "guides/authentication/IMS.md",
+            path: "authentication/IMS.md",
             title: "IMS APIs"
           },
           {
             pages: [
               {
-                path: "guides/authentication/Tools/OAuthPlayground.md",
+                path: "authentication/Tools/OAuthPlayground.md",
                 title: "OAuth 2.0 Playground"
               },
               {
-                path: "guides/authentication/Tools/Postman.md",
+                path: "authentication/Tools/Postman.md",
                 title: "Postman"
               }
             ],
-            path: "guides/authentication/Tools/index.md",
+            path: "authentication/Tools/index.md",
             title: "Tools"
           }
         ]
