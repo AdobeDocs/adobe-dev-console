@@ -183,6 +183,17 @@ module.exports = {
           }
         ]
       },
+      ,
+      {
+        path: "support/index.md",
+        title: "Support",
+        pages: [
+          {
+            path: "support/faq.md",
+            title: "FAQ"
+          }
+        ]
+      }
     ]
   },
   plugins: [`@adobe/gatsby-theme-aio`],
