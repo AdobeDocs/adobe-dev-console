@@ -183,7 +183,6 @@ module.exports = {
           }
         ]
       },
-      ,
       {
         path: "support/index.md",
         title: "Support",
