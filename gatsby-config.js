@@ -33,11 +33,91 @@ module.exports = {
     subPages: [ // side nav on gatsby pages
       {
         path: "guides/index.md",
-        title: "Console Overview"
+        title: "Developer Console",
+        pages: [
+          {
+            path: "guides/getting-started.md",
+            title: "Getting Started"
+          },
+          {
+            path: "guides/projects/index.md",
+            title: "Projects",
+            pages: [
+              {
+                path: "guides/projects/projects-empty.md",
+                title: "Create an Empty Project"
+              },
+              {
+                path: "guides/projects/projects-template.md",
+                title: "Create a Templated Project"
+              },
+              {
+                path: "guides/projects/approval.md",
+                title: "Projects Approval"
+              },
+              {
+                path: "guides/projects/beta-users.md",
+                title: "Beta Users"
+              }
+            ]
+          },
+          {
+            path: "guides/plugins/index.md",
+            title: "Plugins",
+            pages: [
+              {
+                path: "guides/plugins/plugin-distribution.md",
+                title: "Distribute a Plugin"
+              },
+              {
+                path: "guides/plugins/plugin-update.md",
+                title: "Update a Plugin"
+              }
+            ]
+          },
+          {
+            path: "guides/services/index.md",
+            title: "Services",
+            pages: [
+              {
+                path: "guides/services/services-add-api-jwt.md",
+                title: "Add API using Service Account (JWT)"
+              },
+              {
+                path: "guides/services/services-add-api-key.md",
+                title: "Add API using API Key"
+              },
+              {
+                path: "guides/services/services-add-api-oauth.md",
+                title: "Add API using Oauth"
+              },
+              {
+                path: "guides/services/services-add-event.md",
+                title: "Add Events"
+              },
+              {
+                path: "guides/services/services-enable-runtime.md",
+                title: "Enable Runtime"
+              }
+            ]
+          },
+          {
+            path: "guides/credentials.md",
+            title: "Credentials"
+          },
+          {
+            path: "guides/insights.md",
+            title: "Insights"
+          },
+          {
+            path: "guides/apis-and-services.md",
+            title: "APIs and services"
+          }
+        ]
       },
       {
         path: "guides/authentication/index.md",
-        title: "Authentication Overview",
+        title: "Authentication",
         pages: [
           {
             path: "guides/authentication/APIKeyIntegration.md",
@@ -103,94 +183,6 @@ module.exports = {
           }
         ]
       },
-      {
-        path: "guides/getting-started.md",
-        title: "Getting Started"
-      },
-      {
-        path: "guides/projects/index.md",
-        title: "Projects",
-        pages: [
-          {
-            path: "guides/projects/projects-empty.md",
-            title: "Create an Empty Project"
-          },
-          {
-            path: "guides/projects/projects-template.md",
-            title: "Create a Templated Project"
-          },
-          {
-            path: "guides/projects/approval.md",
-            title: "Projects Approval"
-          },
-          {
-            path: "guides/projects/beta-users.md",
-            title: "Beta Users"
-          }
-        ]
-      },
-      {
-        path: "guides/plugins/index.md",
-        title: "Plugins",
-        pages: [
-          {
-            path: "guides/plugins/plugin-distribution.md",
-            title: "Distribute a Plugin"
-          },
-          {
-            path: "guides/plugins/plugin-update.md",
-            title: "Update a Plugin"
-          }
-        ]
-      },
-      {
-        path: "guides/services/index.md",
-        title: "Services",
-        pages: [
-          {
-            path: "guides/services/services-add-api-jwt.md",
-            title: "Add API using Service Account (JWT)"
-          },
-          {
-            path: "guides/services/services-add-api-key.md",
-            title: "Add API using API Key"
-          },
-          {
-            path: "guides/services/services-add-api-oauth.md",
-            title: "Add API using Oauth"
-          },
-          {
-            path: "guides/services/services-add-event.md",
-            title: "Add Events"
-          },
-          {
-            path: "guides/services/services-enable-runtime.md",
-            title: "Enable Runtime"
-          }
-        ]
-      },
-      {
-        path: "guides/credentials.md",
-        title: "Credentials"
-      },
-      {
-        path: "guides/insights.md",
-        title: "Insights"
-      },
-      {
-        path: "guides/apis-and-services.md",
-        title: "APIs and services"
-      },
-      {
-        path: "support/index.md",
-        title: "Support",
-        pages: [
-          {
-            path: "support/faq.md",
-            title: "FAQ"
-          }
-        ]
-      }
     ]
   },
   plugins: [`@adobe/gatsby-theme-aio`],
