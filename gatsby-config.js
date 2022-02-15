@@ -14,16 +14,16 @@ module.exports = {
   siteMetadata: {
     pages: [
       {
-        path: 'index.md',
-        title: 'Overview'
+        path: "index.md",
+        title: "Overview"
       },
       {
-        path: 'guides/index.md',
-        title: 'Guides'
+        path: "guides/index.md",
+        title: "Guides"
       },
       {
-        path: 'support.md',
-        title: 'Support'
+        path: "support.md",
+        title: "Support"
       }
     ],
     subPages: [
@@ -32,8 +32,8 @@ module.exports = {
         title: "Console Overview"
       },
       {
-        path: 'guides/authentication/index.md',
-        title: 'Authentication Overview',
+        path: "guides/authentication/index.md",
+        title: "Authentication Overview",
         pages: [
           {
             path: "guides/authentication/APIKeyIntegration.md",
@@ -190,5 +190,5 @@ module.exports = {
     ]
   },
   plugins: [`@adobe/gatsby-theme-aio`],
-  pathPrefix: process.env.PATH_PREFIX || '/developer-console/docs/'
+  pathPrefix: process.env.PATH_PREFIX || "/developer-console/docs/"
 };
