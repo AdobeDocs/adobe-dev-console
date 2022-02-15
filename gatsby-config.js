@@ -12,7 +12,7 @@
 
 module.exports = {
   siteMetadata: {
-    pages: [ // top nav
+    pages: [
       {
         path: "/developer-console",
         title: "Developer Console"
@@ -30,7 +30,7 @@ module.exports = {
         title: "View Docs"
       }
     ],
-    subPages: [ // side nav on gatsby pages
+    subPages: [
       {
         path: "guides/index.md",
         title: "Developer Console",
