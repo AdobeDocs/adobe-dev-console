@@ -1,6 +1,6 @@
 # JWT (Service Account) Authentication
 
-To establish a secure service-to-service Adobe I/O API session, you must create a JSON Web Token (JWT) that encapsulates the identity of your integration, and then exchange it for an access token. Every request to an Adobe service must include the access token in the `Authorization` header, along with the API Key (Client ID) that was generated when you created the [Service Account Integration](../AuthenticationOverview/ServiceAccountIntegration.md) in the [Adobe Developer Console](/console).
+To establish a secure service-to-service Adobe I/O API session, you must create a JSON Web Token (JWT) that encapsulates the identity of your integration, and then exchange it for an access token. Every request to an Adobe service must include the access token in the `Authorization` header, along with the API Key (Client ID) that was generated when you created the [Service Account Integration](../ServiceAccountIntegration) in the [Adobe Developer Console](/console).
 
 ## Authentication Workflow
 
