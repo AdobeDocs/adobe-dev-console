@@ -2,20 +2,20 @@
 
 # Adobe Developer Console Support
 
-If you have questions about how to use Adobe Developer Console or you are looking to report bugs, make feature requests, and more, Console provides multiple resources that can help.
+If you have questions about how to use Adobe Developer Console or you are looking to report bugs, make feature requests, and more, Developer Console provides multiple resources that can help.
 
 ## Frequently Asked Questions
 
-Access a knowledge base of frequently asked questions and find answers to some of the most common questions asked by Adobe Developer Console users. This is a great place to start when needing answer to questions. 
+Access a knowledge base of frequently asked questions and find answers to some of the most common questions asked by other Adobe Developer Console users. This is a great place to start when needing answers to a question. 
 
 Visit the [Adobe Developer Console FAQ](faq.md) to learn more.
 
-## GitHub Issues
+## Developer Forums
 
-Visit <https://github.com/AdobeDocs/adobe-dev-console/issues> to report bugs, ask questions, make feature requests, or start a discussion. You'll find official Adobe developers and community members available to help you out.
+To start a discussion or ask questions please visit our [Developer Console Forums](https://www.adobe.com/go/devs_console_exl) on Adobe Experience League. 
 
-## Adobe Experience League
+On the forums you will find official Adobe developers and knowledgeable community members who are ready and available to help you find the information you need.
 
-To report bugs, ask questions, make feature requests, or start a discussion, visit the [Adobe Developer Console Community](https://www.adobe.com/go/devs_console_exl) on Experience League. 
+## Bugs and Feature Requests
 
-In Experience League you will find official Adobe developers and knowledgeable community members who are ready and available to help you find the information you need.
+Log an issue on <https://github.com/AdobeDocs/adobe-dev-console/issues> to report any bugs or request new product features. 
