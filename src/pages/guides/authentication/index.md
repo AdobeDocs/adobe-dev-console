@@ -1,4 +1,10 @@
-# Adobe I/O Authentication Overview
+<Hero slots="heading, text"/>
+
+# Authentication Guide
+
+Adobe is committed to privacy and security. The following is a guide on navigating the various authentication mechanisms available to you as a developer when integrating or extending different Adobe services.
+
+## Overview
 
 Adobe is committed to privacy and security. Nearly all Adobe services require your application to authenticate through the Adobe Identity Management System (IMS) to receive client credentials. The client credentials determine the access and permissions granted to your application.
 

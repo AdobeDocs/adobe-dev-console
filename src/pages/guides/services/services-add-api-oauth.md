@@ -24,41 +24,73 @@ Once you have found and chosen an API that you would like to add, select **Next*
 
 User authentication using OAuth allows your end users to sign in to your integration with an Adobe ID. With an OAuth token, your integration will be able to access Adobe services and content on behalf of the logged in user. For more information, read the [OAuth Authentication and Authorization documentation](../authentication/OAuth/index.md).
 
-To configure an API using OAuth 2.0 authentication and authorization, you must first select the platforms where you want to use this integration: Web, iOS, or Android. 
+To configure an API using OAuth 2.0 authentication and authorization, you must first select the platforms where you want to use this integration: Web App, Single Page App, or Native App. 
 
 <InlineAlert slots="text"/>
 
-If more than one platform is available for the chosen API, you can select all necessary platforms and configure them all at the same time.
+Depending on the selected API, some of the platforms may not be available to be used with that API. If more than one platform is available, select the platform that best suits your application use case.
 
+TODO
 ![](../../images/services-api-oauth-configure.png)
 
 Depending on the platform(s) you select, you may be required to provide additional configuration information:
 
-### Web
+### Web App
 
-You are required to provide a *Default redirect URI*, which is the URL of the page or script (usually at the root of your web app) that Adobe will access during the authentication process. It can contain a maximum of 256 characters and cannot be a regular expression.
+The Web App platform is best suited for applications that have a backend server. OAuth credentials for Web App require the application to securely store a client secret on the backend server. With the use of the client secret the application can then fetch tokens on the backend server and not risk exposing the client secret or the tokens through the frontend application.
+
+In OAuth 2.0 standard terminology, an OAuth credential for the Web App platform is a *confidential* client with a HTTPS redirect.
+
+When setting up an OAuth credential for the Web App platform you are required to provide:
+1. [A default Redirect URI](#oauth-20-default-redirect-uri) 
+2. [A Redirect URI pattern](#oauth-20-redirect-uri-pattern)
+
+### Single Page App
+
+The Single Page App platform is best suited for JavaScript based applications that run in the browser that either do not have a backend server or want to fetch tokens on the frontend. OAuth credentials for Single Page Apps do not require the application to store a client secret, and therefore, must utilize the [OAuth 2.0 PKCE flow](https://oauth.net/2/pkce/) to securely obtain tokens.
+
+In OAuth 2.0 standard terminology, an OAuth credential for the Single Page App platform is a *public* client with a HTTPS redirect.
+
+When setting up an OAuth credential for the Single Page App platform you are required to provide:
+1. [A default Redirect URI](#oauth-20-default-redirect-uri) 
+2. [A Redirect URI pattern](#oauth-20-redirect-uri-pattern)
+
+
+### Native App
+
+The Native App platform is best suited for applications that run natively on a device (Android, iOS, Windows, Mac, and others)that either do not have a backend server or want to fetch tokens on the frontend. OAuth credentials for Native Apps do not require the application to store a client secret, and therefore, must utilize the [OAuth 2.0 PKCE flow](https://oauth.net/2/pkce/) to securely obtain tokens.
+
+In OAuth 2.0 standard terminology, an OAuth credential for the Native App platform is a *public* client with a non-HTTPS redirect.
+
+### OAuth 2.0 Default Redirect URI
+
+A *Default redirect URI* is the URL of the page or script (usually at the root of your web app) that Adobe will access during the authentication process. It can contain a maximum of 256 characters and cannot be a regular expression.
 
 <InlineAlert slots="text"/>
 
-The *Default redirect URI* must be hosted on a secure server (HTTPS), even if it is only a localhost instance. For example, **https://redirect.com/uri/etc**. 
+The *Default redirect URI* MUST be hosted on a secure server (HTTPS), even if it is only a localhost instance. For example, **https://redirect.com/uri/etc**. 
 
-For the Web platform, you must also provide a *Redirect URI pattern*. This is a URI path (or comma-separated list of paths) to which Adobe will attempt to redirect when the login flow is complete. It must be within your application domain, and is typically the root. It can contain a maximum of 512 characters.
- 
+### OAuth 2.0 Redirect URI pattern
+
+When creating a new authorize request, the OAuth 2.0 framework allows your application to request a different redirect URI than the default Redirect URI. However, any requested redirect URI would be matched against the *Redirect URI pattern* you supply. The authorize request can be successfully completed only if the requested redirect URI passes regex matching, 
+
+A *Redirect URI pattern* is a URI path (or comma-separated list of paths) to which Adobe can redirect (if requested) when the login flow is complete. It must be within your application domain, and is typically the root. It can contain a maximum of 512 characters.
+
 <InlineAlert slots="text"/>
   
 You must escape periods (**.**) with **\\**. For example, **https://example\\.com/**.
 
+### Web
+
+The OAuth credential for the Web platform has been deprecated in favor of the [Web App platform](#web-app). Furthermore, the new Web App platfotm credentials do not support the weaker OAuth implicit flow. Applications looking for a substitute for the OAuth implicit flow should use the more secure [Single Page App platform](#single-page-app).
+
 ### iOS
 
-You are required to provide a *URL Scheme*. This is a custom iOS URL scheme that allows external apps and websites to link to your app.
-
+The OAuth credential for the iOS platform has been deprecated in favor of the [Native App platform](#native-app).
 ### Android
 
-No additional configuration is required.
+The OAuth credential for the Android platform has been deprecated in favor of the [Native App platform](#native-app).
 
-After completing any necessary configuration, you can then select **Save configured API** to complete the configuration.
-
-![](../../images/services-api-oauth-web.png)
 
 ## API overview
 

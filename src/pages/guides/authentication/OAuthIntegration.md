@@ -27,3 +27,8 @@ When the API has been successfully connected, you will be able to access the new
 ### Step 3: Try It
 
 Generate an access token using [OAuth 2.0 Playground](./Tools/OAuthPlayground.md)
+
+
+### Step 4: Integrate OAuth authentication in your application
+
+Read our [extensive guide on OAuth](OAuth/index.md) to integrate OAuth authentication in your application. To see sample applications visit [here](OAuth/samples.md).

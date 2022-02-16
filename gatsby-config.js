@@ -173,7 +173,7 @@ module.exports = {
           },
           {
             path: "guides/authentication/IMS.md",
-            title: "IMS APIs"
+            title: "Authentication API Reference"
           },
           {
             pages: [
