@@ -2,6 +2,114 @@
 
 Following is an API reference for Adobe Identity Management Services (IMS) APIs.
 
+On this page:
++ [OpenID Configuration](#openid-configuration)
++ [ID Token Keys](#id-token-keys)
++ [OpenID Configuration](#openid-configuration-1)
++ [UserInfo](#userinfo)
++ [Authorize Request](#authorize-request)
++ [Fetching Access tokens](#fetching-access-tokens)
++ [Refreshing Access tokens](#refreshing-access-tokens)
++ [Token revocation](#token-revocation)
+
+## OpenID Configuration
+
+This API allows you to view information about Adobe's OpenID configuration.
+
+### Request
+
+```curl
+curl -X GET 'https://ims-na1.adobelogin.com/ims/.well-known/openid-configuration'
+```
+
+### Sample Response
+
+```json
+{
+    "issuer": "https://ims-na1.adobelogin.com",
+    "authorization_endpoint": "https://ims-na1.adobelogin.com/ims/authorize/v2",
+    "token_endpoint": "https://ims-na1.adobelogin.com/ims/token/v3",
+    "userinfo_endpoint": "https://ims-na1.adobelogin.com/ims/userinfo/v2",
+    "revocation_endpoint": "https://ims-na1.adobelogin.com/ims/revoke",
+    "jwks_uri": "https://ims-na1.adobelogin.com/ims/keys",
+    "response_types_supported": [
+        "code",
+        "token",
+        "id_token",
+        "id_token token",
+        "code id_token"
+    ],
+    "subject_types_supported": [
+        "public"
+    ],
+    "id_token_signing_alg_values_supported": [
+        "RS256"
+    ],
+    "scopes_supported": [
+        "openid",
+        "email",
+        "profile"
+    ],
+    "token_endpoint_auth_methods_supported": [
+        "client_secret_basic",
+        "client_secret_post"
+    ],
+    "claims_supported": [
+        "sub",
+        "given_name",
+        "family_name",
+        "name",
+        "email",
+        "email_verified",
+        "address"
+    ],
+    "grant_types_supported": [
+        "authorization_code",
+        "implicit_grant",
+        "refresh_token"
+    ]
+}
+```
+
+## ID Token Keys
+
+Note: To retrive the keys with which ID Tokens are signed can be found here: [`https://ims-na1.adobelogin.com/ims/keys`](https://ims-na1.adobelogin.com/ims/keys)
+
+## OpenID Configuration
+
+This API allows you to retrive the keys with which the ID Tokens are signed.
+
+### Request
+
+```curl
+curl -X GET 'https://ims-na1.adobelogin.com/ims/keys'
+```
+
+### Sample Response
+
+```json
+{
+    "keys": [
+        {
+            "alg": "RS256",
+            "kty": "RSA",
+            "use": "sig",
+            "kid": "ims",
+            "e": "AQAB",
+            "n": "gBI3r_iauYJrKOTpEsFLeQ4TFktfzmNa30BK_84uh8mZ9N1NJ8VjOlwH9SzPD_gIpELaAaf2n7GeKN8kWYGtex6uCmz5iZZ3eDzryvTfvj3MwQx_XbGloz4QKQXSlCwADlOXP3-EhMqOVr3tVqQe0uX_TPn1F_b9yIONXAX1GwWTFb9UqNjjpFNOxuKJaAh6uod7Y9kmzw0GE4GvMs6AIjitxLNLlpeC8J3vyA0l4UWVJR9lwLjS1O0Lk07IfjAMMes6fonQ5AtzYewIOk4UdNCgb_XKpqLgYY_9J9nfIuBGVY-W7ZfHhXjA1AixQw6A4XoreGr5AnF5WMwd6DA7vw"
+        },
+        {
+            "alg": "RS256",
+            "kty": "RSA",
+            "use": "sig",
+            "kid": "ims_na1-key-1",
+            "e": "AQAB",
+            "n": "q2y0X2R0db3z6yUHWjnd3qppszntWcoel3WURBYekEcadjfxDFAWrAHX8OoceddD6n-qC_2b2GVJny45qKmhq8KFvVOUCMgUUY_ErnvrZXQl0r3USDpf5rxNOQuqxBl532Z9H17k2K_VdT5BL8xwYFYpKtOc-Vgi6Gz2KnhSXlOYBQW9PII2pGsCL4_uwIl32nibGnEDgJfnja01N-hUaLJikvR1OQuYPNaww6JcFQ_Z-_Jt4ec4YYOnrqOs7H7oE-hotwe57o5FxJlqPCccirysqlA7QU4lQxGw8qlIoU3S0WAzLqaxBOgiDET6sK_QVdq6A2TDo1NNY9ktzeW2ow"
+        }
+    ]
+}
+```
+
 ## UserInfo
 
 This API allows you to fetch information about an user.
@@ -48,6 +156,201 @@ curl -X GET 'https://ims-na1.adobelogin.com/ims/userinfo/v2?client_id={YOUR_CLIE
 |`given_name`|`profile`|User's given name|
 |`family_name`|`profile`|User's family name or last name|
 |`email`|`email`|User's email address|
+
+The Keys with which ID Tokens are signed can be found here: [`https://ims-na1.adobelogin.com/ims/keys`](https://ims-na1.adobelogin.com/ims/keys)
+
+## Authorize Request
+
+Once a user lands on your application to initiatie the OAuth authentication flow your application should redirect the user to an Adobe IMS URL. While the URL endpoint is common, the query parameters would be specific to your application. 
+
+Read along to find out more on how to construct the full authorize URL with values for the different query parameters.
+
+### Parameters
+
+There are several query parameters available to you as a developer to customize user experience for your application. Some of the query paramters are mandatory and others optional. By using the paramters outlined in the table below you would be able to construct the authorize URL for your application.
+
+
+|Parameter|Mandatory|Description|
+|---|---|---|
+|`client_id`|Yes|The client ID obtained from [Adobe Developer Console](/console).|
+|`redirect_uri`| No|The URI to which the user agent is redirected once the authorization completes. Note that this URI must be HTTPS. The pattern is validated against the list of valid redirect URIs configured for your client. If the redirect URI is not provided with the request or it does not validate against the allowed redirects, it will consider the Default Redirect URI in Adobe Developer Console.|
+|`scope`|No|The scope of the access request, expressed as a list of splace or comma delimited, case-sensitive strings. See the [OAuth 2.0 Scopes reference document](Scopes.md) for more information.|
+|`response_type`|No|Possible values are `code`, `token`, `id_token`, `id_token token`, `code id_token`. The default response type for the Authorization code flow is `code`.|
+|`state`|Recommended|Client-defined state data that is replayed back to the client. It must not be longer than 4096 characters. Does not need to be json. Typically, Cross-Site Request Forgery (CSRF, XSRF) mitigation is done by cryptographically binding the value of this parameter with a browser cookie.|
+|`nonce`|No|String value used to associate a Client session with an ID Token and to mitigate replay attacks. The value is passed through unmodified from the Authentication Request to the ID Token.|
+|`prompt`|No|Space delimited, case sensitive list of ASCII string values that specifies whether the Authorization Server prompts the End-User for authentication or redirects back if the user is not authenticated. Supported values: `none`, `login`.<br/><ul><li>none → Does not show any UI. Either returns successfully with a valid authentication response or returns with an error.<ul><li>error=login_required → No user is logged in.</li><li>error=consent_required → User is Logged in, but has not consented to your app.</li><li>error=interaction_required → User is logged in, has given consent, but there is some other action they needs to perform (accept terms of use, etc.).</li></ul></li><li>login → Even if the user is authenticated, they will see the login screen.</li></ul>|
+|`code_challenge`|Yes, for Public Clients|`code_challenge` value depends on `code_challenge_method` (see next line).|
+|`code_challenge_method`|No, default to `plain`|Possible values: `S256`, `plain`<br/><br/><ul><li>For `code_challenge_method` = `plain`</li><li>`code_challenge` = `code_verifier`</li><li>For `code_challenge_method` = `S256`</li><li>`code_challenge` =  `BASE64(SHA256(code_verifier))`</li><li>`code_verifier` is sent on the `/token` endpoint.</li></ul><br/><br/>For more information, read the [Proof Key for Code Exchange by OAuth Public Clients](https://tools.ietf.org/html/rfc7636) documentation.|
+|`response_mode`|No|Possible values: `query`, `fragment`. <br/>For more information, refer to this [openid documentation](https://openid.net/specs/oauth-v2-multiple-response-types-1_0.html#ResponseModes).<br/><br/>If `response_mode` is not specified, the following defaults are applied:<br/><ul><li>code → query</li><li>token → fragment</li><li>id_token → fragment</li><li>id_token token → fragment</li><li>code id_token → fragment</li></ul>|
+
+### Constructing the Request URL for OAuth Web App and OAuth Web Credentials
+
+**Note:** The request URL has been split onto multiple lines for readability. A complete request path includes multiple parameters separated by an ampersand (`&`) with no spaces or line breaks.
+
+```
+https://ims-na1.adobelogin.com/ims/authorize/v2
+  ?client_id={CLIENT_ID}
+  &redirect_uri={REDIRECT_URI}
+  &scope={SCOPES}
+  &state={STATE}
+  &response_type=code
+```
+
+##### Sample Request URL
+
+```
+https://ims-na1.adobelogin.com/ims/authorize/v2?client_id=202b135c20864fbfb26a46522aa2433b&redirect_uri=https://www.myapp.com/OAuth/callback&scope=openid,creative_sdk&state=90cff02f-da33-46ec-985c-1f5cf2f9644a&response_type=code
+```
+
+**Note:** Ensure that you are using the latest version (`v2`) of the `/authorize` endpoint.
+
+### Constructing the Request URL for all other OAuth credentials
+
+**Note:** The request URL has been split onto multiple lines for readability. A complete request path includes multiple parameters separated by an ampersand (`&`) with no spaces or line breaks.
+
+```
+https://ims-na1.adobelogin.com/ims/authorize/v2
+  ?client_id={CLIENT_ID}
+  &code_challenge={CODE_CHALLENGE}
+  &code_challenge_method=S256
+  &redirect_uri={REDIRECT_URI}
+  &scope={SCOPES}
+  &state={STATE}
+  &response_type=code
+```
+
+##### Sample Request URL
+
+```
+https://ims-na1.adobelogin.com/ims/authorize/v2?client_id=135c20864fbfb26a46522aa2433b&code_challenge=c9vBtg5G7DupTxSYODrpd2LpBeECiSTTQtQclGNMklM&code_challenge_method=S256&redirect_uri=https://www.myapp.com/OAuth/callback&scope=openid,creative_sdk&state=90cff02f-da33-46ec-985c-1f5cf2f9644a&response_type=code
+```
+
+**Note:** Ensure that you are using the latest version (`v2`) of the `/authorize` endpoint.
+
+### Successful response
+
+After the user has authenticated and been granted consent to your application, the user agent will be redirected to `{YOUR_REDIRECT_URI}` with parameters determined by the `response_type` sent in the request.
+
+|Response Type (`response_type`)|Parameters|
+|---|---|
+|`token`| `access_token={ACCESS_TOKEN}&state={STATE}&token_type=bearer&expires_in=86399` <br/><br/><ul><li>`token_type` will always be `bearer`.</li><li>`expires_in` is the validity of the token in seconds.</li></ul>|
+|`code`| `code={AUTHORIZATION_CODE}&state={STATE}`|
+|`id_token`|`id_token={ID_TOKEN}&state={STATE}`|
+|`id_token token`|`id_token={ID_TOKEN}&access_token={ACCESS_TOKEN}&state={STATE}&token_type=bearer&expires_in=86399`|
+|`code id_token`|`id_token={ID_TOKEN}&code={AUTHORIZATION_CODE}&state={STATE}`|
+
+The parameters will be in the `query` or the `fragment`, according to the `response_mode` parameter included in the request. If a `response_mode` is not specified, the default values are used as shown in the [Authorization parameters table](#authorization).
+
+## Fetching Access tokens
+
+Once the user grants access to your application your application can fetch access tokens by using the tokens API.
+
+### Parameters
+
+Parameters can be sent in the body or as query parameters. Passing parameters in the body is recommended for sensitive data, as query parameters may be logged by app servers.
+
+|Parameter|Mandatory|Description|
+|---|---|---|
+|`authorization_code`|Yes|The value of the `code` query/fragment parameter returned in the callback request from the autorize step | 
+|`grant_type`|Yes|Value should always be `authorization_code`|
+|`authorization`| Required for confidential clients|Basic Authorization header.<br/><br/>`Authorization: Basic Base64(clientId:clientSecret)`|
+|`client_id`|Required for PUBLIC clients|The Client ID obtained from the [Adobe Developer Console](/console)|
+|`code_verifier`|Required for PUBLIC clients|Code verifier generated for the `code_challenge` sent during [Authorization](#authorization).|
+
+
+### Request for OAuth Web App and OAuth Web credentials
+
+```curl
+curl -X POST 'https://ims-na1.adobelogin.com/ims/token/v3' \
+  -H 'Authorization: Basic {AUTHORIZATION}' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -d 'code={AUTHORIZATION_CODE}&grant_type=authorization_code'
+```
+
+### Request for all other OAuth credentials
+
+```curl
+curl -X POST 'https://ims-na1.adobelogin.com/ims/token/v3?client_id={CLIENT_ID}' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -d 'code={AUTHORIZATION_CODE}&grant_type=authorization_code&code_verifier={CODE_VERIFIER}'
+```
+  
+### Sample Response
+
+```json
+{
+    "access_token": "{ACCESS_TOKEN}",
+    "refresh_token": "{REFRESH_TOKEN}",
+    "sub": "B0DC108C5CD449CA0A494133@c62f24cc5b5b7e0e0a494004",
+    "id_token": "{ID_TOKEN}",
+    "token_type": "bearer",
+    "expires_in": 86399
+}
+```
+
+**Note:** The refresh token is only present if the `offline_access` scope is requested in the authorize step and subsequently consented to by the user.
+
+### Response Object
+
+|Property|Description|
+|---|---|
+|`access_token`|Generated access token. By default they expire in 24 hours.|
+|`refresh_token`|Generated refresh token. By default they expire in 14 days.|
+|`token_type`|Token type will always be `bearer`.|
+|`id_token`|Generated ID token.<br/><br/>Present if `openid` is added as scope. See the [OAuth 2.0 Scopes reference document](Scopes.md) for more information.|
+|`expires_in`|Validity of access token in seconds.|
+
+## Refreshing Access tokens
+
+Once you have fetched the access tokens for a user you may also be provided a refresh token in the response. A refresh token is only presented when the `offline_access` scope is requested in the authorize step. Please note that not all APIs and Services support the `offline_access` scope for security reasons.
+
+### Parameters
+
+|Parameter|Mandatory|Description|
+|---|---|---|
+|`refresh_token`|Yes|The base64-encoded refresh token received in the response to the initial request for an access token|
+|`grant_type`|Yes|The value is always `refresh_token`|
+|`client_id`|Only for PUBLIC clients|The client ID obtained from [Adobe Developer Console](/console)|
+|`authorization`|Only for Confidential clients|Basic Authorization header.<br/><br/>`Authorization: Basic Base64(clientId:clientSecret)`|
+
+
+### Request for OAuth Web App and OAuth Web credentials
+
+```curl
+curl -X POST 'https://ims-na1.adobelogin.com/ims/token/v3' \
+  -H 'Authorization: Basic {AUTHORIZATION}' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -d 'grant_type=refresh_token&refresh_token={REFRESH_TOKEN}'
+```
+
+### Request for all other OAuth credentials
+
+```curl
+curl -X POST 'https://ims-na1.adobelogin.com/ims/token/v3?client_id={CLIENT_ID}' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -d 'grant_type=refresh_token&refresh_token={REFRESH_TOKEN}'
+```
+  
+### Sample Response
+
+```json
+{
+    "access_token": "{ACCESS_TOKEN}",
+    "refresh_token": "{REFRESH_TOKEN}",
+    "token_type": "bearer",
+    "expires_in": 86399
+}
+```
+
+### Response Object
+
+|Property|Description|
+|---|---|
+|`access_token`|Generated access token|
+|`refresh_token`|Generated refresh token.<br/><br/>`offline_access` scope is needed for this to be returned. See the [OAuth 2.0 Scopes reference document](Scopes.md) for more information.|
+|`token_type`|Token type will always be `bearer`.|
+|`expires_in`|Validity of access token in seconds.|
+
 
 ## Token revocation
 
