@@ -18,12 +18,12 @@ module.exports = {
         title: "Developer Console"
       },
       {
-        path: "guides/index.md",
-        title: "Documentation"
-      },
-      {
         path: "guides/authentication/index.md",
         title: "Authentication Guide"
+      },
+      {
+        path: "guides/index.md",
+        title: "Documentation"
       },
       {
         path: "support/index.md",
