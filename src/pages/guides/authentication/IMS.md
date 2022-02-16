@@ -73,11 +73,7 @@ curl -X GET 'https://ims-na1.adobelogin.com/ims/.well-known/openid-configuration
 
 ## ID Token Keys
 
-Note: To retrive the keys with which ID Tokens are signed can be found here: [`https://ims-na1.adobelogin.com/ims/keys`](https://ims-na1.adobelogin.com/ims/keys)
-
-## OpenID Configuration
-
-This API allows you to retrive the keys with which the ID Tokens are signed.
+This API allows you to retrieve the keys with which the ID Tokens are signed.
 
 ### Request
 
@@ -112,14 +108,14 @@ curl -X GET 'https://ims-na1.adobelogin.com/ims/keys'
 
 ## UserInfo
 
-This API allows you to fetch information about an user.
+This API allows you to fetch information about a user.
 
 ### Parameters
 
 |Parameter|Mandatory|Description|
 |---|---|---|
 |`client_id`|No|Your client ID|
-|`ACCESS_TOKEN`|Yes|An aceess token obtained by your application on behalf of the user|
+|`ACCESS_TOKEN`|Yes|An access token obtained by your application on behalf of the user|
 
 ### Request
 
@@ -151,41 +147,41 @@ curl -X GET 'https://ims-na1.adobelogin.com/ims/userinfo/v2?client_id={YOUR_CLIE
 |`sub`|`openid`|The user ID|
 |`account_type`|`profile`|Can be one of two values:<br/><ul><li>**`ind`:** User is an individual account</li><li>**`ent`:** User is part of an organization</li></ul>|
 |`email_verified`|`email`|Whether the user's email address has been verified|
-|`address`|`address`|User's address - currently only the two-digit country code is returned|
+|`address`|`address`|User's address - currently, only the two-digit country code is returned|
 |`name`|`profile`|User's full name|
 |`given_name`|`profile`|User's given name|
 |`family_name`|`profile`|User's family name or last name|
 |`email`|`email`|User's email address|
 
-The Keys with which ID Tokens are signed can be found here: [`https://ims-na1.adobelogin.com/ims/keys`](https://ims-na1.adobelogin.com/ims/keys)
+To fetch the keys with which the ID Tokens are signed see [ID Token Keys](#id-token-keys).
 
 ## Authorize Request
 
-Once a user lands on your application to initiatie the OAuth authentication flow your application should redirect the user to an Adobe IMS URL. While the URL endpoint is common, the query parameters would be specific to your application. 
+Once a user lands on your application to initiate the OAuth authentication flow, your application should redirect the user to an Adobe IMS URL. While the URL endpoint is common, the query parameters would be specific to your application. 
 
-Read along to find out more on how to construct the full authorize URL with values for the different query parameters.
+Read along to find out more about constructing the full authorize URL with values for the different query parameters.
 
 ### Parameters
 
-There are several query parameters available to you as a developer to customize user experience for your application. Some of the query paramters are mandatory and others optional. By using the paramters outlined in the table below you would be able to construct the authorize URL for your application.
+Several query parameters are available to you as a developer to customize the user experience for your application. Some of the query parameters are mandatory, and others optional. Using the parameters outlined in the table below, you can construct the authorize URL for your application.
 
 
 |Parameter|Mandatory|Description|
 |---|---|---|
 |`client_id`|Yes|The client ID obtained from [Adobe Developer Console](/console).|
-|`redirect_uri`| No|The URI to which the user agent is redirected once the authorization completes. Note that this URI must be HTTPS. The pattern is validated against the list of valid redirect URIs configured for your client. If the redirect URI is not provided with the request or it does not validate against the allowed redirects, it will consider the Default Redirect URI in Adobe Developer Console.|
-|`scope`|No|The scope of the access request, expressed as a list of splace or comma delimited, case-sensitive strings. See the [OAuth 2.0 Scopes reference document](Scopes.md) for more information.|
+|`redirect_uri`| No|The URI to which the user agent is redirected once the authorization completes. Note that this URI must be HTTPS. The supplied value for this parameter is validated against the Redirect URI pattern supplied by you at the time of credential creation . If a redirect URI is not provided with the request or if it does not match against the pattern, Adobe will redirect the response to the Default Redirect URI supplied by you at the time of credential creation.|
+|`scope`|No|The requested scopes in the form of a list of space or comma-delimited, case-sensitive strings. See the [OAuth 2.0 Scopes reference document](Scopes.md) for more information.|
 |`response_type`|No|Possible values are `code`, `token`, `id_token`, `id_token token`, `code id_token`. The default response type for the Authorization code flow is `code`.|
-|`state`|Recommended|Client-defined state data that is replayed back to the client. It must not be longer than 4096 characters. Does not need to be json. Typically, Cross-Site Request Forgery (CSRF, XSRF) mitigation is done by cryptographically binding the value of this parameter with a browser cookie.|
+|`state`|Recommended|Client-defined state data that is replayed back to the client. It must not be longer than 4096 characters and does not need to be a JSON object. Typically, Cross-Site Request Forgery (CSRF, XSRF) mitigation is done by cryptographically binding the value of this parameter with a browser cookie.|
 |`nonce`|No|String value used to associate a Client session with an ID Token and to mitigate replay attacks. The value is passed through unmodified from the Authentication Request to the ID Token.|
-|`prompt`|No|Space delimited, case sensitive list of ASCII string values that specifies whether the Authorization Server prompts the End-User for authentication or redirects back if the user is not authenticated. Supported values: `none`, `login`.<br/><ul><li>none → Does not show any UI. Either returns successfully with a valid authentication response or returns with an error.<ul><li>error=login_required → No user is logged in.</li><li>error=consent_required → User is Logged in, but has not consented to your app.</li><li>error=interaction_required → User is logged in, has given consent, but there is some other action they needs to perform (accept terms of use, etc.).</li></ul></li><li>login → Even if the user is authenticated, they will see the login screen.</li></ul>|
-|`code_challenge`|Yes, for Public Clients|`code_challenge` value depends on `code_challenge_method` (see next line).|
-|`code_challenge_method`|No, default to `plain`|Possible values: `S256`, `plain`<br/><br/><ul><li>For `code_challenge_method` = `plain`</li><li>`code_challenge` = `code_verifier`</li><li>For `code_challenge_method` = `S256`</li><li>`code_challenge` =  `BASE64(SHA256(code_verifier))`</li><li>`code_verifier` is sent on the `/token` endpoint.</li></ul><br/><br/>For more information, read the [Proof Key for Code Exchange by OAuth Public Clients](https://tools.ietf.org/html/rfc7636) documentation.|
+|`prompt`|No|Space-delimited, case-sensitive list of ASCII string values that specifies whether Adobe prompts the end-user for authentication or fails the authorize step if user is not authenticated. Supported values: `none`, `login`.<br/><ul><li>`none` → Does not show any UI. Either returns successfully with a valid authentication response or returns with an error.<ul><li>`error=login_required` → No user is logged in.</li><li>`error=consent_required` → User is Logged in, but has not granted access to your app.</li><li>`error=interaction_required` → User is logged in and has granted access to your app, but there is some other action they need to perform (Accept terms of use, etc.).</li></ul></li><li>`login` → Even if the user is authenticated, they will see the login screen.</li><li>No value supplied → Default behavior.</li></ul>|
+|`code_challenge_method`|No, defaults to `plain`|Possible values: `S256`, `plain`|
+|`code_challenge`|Required for Public Clients| The `code_challenge` parameter is a security measure to confirm whether the authorize and token requests originated from the same application.<br /><br />A `code_challenge` comes in pair with a `code_verifier`. A `code_verifier` is a random string of at least 43 characters (see [allowed character set](https://datatracker.ietf.org/doc/html/rfc7636#section-4.1)).<br /><br />Based on the `code_challenge_method`, the `code_challenge` can then be according to - <br /><ul><li>If `code_challenge_method` = `plain`, then `code_challenge` = `code_verifier`</li><li>If `code_challenge_method` = `S256`, then `code_challenge` =  `BASE64_URL_ENCODE(SHA256(code_verifier))`</li></ul><br /> <br />The `code_challenge` is sent with the authorize request, while the corresponding `code_verifier` is sent with the [token request]. For more information, read the [Proof Key for Code Exchange by OAuth Public Clients](https://tools.ietf.org/html/rfc7636) documentation.|
 |`response_mode`|No|Possible values: `query`, `fragment`. <br/>For more information, refer to this [openid documentation](https://openid.net/specs/oauth-v2-multiple-response-types-1_0.html#ResponseModes).<br/><br/>If `response_mode` is not specified, the following defaults are applied:<br/><ul><li>code → query</li><li>token → fragment</li><li>id_token → fragment</li><li>id_token token → fragment</li><li>code id_token → fragment</li></ul>|
 
 ### Constructing the Request URL for OAuth Web App and OAuth Web Credentials
 
-**Note:** The request URL has been split onto multiple lines for readability. A complete request path includes multiple parameters separated by an ampersand (`&`) with no spaces or line breaks.
+**Note:** The request URL has been split into multiple lines for readability. A complete request path includes multiple parameters separated by an ampersand (`&`) with no spaces or line breaks.
 
 ```
 https://ims-na1.adobelogin.com/ims/authorize/v2
