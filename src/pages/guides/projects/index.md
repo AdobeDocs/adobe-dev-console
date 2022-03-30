@@ -69,7 +69,7 @@ Activity Log in a project is retained for 3 months and allows you to export the 
 
 <InlineAlert slots="text"/>
 
-Note: Activity log is currently only available to enterprise and teams organizations.
+Note: Project Activity logs are currently only available to enterprise and teams organizations.
 
 ## Project approval
 
@@ -82,7 +82,7 @@ Once you have completed development on your project, your application is ready f
 
 To read more about the approval process, visit the [project approvals](approval.md) documentation.
 
-### Beta users
+## Beta users
 
 When building a project containing OAuth credentials, Console enables you to select and manage a group of beta users, giving them access to your integration while it is still `In Development`. To learn more, read the [beta users overview](beta-users.md).
 
