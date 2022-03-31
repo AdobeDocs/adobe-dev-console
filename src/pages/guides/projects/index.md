@@ -1,20 +1,20 @@
-# Projects overview
+# Projects Overview
 
-All development work in Adobe Developer Console is done as part of a project. A project may include one or multiple products, as well as a combination of APIs, events, runtime, and plugins. 
+All development work in Adobe Developer Console is done as part of a project. A project may include one or multiple products, and a combination of APIs, events, runtime, and plugins. 
 
-## Developer vs enterprise projects
+## Developer vs Enterprise Projects
 
-Projects are a common framework within both developer and enterprise organizations. Projects belonging to an enterprise organization are visible to other members of the organization, whereas projects belonging to a developer organization are visible only to the individual to whom the organization belongs.
+Projects are a common framework within both developer and enterprise organizations. Projects belonging to an enterprise organization are visible to other organization members. In contrast, projects belonging to a developer organization are visible only to the individual to whom the organization belongs.
 
-Use the org switcher to view the organizations to which you belong and easily switch between them.
+Use the org switcher to view the organizations to which you belong to and easily switch between them.
 
 ![Organization switcher on the Console home screen.](../../images/switch-organizations.png)
 
 <InlineAlert slots="text"/>
 
-**Note:** For enterprise organizations, you must be a system administrator or developer in order to create projects for your organization. For information on how to manage developers in the admin console, see the documentation on [managing developers](https://helpx.adobe.com/enterprise/using/manage-developers.html).
+**Note:** To create projects for enterprise organizations, you must have a system administrator or developer role. For information on managing developers in the admin console, see the documentation on [managing developers](https://helpx.adobe.com/enterprise/using/manage-developers.html).
 
-## Create a new Project
+## Create a New Project
 
 ### Empty Projects
 
@@ -24,46 +24,47 @@ To get started, follow the steps provided in the guide for [creating an empty pr
 
 ### Templated Projects
 
-In order to streamline the creation of projects, Adobe Developer Console provides templates that you can use to get up and running quickly. 
+To streamline the creation of projects, Adobe Developer Console provides templates that you can use to get started quickly. 
 
 **Note:** Templated projects are currently only available for enterprise organizations.
 
 To get started, follow the steps provided in the guide for [creating a templated project](projects-template.md).
 
-## View all Projects
+## View All Projects
 
-The **Projects** screen provides an overview of the projects that have been created by your organization. If you are part of an enterprise organization, this includes all projects that you have access to, not just projects that you have created.
+The **Projects** screen provides an overview of your organization's projects. Suppose you are part of an enterprise organization. In that case, this includes all projects that you have access to and not just projects that you have created.
 
-Each project is shown on a card that includes the title of the project, the last modified date, and the number of workspaces, where applicable.
+On the Projects screen, each project is shown as a card. A project card mentions the title of the project, its last modified date, and the number of workspaces it has, where applicable.
 
 ![All Projects screen (card view)](../../images/projects-card-view.png)
 
-You can use the sort functionality to change the order in which projects are displayed or select the list view to see your projects in a list rather than displayed as cards.
+You can use the sort functionality to change the order in which projects are displayed or select the list view to see your projects in a list rather than shown as cards.
+
 
 ![All Projects screen (list view)](../../images/projects-list-view.png)
 
-From the **Projects** screen, you can also begin working on a new project by selecting **Create new project**.
+You can also begin working on a new project from the Projects screen by selecting **Create New Project**.
 
 ### Read Only view
 
-As a member of an enterprise organization, you may not have been granted access to all of the services licensed by your organization. For this reason, you may see a *Read Only* tag on certain projects or workspaces within a templated project.
+As a member of an enterprise organization, you may not have access to all of the services licensed by your organization. For this reason, you may see a *Read Only* tag on certain projects or workspaces within a templated project.
 
-Projects or workspaces marked as *Read Only* are still visible to you, but certain actions, such as downloading, editing, copying client secrets, or initiating the approval workflow will be greyed out and inaccessible to you.
+Although, Projects or workspaces marked as *Read Only* are still visible to you, but certain actions, such as downloading, editing, copying client secrets, or initiating the approval workflow, will be greyed out and inaccessible.
 
-If you believe you are seeing a *Read Only* tag in error, or would like to gain access to certain services and product profiles, please work with your organization's administrators for access.
+If you believe you are seeing a *Read Only* tag in error, or want access to certain services and product profiles, please work with your organization's administrators for access.
 
 ## Delete a Project
 
-**Deleting a project is permanent**. Before you can delete a project you must remove all services and credentials from it. Certain services (Adobe I/O Runtime, Plugins, etc.) cannot yet be removed from a project, and therefore, disallow a project deletion.
+**Deleting a project is permanent**. Before you can delete a project, you must remove all services and credentials added to it. Certain services (Runtime, plugins, etc.) cannot yet be removed from a project and disallow a project deletion.
 
 
-## Project Access and view Project Activity Log
+## View a Project's Activity Log
 
 Any user in your organization who has access to the Developer Console and has access to the set of product profiles used in a project can view, edit, and delete that project.
 
-However, all such user activity on the Dev Console is captured in a project Activity log and serves as a record of "who did what and when?" for the organization to use. 
+However, all modifications to a project on the Developer Console are captured in the project's activity log. The activity log serves as a record of "who did what and when?", enabling an organization to track changes made to a project. 
 
-Activity Log in a project is retained for 3 months and allows you to export the records as CSV if you wish to store it further. 
+Changes made to a project are retained as activity logs for **3 months**. You can also export the activity log records as a CSV file, if you wish to store them for longer. 
 
 ![Project Activity Log](../../images/project-activity-log.png)
 
