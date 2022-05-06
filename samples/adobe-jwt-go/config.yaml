@@ -1,0 +1,10 @@
+client_id: "..."
+client_secret: "..."
+private_key_path: "./secret.pem"
+iss: "...@AdobeOrg"
+sub: "...@techacct.adobe.com"
+aud: "https://ims-na1.adobelogin.com/c/{client_id}"
+scopes:
+  - "https://ims-na1.adobelogin.com/s/event_receiver_api"
+  - "https://ims-na1.adobelogin.com/s/ent_adobeio_sdk"
+  - "https://ims-na1.adobelogin.com/s/ent_documentcloud_sdk"
