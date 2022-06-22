@@ -30,11 +30,11 @@ In order to try out the connection, follow the steps in the [Adobe Developer Con
 
 Next, open Postman and select Import &gt; Paste Raw Text and paste the copied curl command. Select **Import** to continue.
 
-<kbd>![Postman import](./Images/auth_jwtqs_07.png "Postman import")</kbd>
+![Postman import](./Images/auth_jwtqs_07.png "Postman import")
 
 With the command imported, select **Send** to execute.
 
-<kbd>![Postman send](./Images/auth_jwtqs_08.png "Postman send")</kbd>
+![Postman send](./Images/auth_jwtqs_08.png "Postman send")
 
 The example curl sends a POST request to [https://ims-na1.adobelogin.com/ims/exchange/jwt](https://ims-na1.adobelogin.com/ims/exchange/jwt) using the parameters outlined in the table below. 
 
