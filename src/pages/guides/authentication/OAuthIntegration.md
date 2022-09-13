@@ -1,3 +1,4 @@
+[DAA_Self-Regulatory_Principles_for_Political_Advertising_May2018.pdf](https://github.com/AdobeDocs/adobe-dev-console/files/9560893/DAA_Self-Regulatory_Principles_for_Political_Advertising_May2018.pdf)
 # OAuth Connection
 
 If your application needs to access Adobe services or content, you'll need a set of client credentials to authenticate your app and your user, and to authorize access. The type of application you are building will determine the type of client credentials you will need.
