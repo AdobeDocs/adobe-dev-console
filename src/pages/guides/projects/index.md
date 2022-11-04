@@ -64,7 +64,7 @@ Any user in your organization who has access to the Developer Console and has ac
 
 However, all modifications to a project on the Developer Console are captured in the project's activity log. The activity log serves as a record of "who did what and when?", enabling an organization to track changes made to a project. 
 
-Changes made to a project are retained as activity logs for **3 months**. You can also export the activity log records as a CSV file, if you wish to store them for longer. 
+Changes made to a project are retained as activity logs for **1 year**. You can also export the activity log records as a CSV file, if you wish to store them for longer. 
 
 ![Project Activity Log](../../images/project-activity-log.png)
 
