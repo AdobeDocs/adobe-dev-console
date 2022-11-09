@@ -10,9 +10,22 @@ This documentation shows you how to use Adobe Developer Console to create projec
 
 <DiscoverBlock slots="link, text"/>
 
+[APIs and services](guides/apis-and-services.md)
+
+Browse available APIs, Events and services for Adobe products and technologies, with which you can develop applications.
+
+
+<DiscoverBlock slots="link, text"/>
+
 [Projects](guides/projects/index.md)
 
 Applications you create that leverage the power of Adobe products and technologies through services such as APIs, Events, and Runtime.
+
+<DiscoverBlock slots="link, text"/>
+
+[Authentication](guides/authentication/index.md)
+
+This guide contains all you need to know to authenticate your apps with Adobe services.
 
 
 <DiscoverBlock slots="link, text"/>
@@ -27,20 +40,6 @@ The App Builder template provides all of the developer tools you need to build S
 [Plugins](guides/plugins/index.md)
 
 Created as part of a project, plugins enhance the functionality of Adobe products and are accessed through the UI of those products. These are typically available through the Adobe Marketplace.
-
-
-<DiscoverBlock slots="link, text"/>
-
-[APIs and services](guides/apis-and-services.md)
-
-Browse available APIs, Events and services for Adobe products and technologies, with which you can develop applications.
-
-
-<DiscoverBlock slots="link, text"/>
-
-[Authentication](guides/authentication/index.md)
-
-This guide contains all you need to know to authenticate your apps with Adobe services.
 
 
 ## What's new on Adobe Developer Console
