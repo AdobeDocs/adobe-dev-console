@@ -8,7 +8,7 @@ Due to security considerations, certificate key pairs are set with a definite ex
 
 The certificate key pairs generated on the Developer Console expire after a year; therefore, you need to replace them with fresh ones every year. To this end, the Developer Console also notifies customers via email about the certificate key pairs expiring within the next 30 days.
 
-The Developer Console sends weekly email alerts about all your certificate key pairs expiring within the next 30 days. Furthermore, daily email alerts are also sent if a certificate key pair in your organization expires within the next 3 days.
+**The Developer Console sends weekly email alerts about all your certificate key pairs expiring within the next 30 days. Furthermore, daily email alerts are also sent if a certificate key pair in your organization expires within the next 3 days.**
 
 Upon receiving the email alert, you need to replace the expiring certificate key pair with a new pair in a timely fashion to ensure all your custom integrations and applications continue to work. See this step-by-step guide on replacing certificate key pairs for more detailed instructions.
 
@@ -64,30 +64,30 @@ You would stop receiving email alerts about the Project only after you remove th
 
 ## FAQs
 
-**Q. How can I find where a given project's certificate key pair is being used?**
+### Q. How can I find where a given project's certificate key pair is being used?
 A. Unfortunately, Adobe cannot tell which custom integrations or applications are using a given certificate key pair - this information is solely available with the customer. Each expiring certificate key pair was created by a developer/admin within the customer's organization. The same developer/admin is in the best position to identify where a given certificate key pair is used.
 
-**Q. How can I identify the developer/admin in my organization who set up the Project or the certificate key pair?**
+### Q. How can I identify the developer/admin in my organization who set up the Project or the certificate key pair?
 A. A good starting point to identify the developers/admins who worked on a project is by looking at who created or last modified the Project on the Project overview screen. Furthermore, the Project Activity Logs, retained for up to a year, show a more granular view of who made what changes to a Project. Note: Information about the Project's creator may be missing for historical projects.
 
-**Q. How can I verify if the Project on the Dev Console is actually being used?**
+### Q. How can I verify if the Project on the Dev Console is actually being used?
 A. Visit the Insights tab in a Project to see recent activity (API calls, Events Delivered, etc.) involving the credentials contained in the Project. See our documentation on [Insights]() to know more.
 
-**Q. Can Adobe replace the certificate key pairs for us?**
+### Q. Can Adobe replace the certificate key pairs for us?
 A. Unfortunately, these certificate key pairs are used in your custom integrations and applications, which Adobe has no information on or access to. Therefore, the customer needs to carry out the activity to refresh the certificate key pairs.
 
-**Q. How can I set up automation to refresh the certificates programmatically?**
+### Q. How can I set up automation to refresh the certificates programmatically?
 A. Unfortunately, such a programmatic method is not available at this time. While the Developer Console continues to work towards simplifying this authentication mechanism and developing a programmatic mechanism to refresh certificates, be sure to check out the AIO CLI command - `//TODO`. Read more about the AIO CLI [here]().
 
-**Q. Why do I keep receiving email alerts about the old certificate key pair even though I replaced the expiring certificate key pair?**
+### Q. Why do I keep receiving email alerts about the old certificate key pair even though I replaced the expiring certificate key pair?
 A. Once you successfully replace the expiring certificate in your custom integration or application, be sure to remove it from the Developer Console. The email alerts would stop only once the expiring certificate key pair is removed from the Project on the Developer Console.
 
-**Q. How can I look at all the Projects that have expiring certificate key pairs?**
+### Q. How can I look at all the Projects that have expiring certificate key pairs?
 A. To view all the Projects with certificate key pairs that are expiring within the next 30 days, apply the filter 'Expiring public certificates' on the list of Projects screen.
 
-**Q. Can email alerts be sent to developers in my organization so that they can act on these alerts directly?**
+### Q. Can email alerts be sent to developers in my organization so that they can act on these alerts directly?
 A. Yes, developers and other users in the organization can be added as email alert recipients. Once added to the list of email alert recipients, the Developer Console will notify them too. Furthermore, all system administrators will also be notified and cannot be removed from the list of recipients. See the section on [adding users as email alert recipients]() for more information.
 
-**Q. I receive too many email alerts about expiring certificates. Can I turn off these emails?**
+### Q. I receive too many email alerts about expiring certificates. Can I turn off these emails?
 A. We understand that not all Projects are production critical; some may be created by developers for experimentation or demoing purposes. For non-critical Projects, we recommend going to the Project overview screen and clicking on the `Pause email alerts` button to turn off email alerts for a Project. See the section on [pausing/activating email alerts]() for more information.
 
