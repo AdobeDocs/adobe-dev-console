@@ -16,7 +16,7 @@ The email alert recipient list applies to **all Projects** in your organization.
 
 A developer or a system administrator can add up to 20 additional users in your organization as email alert recipients. 
 
-**Note:** You can only add user accounts who have been added to your organization and not any email address. Follow this [guide]() to add a user to your organization.
+**Note:** You can only add user accounts who have been added to your organization and not any email address. Follow this [guide](https://helpx.adobe.com/in/enterprise/using/manage-users-individually.html) to add a user to your organization.
 
 
 To add more users as email alert recipients:
@@ -27,6 +27,7 @@ To add more users as email alert recipients:
 4. Search for the user you wish to add by their name or email address and click on `Add` once they appear in the dropdown.
 5. Repeat for as many users as you want to add, and then click `Save`.
 
+![](../../images/add-email-alert-recipient.png)
 
 ### Removing an email alert recipient
 
@@ -42,6 +43,7 @@ To remove any user from the email alert recipients list:
 4. In the list of recipients shown, find the user you wish to remove and click the `Remove` button against their name.
 5. Repeat for as many users as you want to remove, and then click `Save`.
 
+![](../../images/remove-email-alert-recipient.png)
 
 ## Managing noisy email alerts
 
@@ -63,6 +65,8 @@ Pausing email alerts for non-critical Projects is recommended. To Pause alerts
 3. On the Project overview screen, click on the `Pause email alerts` button.
 4. Confirm that you want to pause email alerts.
 
+![](../../images/pause-email-alerts.png)
+
 ### Activating email alerts for a Project
 
 To activate email alerts - 
@@ -71,3 +75,5 @@ To activate email alerts -
 2. Find and open the Project for which you wish to activate the email alerts.
 3. On the Project overview screen, click on the `Activate email alerts` button.
 4. Confirm that you want to activate email alerts.
+
+![](../../images/activate-email-alerts.png)
