@@ -102,6 +102,16 @@ module.exports = {
             ]
           },
           {
+            path: "guides/email-alerts/index.md",
+            title: "Email Alerts",
+            pages: [
+              {
+                path: "guides/email-alerts/cert-expiry.md",
+                title: "Certificate Expiry"
+              }
+            ]
+          },
+          {
             path: "guides/credentials.md",
             title: "Credentials"
           },
