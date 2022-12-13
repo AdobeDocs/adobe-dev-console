@@ -4,8 +4,6 @@ using Jose;
 using RestSharp;
 using System.Collections.Generic;
 
-//NuGet packages: Jose and RestSharp
-
 namespace adobe_jwt_dotnet
 {
     class Program
@@ -46,7 +44,6 @@ namespace adobe_jwt_dotnet
 
                 Console.WriteLine(token); //Intermediate JWT Token
 
-                // var client = new RestClient("https://ims-na1.adobelogin.com/ims/exchange/jwt/");
                 var client = new RestClient("https://ims-na1.adobelogin.com");
 
                 var request = new RestRequest("/ims/exchange/jwt")
