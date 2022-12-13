@@ -19,7 +19,6 @@ namespace adobe_jwt_dotnet
             const string ORG_ID = "YOUR ORGANIZATION ID";               //e.g. ......0A495D09@AdobeOrg
             const string METASCOPES = "YOUR METASCOPES IN COMMA SEPARATED FORMAT"; //e.g. "https://ims-na1.adobelogin.com/s/ent_reactor_developer_sdk,https://ims-na1.adobelogin.com/s/ent_reactor_admin_sdk"
 
-
             Dictionary<object, object> test = new Dictionary<object, object>();
             test.Add("exp", DateTimeOffset.Now.ToUnixTimeSeconds()+600);
             test.Add("iss", ORG_ID);
@@ -29,7 +28,7 @@ namespace adobe_jwt_dotnet
 
             foreach(string scope in scopes)
             {
-                test.Add(scope, true); 
+                test.Add(scope, true);
             }
 
             //You must have generated a certificate using below command and uploaded in the console.adobe.io integration
@@ -41,25 +40,21 @@ namespace adobe_jwt_dotnet
 
             try
             {
-                X509Certificate2 cert = new X509Certificate2("/path/to/mycert.pfx", "password");
+                X509Certificate2 cert = new X509Certificate2("mycert.pfx", "password");
 
                 string token = Jose.JWT.Encode(test, cert.GetRSAPrivateKey(), JwsAlgorithm.RS256);
 
                 Console.WriteLine(token); //Intermediate JWT Token
 
-                var client = new RestClient("https://ims-na1.adobelogin.com/ims/exchange/jwt/");
+                // var client = new RestClient("https://ims-na1.adobelogin.com/ims/exchange/jwt/");
+                var client = new RestClient("https://ims-na1.adobelogin.com");
 
-                var request = new RestRequest(Method.POST);
-                request.AddHeader("cache-control", "no-cache");
-                request.AddHeader("content-type", "multipart/form-data; boundary=----boundary");
-                request.AddParameter("multipart/form-data; boundary=----boundary",
-                    "------boundary\r\nContent-Disposition: form-data; name=\"client_id\"\r\n\r\n" + CLIENT_ID + 
-                    "\r\n------boundary\r\nContent-Disposition: form-data; name=\"client_secret\"\r\n\r\n" + CLIENT_SECRET + 
-                    "\r\n------boundary\r\nContent-Disposition: form-data; name=\"jwt_token\"\r\n\r\n" + token + 
-                    "\r\n------boundary--", ParameterType.RequestBody);
+                var request = new RestRequest("/ims/exchange/jwt")
+                    .AddParameter("client_id", CLIENT_ID)
+                    .AddParameter("client_secret", CLIENT_SECRET)
+                    .AddParameter("jwt_token", token);
 
-
-                IRestResponse response = client.Execute(request);
+                var response = client.Post(request);
 
                 Console.WriteLine(response.Content);
             }
@@ -67,8 +62,6 @@ namespace adobe_jwt_dotnet
             {
                 Console.WriteLine("An error has occured: "+e.Message);
             }
-
-
         }
     }
 }
