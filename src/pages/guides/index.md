@@ -6,13 +6,19 @@ The ultimate developer destination to access Adobe APIs & SDKs, listen to near r
 
 ## Overview
 
-This documentation shows you how to use Adobe Developer Console to create projects to access Adobe products and services.
 
 <DiscoverBlock slots="link, text"/>
 
-[APIs and services](guides/apis-and-services.md)
+[Getting Started](getting-started.md)
 
-Browse all available Adobe APIs, Adobe I/O Events, and other Adobe services that you can integrate into your application.
+Our getting started guide will give you an quick overview of the Developer Console and how to use it. 
+
+
+<DiscoverBlock slots="link, text"/>
+
+[Authentication Guide](guides/authentication/index.md)
+
+Our authentication guide contains all the information you need to generate access tokens and securely use Adobe services in your application.
 
 
 <DiscoverBlock slots="link, text"/>
@@ -21,18 +27,12 @@ Browse all available Adobe APIs, Adobe I/O Events, and other Adobe services that
 
 A project maps 1:1 to an application you are building. You can leverage the power of Adobe products and technologies by adding services such as APIs, Events, and Runtime to your project.
 
-<DiscoverBlock slots="link, text"/>
-
-[Authentication](guides/authentication/index.md)
-
-Our authentication guide contains all the information you need to generate access tokens and securely use Adobe services in your application.
-
 
 <DiscoverBlock slots="link, text"/>
 
-[App Builder template](guides/projects/projects-template.md)
+[APIs, Events, and services](guides/apis-and-services.md)
 
-Quickly start building an App Builder application by using the App Builder project template. App Builder provides all required developer tooling to build a Single Page App with Adobe's UI toolkit or microservices that orchestrate Adobe and non-Adobe APIs and services. [Learn more](https://developer.adobe.com/app-builder/).
+Browse all available Adobe APIs, Adobe I/O Events, and other Adobe services that you can integrate into your application.
 
 
 <DiscoverBlock slots="link, text"/>  
@@ -40,6 +40,13 @@ Quickly start building an App Builder application by using the App Builder proje
 [Plugins](guides/plugins/index.md)
 
 Plugins enhance the functionality of Adobe products. End users of the plugins can install them through the marketplace and use them through the product UI. As a developer, you can add a plugin to your project and start building it. 
+
+
+<DiscoverBlock slots="link, text"/>
+
+[App Builder template](guides/projects/projects-template.md)
+
+Quickly start building an App Builder application by using the App Builder project template. App Builder provides all required developer tooling to build a Single Page App with Adobe's UI toolkit or microservices that orchestrate Adobe and non-Adobe APIs and services. [Learn more](https://developer.adobe.com/app-builder/).
 
 
 ## What's new on Adobe Developer Console
