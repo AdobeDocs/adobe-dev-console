@@ -9,9 +9,9 @@ The ultimate developer destination to access Adobe APIs & SDKs, listen to near r
 
 <DiscoverBlock slots="link, text"/>
 
-[Getting Started](getting-started.md)
+[Accessing the Developer Console](getting-started.md)
 
-Our getting started guide will give you an quick overview of the Developer Console and how to use it. 
+This guide will give you a quick overview of the Developer Console and how to gain access.
 
 
 <DiscoverBlock slots="link, text"/>
@@ -23,16 +23,16 @@ Our authentication guide contains all the information you need to generate acces
 
 <DiscoverBlock slots="link, text"/>
 
-[Projects](guides/projects/index.md)
+[APIs, Events, and services](guides/apis-and-services.md)
 
-A project maps 1:1 to an application you are building. You can leverage the power of Adobe products and technologies by adding services such as APIs, Events, and Runtime to your project.
+Browse all available Adobe APIs, Adobe I/O Events, and other Adobe services that you can integrate into your application.
 
 
 <DiscoverBlock slots="link, text"/>
 
-[APIs, Events, and services](guides/apis-and-services.md)
+[Creating Projects](guides/projects/index.md)
 
-Browse all available Adobe APIs, Adobe I/O Events, and other Adobe services that you can integrate into your application.
+A project on the Developer Console corresponds to an application you are building. To leverage the power of Adobe products and technologies in your application, simply add those services (APIs, Events, and Runtime) to your project.
 
 
 <DiscoverBlock slots="link, text"/>  
@@ -44,7 +44,7 @@ Plugins enhance the functionality of Adobe products. End users of the plugins ca
 
 <DiscoverBlock slots="link, text"/>
 
-[App Builder template](guides/projects/projects-template.md)
+[App Builder Project Template](guides/projects/projects-template.md)
 
 Quickly start building an App Builder application by using the App Builder project template. App Builder provides all required developer tooling to build a Single Page App with Adobe's UI toolkit or microservices that orchestrate Adobe and non-Adobe APIs and services. [Learn more](https://developer.adobe.com/app-builder/).
 
@@ -53,7 +53,7 @@ Quickly start building an App Builder application by using the App Builder proje
 
 ### Migrate to the new OAuth Server-to-Server credential
 
-TODO
+**TODO**
 
 Use secure and industry-standard OAuth2.0 credentials in your applications when integrating with Adobe APIs and services. Read more about our new credentials - [OAuth Server-to-Server](#TODO), [OAuth Web App](#TODO), [OAuth Single-Page App](#TODO), and [OAuth Native App](#TODO). 
 
@@ -63,8 +63,8 @@ Adobe will send you [email alerts](email-alerts/index.md) whenever there is a po
 
 ### Project Filters
 
-You can now use Project Filters to narrow your search when looking for a specific project. You can filter by who created or last modified the project, any title or description used in the project, or any programmatic identifiers such as client id, technical accounts, namespaces, etc. You can also quickly view the projects that contain certificates expiring within the next 30 days.
+Use Project Filters to narrow your search when looking for a specific project. You can filter by who created or last modified the project, any title or description used in the project, or any programmatic identifiers such as client id, technical accounts, namespaces, etc. You can also quickly view the projects that contain certificates expiring within the next 30 days.
 
 ### Project Activity Logs
 
-You can now view who created or last modified a project by visiting the Project overview page. You can also view the exact set of changes made to the project in the last year (who, what, and when) by visiting the [Activity Logs](projects/index.md#view-a-projects-activity-log) tab within the Project.
+View who created or last modified a project by visiting the Project overview page. You can also view the exact set of changes made to the project in the last year (who, what, and when) by visiting the [Activity Logs](projects/index.md#view-a-projects-activity-log) tab within the Project.
