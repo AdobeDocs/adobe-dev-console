@@ -2,30 +2,55 @@
 
 # Authentication Guide
 
-Adobe is committed to privacy and security. The following is a guide on navigating the various authentication mechanisms available to you as a developer when integrating or extending different Adobe services.
+Learn how to securely integrate with Adobe products and services in your application. The following guide is a technical reference for the Adobe supported authentication types available to your application. 
 
 ## Overview
 
-Adobe is committed to privacy and security. Nearly all Adobe services require your application to authenticate through the Adobe Identity Management System (IMS) to receive client credentials. The client credentials determine the access and permissions granted to your application.
+Adobe is committed to the privacy and security of our users and their data. Therefore, understanding various authentication and authorization mechanisms is of unique importance for a developer integrating with Adobe products and services.
 
-Any API that accesses a service, data or content on behalf of an end user authenticates using the OAuth or JSON Web Token standards.
+Depending on the Adobe product or service you are integrating in your app, you may be required to use one or more of the authentication types listed below. Each authentication type further has different credential types that support different platforms (web, mobile, desktop, etc.).
 
-Use the [Adobe Developer Console](/console) to obtain client credentials by creating a new **Project**. Once you create a project, you can add APIs that include **API Keys** (Client ID) and other access credentials. You can then obtain a secure access token from Adobe for each API session.
+1. [User authentication](./UserAuthentication/index.md)
+   * [OAuth Web App credential](./UserAuthentication/implementation.md#oauth-web-app-credential)
+   * [OAuth Single Page App credential](./UserAuthentication/implementation.md#oauth-single-page-app-credential)
+   * [OAuth Native App credential](./UserAuthentication/implementation.md#oauth-native-app-credential)
 
-A project can include one or more services. In many cases, you will use the same client credentials to access multiple Adobe products and services. In addition to APIs, you may also add I/O Events and I/O Runtime to your projects so that your applications can access content and services in real-time.
+2. [Server to server authentication](./index.md#server-to-server-authentication)
+   * OAuth Server to Server credential
+   * Service Account (JWT) credential *(deprecated)*
 
-To learn more about creating projects in Adobe Developer Console, read the [Console getting started guide](../getting-started.md).
+3. [API key authentication](./index.md#api-key-authentication)
+   * API Key credential
 
-## Types of Authentication
 
-### [API Key Integration (Authorization Only)](APIKeyIntegration.md)
-An API Key is the only client credential required for these services. These integrations do not need to pass an access token with each request.
-e.g. Adobe Stock
+## User authentication
 
-### [OAuth Integration (OAuth 2.0 authentication flow)](OAuthIntegration.md)
-If your integration needs to access content or a service on behalf of an end user, that user must be authenticated as well. Your integration will need to pass the OAuth token granted by the Adobe IMS.
-e.g. Creative SDK, Photoshop, Adobe Analytics
+If your application needs to read or modify the data owned by an Adobe end-user it can do so by using a user authentication credential. However, before your application can view or edit the user's data, the user would need to provide an explicit 'consent' to your application. 
 
-### [Service Account Integration (JWT authentication flow)](ServiceAccountIntegration.md)
-For service-to-service integrations, you will also need a JSON Web Token (JWT) that encapsulates your client credentials and authenticates the identity of your integration. You then exchange the JWT for the access token that authorizes access.
-e.g. Adobe Campaign, Adobe Launch, Adobe Target
+View our guide on user authentication credentials -
+1. [Understanding OAuth 2.0 `authorization_code` grant flow (3-legged OAuth)](./UserAuthentication/index.md)
+2. [Learning about the different user authentication credential types](./UserAuthentication/implementation.md#user-authentication-credential-types)
+3. [Understanding default redirect URI and redirect URI pattern](./UserAuthentication/implementation.md#understanding-default-redirect-uri-and-redirect-uri-patterns)
+4. [Implementing user authentication using standard OAuth2 libraries](./UserAuthentication/implementation.md#standard-oauth2-libraries)
+
+
+## Server to server authentication
+
+If your application needs to read or modify data owned by your application or your organization, you can do so by using a server to server authentication credential. Server to server authentication credentials only allow you to access your application's data or your organization's data, and therefore, do not require an end user to sign in. 
+
+View our guide on server to server authentication credentials -
+1. Understanding OAuth 2.0 `client_credentials` grant type (2-legged OAuth)
+2. Learning about the different Server to server authentication credential types
+3. Setting up the credential - credential name, product profiles
+4. Implementing server to server authentication using standard OAuth2 libraries
+5. Rotating client secrets programmaticly
+
+
+## API key authentication 
+
+If your application needs to integrate with an Adobe offering that supports unauthenticated workflows (does not require access tokens), you can do so by using API key credential. The API key credential identifies your application to Adobe servers and can help accept/reject requests originating from certain domains that you configure during credential setup.
+
+View our guide on API key credentials - 
+1. Understanding different uses of the API key credential
+2. Setting up the credential - allowed origins
+

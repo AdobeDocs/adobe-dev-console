@@ -152,16 +152,12 @@ module.exports = {
           {
             pages: [
               {
-                path: "guides/authentication/OAuth/Scopes.md",
-                title: "OAuth Scopes"
-              },
-              {
-                path: "guides/authentication/OAuth/samples.md",
-                title: "OAuth Sample Code"
+                path: "guides/authentication/UserAuthentication/implementation.md",
+                title: "Implementation Guide"
               }
             ],
-            path: "guides/authentication/OAuth/index.md",
-            title: "OAuth Authentication"
+            path: "guides/authentication/UserAuthentication/index.md",
+            title: "User Authentication"
           },
           {
             pages: [
