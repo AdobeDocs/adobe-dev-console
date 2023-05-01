@@ -154,6 +154,10 @@ module.exports = {
               {
                 path: "guides/authentication/UserAuthentication/implementation.md",
                 title: "Implementation Guide"
+              },
+              {
+                path: "guides/authentication/UserAuthentication/IMS.md",
+                title: "API Reference"
               }
             ],
             path: "guides/authentication/UserAuthentication/index.md",
@@ -176,10 +180,6 @@ module.exports = {
             ],
             path: "guides/authentication/JWT/index.md",
             title: "JWT (Service Account) Authentication"
-          },
-          {
-            path: "guides/authentication/IMS.md",
-            title: "Authentication API Reference"
           },
           {
             pages: [

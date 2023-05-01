@@ -172,6 +172,6 @@ There are several great resources to get more familiar with the OAuth2.0 framewo
 + [StackOverflow](https://stackoverflow.com/questions/tagged/oauth-2.0)
 + Authentication API Reference
   + [Authorize Request](../IMS.md#authorize-request)
-  + [Fetching Access Tokens](../IMS.md#fetching-access-tokens)
+  + [Fetching Access Tokens](../IMS.md#fetching-access-tokens-for-user-authentication-credentials)
   + [Refreshing Access Tokens](../IMS.md#refreshing-access-tokens)
   + [Revoking a Token](../IMS.md#token-revocation)
