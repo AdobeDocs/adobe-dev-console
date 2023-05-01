@@ -19,8 +19,8 @@ Depending on the Adobe product or service you are integrating in your app, you m
    * OAuth Server to Server credential
    * Service Account (JWT) credential *(deprecated)*
 
-3. [API key authentication](./index.md#api-key-authentication)
-   * API Key credential
+3. [API key authentication](./APIKeyAuthentication/index.md)
+   * [API Key credential](./APIKeyAuthentication/index.md#api-key-credential)
 
 
 ## User authentication
@@ -51,6 +51,6 @@ View our guide on server to server authentication credentials -
 If your application needs to integrate with an Adobe offering that supports unauthenticated workflows (does not require access tokens), you can do so by using API key credential. The API key credential identifies your application to Adobe servers and can help accept/reject requests originating from certain domains that you configure during credential setup.
 
 View our guide on API key credentials - 
-1. Understanding different uses of the API key credential
-2. Setting up the credential - allowed origins
+1. [Understanding different uses of the API key credential](./APIKeyAuthentication/index.md#understanding-different-uses-of-the-api-key-credential)
+2. [Understanding allowed origins](./APIKeyAuthentication/index.md#understanding-allowed-origins)
 
