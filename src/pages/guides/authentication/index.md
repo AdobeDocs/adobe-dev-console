@@ -15,7 +15,7 @@ Depending on the Adobe product or service you are integrating in your app, you m
    * [OAuth Single Page App credential](./UserAuthentication/implementation.md#oauth-single-page-app-credential)
    * [OAuth Native App credential](./UserAuthentication/implementation.md#oauth-native-app-credential)
 
-2. [Server to server authentication](./index.md#server-to-server-authentication)
+2. [Server to server authentication](./ServerToServerAuthentication/index.md)
    * OAuth Server to Server credential
    * Service Account (JWT) credential *(deprecated)*
 
@@ -39,8 +39,8 @@ View our guide on user authentication credentials -
 If your application needs to read or modify data owned by your application or your organization, you can do so by using a server to server authentication credential. Server to server authentication credentials only allow you to access your application's data or your organization's data, and therefore, do not require an end user to sign in. 
 
 View our guide on server to server authentication credentials -
-1. Understanding OAuth 2.0 `client_credentials` grant type (2-legged OAuth)
-2. Learning about the different Server to server authentication credential types
+1. [Understanding server to server credentials](./ServerToServerAuthentication/index.md)
+2. [Learning about the different Server to server authentication credential types](./ServerToServerAuthentication/index.md#server-to-server-credential-types)
 3. Setting up the credential - credential name, product profiles
 4. Implementing server to server authentication using standard OAuth2 libraries
 5. Rotating client secrets programmaticly

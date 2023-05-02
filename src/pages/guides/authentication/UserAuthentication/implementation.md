@@ -93,7 +93,7 @@ The *Default redirect URI* MUST be hosted on a secure server (HTTPS), even if it
 
 ### Redirect URI pattern
 
-When creating a new authorization request, the OAuth 2.0 framework allows your application to request a different redirect URI than the default Redirect URI. However, any requested redirect URI must match against the *Redirect URI pattern* you supply. The authorize request can be successfully completed only if the requested Redirect URI passes regex matching, 
+When creating a new authorization request, the OAuth 2.0 framework allows your application to request a different redirect URI than the default Redirect URI by using the `redirect_url` query parameter. However, any requested redirect URI must match against the *Redirect URI pattern* you supply. The authorize request can be successfully completed only if the requested Redirect URI passes regex matching, 
 
 A *Redirect URI pattern* is a URI path (or comma-separated list of paths) to which Adobe can redirect (if requested) when the login and consent flow is completed. The URIs mentioned must be within your application domain. The redirect URI pattern field can accommodate up to 512 characters.
 

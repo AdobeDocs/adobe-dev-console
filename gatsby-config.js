@@ -138,18 +138,6 @@ module.exports = {
         title: "Authentication",
         pages: [
           {
-            path: "guides/authentication/APIKeyIntegration.md",
-            title: "API Key Integration"
-          },
-          {
-            path: "guides/authentication/OAuthIntegration.md",
-            title: "OAuth Integration"
-          },
-          {
-            path: "guides/authentication/ServiceAccountIntegration.md",
-            title: "Service Account Integration"
-          },
-          {
             pages: [
               {
                 path: "guides/authentication/UserAuthentication/implementation.md",
