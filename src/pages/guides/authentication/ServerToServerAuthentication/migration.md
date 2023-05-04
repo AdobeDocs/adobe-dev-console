@@ -43,7 +43,7 @@ Your applications using the Service Account (JWT) credentials will stop working 
 
 The migration to the OAuth Server-to-Server credential is a simple process that enables a zero downtime migration for your application. You can follow the steps below to you migrate your application.
 
-## Preparation: Find out which applications are using the Service Account (JWT) credentials
+### Preparation: Find out which applications are using the Service Account (JWT) credentials
 
 To find out which of your Adobe applications and integrations are using the Service Account (JWT) credential
 
@@ -57,7 +57,7 @@ Perform the steps below for each application/project you have identified. If a p
 
 Note: you do not have to worry about auto-generated projects. Adobe will automatically migrate those during the migration window.
 
-## Step 1: Add the new credential to your project
+### Step 1: Add the new credential to your project
 
 Once you have identified the application that needs to be updated and its related project on the Developer Console, the first step is to add the new credential to your project to begin using the new credential to generate access tokens and update your application.
 
@@ -79,7 +79,7 @@ Adding an equivalent OAuth Server-to-Server credential will not impact your runn
 
   * Meanwhile, you can test the new credential by generating access tokens using the Developer Console UI or a cURL command. We also recommend reading our [implementation guide](./implementation.md) that points to several [standard OAuth 2.0 libraries](./implementation.md#generating-access-tokens-using-standard-oauth2-libraries) to generate access tokens programmatically.
 
-## Step 2: Update your application and delete old credential
+### Step 2: Update your application and delete old credential
 
 <InlineAlert slots="text"/>
 
@@ -101,7 +101,7 @@ Completion of this step will complete the migration, and the step cannot be roll
    
 4. Once you are sure that you have replaced the old credential successfully, the dialog will take you to the last step of deleting the old credential. To confirm this step, you must type in the project name to confirm your intentions. Note: once completed, this step cannot be rolled back.
 
-## Cancelling Migration
+### Cancelling Migration
 
 During the migration, you cannot add any APIs or other services to the project. Furthermore, during migration, you cannot rotate client secrets for the OAuth Server-to-Server credential.
 
