@@ -1,6 +1,6 @@
 # User Authentication Implementation Guide
 
-The following guide goes over finer implementation details for user authentication credentials. At the end of the guide is a list of suggested industry-standard OAuth2 libraries. Before you proceed, we recommend you become familiar with the 3-legged OAuth in our [user authentication guide](./index.md).
+The following guide goes over finer implementation details for user authentication credentials. At the end of the guide is a list of recommended industry-standard OAuth2 libraries. Before you proceed, we recommend you become familiar with the 3-legged OAuth flow in our [user authentication guide](./index.md).
 
 ## User authentication credential types
 
