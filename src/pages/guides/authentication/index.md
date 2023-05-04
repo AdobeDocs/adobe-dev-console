@@ -2,13 +2,13 @@
 
 # Authentication Guide
 
-Learn how to securely integrate with Adobe products and services in your application. The following guide is a technical reference for the Adobe supported authentication types available to your application. 
+Learn how to integrate with Adobe products and services in your application securely. The following guide is a technical reference for the Adobe supported authentication types available to your application.
 
 ## Overview
 
-Adobe is committed to the privacy and security of our users and their data. Therefore, understanding various authentication and authorization mechanisms is of unique importance for a developer integrating with Adobe products and services.
+Adobe is committed to the privacy and security of our users and their data. Therefore, understanding various authentication and authorization mechanisms is uniquely important for a developer integrating with Adobe products and services.
 
-Depending on the Adobe product or service you are integrating in your app, you may be required to use one or more of the authentication types listed below. Each authentication type further has different credential types that support different platforms (web, mobile, desktop, etc.).
+Depending on the Adobe product or service you are integrating into your app, you may be required to use one or more of the authentication types listed below. Each authentication type has different credential types supporting different platforms (web, mobile, desktop, etc.).
 
 1. [User authentication](./UserAuthentication/index.md)
    * [OAuth Web App credential](./UserAuthentication/implementation.md#oauth-web-app-credential)
@@ -25,7 +25,7 @@ Depending on the Adobe product or service you are integrating in your app, you m
 
 ## User authentication
 
-If your application needs to read or modify the data owned by an Adobe end-user it can do so by using a user authentication credential. However, before your application can view or edit the user's data, the user would need to provide an explicit 'consent' to your application. 
+If your application needs to read or modify the data owned by an Adobe end-user, it can do so using a user authentication credential. However, before your application can view or edit the user's data, the user would need to provide explicit 'consent' to your application.
 
 View our guide on user authentication credentials -
 1. [Understanding OAuth 2.0 `authorization_code` grant flow (3-legged OAuth)](./UserAuthentication/index.md)
@@ -36,19 +36,19 @@ View our guide on user authentication credentials -
 
 ## Server to server authentication
 
-If your application needs to read or modify data owned by your application or your organization, you can do so by using a server to server authentication credential. Server to server authentication credentials only allow you to access your application's data or your organization's data, and therefore, do not require an end user to sign in. 
+If your application needs to read or modify data owned by your application or your organization, you can use a server to server authentication credential. Server to server authentication credentials only allow you to access your application's data or your organization's data and, therefore, do not require an end user to sign in.
 
 View our guide on server to server authentication credentials -
 1. [Understanding server to server credentials](./ServerToServerAuthentication/index.md)
 2. [Learning about the different Server to server authentication credential types](./ServerToServerAuthentication/index.md#server-to-server-credential-types)
 3. [Setting up the credential - credential name, product profiles](./ServerToServerAuthentication/implementation.md#setting-up-the-oauth-server-to-server-credential)
 4. [Implementing server to server authentication using standard OAuth2 libraries](./ServerToServerAuthentication/implementation.md#generating-access-tokens-using-standard-oauth2-libraries)
-5. [Rotating client secrets programmaticly](./ServerToServerAuthentication/implementation.md#rotating-client-secrets-programmaticaly)
+5. [Rotating client secrets programmatically](./ServerToServerAuthentication/implementation.md#rotating-client-secrets-programmatically)
 
 
 <InlineAlert slots="text"/>
 
-The Service Account (JWT) credentials have been deprecated in favor of the OAuth Server-to-Server credentials. Your applications using the Service Account (JWT) credentials will stop working after Jan 1, 2025. **You must migrate to the new credential by Jan 1, 2025 in order to ensure your application continues to function. View our [migration guide](./ServerToServerAuthentication/migration.md) to know more.**
+The Service Account (JWT) credentials have been deprecated in favor of the OAuth Server-to-Server credentials. Your applications using the Service Account (JWT) credentials will stop working after Jan 1, 2025. **You must migrate to the new credential by Jan 1, 2025, to ensure your application continues functioning. View our [migration guide](./ServerToServerAuthentication/migration.md) to know more.**
 
 
 ## API key authentication 
