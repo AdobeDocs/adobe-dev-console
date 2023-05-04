@@ -16,8 +16,8 @@ Depending on the Adobe product or service you are integrating in your app, you m
    * [OAuth Native App credential](./UserAuthentication/implementation.md#oauth-native-app-credential)
 
 2. [Server to server authentication](./ServerToServerAuthentication/index.md)
-   * OAuth Server to Server credential
-   * Service Account (JWT) credential *(deprecated)*
+   * [OAuth Server to Server credential](./ServerToServerAuthentication/index.md#oauth-server-to-server-credential)
+   * [Service Account (JWT) credential *(deprecated)*](./ServerToServerAuthentication/index.md#service-account-jwt-credential-deprecated)
 
 3. [API key authentication](./APIKeyAuthentication/index.md)
    * [API Key credential](./APIKeyAuthentication/index.md#api-key-credential)
@@ -41,9 +41,14 @@ If your application needs to read or modify data owned by your application or yo
 View our guide on server to server authentication credentials -
 1. [Understanding server to server credentials](./ServerToServerAuthentication/index.md)
 2. [Learning about the different Server to server authentication credential types](./ServerToServerAuthentication/index.md#server-to-server-credential-types)
-3. Setting up the credential - credential name, product profiles
-4. Implementing server to server authentication using standard OAuth2 libraries
-5. Rotating client secrets programmaticly
+3. [Setting up the credential - credential name, product profiles](./ServerToServerAuthentication/implementation.md#setting-up-the-oauth-server-to-server-credential)
+4. [Implementing server to server authentication using standard OAuth2 libraries](./ServerToServerAuthentication/implementation.md#generating-access-tokens-using-standard-oauth2-libraries)
+5. [Rotating client secrets programmaticly](./ServerToServerAuthentication/implementation.md#rotating-client-secrets-programmaticaly)
+
+
+<InlineAlert slots="text"/>
+
+The Service Account (JWT) credentials have been deprecated in favor of the OAuth Server-to-Server credentials. Your applications using the Service Account (JWT) credentials will stop working after Jan 1, 2025. **You must migrate to the new credential by Jan 1, 2025 in order to ensure your application continues to function. View our [migration guide](./ServerToServerAuthentication/migration.md) to know more.**
 
 
 ## API key authentication 

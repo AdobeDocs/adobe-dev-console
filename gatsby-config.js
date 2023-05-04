@@ -154,20 +154,42 @@ module.exports = {
           {
             pages: [
               {
-                path: "guides/authentication/JWT/JWTCertificate.md",
-                title: "Create a Public Key Certificate"
+                path: "guides/authentication/ServerToServerAuthentication/implementation.md",
+                title: "Implementation Guide"
               },
               {
-                path: "guides/authentication/JWT/Scopes.md",
-                title: "JWT Metascopes"
+                path: "guides/authentication/ServerToServerAuthentication/migration.md",
+                title: "Migration Guide"
               },
               {
-                path: "guides/authentication/JWT/samples.md",
-                title: "JWT Sample Code"
+                path: "guides/authentication/ServerToServerAuthentication/IMS.md",
+                title: "API Reference"
+              },
+              {
+                pages: [
+                  {
+                    path: "guides/authentication/JWT/JWTCertificate.md",
+                    title: "Create a Public Key Certificate"
+                  },
+                  {
+                    path: "guides/authentication/JWT/Scopes.md",
+                    title: "JWT Metascopes"
+                  },
+                  {
+                    path: "guides/authentication/JWT/samples.md",
+                    title: "JWT Sample Code"
+                  }
+                ],
+                path: "guides/authentication/JWT/index.md",
+                title: "Service Account (JWT) credential"
               }
             ],
-            path: "guides/authentication/JWT/index.md",
-            title: "JWT (Service Account) Authentication"
+            path: "guides/authentication/ServerToServerAuthentication/index.md",
+            title: "Server to Server Authentication"
+          },
+          {
+            path: "guides/authentication/APIKeyAuthentication/index.md",
+            title: "API Key Authentication"
           },
           {
             pages: [

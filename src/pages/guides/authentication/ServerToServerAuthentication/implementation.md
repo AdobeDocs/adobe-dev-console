@@ -47,7 +47,7 @@ curl -X POST 'https://ims-na1.adobelogin.com/ims/token/v3?client_id={CLIENT_ID}'
 
 ### Generating access tokens using standard OAuth2 libraries
 
-The  OAuth community site https://oauth.net has a huge list of community-maintained OAuth2 libraries. Some widely known and maintained OAuth2 libraries from that list are -
+We recommend that you use a standard OAuth 2.0 library to implement the access token generation logic in your application. The  OAuth community site https://oauth.net has a huge list of community-maintained OAuth2 libraries. Some widely known and maintained OAuth2 libraries from that list are -
 
 1. [PassportJS](https://github.com/jaredhanson/passport) (Node.js)
 2. [Spring Security](https://spring.io/projects/spring-security) (Java)
