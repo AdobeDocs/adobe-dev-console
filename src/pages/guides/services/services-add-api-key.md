@@ -6,7 +6,7 @@ To begin adding an API from within a templated project, first select the appropr
 
 In an empty project, select **+Add to Project** in the left navigation of the *Project overview* and then choose **API**, or select **Add API** from the quick start buttons.
 
-![](../../images/services-add-to-project.png)
+![alt text](../../images/services-add-to-project.png)
 
 ## Add an API
 
@@ -16,11 +16,11 @@ Using REST APIs allows your application to make calls to Adobe services and prod
 
 Many services are only available through paid licenses or subscriptions. Licenses and subscriptions can refer to either your organization or your personal licenses if you are building a personal project. For this reason, if you select "All" from the *View by* dropdown, you may notice that several services appear greyed out in the list. If you believe that you should have access to one of these disabled services, please speak with your system administrator or Adobe sales representative.
 
-![](../../images/services-add-api.png)
+![alt text](../../images/services-add-api.png)
 
 Once you have found and chosen an API that you would like to add, select **Next** to begin configuring the API.
 
-![](../../images/services-api-key-choose.png)
+![alt text](../../images/services-api-key-choose.png)
 
 ## Configure API
 
@@ -34,7 +34,7 @@ The domains should be entered without the protocol (`http://` of `https://`), bu
 
 Once the list of *Allowed domains* is complete, select **Save configured API** to complete the configuration.
 
-![](../../images/services-api-key-configure.png)
+![alt text](../../images/services-api-key-configure.png)
 
 ## API overview
 
@@ -42,7 +42,7 @@ With the API configured, you are redirected to the API overview, providing links
 
 You can also elect to remove the API on this screen using the *Remove API* button in the top-right corner.
 
-![](../../images/services-api-key-added.png)
+![alt text](../../images/services-api-key-added.png)
 
 ## Credentials
 

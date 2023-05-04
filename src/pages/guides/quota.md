@@ -20,7 +20,7 @@ If the API has a specified quota, *Quota usage* will be visible at the top of th
 
 For example, the DC SDK (Shown as *Services SDK* in the image below) provides 5,000 pages-worth of PDF actions for a six month time period, therefore the **Total quota** is 5,000 and the **Quota used** refers to the number of PDF actions multiplied by the number of pages. The percent value refers to the percentage of the 5,000 total quota that has been used.
 
-![](../images/quota-usage.png)
+![Quota and Usage](../images/quota-usage.png)
 
 ## Next steps
 

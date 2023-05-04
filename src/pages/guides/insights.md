@@ -22,7 +22,7 @@ There is a 10 minute delay on all data shown.
 
 By default, the information shown on the *Overview* tab is for all APIs that have been added to the project or workspace. You can use the **All Services** dropdown to select a specific API that you would like to focus on. Alternatively, to see more insights related to APIs, you can select **APIs** from the insights navigation.
 
-![](../images/insights-overview.png)
+![Insights overview](../images/insights-overview.png)
 
 ## API insights
 
@@ -30,13 +30,13 @@ Selecting **APIs** from the insights navigation opens the *APIs* tab, showing *A
 
 By default, this information is shown for all APIs that have been added to the project or workspace. Similar to the insights overview, you can use the **All Services** dropdown to select a specific API that you would like to focus on. 
 
-![](../images/insights-api-overview.png)
+![Insights API overview](../images/insights-api-overview.png)
 
 When a specific API is selected, the *API calls over time* graph adjusts to show only those calls related to the selected API. The *Total API calls by service* circle graph is redrawn to illustrate *Total API calls by endpoint* from within the selected API.
 
 The *Response codes* graph is also redrawn to show only the response codes from the specified API.
 
-![](../images/insights-api-detail.png)
+![Insights API details](../images/insights-api-detail.png)
 
 ## Runtime insights
 
@@ -52,10 +52,10 @@ There is a 10 minute delay on all data shown.
 
 By default, the *Runtime* tab shows all actions, but you can use the **Show** dropdown to select a specific action to view in more detail.
 
-![](../images/insights-runtime-overview.png)
+![Insights Runtime Overview](../images/insights-runtime-overview.png)
 
 Once a specific action has been selected using the **Show** dropdown, the *Runtime* tab adjusts to display information specific to that action. Note that the runtime namespace updates to include "runtime namespace/action" and that the counts now show totals for *Cache Hit Ratio*, *Activations*, and *Activation Errors*.
 
 The breakdown of action-specific information also includes *Total activations by region*, as well as graphs showing *Activations over time by region*, *Activation errors over time*, and *Activation Duration*, each broken down by regions.
 
-![](../images/insights-runtime-action.png)
+![Insights Runtime action](../images/insights-runtime-action.png)

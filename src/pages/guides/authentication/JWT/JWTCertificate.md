@@ -7,7 +7,7 @@ The Service Account (JWT) credentials have been deprecated in favor of the OAuth
 
 Create a private key and a public certificate. Make sure you store these securely.
 
-## MacOS and Linux:
+## MacOS and Linux
 
 Open a terminal and execute the following command:  
 
@@ -15,7 +15,7 @@ Open a terminal and execute the following command:
 
 ![Generate public certificate](../Images/auth_jwtqs_00.png "Generate Public certificate")
 
-## Windows:
+## Windows
 
 1. Download an OpenSSL client to generate public certificates; for example, you can try the [OpenSSL Windows client](https://bintray.com/vszakats/generic/download_file?file_path=openssl-1.1.1-win64-mingw.zip).
 

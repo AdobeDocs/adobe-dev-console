@@ -8,7 +8,7 @@ For information on how to build a plugin, please being by reading the [plugin ov
 
 When you have finished developing your plugin, it is time to submit the plugin for review and distribution. To begin, select the plugin project from the project list.
 
-![](../../images/project-personal-listing.png)
+![select project](../../images/project-personal-listing.png)
 
 ## Project overview
 
@@ -16,7 +16,7 @@ Selecting the project opens the **Project overview** that provides information a
 
 Under **Products & services** you can confirm that this is a plugin project and its status is currently "In Development".
 
-![](../../images/plugin-project-overview.png)
+![project overview](../../images/plugin-project-overview.png)
 
 ## Begin distribution process
 
@@ -26,7 +26,7 @@ To begin the distribution process, select **Distribute** from the left navigatio
 
 Distributing a plugin requires you to complete a public profile before you can submit your plugin listing. The information in your public profile tells users about who created your plugin. A commerce account can also be set up for paid plugins. If you have not already created a public profile, select **Complete your public profile** and read the [public profile overview](../public-profile.md) for more information.
 
-![](../../images/plugin-distribute.png)
+![distribute](../../images/plugin-distribute.png)
 
 ### Distribution resources
 
@@ -40,7 +40,7 @@ The **Distribute** tab also includes **Resources** to help you with the distribu
 
 Once you have gathered your files and created your public profile, you're ready to create your listing. To get started, select **Create XD plugin listing** (or **Create Photoshop plugin listing**) on the **Distribute** screen.
 
-![](../../images/plugin-create-listing.png)
+![create listing](../../images/plugin-create-listing.png)
 
 ### Listing Information
 
@@ -52,7 +52,7 @@ The **Listing Information** tab requires you to complete the details related to 
 
 The listing information is also where you are able to upload plugin icons and screenshots to improve your plugin listing. Once you have completed all of the required fields, you can continue with your plugin submission by selecting **Upload Plugin File** at the end of the listing information form or by selecting **Plugin File** from the top navigation.
 
-![](../../images/plugin-listing-information.png)
+![listing information](../../images/plugin-listing-information.png)
 
 ### Commerce information
 
@@ -60,7 +60,7 @@ If you are submitting a Photoshop plugin, the listing information includes a **C
 
 **Note:** If you select **Paid** as the purchase method, you must complete the commerce information in your public profile. For more information on completing your public profile, read the [public profile overview](../public-profile.md).
 
-![](../../images/plugin-photoshop-purchase-method.png)
+![commerce information](../../images/plugin-photoshop-purchase-method.png)
 
 ### Plugin File
 
@@ -68,7 +68,7 @@ After ensuring that your plugin is packaged in the correct file format (`.xdx` f
 
 **Note:** Plugin files must be less than 50 MB.
 
-![](../../images/plugin-distribute-file.png)
+![plugin distribute](../../images/plugin-distribute-file.png)
 
 Once the plugin file has been successfully uploaded, the name of the `.xdx` (or `.ccx`) file will appear in the **Plugin File** field and the manifest will populate values for the following fields:
 
@@ -78,7 +78,7 @@ Once the plugin file has been successfully uploaded, the name of the `.xdx` (or 
 
 You can now select **Preview & Submit** to preview your listing and submit your plugin for approval.
 
-![](../../images/plugin-distribute-complete.png)
+![distribution completed](../../images/plugin-distribute-complete.png)
 
 ### Preview and submit
 
@@ -92,7 +92,7 @@ You also have the option to **Delay Publishing** to a later time. By default the
 
 After reviewing your plugin listing, adding notes to Adobe reviewers, and selecting your publishing time, you can **Submit** your plugin for review.
 
-![](../../images/plugin-preview-submit.png)
+![preview and submit](../../images/plugin-preview-submit.png)
 
 ## Plugin review
 
@@ -102,7 +102,7 @@ The distribute screen now also displays **+ Add new version** in the top-right c
 
 **Note:** Adobe Developer Console supports versioning for plugins, but attempting to add a new version while the current plugin is "In Review" will result in a "Plugin already in review" warning. Any new versions that are submitted will replace the version currently in review, moving your submission to the back of the queue. To lear more about versioning, see the documentation on [updating plugins](plugin-update.md).
 
-![](../../images/plugin-distribute-success.png)
+![plugin distribute successful](../../images/plugin-distribute-success.png)
 
 ## Next steps
 

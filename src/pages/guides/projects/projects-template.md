@@ -16,7 +16,7 @@ Before creating a project, ensure that you are working in the correct organizati
 
 To create a new project, select **Create project from template** from the **Quick start** menu on the **Home** screen.
 
-![](../../images/create-project-from-template.png)
+![alt text](../../images/create-project-from-template.png)
 
 ## Select template type
 
@@ -26,7 +26,7 @@ Currently there is only one template type available: **App Builder**. The App Bu
 
 **Note:** Additional templates will be released in the future to support the streamlining of other workflows and creation of applications.
 
-![](../../images/browse-templates.png)
+![alt text](../../images/browse-templates.png)
 
 ## Set up templated project
 
@@ -34,7 +34,7 @@ After a template has been selected, it is time to set up the project. The follow
 
 **Note:** Please pay special attention to the [App Name](#app-name) as this value cannot be changed once project set up is complete.
 
-![](../../images/set-up-templated-project.png)
+![alt text](../../images/set-up-templated-project.png)
 
 ### Project title
 
@@ -44,7 +44,7 @@ A project title is generated automatically ("Project 01"), but you can change th
 
 It is recommended that if you are working in collaboration with multiple developers, you provide a project title that is meaningful and makes the project easy to distinguish from other projects in the organization.
 
-![](../../images/templated-project-title.png)
+![alt text](../../images/templated-project-title.png)
 
 ### App Name
 
@@ -52,7 +52,7 @@ The app name is the public-facing name of the application and is used for settin
 
 **Note:** The app name is publicly visible, will be submitted for approval, and must be unique. You cannot change your app's name after creating the project.
 
-![](../../images/templated-project-app-name.png)
+![alt text](../../images/templated-project-app-name.png)
 
 ### Workspaces
 
@@ -64,7 +64,7 @@ Since most custom applications are created with the intent of being distributed,
 
 You can create additional workspaces for each individual developer working on the project. These workspaces are editable and can be added as needed.
 
-![](../../images/templated-project-workspaces.png)
+![alt text](../../images/templated-project-workspaces.png)
 
 ### Adobe Runtime
 
@@ -90,7 +90,7 @@ From here you can view and select all available workspaces, as well as see vario
 
 **Note:** Because we elected to "Include Runtime with each workspace", the "Delete project" button is disabled.
 
-![](../../images/project-overview.png)
+![alt text](../../images/project-overview.png)
 
 ## Add a workspace
 
@@ -98,7 +98,7 @@ You can add additional workspaces to a project during creation, or after a proje
 
 These workspaces appear alongside the default Production and Stage workspaces as individual cards. These additional workspace cards include an ellipses button ("...") that, when selected, allows you to Edit the workspace.
 
-![](../../images/templated-project-add-workspace.png)
+![alt text](../../images/templated-project-add-workspace.png)
 
 ## Select a workspace
 
@@ -108,7 +108,7 @@ Once a workspace is selected, the **Workspace overview** opens showing informati
 
 **Note:** If you selected to "Include Runtime with each workspace" during set up, you will see the unique Runtime namespace for the workspace listed under *Products & Services*.
 
-![](../../images/workspace-products-services.png)
+![alt text](../../images/workspace-products-services.png)
 
 ## Add services
 
@@ -116,7 +116,7 @@ To begin adding services to your project, you can use the **Add service** button
 
 For detailed information on working with services, please read the [services documentation](../services/index.md).
 
-![](../../images/workspace-add-service.png)
+![alt text](../../images/workspace-add-service.png)
 
 ## Insights
 
@@ -138,4 +138,4 @@ After the project has been deleted, you are returned to the project list and an 
 
 **Note:** If Runtime has been enabled for a project, or a workspace within a project, the project can no longer be deleted and the **Delete project** button will not appear in the project overview. You can select to start over with a new project or edit your existing project, but you cannot remove Runtime nor can you delete a project containing a Runtime namespace.
 
-![](../../images/project-delete.png)
+![alt text](../../images/project-delete.png)

@@ -10,7 +10,7 @@ To begin adding a service from within a templated project, first select the appr
 
 In an empty project, select **+ Add to Project** in the left navigation of the **Project overview** or select from the quick start buttons.
 
-![](../../images/services-add-to-project.png)
+![Add to project](../../images/services-add-to-project.png)
 
 ## Service-specific workflows
 
@@ -67,4 +67,3 @@ To learn more about insights, read the [insights overview](../insights.md).
 You can continue to add as many services as you need by following the various [workflow guides](#service-specific-workflows) found in this document.
 
 Once you have completed development on your project and are ready to submit your application for approval, please read the [project approval guide](../projects/approval.md) to get started.
-

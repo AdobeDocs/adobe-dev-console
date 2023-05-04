@@ -6,7 +6,7 @@ To begin adding an API from within a templated project, first select the appropr
 
 In an empty project, select **+Add to Project** in the left navigation of the *Project overview* and then choose **API**, or select **Add API** from the quick start buttons.
 
-![](../../images/services-add-to-project.png)
+![alt text](../../images/services-add-to-project.png)
 
 ## Add an API
 
@@ -16,11 +16,11 @@ Using REST APIs allows your application to make calls to Adobe services and prod
 
 Many services are only available through paid licenses or subscriptions. Licenses and subscriptions can refer to either your organization or your personal licenses if you are building a personal project. For this reason, if you select "All" from the *View by* dropdown, you may notice that several services appear greyed out in the list. If you believe that you should have access to one of these disabled services, please speak with your system administrator or Adobe sales representative.
 
-![](../../images/services-add-api.png)
+![alt text](../../images/services-add-api.png)
 
 Once you have found and chosen an API that you would like to add, select **Next** to begin configuring the API.
 
-![](../../images/services-select-api-jwt.png)
+![alt text](../../images/services-select-api-jwt.png)
 
 ## Configure API
 
@@ -38,7 +38,7 @@ There are two options for creating the necessary credentials:
 
     To upload your own public key, drag and drop a file from your computer or use *Select a File* to choose the file that you would like to use. Then select **Next** to proceed.
 
-![](../../images/services-api-jwt-create.png)
+![alt text](../../images/services-api-jwt-create.png)
 
 If you select Option 1 to **Generate a key pair**, immediately upon selecting the **Generate keypair** button, a file is downloaded to your computer containing your private key, as well as all of your app settings. 
 
@@ -54,7 +54,7 @@ If the selected API configuration is complete, a **Save configured API** button 
 
 Otherwise, please proceed to the next section on [selecting product profiles](#select-product-profiles). 
 
-![](../../images/services-api-jwt-keypair.png)
+![alt text](../../images/services-api-jwt-keypair.png)
 
 ## Select product profiles
 
@@ -64,7 +64,7 @@ As product profiles are selected, they appear in the left navigation under *Prod
 
 Continue selecting all required product profiles and, once complete, select **Save configured API** to complete the configuration.
 
-![](../../images/services-api-jwt-choose-profiles.png)
+![alt text](../../images/services-api-jwt-choose-profiles.png)
 
 ## API overview
 
@@ -72,7 +72,7 @@ With the API configured, you are redirected to the API overview, providing links
 
 You can also elect to remove the API on this screen using the **Remove API** button or, if the API includes product profiles, edit the profiles selected during configuration.
 
-![](../../images/services-api-jwt-added.png)
+![alt text](../../images/services-api-jwt-added.png)
 
 ## Quota usage
 
@@ -82,17 +82,17 @@ For APIs that provide a quota, a *Quota usage* section will appear at the top of
 
 For more information on quota usage, please visit the [quota usage overview](../quota.md).
 
-![](../../images/quota-usage.png)
+![alt text](../../images/quota-usage.png)
 
 ## Generate token
 
 To generate a token, copy and paste your private key into the *Private key* field and select **Generate token**.
 
-![](../../images/services-api-jwt-generate-token.png)
+![alt text](../../images/services-api-jwt-generate-token.png)
 
 If the private key is correct, an access token will appear along with the ability to **Copy** the token for use.
 
-![](../../images/services-api-jwt-token.png)
+![alt text](../../images/services-api-jwt-token.png)
 
 ## Credentials
 

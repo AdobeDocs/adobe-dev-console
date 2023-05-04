@@ -16,7 +16,7 @@ Next, select **Create new project** from the **Quick start** menu on the **Home*
 
 **Note:** When accessing Console using a developer organization, only two Quick start options appear: "Create new project" and "Developer downloads".
 
-![](../../images/create-new-project-quick-start.png)
+![alt text](../../images/create-new-project-quick-start.png)
 
 ## Project overview
 
@@ -28,7 +28,7 @@ A project name is automatically generated for your project ("Project 12" in the 
 
 The project overview screen also includes the last modified date of the project, the project created date, and the project description.
 
-![](../../images/new-project-created.png)
+![alt text](../../images/new-project-created.png)
 
 ## Download project
 
@@ -42,7 +42,7 @@ Once the project has been deleted, you are returned to the project list and an a
 
 **Note:** Once Runtime has been enabled for a project, the project can no longer be deleted and the **Delete project** button will not appear in the project overview. You can select to start over with a new project or edit your existing project, but you cannot remove Runtime nor can you delete a project containing a Runtime namespace.
 
-![](../../images/project-delete.png)
+![alt text](../../images/project-delete.png)
 
 ## Next Steps
 
@@ -52,4 +52,4 @@ To learn more about working with services including steps for adding APIs, event
 
 If you are interested in building a Plugin, please visit the [plugins overview](../plugins/index.md) for a complete guide to creating, updating, and distributing plugins.
 
-![](../../images/empty-project-add-to-project.png)
+![alt text](../../images/empty-project-add-to-project.png)

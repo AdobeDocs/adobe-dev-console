@@ -10,25 +10,25 @@ On the distribution tab, are details pertaining to your current plugin, includin
 
 To add a new version, select **Add new version** in the top-right corner of the screen.
 
-![](../../images/plugin-add-new-version.png)
+![add new version](../../images/plugin-add-new-version.png)
 
 ## Update listing information
 
 At this time you can update the **Listing Information**, including the categories your plugin should be listed in, languages your plugin supports, and version details for your new plugin version.
 
-![](../../images/plugin-listing-information.png)
+![plugin listing information](../../images/plugin-listing-information.png)
 
 ## Plugin file
 
 After ensuring that your listing has been updated properly, you can drag and drop your new plugin file or use **Select a File** to navigate to the appropriate file on your computer and select it for upload.
 
-![](../../images/plugin-distribute-file.png)
+![plugin file](../../images/plugin-distribute-file.png)
 
 Once the plugin file has been successfully uploaded, the name of the file will appear in the **Plugin File** field and the manifest will populate the new **Plugin version** (Required), **Min. version** (Required), and **Max. version** (Optional). 
 
 You can now select **Preview & Submit** to continue.
 
-![](../../images/plugin-distribute-complete.png)
+![distribute complete](../../images/plugin-distribute-complete.png)
 
 ### Preview and submit
 
@@ -38,13 +38,13 @@ You can add a new **Note to Adobe Reviewers** and you again have the option to *
 
 After reviewing your plugin listing, adding notes to Adobe reviewers, and selecting your publishing time, you can **Submit** the new version of your plugin for review.
 
-![](../../images/plugin-preview-submit.png)
+![preview submit](../../images/plugin-preview-submit.png)
 
 ## Plugin review
 
 Upon successful submission on your Plugin, you will return to the **Distribute** page where the **Version Number** will have updated to the new version of your plugin, and the **Status** will once again be "In review".
 
-![](../../images/plugin-new-version-in-review.png)
+![version review](../../images/plugin-new-version-in-review.png)
 
 ## Next steps
 

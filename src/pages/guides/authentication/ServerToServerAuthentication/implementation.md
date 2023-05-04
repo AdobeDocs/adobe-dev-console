@@ -19,17 +19,17 @@ Depending on the API or an Event to your project on the Adobe Developer Console,
 
 An admin in your organization can manage all OAuth Server-to-Server credentials by visiting the [Adobe Admin Console](https://adminconsole.adobe.com) > Users > API credentials. To find the correct API credential easily on the Admin Console, you can provide your OAuth Server-to-Server credential a name during credential setup.
 
-![](../../../images/oauth-server-to-server-credential-name.png)
+![OAuth Server-to-Server Credential Name](../../../images/oauth-server-to-server-credential-name.png)
 
 This name can be modified later in your project by visiting the OAuth Server-to-Server credential overview page.
 
-![](../../../images/oauth-server-to-server-credential-name-update.png)
+![OAuth Server-to-Server Credential Name update](../../../images/oauth-server-to-server-credential-name-update.png)
 
 ### Selecting Product Profiles
 
 Depending on the API or Event you add, you may be asked to select product profiles to assign to your credential. These product profiles govern what data your application can/cannot access in your organization. 
 
-![](../../../images/oauth-server-to-server-credential-product-profiles.png)
+![OAuth Server-to-Server Credential product profiles](../../../images/oauth-server-to-server-credential-product-profiles.png)
 
 The product profile selection works the same way as it does for Service Account (JWT) credentials.
 
@@ -43,7 +43,7 @@ curl -X POST 'https://ims-na1.adobelogin.com/ims/token/v3?client_id={CLIENT_ID}'
   -d 'client_secret={CLIENT_SECRET}&grant_type=client_credentials&scope={SCOPES}'
 ```
 
-![](../../../images/oauth-server-to-server-credential-generate-access-tokens.png)
+![OAuth Server-to-Server Credential generate access token](../../../images/oauth-server-to-server-credential-generate-access-tokens.png)
 
 ### Generating access tokens using standard OAuth2 libraries
 
@@ -70,18 +70,18 @@ To rotate client secrets through the UI, follow the steps below on the credentia
 
 1. Add a new client secret to your credential .
 
-![](../../../images/oauth-server-to-server-credential-add-client-secret.png)
+![OAuth Server-to-Server Credential add client secret](../../../images/oauth-server-to-server-credential-add-client-secret.png)
 
-![](../../../images/oauth-server-to-server-credential-added-client-secret.png)
+![OAuth Server-to-Server Credential added client secret](../../../images/oauth-server-to-server-credential-added-client-secret.png)
 
 2. Update your application to replace your old client secret with the new one you added.
 3. Check the client secret last used timestamp to make sure your application is no longer using the old client secret.
 
-![](../../../images/oauth-server-to-server-credential-check-client-secret-timestamps.png)
+![OAuth Server-to-Server Credential check client secret last used timestamp](../../../images/oauth-server-to-server-credential-check-client-secret-timestamps.png)
 
 4. Once sure that you have successfully replaced the client secret, you can delete the old client secret.
 
-![](../../../images/oauth-server-to-server-credential-delete-old-client-secret.png)
+![OAuth Server-to-Server Credential delete old client secret](../../../images/oauth-server-to-server-credential-delete-old-client-secret.png)
 
 
 <InlineAlert slots="text"/>

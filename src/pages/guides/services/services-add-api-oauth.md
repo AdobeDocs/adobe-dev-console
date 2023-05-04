@@ -6,7 +6,7 @@ To begin adding an API from within a templated project, first, select the approp
 
 In an empty project, select **+Add to Project** in the left navigation of the *Project overview* and then choose **API**, or select **Add API** from the quick start buttons.
 
-![](../../images/services-add-to-project.png)
+![alt text](../../images/services-add-to-project.png)
 
 ## Add an API
 
@@ -18,7 +18,7 @@ Many services are only available through paid licenses or subscriptions. License
 
 Once you have found and chosen an API that you would like to add, select **Next** to begin configuring the API.
 
-![](../../images/services-api-oauth-select.png)
+![alt text](../../images/services-api-oauth-select.png)
 
 ## Configure API
 
@@ -30,7 +30,7 @@ To configure an API using OAuth 2.0 authentication and authorization, you must f
 
 Depending on the selected API, some of the platforms may not be available to be used with that API. Select the platform that best suits your application use case if more than one platform is available.
 
-![](../../images/services-api-oauth-configure.png)
+![alt text](../../images/services-api-oauth-configure.png)
 
 Depending on the platform(s) you select, you may be required to provide additional configuration information:
 
@@ -104,7 +104,7 @@ With the API configured, you are redirected to the API overview, providing links
 
 You can also elect to remove the API on this screen using the **Remove API** button in the top-right corner.
 
-![](../../images/services-api-oauth-added.png)
+![alt text](../../images/services-api-oauth-added.png)
 
 ## Credentials
 
