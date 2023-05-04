@@ -53,9 +53,8 @@ Quickly start building an App Builder application by using the App Builder proje
 
 ### Migrate to the new OAuth Server-to-Server credential
 
-**TODO**
+The Service Account (JWT) credentials have been deprecated in favor of the OAuth Server-to-Server credentials. Your applications using the Service Account (JWT) credentials will stop working after Jan 1, 2025. You must migrate to the new credential by **Jan 1, 2025**, to ensure your application continues functioning. [Learn more](./authentication/ServerToServerAuthentication/migration.md)
 
-Use secure and industry-standard OAuth2.0 credentials in your applications when integrating with Adobe APIs and services. Read more about our new credentials - [OAuth Server-to-Server](#TODO), [OAuth Web App](#TODO), [OAuth Single-Page App](#TODO), and [OAuth Native App](#TODO). 
 
 ### Email alerts
 
