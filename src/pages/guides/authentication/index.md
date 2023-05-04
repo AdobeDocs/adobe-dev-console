@@ -48,7 +48,7 @@ View our guide on server to server authentication credentials -
 
 <InlineAlert slots="text"/>
 
-The Service Account (JWT) credentials have been deprecated in favor of the OAuth Server-to-Server credentials. Your applications using the Service Account (JWT) credentials will stop working after Jan 1, 2025. **You must migrate to the new credential by Jan 1, 2025, to ensure your application continues functioning. View our [migration guide](./ServerToServerAuthentication/migration.md) to know more.**
+The Service Account (JWT) credentials have been deprecated in favor of the OAuth Server-to-Server credentials. Your applications using the Service Account (JWT) credentials will stop working after Jan 1, 2025. You must migrate to the new credential by **Jan 1, 2025**, to ensure your application continues functioning. [Learn more](./ServerToServerAuthentication/migration.md).
 
 
 ## API key authentication 

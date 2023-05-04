@@ -1,10 +1,10 @@
 # User Authentication Implementation Guide
 
-The following guide goes over finer implementation details for user authentication credentials. At the end of the guide is a list of recommended industry-standard OAuth2 libraries. Before you proceed, we recommend you become familiar with the 3-legged OAuth flow in our [user authentication guide](./index.md).
+The following guide goes over finer implementation details for user authentication credentials. At the end of this guide is a list of recommended industry-standard OAuth2 libraries. Before proceeding, we recommend you familiarize yourself with the 3-legged OAuth flow in our  [user authentication guide](./index.md).
 
 ## User authentication credential types
 
-If an API or Event that you are adding to your project uses user authentication credentials, you can select the credential type depending on the platform your application runs on. 
+If an API or Event you are adding to your project uses user authentication credentials, you can select the credential type depending on your application's platform. 
 
 The following types of user authentication credentials are available:
 
@@ -17,19 +17,19 @@ The following types of user authentication credentials are available:
 
 <InlineAlert slots="text"/>
 
-Depending on the selected API, some of the platforms may not be available to be used with that API. Select the platform that best suits your application use case if more than one platform is available.
+Depending on the selected API, some platforms may not be available to use with that API. Select the platform that best suits your application use case if more than one platform is available.
 
 ![](../../../images/services-api-oauth-configure.png)
 
 ### OAuth Web App credential
 
-The Web App platform is best suited for applications that have a backend server with a web, mobile, or desktop frontend. OAuth credentials for Web App require the application to securely store a client secret on the backend server. The application can then fetch tokens using the client secret on the backend server, and therefore, not risk exposing the client secret or the tokens through the frontend application.
+The Web App platform is best suited for applications with a backend server with a web, mobile, or desktop frontend. OAuth credentials for Web App require the application to store a client secret on the backend server securely. The application can then fetch tokens using the client secret on the backend server and not risk exposing the client secret or the tokens through the frontend application.
 
-When setting up an OAuth credential for the Web App platform, you are required to provide:
+When setting up an OAuth credential for the Web App platform, you are required to provide the following:
 1. [A Default Redirect URI](#default-redirect-uri) 
 2. [A Redirect URI pattern](#redirect-uri-pattern)
 
-If the list of scope your application is requesting includes the `offline_access` scope, your application will also recieve a refresh token that can be used to regenerate access tokens without needing the user to sign in again or even be present.
+Suppose the list of scope your application requests includes the `offline_access` scope. In that case, your application will also receive a refresh token that can be used to regenerate access tokens without needing the user to sign in again or even be present.
 
 <InlineAlert slots="text"/>
 
@@ -37,9 +37,9 @@ In OAuth 2.0 standard terminology, an OAuth Web App credential is a *confidentia
 
 ### OAuth Single Page App credential
 
-The OAuth Single Page App credential is best suited for JavaScript-based applications that run in the browser and either do not have a backend server or want to fetch tokens on the frontend. OAuth credentials for Single Page Apps do not require the application to store a client secret, and therefore, must utilize the [OAuth 2.0 PKCE flow](https://oauth.net/2/pkce/) to obtain tokens securely. The OAuth Single Page App credential can also be used for mobile only applications utilizing a web view.
+The OAuth Single Page App credential is best suited for JavaScript-based applications that run in the browser and either do not have a backend server or want to fetch tokens on the front end. OAuth credentials for Single Page Apps do not require the application to store a client secret and, therefore, must utilize the [OAuth 2.0 PKCE flow](https://oauth.net/2/pkce/) to obtain tokens securely. The OAuth Single Page App credential can also be used for mobile-only applications utilizing a web view.
 
-When setting up an OAuth credential for the Single Page App platform, you are required to provide:
+When setting up an OAuth credential for the Single Page App platform, you are required to provide the following:
 1. [A Default Redirect URI](#default-redirect-uri) 
 2. [A Redirect URI pattern](#redirect-uri-pattern)
 
@@ -52,7 +52,7 @@ In OAuth 2.0 standard terminology, an OAuth Single Page App credential is a *pub
 
 ### OAuth Native App credential
 
-The Native App platform is best suited for applications that run natively on a device (Android, iOS, Windows, Mac, and others) and either do not have a backend server or want to fetch tokens on the frontend. OAuth credentials for Native Apps do not require the application to store a client secret, and therefore, must utilize the [OAuth 2.0 PKCE flow](https://oauth.net/2/pkce/) to obtain tokens securely.
+The Native App platform is best suited for applications that run natively on a device (Android, iOS, Windows, Mac, and others) and either do not have a backend server or want to fetch tokens on the front end. OAuth credentials for Native Apps do not require the application to store a client secret and, therefore, must utilize the [OAuth 2.0 PKCE flow](https://oauth.net/2/pkce/) to obtain tokens securely.
 
 Refresh tokens are not available for the OAuth Native App credential. Your application will need the user to sign in again to generate a new access token.
 
@@ -75,17 +75,17 @@ The OAuth credential for the Android platform has been deprecated in favor of th
 
 ## Understanding default redirect URI and redirect URI patterns
 
-For OAuth Web App and OAuth Single Page App credentials, you need to configure the default redirect URI and the redirect URI patterns. 
+For OAuth Web App and OAuth Single Page App credentials, you need to configure the default redirect URI and the redirect URI patterns.
 
 In the 3-legged OAuth workflow outlined above, your application will send the user to sign in to her account and grant permissions to your application. Once this happens, Adobe will need to send the user back to your application. Adobe determines where to redirect the user based on the value of the default redirect URI and the redirect URI patterns you have configured.
 
-The page served by your application post redirection must be able to handle both scenarios - where the user accepts/rejects granting permissions to your application. In case the user grants your application permissions, your application will recieve the authorization code as a query parameter when Adobe redirects the user back to your app.
+The page served by your application post redirection must be able to handle both scenarios - where the user accepts/rejects granting permissions to your application. If the user grants your application permissions, your application will receive the authorization code as a query parameter when Adobe redirects the user back to your app.
 
 ### Default redirect URI
 
-Adobe sends the user back to the default URI, if no redirect URI is specified in the authorization request. See [authorization request](https://datatracker.ietf.org/doc/html/rfc6749#section-4.1.1).
+Adobe sends the user back to the default URI if no redirect URI is specified in the authorization request. See [authorization request](https://datatracker.ietf.org/doc/html/rfc6749#section-4.1.1).
 
-You can specify a default redirect URI of up to 256 characters. It must be an absolute URI and cannot contain wildcards of regexs.
+You can specify a default redirect URI of up to 256 characters. It must be an absolute URI and cannot contain wildcards of regexes.
 
 <InlineAlert slots="text"/>
 
@@ -93,9 +93,9 @@ The *Default redirect URI* MUST be hosted on a secure server (HTTPS), even if it
 
 ### Redirect URI pattern
 
-When creating a new authorization request, the OAuth 2.0 framework allows your application to request a different redirect URI than the default Redirect URI by using the `redirect_url` query parameter. However, any requested redirect URI must match against the *Redirect URI pattern* you supply. The authorize request can be successfully completed only if the requested Redirect URI passes regex matching, 
+When creating a new authorization request, the OAuth 2.0 framework allows your application to request a different redirect URI than the default Redirect URI by using the `redirect_url` query parameter. However, any requested redirect URI must match the *Redirect URI pattern* you supply. The authorized request can only be completed if the requested Redirect URI passes regex matching.
 
-A *Redirect URI pattern* is a URI path (or comma-separated list of paths) to which Adobe can redirect (if requested) when the login and consent flow is completed. The URIs mentioned must be within your application domain. The redirect URI pattern field can accommodate up to 512 characters.
+A *Redirect URI pattern* is a URI path (or comma-separated list of URI paths) to which Adobe can redirect (if requested) when the login and consent flow is completed. The URIs mentioned must be within your application domain. The redirect URI pattern field can accommodate up to 512 characters.
 
 <InlineAlert slots="text"/>
   
@@ -103,38 +103,15 @@ You can use wildcards in the redirect URI pattern to club multiple redirect URIs
 
 ## OAuth 2.0 Scopes
 
-OAuth scopes directly relate to the access and permissions your application has on behalf of a user using your application. Based on the APIs and Events you add to your project, your credential will gain access to a set of scopes your application can request. Each scope your application requests during the authorization workflow, would be shown with a short description to the user on the consent screen. At this point, the user can either approve or reject your application's bid for gaining those permissions.
+OAuth scopes directly relate to the access and permissions your application has on behalf of a user using your application. Based on the APIs and Events you add to your project, your credential will gain access to a set of scopes your application can request. 
 
-You can always find the scopes your application can request by visiting the credential page and looking at the **Scopes** tab. Below are some commmonly encountered scopes.
+Each scope your application requests during the authorization workflow, would be shown with a short description to the user on the consent screen. The user can approve or reject your application to gain those permissions.
 
-### Identity scopes
+You can always find the scopes your application can request by visiting the credential page and the *Scopes tab*. See our API reference to view some commonly encountered scopes -
 
-|Scope|Consent description|Details|
-|---|---|---|
-|`openid`|Can access user account and read a unique identifier|Mandatory scope to enable authorization flows.|
-|`email`|Can read user email address|Returns `email` and `email_verified` claims.|
-|`address`|Can read user postal address|Returns `address` claim. Currently this contains only the country code.|
-|`profile`|Can read basic user profile, including information like `name`|Returns `name`, `family_name`, `given_name`, `account_type` claims.|
-|`offline_access`|The app can access the data user has given permission to, even when user is not using the app|Allows the return of a refresh token.|
-
-### Creative Cloud
-
-Scopes for Creative Cloud user authentication based APIs
-
-APIs | Scopes
----|---
-Adobe Stock | `openid`
-Creative SDK | `openid,creative_sdk`
-Photoshop | `openid,creative_sdk`
-Lightroom | `openid,creative_sdk`
-
-### Experience Cloud
-
-Scopes for Experience Cloud user authentication based APIs
-
-APIs | Scopes
----|---
-Adobe Analytics | ```openid, AdobeID, read_organizations, additional_info.projectedProductContext, additional_info.job_function```
+1. [Identity scopes](./IMS.md#identity-scopes)
+2. [Creative Cloud Scopes](./IMS.md#creative-cloud)
+3. [Experience Cloud Scopes](./IMS.md#experience-cloud)
 
 ## Standard OAuth2 libraries
 
@@ -147,7 +124,7 @@ The  OAuth community site https://oauth.net has a huge list of community-maintai
 
 <InlineAlert slots="text"/>
 
-Using industry standard libraries is the quickest and most secure way of integrating with OAuth. We recommend developers perform their due dilligence in picking the OAuth 2.0 library that works best for their application.
+Using industry-standard libraries is the quickest and most secure way of integrating with OAuth. We recommend developers diligently pick the OAuth 2.0 library that works best for their application.
 
 ### Sample apps
 

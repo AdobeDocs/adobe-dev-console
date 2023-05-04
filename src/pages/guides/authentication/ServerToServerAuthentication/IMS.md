@@ -49,10 +49,10 @@ Note: No `client_secret` values are returned by this API. Only the secret `uuid`
 
 |Parameter|Where|Mandatory|Description|
 |---|---|---|---|
-|`org_id`|URL|Yes|For instructions on where to find the `org_id`, see step 2 and 3 on our guide to [rotate secrets programmatically](./implementation.md#rotating-client-secrets-programmaticaly)|
-|`credential_id`|URL|Yes|For instructions on where to find the `credential_id`, see step 2 and 3 on our guide to [rotate secrets programmatically](./implementation.md#rotating-client-secrets-programmaticaly)|
+|`org_id`|URL|Yes|For instructions on where to find the `org_id`, see step 2 and 3 on our guide to [rotate secrets programmatically](./implementation.md#rotating-client-secrets-programmatically)|
+|`credential_id`|URL|Yes|For instructions on where to find the `credential_id`, see step 2 and 3 on our guide to [rotate secrets programmatically](./implementation.md#rotating-client-secrets-programmatically)|
 |`client_id`|Headers|Yes|The Client ID obtained from the [Adobe Developer Console](/console)|
-|`access_token`|Headers|Yes|For instructions on how to generate an access token, see step 5 on our guide to [rotate secrets programmatically](./implementation.md#rotating-client-secrets-programmaticaly)|
+|`access_token`|Headers|Yes|For instructions on how to generate an access token, see step 5 on our guide to [rotate secrets programmatically](./implementation.md#rotating-client-secrets-programmatically)|
 
 ### Request for OAuth Server-to-Server credential
 
@@ -108,10 +108,10 @@ Note: The API response contains the the `client_secret` that was added and its `
 
 |Parameter|Where|Mandatory|Description|
 |---|---|---|---|
-|`org_id`|URL|Yes|For instructions on where to find the `org_id`, see step 2 and 3 on our guide to [rotate secrets programmatically](./implementation.md#rotating-client-secrets-programmaticaly)|
-|`credential_id`|URL|Yes|For instructions on where to find the `credential_id`, see step 2 and 3 on our guide to [rotate secrets programmatically](./implementation.md#rotating-client-secrets-programmaticaly)|
+|`org_id`|URL|Yes|For instructions on where to find the `org_id`, see step 2 and 3 on our guide to [rotate secrets programmatically](./implementation.md#rotating-client-secrets-programmatically)|
+|`credential_id`|URL|Yes|For instructions on where to find the `credential_id`, see step 2 and 3 on our guide to [rotate secrets programmatically](./implementation.md#rotating-client-secrets-programmatically)|
 |`client_id`|Headers|Yes|The Client ID obtained from the [Adobe Developer Console](/console)|
-|`access_token`|Headers|Yes|For instructions on how to generate an access token, see step 5 on our guide to [rotate secrets programmatically](./implementation.md#rotating-client-secrets-programmaticaly)|
+|`access_token`|Headers|Yes|For instructions on how to generate an access token, see step 5 on our guide to [rotate secrets programmatically](./implementation.md#rotating-client-secrets-programmatically)|
 
 ### Request for OAuth Server-to-Server credential
 
@@ -149,11 +149,11 @@ Note: you need the secret `uuid` to delete a secret. You cannot use the plain te
 
 |Parameter|Where|Mandatory|Description|
 |---|---|---|---|
-|`org_id`|URL|Yes|For instructions on where to find the `org_id`, see step 2 and 3 on our guide to [rotate secrets programmatically](./implementation.md#rotating-client-secrets-programmaticaly)|
-|`credential_id`|URL|Yes|For instructions on where to find the `credential_id`, see step 2 and 3 on our guide to [rotate secrets programmatically](./implementation.md#rotating-client-secrets-programmaticaly)|
+|`org_id`|URL|Yes|For instructions on where to find the `org_id`, see step 2 and 3 on our guide to [rotate secrets programmatically](./implementation.md#rotating-client-secrets-programmatically)|
+|`credential_id`|URL|Yes|For instructions on where to find the `credential_id`, see step 2 and 3 on our guide to [rotate secrets programmatically](./implementation.md#rotating-client-secrets-programmatically)|
 |`uuid`|URL|Yes|The uuid of the secret you wish to delete. See the [list all secrets API](#list-all-client-secrets) to get the secret's `uuid`.|
 |`client_id`|Headers|Yes|The Client ID obtained from the [Adobe Developer Console](/console)|
-|`access_token`|Headers|Yes|For instructions on how to generate an access token, see step 5 on our guide to [rotate secrets programmatically](./implementation.md#rotating-client-secrets-programmaticaly)|
+|`access_token`|Headers|Yes|For instructions on how to generate an access token, see step 5 on our guide to [rotate secrets programmatically](./implementation.md#rotating-client-secrets-programmatically)|
 
 ### Request for OAuth Server-to-Server credential
 

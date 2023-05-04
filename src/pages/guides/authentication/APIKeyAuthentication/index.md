@@ -6,15 +6,15 @@ If your application needs to integrate with an Adobe offering that supports unau
 
 ### Embedding Adobe web experiences on your website
 
-Some APIs allow you to generate API Key credentials to embed an Adobe web experience on your website. For example: Adobe Express Embed SDK and PDF Embed API. These APIs only need to identify your application using your application's api key. 
+Some APIs allow you to generate API Key credentials to embed an Adobe web experience on your website. For example, Adobe Express Embed SDK and PDF Embed API are two such APIs. These APIs only need to identify your application using your application's API key.
 
-To ensure that your API key is not misused, Adobe servers reject API calls that do not originate from the your website's domains. You can configure your website's domains for your API key credential  during credential setup.
+To ensure that your API key is not misused, Adobe servers reject API calls that do not originate from your website's domains. During credential setup, you can configure your website's domains for your API key credential.
 
 ### Calling APIs that do not require an access token
 
-A small collection of Adobe services (e.g. API Mesh for App Builder, Adobe Stock) do not require an access token for API request. These services can be called _“anonymously”_ and typically provide consistent results regardless of the application or user that made the request. Such APIs can be called with an API Key credential. 
+A small collection of Adobe services (e.g., API Mesh for App Builder, Adobe Stock) do not require an access token for API requests. These services can be called *"anonymously"* and typically provide consistent results regardless of the application or user that made the request. Such APIs can be called with an API Key credential.
 
-To try it out, you can create a project with the Adobe Stock API. Then use the API key to make an API request as shown in the cURL command below. 
+You can create a project with the Adobe Stock API to try it out. Then use the API key to make an API request, as shown in the cURL command below.
 
 ```curl
 curl 'https://stock.adobe.io/Rest/Media/1/Search/Files?locale=en_US%26search_parameters%5Bwords%5D=kittens '
@@ -24,15 +24,14 @@ curl 'https://stock.adobe.io/Rest/Media/1/Search/Files?locale=en_US%26search_par
 
 ## API Key credential
 
-The API Key credential, as the name suggests, only contains an API key and no secrets. It cannot be used to generate access tokens. An API key credential only allows Adobe servers to identify the application but cannot authenticate a user or the application.
+As the name suggests, the API Key credential only contains an API key and no secrets. It cannot be used to generate access tokens. An API key credential only allows Adobe servers to identify the application but cannot authenticate a user or the application.
 
 ### Understanding Allowed Origins
 
-Some Adobe APIs do not require an access token, only an API key, to be called. However, such an API may still need to prevent your API key from being copied by a malicious actor and then misused. 
+Some Adobe APIs do not require an access token, only an API key, to be called. However, such an API may still need to prevent your API key from being copied by a malicious actor and misused.
 
-To prevent such bad actors Adobe servers only accept API requests originating from your website, and reject any other API requests. This is achieved by relying on the Origin HTTP request header that a broswer sends with each request. 
+To prevent bad actors from using your API key, Adobe servers only accept API requests originating from your website and reject any other API requests. Adobe servers determine whether the request originates from your website by relying on the Origin HTTP request header that a browser sends with each request.
 
 To ensure that Adobe servers accept API requests from all the domains your application uses, you must add those domains as 'allow listed origins' during API Key credential setup.
 
-You can configure upto 5 comma separated domains, use wildcards to club together multiple subdomains, and specify an non-priviledged port numbers. You can edit these domains any time by visting your project on the Adobe Developer Console.
-
+You can configure up to 5 comma-separated domains, use wildcards to club together multiple subdomains and specify any non-privileged port numbers. You can edit these domains any time by visiting your project on the Adobe Developer Console.
