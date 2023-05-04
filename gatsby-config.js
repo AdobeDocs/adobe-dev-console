@@ -162,6 +162,10 @@ module.exports = {
                 title: "Migration Guide"
               },
               {
+                path: "guides/authentication/ServerToServerAuthentication/faqs.md",
+                title: "FAQs"
+              },
+              {
                 path: "guides/authentication/ServerToServerAuthentication/IMS.md",
                 title: "API Reference"
               },

@@ -71,13 +71,13 @@ A. Unfortunately, Adobe cannot tell which custom integrations or applications ar
 A. A good starting point to identify the developers/admins who worked on a project is by looking at who created or last modified the Project on the Project overview screen. Furthermore, the Project Activity Logs, retained for up to a year, show a more granular view of who made what changes to a Project. Note: Information about the Project's creator may be missing for historical projects.
 
 ### Q. How can I verify if the Project on the Dev Console is actually being used?
-A. Visit the Insights tab in a Project to see recent activity (API calls, Events Delivered, etc.) involving the credentials contained in the Project. See our documentation on [Insights](../insights.md) to know more.
+A. A. Visit the Service Account (JWT) credential overview page and look at the last access token generated at timestamp. This will tell you when was this project and credential last used to generate an access token. You can also visit the Insights tab in a Project to see recent activity (API calls, Events Delivered, etc.) involving the credentials contained in the Project. See our documentation on [Insights](../insights.md) to know more.
 
 ### Q. Can Adobe replace the certificate key pairs for us?
 A. Unfortunately, these certificate key pairs are used in your custom integrations and applications, which Adobe has no information on or access to. Therefore, the customer needs to carry out the activity to refresh the certificate key pairs.
 
 ### Q. How can I set up automation to refresh the certificates programmatically?
-A. Unfortunately, such a programmatic method is not available at this time.
+A. Unfortunately, such a programmatic method is not available at this time and is not planned for Service Account (JWT) credentials. To utilize programmatic secret rotation, we recommend you migrate your application to use the new OAuth Server-to-Server credential. Learn more about the [migration](../authentication/ServerToServerAuthentication/migration.md).
 
 ### Q. Why do I keep receiving email alerts about the old certificate key pair even though I replaced the expiring certificate key pair?
 A. Once you successfully replace the expiring certificate in your custom integration or application, be sure to remove it from the Developer Console. The email alerts would stop only once the expiring certificate key pair is removed from the Project on the Developer Console.

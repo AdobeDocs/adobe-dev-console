@@ -110,6 +110,3 @@ During the migration you cannot add any APIs or other services to the project. F
 If you need to add other services or disable the OAuth Server to Server credential in case of a client secret leak - you can cancel the migration.
 
 Canceling the migration will delete the OAuth Server-to-Server credential from your project. If your application is already using the new credential it will stop working once you cancel the migration.
-
-### FAQs
-
