@@ -43,7 +43,7 @@ Your applications using the Service Account (JWT) credentials will stop working 
 
 The migration to the OAuth Server-to-Server credential is a simple process that enables a zero downtime migration for your application. You can follow the steps below to you migrate your application.
 
-## Preparation: Find out which applications are using the Service Account (JWT) credentials
+### Preparation: Find out which applications are using the Service Account (JWT) credentials
 
 To find out which of your Adobe applications and integrations are using the Service Account (JWT) credential
 
