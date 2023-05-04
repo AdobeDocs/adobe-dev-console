@@ -10,7 +10,7 @@ To begin working with beta users, visit the **Project overview** of the project 
 
 **Note:** The ability to select beta users is available only for certain APIs. If your project does not include one of these APIs, the beta users feature will not be visible.
 
-![alt text](../../images/beta-users-project-overview.png)
+![](../../images/beta-users-project-overview.png)
 
 ## Add beta users
 
@@ -22,17 +22,17 @@ If your project status is **In Development** or **In Review** (or if your projec
 
 To add a user to the list manually, input their email addresses into the text box, separating multiple email addresses with commas (`,`). Once you have entered all of the email addresses, select **Save list** to save your changes. 
 
-![alt text](../../images/beta-users-add.png)
+![](../../images/beta-users-add.png)
 
 After you save the list, the count (`0/25`) will update to show the current number of beta users.
 
-![alt text](../../images/beta-users-list-saved.png)
+![](../../images/beta-users-list-saved.png)
 
 ### Upload CSV
 
 To add beta users using a CSV file, select **Upload .CSV** and choose the file you wish to upload. 
 
-![alt text](../../images/beta-users-upload.png)
+![](../../images/beta-users-upload.png)
 
 After locating the file you wish to use, select **Open** to open the file and you should see the email addresses, separated by commas (`,`) in the text field.
 
@@ -42,17 +42,17 @@ If the list of email addresses looks correct, select **Save list** to save your 
 
 After you save the list, the count (`0/25`) will update to show the current number of beta users.
 
-![alt text](../../images/beta-users-list-saved.png)
+![](../../images/beta-users-list-saved.png)
 
 ## Remove beta users
 
 To remove a beta user, simply remove their email address from the list and save your changes. You can also remove all beta users at once by selecting **Clear list**. 
 
-![alt text](../../images/beta-users-clear-list.png)
+![](../../images/beta-users-clear-list.png)
 
 Before the list is cleared you will be asked to confirm your selection. Selecting **Clear list** from the dialog will remove all beta user email addresses and return the count to `0/25`.
 
-![alt text](../../images/beta-users-clear-confirm.png)
+![](../../images/beta-users-clear-confirm.png)
 
 ## Engaging your beta users
 

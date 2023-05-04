@@ -16,21 +16,21 @@ Once you have completed development on an App Builder application, it is time to
 
 To begin the approval process, navigate to the **Production** workspace and select **Submit for approval** in the top-right corner of the screen or select **Approval** in the left navigation.
 
-![approval overview](../../images/approval-production-overview.png)
+![](../../images/approval-production-overview.png)
 
 On the *Approval* screen you will be presented with the **App Submission Details** form. These details will be visible to people using your app and administrators reviewing your application.
 
 Once the submission details have been completed, select **Submit** to begin the approval process.
 
-![application details](../../images/approval-app-submission-details.png)
+![](../../images/approval-app-submission-details.png)
 
 You will be returned to the *Approval* screen, where the *Status* of your application should now be "In Review".
 
-![in review](../../images/approval-in-review.png)
+![](../../images/approval-in-review.png)
 
 Following a review by your organization administrators, your application will either be approved and published or rejected. If the application is rejected, your admin will be able to include a note telling you what went wrong, allowing you to fix the error and submit for approval again.
 
-![rejected application](../../images/approval-app-rejected.png)
+![](../../images/approval-app-rejected.png)
 
 If your application is approved, you are ready to move on to the [next steps](#next-steps) found at the end of this document.
 
@@ -38,7 +38,7 @@ If your application is approved, you are ready to move on to the [next steps](#n
 
 In order for an application to be available to public users, it must first be approved by the Adobe Review team. To begin, navigate to the **Project overview** for the project containing the application that you want to publish.
 
-![empty project](../../images/approval-empty-project.png)
+![](../../images/approval-empty-project.png)
 
 Select **Approval** from the left navigation to view the submission details. These details include information about the application that will be shown to end users and the Adobe Review team. 
 
@@ -46,14 +46,14 @@ Select **Approval** from the left navigation to view the submission details. The
 
 Once the submission details have been completed, select **Submit for approval** to continue the approval process.
 
-![submit for approval](../../images/approval-submit-for-approval.png)
+![](../../images/approval-submit-for-approval.png)
 
 After submitting, your application status will be updated to **In Review** and the details that you filled in previously will be visible, however they will be greyed out and you will not be able to edit them. 
 
-![profile in review](../../images/approval-public-profile-in-review.png)
+![](../../images/approval-public-profile-in-review.png)
 
 ## Next steps
 
 Once an application has been approved, either by internal reviewers or the Adobe Review team, its status will be updated to **Published** and the application will be available for use either by employees within your enterprise organization (for App Builder applications) or for the general public through Adobe Exchange.
 
-![profile published](../../images/approval-public-profile-published.png)
+![](../../images/approval-public-profile-published.png)

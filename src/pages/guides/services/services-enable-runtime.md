@@ -12,7 +12,7 @@ Runtime can be enabled for an empty project from the **Project overview**. You c
 
 For more information on creating an empty project, please begin by reading the [projects overview](../projects/index.md).
 
-![alt text](../../images/runtime-empty-project.png)
+![](../../images/runtime-empty-project.png)
 
 ## Enable Runtime for a templated project
 
@@ -20,11 +20,11 @@ Runtime can be enabled for a template project during the project set up or by ma
 
 To automatically add Runtime during set up, ensure that the checkbox to "Include Runtime with each workspace" is checked before you select **Save** and complete the project set up.
 
-![alt text](../../images/set-up-templated-project.png)
+![](../../images/set-up-templated-project.png)
 
 Once your project has been saved, the **Project overview** will be visible, showing the project workspaces and that Runtime has been enabled for each. 
 
-![alt text](../../images/runtime-workspaces.png)
+![](../../images/runtime-workspaces.png)
 
 When you select a workspace you will be taken to the **Workspace overview** which will show the newly created Runtime instance. Selecting the Runtime instance will take you to the Runtime overview where you can begin to configure Runtime, as shown in the [Get started with Runtime](#get-started-with-runtime) section found later in this document.
 
@@ -38,13 +38,13 @@ If you would like to enable Runtime for an additional workspace, ensure that **I
 
 For more information on adding workspaces to a templated project, please read the guide for [creating a templated project](../projects/projects-template.md).
 
-![alt text](../../images/runtime-add-workspace.png)
+![](../../images/runtime-add-workspace.png)
 
 Once added, the **Project overview** will display the new workspace, along with an indication that Runtime has been enabled. You can now select the workspace by choosing the card or using the **Workspaces** dropdown in the left navigation. 
 
 This will open the **Workspace overview** which will show the newly created Runtime instance. Selecting the Runtime instance will take you to the Runtime overview where you can begin to configure Runtime, as shown in the [Get started with Runtime](#get-started-with-runtime) section found later in this document.
 
-![alt text](../../images/runtime-new-workspace.png)
+![](../../images/runtime-new-workspace.png)
 
 ## Get started with Runtime
 
@@ -52,7 +52,7 @@ In order to get started with Adobe I/O Runtime, whether as part of an empty proj
 
 For detailed instructions on installing and configuring the tools you will need on your machine in order to create and run actions, please follow the steps provided in the [Runtime getting started guide](https://www.adobe.com/go/devs_Runtime_get_started).
 
-![alt text](../../images/runtime-get-started.png)
+![](../../images/runtime-get-started.png)
 
 ## Remove Runtime from project or workspace
 

@@ -10,27 +10,27 @@ This guide provides instructions to help you begin building plugins within Adobe
 
 To create a plugin, begin by selecting the quick start button to **Create an empty project** on the Console home screen.
 
-![Personal org](../../images/personal-org.png)
+![](../../images/personal-org.png)
 
 When the project overview opens, it will briefly display a success banner ("Project created successfully").
 
-![Project created](../../images/personal-project-created.png)
+![](../../images/personal-project-created.png)
 
 ## Begin building your plugin
 
 Select **Add Plugin** to add a new plugin to your project.
 
-![Add plugin](../../images/personal-project-add-plugin.png)
+![](../../images/personal-project-add-plugin.png)
 
 On the **Add a plugin** screen, you can select the type of plugin that you would like to add to your project: Adobe XD or Photoshop. After choosing the type of plugin you would like to add, select **Save** to save your changes and return to the plugin overview.
 
 **Note:** You can add multiple plugins to a single project by following this workflow more than once.
 
-![add a plugin](../../images/plugin-add-a-plugin.png)
+![](../../images/plugin-add-a-plugin.png)
 
 After the plugin type has been selected, you are taken to the landing page for your plugin. This landing page includes the **Status**, **Plugin ID**, **Last modified** date, and **Created** date for your plugin, as well as navigation options to return to the **Project Overview** or **Distribute** your completed plugin.
 
-![plugin created](../../images/plugin-created.png)
+![](../../images/plugin-created.png)
 
 ### Download starter project
 
@@ -38,22 +38,22 @@ To begin development for your plugin, locate the **Download the starter project*
 
 The starter project includes the basic folder structure for a plugin as well as a manifest file that is pre-configured with the correct plugin ID and project name.
 
-![plugin download starter package](../../images/plugin-download-starter.png)
+![](../../images/plugin-download-starter.png)
 
 ### Create FastSpring account (optional)
 
 If you plan to sell your Photoshop plugin, you will need to set up a FastSpring account and enter the key into your public profile. For more information, please read the [public profile overview](../public-profile.md).
 
-![plugin photoshop](../../images/plugin-photoshop-fastspring.png)
+![](../../images/plugin-photoshop-fastspring.png)
 
 ## Distribute plugin
 
 When you have finished building your plugin, it is time to submit the plugin for review and distribution. For detailed instructions on how to submit your plugin for distribution, please see the [plugin distribution](plugin-distribution.md) guide.
 
-![plugin distribute docs](../../images/plugin-distribute-docs.png)
+![](../../images/plugin-distribute-docs.png)
 
 ## Project overview
 
 At any time you can return to the overview for the project by selecting **Project overview** in the left navigation. The overview includes information about the plugin project, including **Products & services** which lists the plugin that you created (in this example, an Adobe XD plugin). While you continue to work on your plugin it will appear as "In Development".
 
-![plugin project overview](../../images/plugin-project-overview.png)
+![](../../images/plugin-project-overview.png)

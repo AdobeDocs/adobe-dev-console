@@ -27,7 +27,7 @@ To add more users as email alert recipients:
 4. Search for the user you wish to add by their name or email address and click on `Add` once they appear in the dropdown.
 5. Repeat for as many users as you want to add, and then click `Save`.
 
-![Add Email alert recipient](../../images/add-email-alert-recipient.png)
+![](../../images/add-email-alert-recipient.png)
 
 ### Removing an email alert recipient
 
@@ -43,7 +43,7 @@ To remove any user from the email alert recipients list:
 4. In the list of recipients shown, find the user you wish to remove and click the `Remove` button against their name.
 5. Repeat for as many users as you want to remove, and then click `Save`.
 
-![Remove Email alert recipient](../../images/remove-email-alert-recipient.png)
+![](../../images/remove-email-alert-recipient.png)
 
 ## Managing noisy email alerts
 
@@ -65,7 +65,7 @@ Pausing email alerts for non-critical Projects is recommended. To Pause alerts
 3. On the Project overview screen, click on the `Pause email alerts` button.
 4. Confirm that you want to pause email alerts.
 
-![Pause Email alerts](../../images/pause-email-alerts.png)
+![](../../images/pause-email-alerts.png)
 
 ### Activating email alerts for a Project
 
@@ -76,4 +76,4 @@ To activate email alerts -
 3. On the Project overview screen, click on the `Activate email alerts` button.
 4. Confirm that you want to activate email alerts.
 
-![Activate Email alerts](../../images/activate-email-alerts.png)
+![](../../images/activate-email-alerts.png)

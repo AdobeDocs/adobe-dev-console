@@ -8,21 +8,21 @@ To learn more about Adobe I/O Events, read the [events documentation](https://ww
 
 To add events to your application, begin by navigating to the *Project overview* or *Workspace overview* if working in a templated project. You can then select **Add event** from the quick start menu or select **Event** from the *Add to Project* dropdown (or *Add Service* in a templated project).
 
-![alt text](../../images/events-get-started.png)
+![](../../images/events-get-started.png)
 
 The *Add events* dialog opens, providing a listing of Adobe event providers that can be filtered based on the products that are available to your organization.
 
-![alt text](../../images/events-add.png)
+![](../../images/events-add.png)
 
 Choose the event that you would like to add and select **Next** to begin configuring the events.
 
-![alt text](../../images/events-add-select.png)
+![](../../images/events-add-select.png)
 
 ## Configure
 
 The first step in configuration is to choose your event subscriptions. This requires you to select from the provided list which events you would like to receive notifications about from your chosen event providers. As events are chosen, they appear under *Subscribed Events* in the left navigation.
 
-![alt text](../../images/events-configure.png)
+![](../../images/events-configure.png)
 
 ## Credentials
 
@@ -42,7 +42,7 @@ The *Redirect URI* must use HTTPS (for example, **https://redirect.com/uri/et**)
 
 After entering a redirect that matches the appropriate formatting, you can then select **Next** to proceed with event configuration.
 
-![alt text](../../images/events-configure-auth.png)
+![](../../images/events-configure-auth.png)
 
 ## Registration details
 
@@ -54,7 +54,7 @@ To learn more about webhooks, visit the [webhooks documentation](https://www.ado
 
 After completing the *Event registration details* select **Save configured events** to complete the configuration.
 
-![alt text](../../images/events-configure-registration.png)
+![](../../images/events-configure-registration.png)
 
 ## Event overview
 
@@ -62,19 +62,19 @@ Once events have been successfully configured, you will be taken to the event ov
 
 You can also remove an event registration from the event overview by selecting **Delete Events Registration** in the top-right corner.
 
-![alt text](../../images/events-registration-details.png)
+![](../../images/events-registration-details.png)
 
 ## Credentials
 
 The *Credentials* tab shows details related to the event authentication method, allowing you to perform actions such as copying a Client ID, retrieving the client secret, generating a JWT token, etc depending on the type of authentication used. 
 
-![alt text](../../images/events-credentials.png)
+![](../../images/events-credentials.png)
 
 ## Debug Tracing
 
 The *Debug Tracing* tab shows details related to recent requests and responses related to the registered events. This includes the date and time, event ID, and more.
 
-![alt text](../../images/events-debug-tracing.png)
+![](../../images/events-debug-tracing.png)
 
 ## Next steps
 

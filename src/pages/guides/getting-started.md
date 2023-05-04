@@ -12,7 +12,7 @@ When you use your company or school acccount to login, you can see all the proje
 
 To contact an administrator on your organization, view our documentation [here](https://helpx.adobe.com/enterprise/kb/contact-administrator.html). If you're an administrator, check out our documentation on [managing developers](https://helpx.adobe.com/enterprise/using/manage-developers.html).
 
-![Access Denied](../images/access-denied-screen.png)
+![](../images/access-denied-screen.png)
 
 ### Logging in with a personal account
 
@@ -28,7 +28,7 @@ The org switcher is located on the top right corner of the UI. Next to the org s
 
 The projects in an organization belong to that organization. When you are working with multiple organization, be sure to check which organization you have selected in the org switcher.
 
-![Swithch Organizations](../images/switch-organizations.png)
+![](../images/switch-organizations.png)
 
 
 ## Introduction to the Developer Console UI
@@ -41,13 +41,13 @@ After successfully logging in to [Adobe Developer Console](/console), you will a
 
 The _Home_ screen is where you can easily find information and quick links, including top-navigation links to Projects and Downloads.
 
-![Dev Console Home](../images/developer-console-home.png)
+![](../images/developer-console-home.png)
 
 #### Quick start
 
 The _Home_ screen also provides "quick start" links to help you get started with some of the most common Console actions. _Quick start_ links are available for: creating an empty project, creating a project using a template, and downloading resources.
 
-![Quick Start](../images/quick-start.png)
+![](../images/quick-start.png)
 
 #### Recent projects
 
@@ -55,7 +55,7 @@ If your organization has created projects, the most recent projects are displaye
 
 Only the three most recent projects will be shown, therefore to view additional projects for your organization, select **All projects** or choose _Projects_ in the top navigation. See the [Projects](#projects) section that follows for more information.
 
-![Recent Projects](../images/recent-projects.png)
+![](../images/recent-projects.png)
 
 #### Resources
 
@@ -63,7 +63,7 @@ The _Resources_ section provides helpful links to related documentation, guides,
 
 The resources that appear are influenced by where you are in your workflow, updating to ensure you are provided with the most relevant information at the most appropriate time.
 
-![Resources](../images/resources.png)
+![](../images/resources.png)
 
 ### Projects
 
@@ -75,7 +75,7 @@ You can use the sort functionality to change the order in which projects are dis
 
 For more information on projects, being by reading the [projects overview](projects/index.md).
 
-![Projects](../images/projects.png)
+![](../images/projects.png)
 
 ### APIs and services
 
