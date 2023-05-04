@@ -57,7 +57,7 @@ For each application/project that you have identified perform the steps below. I
 
 Note: you do not have to worry about auto generated projects. Those will automatically migrated by Adobe during the migration window.
 
-### Step 1: Add the new credential to your project and update your application
+### Step 1: Add the new credential to your project
 
 Once you have identified the application that needs to be updated and its corresponding project on the Developer Console. The first step is to add the new credential to your project, so that you can begin using the new credential to generate access tokens and update your application.
 
@@ -75,33 +75,33 @@ Adding an equivalent OAuth Server-to-Server credential will not impact your runn
 
   * The difference between the two credentials is the token generation mechanism and the use of public certificate and private key pair.
 
-3. Update your application code to start using the new credential to generate access tokens. 
-
   * At this point, you can use either credentials to generate access tokens. This ensures that your running application can continue generating access tokens using the Service Account (JWT)
 
   * Meanwhile, you can test the new credential by generating access tokens using the Developer Console UI or a cURL command. We also recommend reading our [implementation guide](./implementation.md) that points to several [standard OAuth 2.0 libraries](./implementation.md#generating-access-tokens-using-standard-oauth2-libraries) to generate access tokens programmatically.
 
-  * At this point you can make code changes to your application and deploy it. Because both you credentials work and you can use either to generate an access tokens, you can deploy your updated application to test, staging, and even production environments. 
 
-
-### Step 2: Review timestamps to confirm replacement and delete old credential
-
-Once you have updated your application and deployed it to production, the next step is to review whether your application has stopped using the old credential completely. And if so, delete the old credential to complete the migration.
+### Step 2: Update your application and delete old credential
 
 <InlineAlert slots="text"/>
 
-Step 2, once completed, will complete the migration and cannot be rolledback. We recommend that developers pay attention to the prompts on the UI and exercise care when performing this step.
+Once this completed, will complete the migration and cannot be rolledback. We recommend that developers pay attention to the prompts on the UI and exercise care when performing this step.
 
 
-1. Login to the Developer Console and navigate to your project. From the left side nav, open the Service Account (JWT) credential tab and view the migration card.
+1. Update your application code to start using the new credential to generate access tokens. 
+   
+   * At this point you can make code changes to your application and deploy it. Because both you credentials work and you can use either to generate an access tokens, you can deploy your updated application to test, staging, and even production environments.
 
-2. On the migration card, click the button to review timestamps and delete old credential. This will launch a dialog that walks you through the timestamp and credential usage of your application. Based on the status of the two checks (listed below), the UI displays will prompt you the recommended action.
+   * Once you have updated your application and deployed it to production, the next step is to review whether your application has stopped using the old credential completely. And if so, delete the old credential to complete the migration.
+
+2. Login to the Developer Console and navigate to your project. From the left side nav, open the Service Account (JWT) credential tab and view the migration card.
+
+3. On the migration card, click the button to review timestamps and delete old credential. This will launch a dialog that walks you through the timestamp and credential usage of your application. Based on the status of the two checks (listed below), the UI displays will prompt you the recommended action.
 
    * Did your application generate access tokens using the new credential more recently than the old credential?
 
    * Has it been at least 24 hours since the last time an access token was generated using your old credential?
    
-3. Once you are sure that you have replaced the old credential successfull, the dialog will take you to the last step of deleting the old credential. To confirm this step you must type in the project name to confirm your intentions. Note: once completed, this step cannot be rolledbacked.
+4. Once you are sure that you have replaced the old credential successfull, the dialog will take you to the last step of deleting the old credential. To confirm this step you must type in the project name to confirm your intentions. Note: once completed, this step cannot be rolledbacked.
 
 ### Cancelling Migration
 
