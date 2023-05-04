@@ -1,14 +1,41 @@
-# Getting started with Adobe Developer Console
+# Accessing the Adobe Developer Console
 
-In order to begin creating projects quickly and easily, this overview document introduces key areas of the Adobe Developer Console user interface (UI)
+To start building your application that integrates with Adobe products and services you would first need to log in to the Developer Console and then [create a project](./projects/index.md).
 
-## Access
+## Logging in to the Developer Console
 
-Users who already belong to an Adobe enterprise or team organization, require either System Administrator or Developer permissions in order to access the Adobe Developer Console. More information about user management can be found in the [Adobe Admin Console guide](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/users.ug.html).
+To login to the [Adobe Developer Console](https://developer.adobe.com/console) you need an Adobe Account. When you visit the Developer Console, you'd be redirected to the login page where you could sign up for a new account or sign in using an existing account.
 
-For users who do not belong to an Adobe enterprise or team organization, we will automatically create your own personal Developer organization during sign-up. 
+### Logging in with a company or school account
 
-## Home
+When you use your company or school acccount to login, you can see all the projects your organization has on the Developer Console. However, before you can see any projects or can begin creating a new project, an administrator on your organization would need to grant you developer role permissions. If you login without the developer or system administrator permissions, you will see an Access Denied screen.
+
+To contact an administrator on your organization, view our documentation [here](https://helpx.adobe.com/enterprise/kb/contact-administrator.html). If you're an administrator, check out our documentation on [managing developers](https://helpx.adobe.com/enterprise/using/manage-developers.html).
+
+![](../images/access-denied-screen.png)
+
+### Logging in with a personal account
+
+You can also use your personal account to login and access the Developer Console. When you login using your personal account, you are automatically provided a personal developer organization. You can create and manage projects under this organization.
+
+### Switching between your organizations
+
+If you are a developer or a system administrator on multiple organizations, you can access those organizations using the organization switcher ('org switcher').
+
+The org switcher is located on the top right corner of the UI. Next to the org switcher, you can always check which organization you are using currently and what role you have in that organization. To change the organization you are using, simply click on the org switcher dropdown and select the desired org from the list. 
+
+<InlineAlert slots="text"/>
+
+The projects in an organization belong to that organization. When you are working with multiple organization, be sure to check which organization you have selected in the org switcher.
+
+![](../images/switch-organizations.png)
+
+
+## Introduction to the Developer Console UI
+
+In order to create and manage projects easily, this section introduces key areas of the Adobe Developer Console user interface (UI).
+
+### Home
 
 After successfully logging in to [Adobe Developer Console](/console), you will arrive at the _Home_ screen. 
 
@@ -16,25 +43,13 @@ The _Home_ screen is where you can easily find information and quick links, incl
 
 ![](../images/developer-console-home.png)
 
-### Switch Organizations
-
-Adobe Developer Console allows developers to access and work on projects within multiple organizations.
-
-Navigating between organizations is easily done using the organization switcher ("org switcher") located in the top-right corner of the UI. To switch organizations, simply select the down arrow ( &#709; ) and choose the organization you wish to use.
-
-<InlineAlert slots="text"/>
-
-The "Role" will also update to reflect your role within the newly selected organization, or will disappear if you select a personal organization because they are not role-based.
-
-![](../images/switch-organizations.png)
-
-### Quick start
+#### Quick start
 
 The _Home_ screen also provides "quick start" links to help you get started with some of the most common Console actions. _Quick start_ links are available for: creating an empty project, creating a project using a template, and downloading resources.
 
 ![](../images/quick-start.png)
 
-### Recent projects
+#### Recent projects
 
 If your organization has created projects, the most recent projects are displayed on the _Home_ screen, enabling you to easily continue working or see work that has been done.
 
@@ -42,7 +57,7 @@ Only the three most recent projects will be shown, therefore to view additional 
 
 ![](../images/recent-projects.png)
 
-### Resources
+#### Resources
 
 The _Resources_ section provides helpful links to related documentation, guides, and services to support you in your work.
 
@@ -50,7 +65,7 @@ The resources that appear are influenced by where you are in your workflow, upda
 
 ![](../images/resources.png)
 
-## Projects
+### Projects
 
 The _Projects_ screen provides an overview of the projects that have been created by your organization. If you are part of an enterprise organization, this includes all projects that you have access to, not just projects that you have created.
 
@@ -62,7 +77,7 @@ For more information on projects, being by reading the [projects overview](proje
 
 ![](../images/projects.png)
 
-## APIs and services
+### APIs and services
 
 The _APIs and services_ screen provides access to all available APIs, Events and services for Adobe products and technologies, with which you can develop applications. It can be accessed by selecting selecting **APIs and services** in the top navigation.
 

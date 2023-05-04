@@ -1,5 +1,10 @@
 # Service Account Connection
 
+
+<InlineAlert slots="text"/>
+
+Service Account (JWT) credentials have been deprecated in favor of the OAuth Server-to-Server credentials. Your applications using the Service Account (JWT) credentials will stop working after Jan 1, 2025. **You must migrate to the new credential by Jan 1, 2025 in order to ensure your application continues to function. View our [migration guide](../ServerToServerAuthentication/migration.md) to know more.**
+
 A Service Account connection allows your application to call Adobe services on behalf of the application itself or on behalf of an enterprise organization.
 
 For this type of connection, you will create a JSON Web Token (JWT) that encapsulates your credentials and begin each API session by exchanging the JWT for an access token. 
