@@ -12,8 +12,9 @@
     "url": "https://github.com/icaraps"
   },
   "dependencies": {
-    "@adobe/gatsby-theme-aio": "^4.9.7",
+    "@adobe/gatsby-theme-aio": "^4.9.8",
     "gatsby": "4.22.0",
+    "http-proxy-middleware": "^2.0.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
@@ -21,7 +22,7 @@
     "start": "gatsby build && gatsby serve",
     "start:prefix": "gatsby build --prefix-paths && gatsby serve --prefix-paths",
     "dev": "gatsby develop",
-    "dev:https": "gatsby develop --https --host localhost.corp.adobe.com --port 9000",
+    "dev:https": "gatsby develop --https --host local.corp.adobe.com --port 9000",
     "build": "gatsby build",
     "build:incremental": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "serve": "gatsby serve",
