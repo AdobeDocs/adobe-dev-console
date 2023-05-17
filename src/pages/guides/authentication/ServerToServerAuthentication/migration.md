@@ -1,5 +1,9 @@
 # Migrating from Service Account (JWT) credential to OAuth Server-to-Server credential
 
+<InlineAlert slots="text"/>
+
+Note: Some Adobe applications and in-product integrations cannot be migrated yet. Review the list of these applications [here](./migration-exceptions.md) before actually migrating your application. Adobe will ensure you get enough time to migrate credentials after updates have been released. 
+
 The Service Account (JWT) credentials have been deprecated in favor of the new OAuth Server-to-Server credentials. 
 
 The new OAuth Server-to-Server credentials simplify all aspects of application development - experimentation, implementation, and maintenance. See the section on [Why OAuth Server-to-Server credentials?](#why-oauth-server-to-server-credentials) below to learn more.
