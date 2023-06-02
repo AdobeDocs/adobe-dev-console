@@ -60,7 +60,7 @@ Note: No `client_secret` values are returned by this API. Only the secret `uuid`
 
 ```curl
 curl -X GET 'https://api.adobe.io/console/organizations/{org_id}/credentials/{credential_id}/secrets' \
-     -H 'Authorization: Bearer {access_token}'
+     -H 'Authorization: Bearer {access_token}' \
      -H 'x-api-key: {client_id}'
 ```
 
@@ -121,7 +121,7 @@ Note: The API response contains the the `client_secret` that was added and its `
 
 ```curl
 curl -X POST 'https://api.adobe.io/console/organizations/{org_id}/credentials/{credential_id}/secrets' \
-     -H 'Authorization: Bearer {access_token}'
+     -H 'Authorization: Bearer {access_token}' \
      -H 'x-api-key: {client_id}'
 ```
 
@@ -165,7 +165,7 @@ Note: you need the secret `uuid` to delete a secret. You cannot use the plain te
 
 ```curl
 curl -X DELETE 'https://api.adobe.io/console/organizations/{org_id}/credentials/{credential_id}/secrets/{uuid}' \
-     -H 'Authorization: Bearer {access_token}'
+     -H 'Authorization: Bearer {access_token}' \
      -H 'x-api-key: {client_id}'
 ```
 
