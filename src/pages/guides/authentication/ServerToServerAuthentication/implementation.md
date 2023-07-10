@@ -141,7 +141,7 @@ curl -X POST 'https://api.adobe.io/console/organizations/{orgId}/credentials/{cr
 
 
 ```curl
-curl -X POST 'https://api.adobe.io/console/organizations/{orgId}/credentials/{credentialId}/secrets/{uuid from step 9}' \
+curl -X DELETE 'https://api.adobe.io/console/organizations/{orgId}/credentials/{credentialId}/secrets/{uuid from step 9}' \
      -H 'Authorization: Bearer {ACCESS TOKEN GENERATED IN STEP 5}'
      -H 'x-api-key: {CLIENT ID FROM STEP 6}'
 ```
