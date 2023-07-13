@@ -62,7 +62,7 @@ While most projects can be deleted, sometimes a project is related to an applica
 
 <InlineAlert slots="text"/>
 
-Projects contining plugins cannot be deleted yet. 
+Projects continuing plugins cannot be deleted yet. 
 
 ## View a Project's Activity Log
 
