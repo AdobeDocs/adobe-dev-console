@@ -1,3 +1,4 @@
+[supported_devices.csv](https://github.com/AdobeDocs/adobe-dev-console/files/12330756/supported_devices.csv)
 # Adobe I/O Documentation Template
 
 This is a site template built with the [Adobe I/O Theme](https://github.com/adobe/aio-theme).
