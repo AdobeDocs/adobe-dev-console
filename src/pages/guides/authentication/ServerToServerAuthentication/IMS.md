@@ -43,6 +43,8 @@ You do not need a refresh token for OAuth Server-to-Server credentials. You can 
 
 ## List all client secrets
 
+Pre-requisite: You need to add `I/O Management API` to your project for fetching the list of secrets. See [Add API to a Project](../../services/services-add-api-jwt.md)
+
 Note: No `client_secret` values are returned by this API. Only the secret `uuid` and other metadata is returned. 
 
 ### Parameters
@@ -58,7 +60,7 @@ Note: No `client_secret` values are returned by this API. Only the secret `uuid`
 
 ```curl
 curl -X GET 'https://api.adobe.io/console/organizations/{org_id}/credentials/{credential_id}/secrets' \
-     -H 'Authorization: Bearer {access_token}'
+     -H 'Authorization: Bearer {access_token}' \
      -H 'x-api-key: {client_id}'
 ```
 
@@ -101,6 +103,8 @@ Note: the `created_at` and `last_used_at` values are in milliseconds since UNIX 
 
 You can add up to 2 client secrets for an OAuth Server-to-Server credential.
 
+Pre-requisite: You need to add `I/O Management API` to your project for adding client secret to the credential. See [Add API to a Project](../../services/services-add-api-jwt.md)
+
 Note: The API response contains the the `client_secret` that was added and its `uuid`. This `client_secret` will never be returned in plain text by any other API response. However, you can still find it on the Developer Console UI.
 
 
@@ -117,7 +121,7 @@ Note: The API response contains the the `client_secret` that was added and its `
 
 ```curl
 curl -X POST 'https://api.adobe.io/console/organizations/{org_id}/credentials/{credential_id}/secrets' \
-     -H 'Authorization: Bearer {access_token}'
+     -H 'Authorization: Bearer {access_token}' \
      -H 'x-api-key: {client_id}'
 ```
 
@@ -143,6 +147,8 @@ Note: the `created_at` and `last_used_at` values are in milliseconds since UNIX 
 
 ## Remove client secret from credential
 
+Pre-requisite: You need to add `I/O Management API` to your project for removing client secret from the credential. See [Add API to a Project](../../services/services-add-api-jwt.md)
+
 Note: you need the secret `uuid` to delete a secret. You cannot use the plain text `client_secret` value to identify which secret to delete.
 
 ### Parameters
@@ -159,7 +165,7 @@ Note: you need the secret `uuid` to delete a secret. You cannot use the plain te
 
 ```curl
 curl -X DELETE 'https://api.adobe.io/console/organizations/{org_id}/credentials/{credential_id}/secrets/{uuid}' \
-     -H 'Authorization: Bearer {access_token}'
+     -H 'Authorization: Bearer {access_token}' \
      -H 'x-api-key: {client_id}'
 ```
 
