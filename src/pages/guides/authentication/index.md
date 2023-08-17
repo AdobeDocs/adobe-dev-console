@@ -1,3 +1,5 @@
+import { GetCredentialExternal } from '../../../components/GetCredentialExternal';
+
 <Hero slots="heading, text"/>
 
 # Authentication Guide
@@ -59,4 +61,4 @@ View our guide on API key credentials -
 1. [Understanding different uses of the API key credential](./APIKeyAuthentication/index.md#understanding-different-uses-of-the-api-key-credential)
 2. [Understanding allowed origins](./APIKeyAuthentication/index.md#understanding-allowed-origins)
 
-<GetCredential credentialType="apiKey" />
+<GetCredentialExternal />
