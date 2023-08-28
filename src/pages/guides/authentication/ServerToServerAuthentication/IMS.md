@@ -21,9 +21,9 @@ Parameters can be sent in the body or as query parameters. Passing parameters in
 ### Request for OAuth Server-to-Server credential
 
 ```curl
-curl -X POST 'https://ims-na1.adobelogin.com/ims/token/v3?client_id={CLIENT_ID}' \
+curl -X POST 'https://ims-na1.adobelogin.com/ims/token/v3' \
   -H 'Content-Type: application/x-www-form-urlencoded' \
-  -d 'client_secret={CLIENT_SECRET}&grant_type=client_credentials&scope={SCOPES}'
+  -d 'client_id={CLIENT_ID}&client_secret={CLIENT_SECRET}&grant_type=client_credentials&scope={SCOPES}'
 ```
 
 ### Sample Response
