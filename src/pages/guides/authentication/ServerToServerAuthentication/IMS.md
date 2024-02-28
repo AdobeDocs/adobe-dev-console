@@ -18,6 +18,7 @@ Parameters can be sent in the body or as query parameters. Passing parameters in
 |`scope`|Yes|The list of comma separated scopes you are requesting. To see the scopes available to your credential, visit your project on the [Adobe Developer Console](/console)|
 
 
+
 ### Request for OAuth Server-to-Server credential
 
 ```curl
@@ -38,7 +39,7 @@ curl -X POST 'https://ims-na1.adobelogin.com/ims/token/v3' \
 
 ## Refreshing access tokens
 
-You do not need a refresh token for OAuth Server-to-Server credentials. You can always request a new access token directly using your *client_id*, *client_secret*, and *scopes*. See [fetching access tokens](#fetching-access-tokens).
+You do not need a refresh token for OAuth Server-to-Server credentials. You can always request a new access token directly using your *client_id*, *client_secret*, and *scope*. See [fetching access tokens](#fetching-access-tokens).
 
 
 ## List all client secrets
