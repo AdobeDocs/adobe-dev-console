@@ -6,7 +6,7 @@ In the OAuth 2.0 framework, server to server authentication is called 2-legged O
 
 For your application to generate an access token, an end-user does not need to sign in or provide consent to your application. Instead, your application can use its credentials (client id and secrets) to authenticate itself and generate access tokens. Your application can then use the generated access token to call Adobe APIs and services on its behalf.
 
-## Who's data can you access with a server to server credential?
+## Whose data can you access with a server to server credential?
 
 The token generation process for a server to server credential only authenticates your application. Therefore, the generated access token can only be used to read and modify data owned by your application.
 
