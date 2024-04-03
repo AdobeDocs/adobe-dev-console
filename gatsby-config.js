@@ -138,52 +138,62 @@ module.exports = {
         title: "Authentication",
         pages: [
           {
-            path: "guides/authentication/APIKeyIntegration.md",
-            title: "API Key Integration"
-          },
-          {
-            path: "guides/authentication/OAuthIntegration.md",
-            title: "OAuth Integration"
-          },
-          {
-            path: "guides/authentication/ServiceAccountIntegration.md",
-            title: "Service Account Integration"
+            pages: [
+              {
+                path: "guides/authentication/UserAuthentication/implementation.md",
+                title: "Implementation Guide"
+              },
+              {
+                path: "guides/authentication/UserAuthentication/IMS.md",
+                title: "API Reference"
+              }
+            ],
+            path: "guides/authentication/UserAuthentication/index.md",
+            title: "User Authentication"
           },
           {
             pages: [
               {
-                path: "guides/authentication/OAuth/Scopes.md",
-                title: "OAuth Scopes"
+                path: "guides/authentication/ServerToServerAuthentication/implementation.md",
+                title: "Implementation Guide"
               },
               {
-                path: "guides/authentication/OAuth/samples.md",
-                title: "OAuth Sample Code"
+                path: "guides/authentication/ServerToServerAuthentication/migration.md",
+                title: "Migration Guide"
+              },
+              {
+                path: "guides/authentication/ServerToServerAuthentication/faqs.md",
+                title: "FAQs"
+              },
+              {
+                path: "guides/authentication/ServerToServerAuthentication/IMS.md",
+                title: "API Reference"
+              },
+              {
+                pages: [
+                  {
+                    path: "guides/authentication/JWT/JWTCertificate.md",
+                    title: "Create a Public Key Certificate"
+                  },
+                  {
+                    path: "guides/authentication/JWT/Scopes.md",
+                    title: "JWT Metascopes"
+                  },
+                  {
+                    path: "guides/authentication/JWT/samples.md",
+                    title: "JWT Sample Code"
+                  }
+                ],
+                path: "guides/authentication/JWT/index.md",
+                title: "Service Account (JWT) credential"
               }
             ],
-            path: "guides/authentication/OAuth/index.md",
-            title: "OAuth Authentication"
+            path: "guides/authentication/ServerToServerAuthentication/index.md",
+            title: "Server to Server Authentication"
           },
           {
-            pages: [
-              {
-                path: "guides/authentication/JWT/JWTCertificate.md",
-                title: "Create a Public Key Certificate"
-              },
-              {
-                path: "guides/authentication/JWT/Scopes.md",
-                title: "JWT Metascopes"
-              },
-              {
-                path: "guides/authentication/JWT/samples.md",
-                title: "JWT Sample Code"
-              }
-            ],
-            path: "guides/authentication/JWT/index.md",
-            title: "JWT (Service Account) Authentication"
-          },
-          {
-            path: "guides/authentication/IMS.md",
-            title: "Authentication API Reference"
+            path: "guides/authentication/APIKeyAuthentication/index.md",
+            title: "API Key Authentication"
           },
           {
             pages: [

@@ -6,52 +6,64 @@ The ultimate developer destination to access Adobe APIs & SDKs, listen to near r
 
 ## Overview
 
-This documentation shows you how to use Adobe Developer Console to create projects in order to access Adobe products and services.
 
 <DiscoverBlock slots="link, text"/>
 
-[APIs and services](guides/apis-and-services.md)
+[Accessing the Developer Console](getting-started.md)
 
-Browse available APIs, Events and services for Adobe products and technologies, with which you can develop applications.
-
-
-<DiscoverBlock slots="link, text"/>
-
-[Projects](guides/projects/index.md)
-
-Applications you create that leverage the power of Adobe products and technologies through services such as APIs, Events, and Runtime.
-
-<DiscoverBlock slots="link, text"/>
-
-[Authentication](guides/authentication/index.md)
-
-This guide contains all you need to know to authenticate your apps with Adobe services.
+This guide will give you a quick overview of the Developer Console and how to gain access.
 
 
 <DiscoverBlock slots="link, text"/>
 
-[App Builder template](guides/projects/projects-template.md)
+[Authentication Guide](guides/authentication/index.md)
 
-The App Builder template provides all of the developer tools you need to build Single Page Applications with Adobe's UI toolkit, create microservices, and orchestrate APIs in Adobe Experience Cloud. Collaborate with your team in dedicated workspaces and deploy to your organization seamlessly. 
+Our authentication guide contains all the information you need to generate access tokens and securely use Adobe services in your application.
+
+
+<DiscoverBlock slots="link, text"/>
+
+[APIs, Events, and services](guides/apis-and-services.md)
+
+Browse all available Adobe APIs, Adobe I/O Events, and other Adobe services that you can integrate into your application.
+
+
+<DiscoverBlock slots="link, text"/>
+
+[Creating Projects](guides/projects/index.md)
+
+A project on the Developer Console corresponds to an application you are building. To leverage the power of Adobe products and technologies in your application, simply add those services (APIs, Events, and Runtime) to your project.
 
 
 <DiscoverBlock slots="link, text"/>  
 
 [Plugins](guides/plugins/index.md)
 
-Created as part of a project, plugins enhance the functionality of Adobe products and are accessed through the UI of those products. These are typically available through the Adobe Marketplace.
+Plugins enhance the functionality of Adobe products. End users of the plugins can install them through the marketplace and use them through the product UI. As a developer, you can add a plugin to your project and start building it. 
+
+
+<DiscoverBlock slots="link, text"/>
+
+[App Builder Project Template](guides/projects/projects-template.md)
+
+Quickly start building an App Builder application by using the App Builder project template. App Builder provides all required developer tooling to build a Single Page App with Adobe's UI toolkit or microservices that orchestrate Adobe and non-Adobe APIs and services. [Learn more](https://developer.adobe.com/app-builder/).
 
 
 ## What's new on Adobe Developer Console
 
-### Introducing developer orgs and unified public profile
-    
-All Adobe ID accounts now have access to advanced developer features, such as building service-to-service integrations, journaling for event subscriptions, and access to I/O Runtime (license permitting).
+### Migrate to the new OAuth Server-to-Server credential
 
-### A new era of Photoshop extensibility 
-    
-Adobe is making the Photoshop host app APIs more modern and introducing UXP, our new cross-app API platform. Add a Photoshop plugin to your project, download the starter template, then return to the Developer Console when you’re ready to distribute it.
+The Service Account (JWT) credentials have been deprecated in favor of the OAuth Server-to-Server credentials. Your applications using the Service Account (JWT) credentials will stop working after Jan 1, 2025. You must migrate to the new credential by **Jan 1, 2025**, to ensure your application continues functioning. [Learn more](./authentication/ServerToServerAuthentication/migration.md)
 
-### Add beta users
 
-Select and manage a group of beta users who will have access to your integration while it’s still in development.
+### Email alerts
+
+Adobe will send you [email alerts](email-alerts/index.md) whenever there is a potential or ongoing impact on your application. You can [add developers](email-alerts/index.md#managing-email-alert-recipients-in-an-enterprise-organization) in your organization as email alert recipients. You can also [pause email alerts](email-alerts/index.md#managing-noisy-email-alerts) for any projects that are not critical.
+
+### Project Filters
+
+Use Project Filters to narrow your search when looking for a specific project. You can filter by who created or last modified the project, any title or description used in the project, or any programmatic identifiers such as client id, technical accounts, namespaces, etc. You can also quickly view the projects that contain certificates expiring within the next 30 days.
+
+### Project Activity Logs
+
+View who created or last modified a project by visiting the Project overview page. You can also view the exact set of changes made to the project in the last year (who, what, and when) by visiting the [Activity Logs](projects/index.md#view-a-projects-activity-log) tab within the Project.

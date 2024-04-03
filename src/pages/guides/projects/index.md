@@ -1,14 +1,12 @@
 # Projects Overview
 
-All development work in Adobe Developer Console is done as part of a project. A project may include one or multiple products, and a combination of APIs, events, runtime, and plugins. 
+All development work in Adobe Developer Console is done as part of a project. The concept of a project corresponds to an application you are building. To use APIs and services in the application, you can simply add those APIs and services to the Project. The project may include one or multiple products, and a combination of APIs, events, runtime, and plugins.
 
-## Developer vs Enterprise Projects
+## Projects in an enterprise organization vs personal developer organization
 
-Projects are a common framework within both developer and enterprise organizations. Projects belonging to an enterprise organization are visible to other organization members. In contrast, projects belonging to a developer organization are visible only to the individual to whom the organization belongs.
+Projects are a common framework within enterprise and personal developer organizations. Projects created under an enterprise organization are owned by the organization and are visible to other organization members. In contrast, projects belonging to a developer organization are visible only to you.
 
-Use the org switcher to view the organizations to which you belong to and easily switch between them.
-
-![Organization switcher on the Console home screen.](../../images/switch-organizations.png)
+If you are a developer or a system administrator on multiple organizations, you can view the projects that are owned by those organizations. The projects you see on the Developer Console depends on the organization you have currently selected in the [org switcher](../getting-started.md#switching-between-your-organizations). Use the org switcher to view the organizations to which you belong to and easily switch between them.
 
 <InlineAlert slots="text"/>
 
@@ -55,8 +53,16 @@ If you believe you are seeing a *Read Only* tag in error, or want access to cert
 
 ## Delete a Project
 
-**Deleting a project is permanent**. Before you can delete a project, you must remove all services and credentials added to it. Certain services (Runtime, plugins, etc.) cannot yet be removed from a project and disallow a project deletion.
+Deleting a project is **permanent** and will remove all entites contained within the project - APIs and services, credentials, and workspaces. You can delete a project by visiting the project overview page.
 
+While most projects can be deleted, sometimes a project is related to an application you have published and, therefore, cannot be deleted. 
+
+1. If a project contains an API that was submitted for approval (status: In Review or Approved), then the project cannot be deleted.
+2. If an App Builder project has been submitted for approval (status: Pending or Published), then that project cannot be deleted. However, you can always revoke a published app and then delete the project. 
+
+<InlineAlert slots="text"/>
+
+Projects containing plugins cannot be deleted yet. 
 
 ## View a Project's Activity Log
 

@@ -27,7 +27,7 @@ jwttoken = jwt.encode(jwtPayloadJson, private_key, algorithm='RS256')
 #print(jwttoken.decode('utf-8'))
 
 
-# We are making a http request simmilar to this curl request
+# We are making an HTTP request similar to this curl request
 #curl -X POST -H "Content-Type: multipart/form-data" -F "client_id=CLIENT_ID" -F "client_secret=CLIENT_SECRET" -F "jwt_token=`./jwtenc.sh`" https://ims-na1.adobelogin.com/ims/exchange/jwt
 accessTokenRequestPayload['jwt_token'] = jwttoken
 result = requests.post(url, data = accessTokenRequestPayload)

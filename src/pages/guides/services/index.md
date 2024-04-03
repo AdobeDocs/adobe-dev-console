@@ -1,8 +1,6 @@
 # Services overview
 
-After creating a project, it is time to begin adding services. These services include accessing Adobe APIs, adding events, and enabling Runtime.
-
-**Note:** For information on building a Plugin, please visit the [plugins overview](../plugins/index.md) for a complete guide to creating, updating, and distributing plugins.
+After creating a project, it is time to begin adding services. These services include Adobe APIs, I/O Events, Plugins, App Builder, and I/O Runtime.
 
 ## Add a service
 
