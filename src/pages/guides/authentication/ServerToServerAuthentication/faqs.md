@@ -1,11 +1,11 @@
-# FAQs
+27# FAQs
 
 ### Will my Adobe application stop working immediately?
-No - any existing application using the Service Account (JWT) credential will continue to work until Jan 1, 2025. See [deprecation timelines](./migration.md#deperecation-timelines).
+No - any existing application using the Service Account (JWT) credential will continue to work until Jan 27, 2025. See [deprecation timelines](./migration.md#deperecation-timelines).
 
 
 ### By when do I need to migrate to the new credential? 
-You must migrate your application to use the new OAuth Server-to-Server credential before Jan 1, 2025, to ensure your application does not face any downtime. See [migration guide](./migration.md#migration-overview)
+You must migrate your application to use the new OAuth Server-to-Server credential before Jan 27, 2025, to ensure your application does not face any downtime. See [migration guide](./migration.md#migration-overview)
 
 
 ### We are using the Service Account (JWT) credential in a 3rd party application we did not develop. How should we migrate such applications?
@@ -13,17 +13,17 @@ The company or organization that developed the application must add support to u
 
 
 ### We are a company or organization that develops applications using Service Account (JWT) credentials that Adobe customers install. What do we need to do?
-Until May 1, 2024, customers can still create Service Account (JWT) credentials to use your application. However, any existing or new customers of your application must switch to using the before credential by Jan 1, 2025.
+Until June 3, 2024, customers can still create Service Account (JWT) credentials to use your application. However, any existing or new customers of your application must switch to using the before credential by Jan 27, 2025.
 
-Therefore, we recommend enhancing your application before May 1, 2024. You must add support to use the new credential and support for customers to migrate from the old credential to the new credential.
+Therefore, we recommend enhancing your application before June 3, 2024. You must add support to use the new credential and support for customers to migrate from the old credential to the new credential.
 
 
 ### We can currently create new Service Account (JWT) credentials even though they are marked as deprecated. Is it recommended?
-No, creating any new Service Account (JWT) credentials is not recommended. All Service Account (JWT) credentials, old or new, will stop working after Jan 1, 2025. We recommend you avoid migrating your application again and use the new OAuth Server-to-Server credential from the beginning. See our [implementation guide](./implementation.md).
+No, creating any new Service Account (JWT) credentials is not recommended. All Service Account (JWT) credentials, old or new, will stop working after Jan 27, 2025. We recommend you avoid migrating your application again and use the new OAuth Server-to-Server credential from the beginning. See our [implementation guide](./implementation.md).
 
 
-### What happens if we do not migrate our application by Jan 1, 2025?
-Projects on the Developer Console still containing any Service Account (JWT) credentials will be 'frozen' after Jan 1, 2025. This will disable certificate rotation for your application or any other action to modify the project or the credential. The ability to migrate will, however, still be available. Once you migrate your application, the project will be 'unfrozen' again. 
+### What happens if we do not migrate our application by Jan 27, 2025?
+Projects on the Developer Console still containing any Service Account (JWT) credentials will be 'frozen' after Jan 27, 2025. This will disable certificate rotation for your application or any other action to modify the project or the credential. The ability to migrate will, however, still be available. Once you migrate your application, the project will be 'unfrozen' again. 
 
 
 ### Why do I have to switch to the new credential for my existing applications?
