@@ -12,7 +12,7 @@ User authentication credentials rely on OAuth2.0 `authorization_code` grant type
 6. Revoking access tokens or refresh tokens
 
 
-If you are already familiar with 3-legged OAuth, head to our [implmentation guide](./implementation.md) to begin integrating OAuth in your application. Learn about [user authentication credential types](./implementation.md#user-authentication-credential-types), [redirect URIs](./implementation.md#understanding-default-redirect-uri-and-redirect-uri-patterns), [standard libraries](./implementation.md#standard-oauth2-libraries), and more.
+If you are already familiar with 3-legged OAuth, head to our [implementation guide](./implementation.md) to begin integrating OAuth in your application. Learn about [user authentication credential types](./implementation.md#user-authentication-credential-types), [redirect URIs](./implementation.md#understanding-default-redirect-uri-and-redirect-uri-patterns), [standard libraries](./implementation.md#standard-oauth2-libraries), and more.
 
 ## Asking a user to authorize your application
 

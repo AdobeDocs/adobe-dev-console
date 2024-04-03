@@ -38,9 +38,9 @@ The product profile selection works the same way as it does for Service Account 
 Generating access tokens for experimentation with the OAuth Server-to-Server credential is straightforward. You can use the 'Generate access token' button on the credential overview page or copy the cURL command and use the command line to generate an access token for quick use.
 
 ```curl
-curl -X POST 'https://ims-na1.adobelogin.com/ims/token/v3?client_id={CLIENT_ID}' \
+curl -X POST 'https://ims-na1.adobelogin.com/ims/token/v3' \
   -H 'Content-Type: application/x-www-form-urlencoded' \
-  -d 'client_secret={CLIENT_SECRET}&grant_type=client_credentials&scope={SCOPES}'
+  -d 'client_id={CLIENT_ID}&client_secret={CLIENT_SECRET}&grant_type=client_credentials&scope={SCOPES}'
 ```
 
 ![](../../../images/oauth-server-to-server-credential-generate-access-tokens.png)
