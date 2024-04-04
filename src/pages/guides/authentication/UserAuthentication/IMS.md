@@ -5,7 +5,6 @@ Following is an API reference for Adobe Identity Management Services (IMS) APIs.
 On this page:
 + [OpenID Configuration](#openid-configuration)
 + [ID Token Keys](#id-token-keys)
-+ [OpenID Configuration](#openid-configuration-1)
 + [UserInfo](#userinfo)
 + [Authorize Request](#authorize-request)
 + [Fetching Access tokens](#fetching-access-tokens)
@@ -171,7 +170,7 @@ Several query parameters are available to you as a developer to customize the us
 |---|---|---|
 |`client_id`|Yes|The client ID obtained from [Adobe Developer Console](/console).|
 |`redirect_uri`| No|The URI to which the user agent is redirected once the authorization completes. Note that this URI must be HTTPS. The supplied value for this parameter is validated against the Redirect URI pattern supplied by you at the time of credential creation . If a redirect URI is not provided with the request or if it does not match against the pattern, Adobe will redirect the response to the Default Redirect URI supplied by you at the time of credential creation.|
-|`scope`|No|The requested scopes in the form of a list of space or comma-delimited, case-sensitive strings. See the [OAuth 2.0 Scopes reference document](OAuth/Scopes.md) for more information.|
+|`scope`|No|The requested scopes in the form of a list of space or comma-delimited, case-sensitive strings. See the section on [OAuth 2.0 Scopes](#scopes) for more information.|
 |`response_type`|No|Possible values are `code`, `token`, `id_token`, `id_token token`, `code id_token`. The default response type for the Authorization code flow is `code`.|
 |`state`|Recommended|Client-defined state data that is replayed back to the client. It must not be longer than 4096 characters and does not need to be a JSON object. Typically, Cross-Site Request Forgery (CSRF, XSRF) mitigation is done by cryptographically binding the value of this parameter with a browser cookie.|
 |`nonce`|No|String value used to associate a Client session with an ID Token and to mitigate replay attacks. The value is passed through unmodified from the Authentication Request to the ID Token.|
@@ -294,7 +293,7 @@ curl -X POST 'https://ims-na1.adobelogin.com/ims/token/v3?client_id={CLIENT_ID}'
 |`access_token`|Generated access token. By default they expire in 24 hours.|
 |`refresh_token`|Generated refresh token. By default they expire in 14 days.|
 |`token_type`|Token type will always be `bearer`.|
-|`id_token`|Generated ID token.<br/><br/>Present if `openid` is added as scope. See the [OAuth 2.0 Scopes reference document](OAuth/Scopes.md) for more information.|
+|`id_token`|Generated ID token.<br/><br/>Present if `openid` is added as scope. See the section on [OAuth 2.0 Scopes ](#scopes) for more information.|
 |`expires_in`|Validity of access token in seconds.|
 
 ## Refreshing Access tokens
@@ -344,7 +343,7 @@ curl -X POST 'https://ims-na1.adobelogin.com/ims/token/v3?client_id={CLIENT_ID}'
 |Property|Description|
 |---|---|
 |`access_token`|Generated access token|
-|`refresh_token`|Generated refresh token.<br/><br/>`offline_access` scope is needed for this to be returned. See the [OAuth 2.0 Scopes reference document](OAuth/Scopes.md) for more information.|
+|`refresh_token`|Generated refresh token.<br/><br/>`offline_access` scope is needed for this to be returned. See the section on [OAuth 2.0 Scopes](#scopes) for more information.|
 |`token_type`|Token type will always be `bearer`.|
 |`expires_in`|Validity of access token in seconds.|
 
