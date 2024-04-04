@@ -10,6 +10,20 @@ Migrating your applications to the OAuth Server-to-Server credential is a simple
 
 If you have more questions, check out our [frequently asked questions](#faqs) or visit the Adobe Developer Console [forums](https://experienceleaguecommunities.adobe.com/t5/adobe-developer-console/ct-p/adobe-io-console).
 
+## Table of Contents
+
++ [Why OAuth Server-to-Server credentials?](#why-oauth-server-to-server-credentials)
++ [Deperecation Timelines](#deperecation-timelines)
++ [Migration Overview](#migration-overview)
+   + [Preparation: Find out which applications are using the Service Account (JWT) credentials](#preparation-find-out-which-applications-are-using-the-service-account-jwt-credentials)
+   + [Step 1: Add the new credential to your project](#step-1-add-the-new-credential-to-your-project)
+   + [Step 2: Update your application and delete old credential](#step-2-update-your-application-and-delete-old-credential)
+     + [Update your application](#update-your-application)
+     + [Test if the new credential is working](#test-if-the-new-credential-is-working)
+     + [Delete the old credential](#delete-the-old-credential)
+   + [Cancelling Migration](#cancelling-migration)
+
+
 ## Why OAuth Server-to-Server credentials?
 
 The new OAuth Server-to-Server credentials rely on the OAuth 2.0 client credentials grant. Therefore, you can use industry-standard [OAuth 2.0 libraries](./implementation.md#generating-access-tokens-using-standard-oauth2-libraries) to implement access token generation in your application.
@@ -34,7 +48,7 @@ Lastly, while the new OAuth Server-to-Server credentials do not use expiring cer
 Your applications using the Service Account (JWT) credentials will stop working after Jan 27, 2025.
 
 
-| | May 1, 2023 - Apr 30, 2024 | May 1, 2024 - Dec 31, 2024 | Jan 27, 2025 (end of life) |
+| | May 1, 2023 - Jun 2, 2024 | Jun 3, 2024 - Jan 26, 2024 | Jan 27, 2025 (end of life) |
 |-|------------------------------|---------------------------------|-------------------------------|
 | Existing applications using a Service Account (JWT) credential |   Existing applications using the Service Account (JWT) credential will continue to work. |   Existing applications using the Service Account (JWT) credential will continue to work.  |  **Existing applications cannot refresh expiring certificates after Jan 27, 2025, and will stop working**.  |
 | New applications creating a Service Account (JWT) credential   |  A new Service Account (JWT) credential can be added to the project.  |  A new Service Account (JWT) credential **cannot** be created or added to the project.  |  A new Service Account (JWT) credential **cannot** be created or added to the project.  |
@@ -83,7 +97,7 @@ Adding an equivalent OAuth Server-to-Server credential will not impact your runn
 
 <InlineAlert slots="text"/>
 
-Completion of step 2 on the Developer Console will complete the migration, and the step cannot be rolled back. We recommend that developers pay attention to the prompts on the UI and exercise care when performing this step.
+If you are migrating Service Account (JWT) credentials used in AEM, please see the [migration guide for AEM customers](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/jwt-credentials-deprecation-in-adobe-developer-console).
 
 #### Update your application
 
@@ -106,6 +120,10 @@ Completion of step 2 on the Developer Console will complete the migration, and t
 4. If all is well, you can proceed to the final action of deleting the old credential. 
 
 #### Delete the old credential
+
+<InlineAlert slots="text"/>
+
+Completion of this step on the Developer Console will complete the migration, and the step cannot be rolled back. We recommend that developers pay attention to the prompts on the UI and exercise care when performing this step.
    
 1. Once you are sure that you have replaced the old credential successfully, the dialog will take you to the last step of deleting the old credential.
 
