@@ -163,7 +163,7 @@ module.exports = {
               },
               {
                 path: "guides/authentication/ServerToServerAuthentication/faqs.md",
-                title: "FAQs"
+                title: "Deprecation of Service Account (JWT) credentials FAQs"
               },
               {
                 path: "guides/authentication/ServerToServerAuthentication/IMS.md",
