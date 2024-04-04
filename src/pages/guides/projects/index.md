@@ -78,6 +78,18 @@ Changes made to a project are retained as activity logs for **1 year**. You can 
 
 Note: Project Activity logs are currently only available to enterprise and teams organizations.
 
+## Last service activity in a Project
+
+At a glance, the last service activity date informs you when Adobe last recorded activity from your integration or application. This information helps ascertain whether the integration or application using this Project has been active. 
+
+Currently, the Developer Console only records service activity when your integration or application generates access tokens to call Adobe APIs or receives events from Adobe I/O Events. 
+
+We do not yet track service activity when an App Builder app action is invoked, nor any other activities of App Builder apps. Also, we do not yet track the Adobe API calls your integration or application makes. However, you can find information about API calls under the [Insights](../insights.md) tab. Also, we do not yet track any service activity for any Creative Cloud app plugins (Adobe Express add-ons, UXP apps, or ZXP apps). Lastly, we do not yet track any service activity for the API key credential.
+
+Note: The Developer Console only records the date of the service activity. Furthermore, the tracked information only serves to inform you about which of your projects were in use and when.
+
+Note: Historical data for service activity before April 15, 2024 is unavailable.
+
 ## Project approval
 
 Once you have completed development on your project, your application is ready for approval. There are four different approval processes within Adobe Developer Console, depending on the type of application that you have built. 
