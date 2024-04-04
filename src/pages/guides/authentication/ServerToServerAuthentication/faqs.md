@@ -1,4 +1,4 @@
-27# FAQs
+#FAQs
 
 ### Will my Adobe application stop working immediately?
 No - any existing application using the Service Account (JWT) credential will continue to work until Jan 27, 2025. See [deprecation timelines](./migration.md#deperecation-timelines).
