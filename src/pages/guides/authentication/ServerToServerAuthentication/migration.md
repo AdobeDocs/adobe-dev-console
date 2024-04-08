@@ -40,7 +40,7 @@ Lastly, while the new OAuth Server-to-Server credentials do not use expiring cer
 | Generating access tokens in your application         | You can use [standard OAuth 2.0 libraries](./implementation.md#generating-access-tokens-using-standard-oauth2-libraries) to generate access tokens in your application programmatically.| You can implement access token generation programmatically by reading our documentation. |
 | Rotating client secrets programmatically             | You can rotate client secrets on-demand through the Dev Console UI and API. [Learn more](./implementation.md#rotating-client-secrets-programmatically).| You can rotate the public certificate and private key pair manually through the UI. |
 
-## Deperecation Timelines
+## Deprecation Timelines
 
 
 <InlineAlert slots="text"/>
