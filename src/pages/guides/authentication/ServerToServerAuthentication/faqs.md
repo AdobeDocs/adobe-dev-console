@@ -4,10 +4,10 @@
 
 ## Table of contents
 + [General FAQs](#general-faqs)
-+ [Benefits of the New Credential](#benefits-of-the-new-credential)
-+ [Migration Next Steps](#migration-next-steps)
-+ [Migrating Vendor Applications](#migrating-vendor-applications)
-+ [Adobe Assistance](#adobe-assistance)
++ [Benefits of the new credential](#benefits-of-the-new-credential)
++ [Migration next steps](#migration-next-steps)
++ [Migrating vendor applications](#migrating-vendor-applications)
++ [Adobe assistance](#adobe-assistance)
 
 
 
@@ -52,7 +52,7 @@ No. Creating any new Service Account (JWT) credentials is not recommended. All S
 
 
 
-## Benefits of the New Credential
+## Benefits of the new credential
 
 
 
@@ -79,7 +79,7 @@ We recommend immediately [rotating your application's client secret](./implement
 
 
 
-## Migration Next Steps
+## Migration next steps
 
 
 
@@ -142,7 +142,7 @@ You can view this information by opening your Project on the Developer Console. 
 
 
 
-## Migrating Vendor Applications
+## Migrating vendor applications
 
 
 
@@ -158,7 +158,7 @@ Therefore, we recommend enhancing your application before June3, 2024. You must 
 
 
 
-## Adobe Assistance
+## Adobe assistance
 
 
 
