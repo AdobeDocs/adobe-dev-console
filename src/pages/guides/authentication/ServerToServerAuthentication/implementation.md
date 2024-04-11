@@ -79,24 +79,18 @@ You can rotate secrets for your credential through the Dev Console UI and [progr
 To rotate client secrets through the UI, follow the steps below on the credential overview screen - 
 
 1. Add a new client secret to your credential .
-
      ![](../../../images/oauth-server-to-server-credential-add-client-secret.png)
-
      ![](../../../images/oauth-server-to-server-credential-added-client-secret.png)
 
 2. Update your application to replace your old client secret with the new one you added.
-3. Check the client secret last used timestamp to make sure your application is no longer using the old client secret.
 
+3. Check the client secret last used timestamp to make sure your application is no longer using the old client secret.
      ![](../../../images/oauth-server-to-server-credential-check-client-secret-timestamps.png)
 
 4. Once sure that you have successfully replaced the client secret, you can delete the old client secret.
-
      ![](../../../images/oauth-server-to-server-credential-delete-old-client-secret.png)
-
-
-<InlineAlert slots="text"/>
-
-Once a client secret is deleted, you cannot restore it. So be extra sure you have replaced the old client secret with the new one in all locations.
+     <InlineAlert slots="text"/>
+     Once a client secret is deleted, you cannot restore it. So be extra sure you have replaced the old client secret with the new one in all locations.
 
 
 ### Rotating client secrets programmatically
