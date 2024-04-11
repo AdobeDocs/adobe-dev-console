@@ -82,9 +82,13 @@ Note: Project Activity logs are currently only available to enterprise and teams
 
 At a glance, the last service activity date informs you when Adobe last recorded activity from your integration or application. This information helps ascertain whether the integration or application using this Project has been active. 
 
-Currently, the Developer Console only records service activity when your integration or application generates access tokens to call Adobe APIs or receives events from Adobe I/O Events. 
+Currently, the Developer Console only records service activity when your integration or application generates access tokens to call Adobe APIs. 
 
-We do not yet track service activity when an App Builder app action is invoked, nor any other activities of App Builder apps. Also, we do not yet track the Adobe API calls your integration or application makes. However, you can find information about API calls under the [Insights](../insights.md) tab. Also, we do not yet track any service activity for any Creative Cloud app plugins (Adobe Express add-ons, UXP apps, or ZXP apps). Lastly, we do not yet track any service activity for the API key credential.
+We do not yet track service activity when 
+* Your App Builder app action is invoked, nor any other activities of App Builder apps. 
+* Your integration calls Adobe APIs or receives events from Adobe I/O Events. However, you can find information this information under the [Insights](../insights.md) tab. 
+
+Also, we do not yet track any service activity for any Creative Cloud app plugins (Adobe Express add-ons, UXP apps, or ZXP apps). Lastly, we do not yet track any service activity for the API key credential.
 
 Note: The Developer Console only records the date of the service activity. Furthermore, the tracked information only serves to inform you about which of your projects were in use and when.
 
