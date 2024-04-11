@@ -86,7 +86,7 @@ Currently, the Developer Console only records service activity when your integra
 
 We do not yet track service activity when 
 * Your App Builder app action is invoked, nor any other activities of App Builder apps. 
-* Your integration calls Adobe APIs or receives events from Adobe I/O Events. However, you can find information this information under the [Insights](../insights.md) tab. 
+* Your integration calls Adobe APIs or receives events from Adobe I/O Events. However, you can find this information under the [Insights](../insights.md) tab in a Project. 
 
 Also, we do not yet track any service activity for any Creative Cloud app plugins (Adobe Express add-ons, UXP apps, or ZXP apps). Lastly, we do not yet track any service activity for the API key credential.
 
