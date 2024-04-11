@@ -3,7 +3,8 @@
 
 The following guide goes over finer implementation details for OAuth Server-to-Server credentials. At the end of the guide is a list of recommended industry-standard OAuth2 libraries. Before you proceed, we recommend you become familiar with the server to server authentication credentials in our [server to server authentication guide](./index.md).
 
-On this page:
+## Table of contents 
+
 + [Setting up the OAuth Server-to-Server credential](#setting-up-the-oauth-server-to-server-credential)
 + [Generate access tokens](#generate-access-tokens)
 + [Generating access tokens programmatically](#generating-access-tokens-programmatically)
