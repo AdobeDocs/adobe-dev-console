@@ -8,11 +8,14 @@ To login to the [Adobe Developer Console](https://developer.adobe.com/console) y
 
 ### Logging in with a company or school account
 
-When you use your company or school acccount to login, you can see all the projects your organization has on the Developer Console. However, before you can see any projects or can begin creating a new project, an administrator on your organization would need to grant you developer role permissions. If you login without the developer or system administrator permissions, you will see an Access Denied screen.
+When you use your company or school acccount to login, you can see all the projects your organization has on the Developer Console. However, before you can see any projects or can begin creating a new project, an administrator on your organization would need to grant you developer role permissions. If you login without the developer or system administrator permissions, you will only be able to view the list of APIs and services Adobe has.
+
+![](../images/user-view-request-access.png)
+
+Depending on what your organization has purchased from Adobe, you can request your Admin developer access to an API by clicking the request access button. But to gain access to other services, you will need to contact your organization administrator yourself. 
 
 To contact an administrator on your organization, view our documentation [here](https://helpx.adobe.com/enterprise/kb/contact-administrator.html). If you're an administrator, check out our documentation on [managing developers](https://helpx.adobe.com/enterprise/using/manage-developers.html).
 
-![](../images/access-denied-screen.png)
 
 ### Logging in with a personal account
 
