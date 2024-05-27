@@ -1,7 +1,7 @@
 
 # OAuth Server-to-Server credential implementation guide
 
-The following guide goes over finer implementation details for OAuth Server-to-Server credentials. At the end of the guide is a list of recommended industry-standard OAuth2 libraries. Before you proceed, we recommend you become familiar with the server to server authentication credentials in our [server to server authentication guide](./index.md).
+The following guide goes over finer implementation details for OAuth Server-to-Server credentials. At the end of the guide is a list of recommended industry-standard OAuth2 libraries. Before you proceed, we recommend you become familiar with the server to server authentication credentials in our [server to server authentication guide](../ServerToServerAuthentication/index.md).
 
 ## Table of contents 
 
@@ -15,7 +15,7 @@ The following guide goes over finer implementation details for OAuth Server-to-S
 
 ## Setting up the OAuth Server-to-Server credential
 
-Depending on the API or an Event to your project on the Adobe Developer Console, you can select the OAuth Server-to-Server credential. The OAuth Server-to-Server credential is available for all APIs and Events supporting the [Service Account (JWT) credential *(deprecated)*](./index.md#service-account-jwt-credential-deprecated).
+Depending on the API or an Event to your project on the Adobe Developer Console, you can select the OAuth Server-to-Server credential. The OAuth Server-to-Server credential is available for all APIs and Events supporting the [Service Account (JWT) credential *(deprecated)*](../ServerToServerAuthentication/index.md#service-account-jwt-credential-deprecated).
 
 ### Credential Name
 

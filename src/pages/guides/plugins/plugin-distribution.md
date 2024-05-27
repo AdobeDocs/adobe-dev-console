@@ -2,7 +2,7 @@
 
 This guide provides instructions for distributing a Plugin created in Adobe Developer Console.
 
-For information on how to build a plugin, please being by reading the [plugin overview](index.md).
+For information on how to build a plugin, please being by reading the [plugin overview](../plugins/index.md).
 
 ## Select plugin project
 
