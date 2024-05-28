@@ -24,15 +24,15 @@ If you selected **OAuth Server-to-Server** under *Credentials* you will be prese
 
 To generate a token, click on the button "Generate access token"
 
-![](../../images/services-api-oauth-s2s-generate-token-2.png)
+![](../images/services-api-oauth-s2s-generate-token-2.png)
 
 You can also view the cURL command you could use to generate access tokens programmatically.
 
-![](../../images/services-api-oauth-s2s-view-curl-command.png)
+![](../images/services-api-oauth-s2s-view-curl-command.png)
 
 You can also view the scopes per service to generate an access token that only works for a subset of services in your project.
 
-![](../../images/services-api-oauth-s2s-view-scopes.png)
+![](../images/services-api-oauth-s2s-view-scopes.png)
 
 ## OAuth User authentication
 
@@ -42,7 +42,7 @@ From here, you can view and copy the *Client ID*, retrieve the client secret, an
 
 Within the *Credential details* screen you can also choose to download the OAuth JSON file, edit the credential, or delete the credential using the buttons provided in the top-right corner of the screen.
 
-![](../../images/services-api-oauth-user-auth-credential-overview.png)
+![](../images/services-api-oauth-user-auth-credential-overview.png)
 
 ## API key
 
