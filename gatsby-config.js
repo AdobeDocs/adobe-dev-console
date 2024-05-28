@@ -88,7 +88,7 @@ module.exports = {
                 title: "Add API using API Key credential"
               },
               {
-                path: "guides/services/services-add-api-oauth.md",
+                path: "guides/services/services-add-api-oauth-user-authentication.md",
                 title: "Add API using OAuth User authentication credential"
               },
               {
