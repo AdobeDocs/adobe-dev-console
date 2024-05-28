@@ -24,9 +24,13 @@ Access to some APIs is based on licenses. Meaning either the licenses your compa
 
 APIs can be connected to your app in multiple ways, depending on the API or the type of app that you are building. Occasionally APIs will provide multiple connection options, allowing you to choose the type of connection that works best for your application. To learn more about each of these authentication methods or API connections, read the [authentication documentation](../authentication/index.md).
 
-* [Add an API using Service Account (JWT) authentication](services-add-api-jwt.md)
-* [Add an API using OAuth authentication](services-add-api-oauth.md)
+* [Add an API using OAuth Server-to-Server credential](services-add-api-oauth-s2s.md)
+* [Add an API using OAuth User authentication credential](services-add-api-oauth-user-authentication.md)
 * [Add an API using API Key authentication](services-add-api-key.md)
+
+<InlineAlert slots="text"/>
+
+See our [authentication guide](../authentication/index.md) to learn about the available credential types.
 
 ### Add Event
 
@@ -52,7 +56,7 @@ Occasionally you may need to remove a service once it has been added to your pro
 
 Once you have successfully added APIs to your project or workspace, you can return to the **Project overview** (or **Workspace overview** in a templated project) at any time to view the details for that API and any other project services you may have added. You can select the specific API from the left navigation to view its details or remove the API using the **Remove API** button in the top-right corner.
 
-You can also select the specific credential type from the left navigation to view the **Credential details** and perform other actions (generate JWT tokens, copy credential details, retrieve client secrets, etc.) as needed. For more information on accessing credentials, please read the [credentials overview](../credentials.md).
+You can also select the specific credential type from the left navigation to view the **Credential details** and perform other actions (generate access tokens, copy credential details, retrieve client secrets, etc.) as needed. For more information on accessing credentials, please read the [credentials overview](../credentials.md).
 
 To view credentials for events, select the specific event registration from the left navigation and select the **Credentials** tab. For more information on working with events, including viewing event credentials, follow the guide for [adding Events to your project or workspace](services-add-event.md).
 
