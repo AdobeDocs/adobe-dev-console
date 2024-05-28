@@ -104,7 +104,8 @@ With the API configured, you are redirected to the API overview, providing links
 
 You can also elect to remove the API on this screen using the **Remove API** button in the top-right corner.
 
-![](../../images/services-api-oauth-added.png)
+![](../../images/services-api-oauth-user-auth-added.png)
+
 
 ## Credentials
 
@@ -113,6 +114,12 @@ Now that you have added an API, you can return to the *Project overview* (or *Wo
 You can select the specific API from the left navigation to view its details or remove the API using the **Remove API** button in the top-right corner.
 
 You can also select the specific credential type from under *Credentials* in the left navigation to view the *Credential details* and perform other actions (view Client ID, retrieve client secret, etc.) as needed. For more information on accessing credentials, please read the [credentials overview](../credentials.md).
+
+![](../../images/services-api-oauth-user-auth-credential-overview.png)
+
+You can also view the scopes available to your credential on the scopes tab.
+
+![](../../images/services-api-oauth-user-auth-credential-scopes.png)
 
 ## Insights
 
