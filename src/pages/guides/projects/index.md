@@ -82,17 +82,18 @@ Note: Project Activity logs are currently only available to enterprise and teams
 
 At a glance, the last service activity date informs you when Adobe last recorded activity from your integration or application. This information helps ascertain whether the integration or application using this Project has been active. 
 
-Currently, the Developer Console only records service activity when your integration or application generates access tokens to call Adobe APIs. 
+Currently, the Developer Console only records service activity when 
+1. Your integration or application generates access tokens to call Adobe APIs. 
+2. Your event registration receives events from I/O Events
 
-We do not yet track service activity when 
-* Your App Builder app action is invoked, nor any other activities of App Builder apps. 
-* Your integration calls Adobe APIs or receives events from Adobe I/O Events. However, you can find this information under the [Insights](../insights.md) tab in a Project. 
+Currently, we do not yet track service activity when 
+1. Your App Builder app action is invoked, nor any other activities of App Builder apps. 
+2. Your integration calls Adobe APIs or receives events from Adobe I/O Events. However, you can find this information under the [Insights](../insights.md) tab in a Project. 
+3. Also, we do not yet track any service activity for any Creative Cloud app plugins (Adobe Express add-ons, UXP apps, or ZXP apps). Lastly, we do not yet track any service activity for the API key credential.
 
-Also, we do not yet track any service activity for any Creative Cloud app plugins (Adobe Express add-ons, UXP apps, or ZXP apps). Lastly, we do not yet track any service activity for the API key credential.
+<InlineAlert slots="text"/>
 
-Note: The Developer Console only records the date of the service activity. Furthermore, the tracked information only serves to inform you about which of your projects were in use and when.
-
-Note: Historical data for service activity before April 15, 2024 is unavailable.
+The Developer Console only records the date of the service activity. Furthermore, the tracked information is approximate and only serves to inform you about which of your projects were in use and when. Historical data for service activity before April 15, 2024 is unavailable.
 
 ## Project approval
 
