@@ -26,13 +26,13 @@ The first step in configuration is to choose your event subscriptions. This requ
 
 ## Credentials
 
-The next step in configuring your event registration is to configure the authentication credentials. This could be a service account (JWT) or OAuth, depending on the type of event being configured. The example in this document uses OAuth 2.0 authentication and authorization.
+The next step in configuring your event registration is to configure the authentication credentials. This could be a OAuth Server-to-Server credential or OAuth User authentication credential, depending on the type of event being configured. The example in this document uses OAuth 2.0 user authentication credential.
 
 <InlineAlert slots="text"/>
 
 To learn more about authentication and available types, visit the [authentication documentation](../authentication/index.md).
 
-To configure an Event using OAuth 2.0 authentication and authorization, you must first select the platform where you want to use this integration: Web App, Single Page App, or Native App. Please note, depending on the selected event provider not all platform choices may be available. 
+To configure an Event using OAuth 2.0 user authentication credential, you must first select the platform where you want to use this integration: Web App, Single Page App, or Native App. Please note, depending on the selected event provider not all platform choices may be available. 
 
 Once you have selected a platform, you will be required to provide a *Redirect URI*, which is a fallback URI to be used if the authorization request contains a redirect URI which doesn't match the Redirect URI list or doesn't contain a `redirect_uri` parameter.
 
@@ -66,7 +66,7 @@ You can also remove an event registration from the event overview by selecting *
 
 ## Credentials
 
-The *Credentials* tab shows details related to the event authentication method, allowing you to perform actions such as copying a Client ID, retrieving the client secret, generating a JWT token, etc depending on the type of authentication used. 
+The *Credentials* tab shows details related to the event authentication method, allowing you to perform actions such as copying a Client ID, retrieving the client secret, generating an access token, etc depending on the type of authentication used. 
 
 ![](../../images/events-credentials.png)
 

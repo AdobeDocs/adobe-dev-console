@@ -10,35 +10,39 @@ To view credentials for events, select the specific event registration from the 
 
 ## Credential details
 
-You can select a specific API from the left navigation to view its details or you can select a credential type under *Credentials* in the left navigation in order to view the *Credential details* and perform other actions (generate JWT tokens, copy credential details, retrieve client secrets, etc.) as needed. 
+You can select a specific API from the left navigation to view its details or you can select a credential type under *Credentials* in the left navigation in order to view the *Credential details* and perform other actions (generate access tokens, copy credential details, retrieve client secrets, etc.) as needed. 
 
 If multiple services have been added to the project or workspace using the same credentials, they will each be listed under the *Connected products and services* on the right-hand side of the details tab.
 
-For example, selecting **Service Account (JWT)** under *Credentials* will open the *Credential details* for all products and services connected using JWT.
+For example, selecting **OAuth Server-to-Server** under *Credentials* will open the *Credential details* for all products and services connected using this credential.
 
 ![](../images/credentials-details.png)
 
-## Generate JWT
+## Generate Access token
 
-If you selected **Service Account (JWT)** under *Credentials* you will be presented with the *Credential details* for all products and services connected using JWT.
+If you selected **OAuth Server-to-Server** under *Credentials* you will be presented with the *Credential details* for all products and services connected using this credential.
 
-You can also select **Generate JWT** in order to view a sample *JWT Payload* or *Generate custom JWT* by copying and pasting your private key into the available field and choosing **Generate Token**.
+To generate a token, click on the button "Generate access token"
 
-![](../images/credentials-generate-jwt.png)
+![](../../images/services-api-oauth-s2s-generate-token-2.png)
 
-If successful, the *Generated JWT* will be visible as well as a *Sample cURL command*. You can select *Clear generated JWT* in order to clear the screen and generate a new token.
+You can also view the cURL command you could use to generate access tokens programmatically.
 
-![](../images/credentials-generated-jwt.png)
+![](../../images/services-api-oauth-s2s-view-curl-command.png)
 
-## OAuth
+You can also view the scopes per service to generate an access token that only works for a subset of services in your project.
 
-By selecting **OAuth** under *Credentials*, you will be shown all products and services connected to your project using OAuth 2.0 authenication and authorization.
+![](../../images/services-api-oauth-s2s-view-scopes.png)
+
+## OAuth User authentication
+
+By selecting an OAuth User authentication credential under *Credentials*, you will be shown all products and services connected to your project using OAuth 2.0 authenication and authorization.
 
 From here, you can view and copy the *Client ID*, retrieve the client secret, and view the *Platform* type as well as the *Redirect URL*. 
 
 Within the *Credential details* screen you can also choose to download the OAuth JSON file, edit the credential, or delete the credential using the buttons provided in the top-right corner of the screen.
 
-![](../images/credentials-oauth-web.png)
+![](../../images/services-api-oauth-user-auth-credential-overview.png)
 
 ## API key
 

@@ -80,16 +80,16 @@ module.exports = {
             title: "Services",
             pages: [
               {
-                path: "guides/services/services-add-api-jwt.md",
-                title: "Add API using Service Account (JWT)"
+                path: "guides/services/services-add-api-oauth-s2s.md",
+                title: "Add API using OAuth Server-to-Server credential"
               },
               {
                 path: "guides/services/services-add-api-key.md",
-                title: "Add API using API Key"
+                title: "Add API using API Key credential"
               },
               {
                 path: "guides/services/services-add-api-oauth.md",
-                title: "Add API using Oauth"
+                title: "Add API using OAuth User authentication credential"
               },
               {
                 path: "guides/services/services-add-event.md",
