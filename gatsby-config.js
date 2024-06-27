@@ -28,6 +28,14 @@ module.exports = {
       {
         path: "support/index.md",
         title: "Support"
+      },
+      {
+        title: 'Get API Key credential',
+        path: "/get-credential-apikey"
+      },
+      {
+        title: 'Get OAuth S2S credential',
+        path: "/get-credential-oauth"
       }
     ],
     subPages: [
