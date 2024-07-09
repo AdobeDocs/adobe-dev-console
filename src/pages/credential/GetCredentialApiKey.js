@@ -4,7 +4,7 @@ import creativeCloud from "./images/cc-icon.png";
 
 const GetCredentialApiKey = () => {
   return (
-    <GetCredential className="getCredentialContainer" templateId="664e39607dcc7c0e5a4a035b" >
+    <GetCredential className="getCredentialContainer" templateId="668d73f3f8897660ad74d577" >
 
       <GetCredential.SignIn title="Get credentials" paragraph="Create unique credentials that you will use to call multiple APIs from your application." buttonText="Sign in to create credentials" />
 
