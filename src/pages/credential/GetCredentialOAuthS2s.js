@@ -12,19 +12,12 @@ const GetCredentialOAuthS2s = () => {
 
       <GetCredential.Form title="Get credentials" paragraph="Create unique credentials that you will use to call multiple APIs from your application." className="formClass">
 
-        <GetCredential.Form.CredentialName label="Credential name" description="Credential name must be unique and between 3 and 45 characters long. A project will be automatically created with the same name in Adobe Developer Console." range="45" />
+        <GetCredential.Form.CredentialName label="Credential name" description="Credential name must be unique and between 6 and 45 characters long and must not contain any special characters. A project will be automatically created with the same name in Adobe Developer Console." range="45" />
 
         <GetCredential.Form.Products label="Included products and services">
           <GetCredential.Form.Product label="Firefly - Firefly Services" icon={firefly} />
           <GetCredential.Form.Product label="Adobe Photoshop - Firefly Services" icon={ps} />
         </GetCredential.Form.Products>
-
-        <GetCredential.Form.Downloads label="Download a personalized code sample" contextHelp={true} contextHelpHeading="Select Language">
-          <GetCredential.Form.Download title="JavaScript" href="https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/8bab684/files/samples_q3_2023/PROD/dc-pdf-services-sdk-java-samples.zip" />
-          <GetCredential.Form.Download title=".Net" href="/Net.zip" />
-          <GetCredential.Form.Download title="Python" href="https://python.zip/" />
-          <GetCredential.Form.Download title="Ruby" href="https://www.ruby.zip/" />
-        </GetCredential.Form.Downloads>
 
         <GetCredential.Form.AdobeDeveloperConsole label='By checking this box, you agree to' linkText="Adobe Developer Terms of Use" href="https://wwwimages2.adobe.com/content/dam/cc/en/legal/servicetou/Adobe-Developer-Additional-Terms_en-US_20230822.pdf" />
 
@@ -65,7 +58,7 @@ const GetCredentialOAuthS2s = () => {
 
       <GetCredential.UnknownError helpLink="https://some_help_link" helpLinkText="Get Help" className="unKnownError" />
 
-      <GetCredential.Card title="Your credential is ready to use" paragraph="Check the downloads section of your browser for the ZIP file, or find it where you save downloads on your machine." nextStepsLabel="Next steps" nextStepsHref="/credentials/nextsteps" developerConsoleManage="Manage on Developer Console" className="card_developer_console" devConsoleDirection="/console">
+      <GetCredential.Card title="Your credential is ready to use" paragraph="Check the downloads section of your browser for the ZIP file, or find it where you save downloads on your machine." devConsoleDirection="/console" nextStepsLabel="Next steps" nextStepsHref="/credentials/nextsteps" developerConsoleManage="Manage on Developer Console" className="card_developer_console">
 
         <GetCredential.Card.Side>
           <div style={{ display: "flex", gap: "32px", flexDirection: "column" }}>
@@ -154,8 +147,6 @@ const GetCredentialOAuthS2s = () => {
 
       </GetCredential.Return>
 
-      <GetCredential.NoDeveloperAccessError title='Get Credentials' docsLinkText="How do I get developer permissions for the [Firefly - Firefly and Creative Cloud Automation API]?" docsLink="" />
-
       <GetCredential.RequestAccess
         title="Get credentials"
         paragraph="Create unique credentials that you will use to call multiple APIs from your application."
@@ -166,7 +157,6 @@ const GetCredentialOAuthS2s = () => {
           <GetCredential.RequestAccess.EdgeCase.NotMember title="Access to Firefly Services APIs is not available at this time." buttonLabel="Learn more about Firefly Services" buttonLink="#someLink" />
           <GetCredential.RequestAccess.EdgeCase.NotSignUp title="Firefly Services APIs is available as part of the beta program. Sign up for the program or log in to an account that has access." buttonLabel="Sign up for the beta" buttonLink="#someLink" />
         </GetCredential.RequestAccess.EdgeCase>
-
         <GetCredential.RequestAccess.RestrictedAccess
           title="Restricted Access"
           buttonLabel="Request access"
@@ -215,8 +205,6 @@ const GetCredentialOAuthS2s = () => {
           </div>
         </GetCredential.RequestAccess.RequestAccessSide>
       </GetCredential.RequestAccess>
-
-      <GetCredential.ErrorCode helpLink="Get help" title="Error code ###" description="Your personal account does not have Developer role permission to access the [Org Name, Inc.] organization in the Adobe Developer Console." buttonLabel="Contact Adobe" buttonLink="https://some_help_link" />
 
     </GetCredential>
 
