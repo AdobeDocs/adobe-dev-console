@@ -53,7 +53,7 @@ Furthermore, you can sort the Projects based on created date, last modified date
 
 You can filter down the list of Projects to find your Projects quickly. You can filter the list of Projects using the following filters:
 
-1. By Text: You can filter Projects by ID, title, description, workspace, IMS client ID, technical account ID, event registration id, plugin id, or Runtime namespace.
+1. By Text: You can filter Projects by ID, title, description, workspace, IMS client ID, technical account ID or email, event registration id, plugin id, or Runtime namespace.
 2. By who created or modified the Project
 3. By what a Project Contains (APIs, Event Providers, and Plugins)
 4. By whether a Project requires your attention
