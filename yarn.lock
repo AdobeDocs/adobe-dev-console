@@ -40,13 +40,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/gatsby-theme-aio@npm:4.14.0-rc2":
-  version: 4.14.0-rc2
-  resolution: "@adobe/gatsby-theme-aio@npm:4.14.0-rc2"
+"@adobe/gatsby-theme-aio@npm:^4.14.4":
+  version: 4.14.4
+  resolution: "@adobe/gatsby-theme-aio@npm:4.14.4"
   dependencies:
     "@adobe/focus-ring-polyfill": ^0.1.5
     "@adobe/gatsby-source-github-file-contributors": ^0.3.1
     "@adobe/prism-adobe": ^1.0.3
+    "@adobe/react-spectrum": ^3.35.1
     "@emotion/react": ^11.10.4
     "@loadable/component": ^5.15.2
     "@mdx-js/mdx": 1.6.22
@@ -138,7 +139,7 @@ __metadata:
     gatsby: ^4.22.0
     react: ^17.0.2
     react-dom: ^17.0.2
-  checksum: f2f1650b837c113b67ae3ed03053e953096fffe018cfec3294189436daaaf552803b7d251c4027443b7940f7060be9af0843c2a94a989d9e8e2fd14cc60a302c
+  checksum: 846ee1128ccfee37bb36313ee594349369bba472f93ca7f6b6142b7ede79842f808f3458659abbbe7972171166a14674aa1860b8ca7539c1300a804f3794b54d
   languageName: node
   linkType: hard
 
@@ -1991,11 +1992,11 @@ __metadata:
   linkType: hard
 
 "@babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.8.7":
-  version: 7.24.6
-  resolution: "@babel/runtime@npm:7.24.6"
+  version: 7.24.8
+  resolution: "@babel/runtime@npm:7.24.8"
   dependencies:
     regenerator-runtime: ^0.14.0
-  checksum: 44d95ca743898fed31b4cefef31de6fd3cf7906e94493368e9d6538289cc52c6c46185205d9c01d38466a5b3f673550f80892d30b1ed02a2c13e704863a8cc48
+  checksum: 6b1e4230580f67a807ad054720812bbefbb024cc2adc1159d050acbb764c4c81c7ac5f7a042c48f578987c5edc2453c71039268df059058e9501fa6023d764b0
   languageName: node
   linkType: hard
 
@@ -7535,11 +7536,11 @@ __metadata:
   linkType: hard
 
 "@swc/helpers@npm:^0.5.0":
-  version: 0.5.11
-  resolution: "@swc/helpers@npm:0.5.11"
+  version: 0.5.12
+  resolution: "@swc/helpers@npm:0.5.12"
   dependencies:
     tslib: ^2.4.0
-  checksum: 5d85e641d993264f38871bf53e7509da959cdff7646a40d876153291146b9d0aa701518546e5bfef18fa17c5944333bbeb66c2f0d7a570e8c5535d0937d76bd9
+  checksum: 293c0cb8f41804f94beb04a764bbcfaf316707ec43947713154ac66311590299446bf9b96ab253ce59ce9e435a0edc8cc2bf93f88dc3989f9241271507dd5fe9
   languageName: node
   linkType: hard
 
@@ -8407,8 +8408,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "adobe-dev-console@workspace:."
   dependencies:
-    "@adobe/gatsby-theme-aio": 4.14.0-rc2
-    "@adobe/react-spectrum": ^3.35.1
+    "@adobe/gatsby-theme-aio": ^4.14.4
     gatsby: 4.22.0
     react: ^17.0.2
     react-dom: ^17.0.2

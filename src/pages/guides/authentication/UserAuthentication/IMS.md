@@ -247,7 +247,7 @@ Parameters can be sent in the body or as query parameters. Passing parameters in
 
 |Parameter|Mandatory|Description|
 |---|---|---|
-|`authorization_code`|Yes|The value of the `code` query/fragment parameter returned in the callback request from the autorize step | 
+|`code`|Yes|The value of the `code` query/fragment parameter returned in the callback request from the autorize step | 
 |`grant_type`|Yes|Value should always be `authorization_code`|
 |`authorization`| Required for confidential clients|Basic Authorization header.<br/><br/>`Authorization: Basic Base64(clientId:clientSecret)`|
 |`client_id`|Required for PUBLIC clients|The Client ID obtained from the [Adobe Developer Console](/console)|
