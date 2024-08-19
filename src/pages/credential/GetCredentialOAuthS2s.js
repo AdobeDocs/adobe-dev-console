@@ -6,7 +6,7 @@ import ps from "./images/ps.png";
 const GetCredentialOAuthS2s = () => {
   return (
 
-    <GetCredential className="getCredentialContainer" templateId="66576a0de3cedc3a36fc9f28" >
+    <GetCredential className="getCredentialContainer" templateId="66576a0de3cedc3a36fc9f28" productName="Firefly Services">
 
       <GetCredential.SignIn title="Get credentials" paragraph="Create unique credentials that you will use to call multiple APIs from your application." buttonText="Sign in to create credentials" />
 
@@ -110,6 +110,7 @@ const GetCredentialOAuthS2s = () => {
           <GetCredential.Card.CredentialDetails.ClientId heading="ClientId" />
           <GetCredential.Card.CredentialDetails.ClientSecret heading="Client Secret" buttonLabel="Retrieve and copy client secret" />
           <GetCredential.Card.CredentialDetails.Scopes heading="Scopes" scope="openid, AdobeID, read_organizations, firefly_api, ff_apis" />
+          <GetCredential.Card.CredentialDetails.ImsOrgID heading="IMS Organization ID" />
         </GetCredential.Card.CredentialDetails>
 
       </GetCredential.Card>
@@ -130,6 +131,7 @@ const GetCredentialOAuthS2s = () => {
           <GetCredential.Return.CredentialDetails.ClientId heading="ClientId" />
           <GetCredential.Return.CredentialDetails.ClientSecret heading="Client Secret" buttonLabel="Retrieve and copy client secret" />
           <GetCredential.Return.CredentialDetails.Scopes heading="Scopes" scope="openid, AdobeID, read_organizations, firefly_api, ff_apis" />
+          <GetCredential.Return.CredentialDetails.ImsOrgID heading="IMS Organization ID" />
         </GetCredential.Return.CredentialDetails>
 
         <GetCredential.Return.ProjectsDropdown label="Projects" subHeading="Only your projects that contain credentials are shown" />

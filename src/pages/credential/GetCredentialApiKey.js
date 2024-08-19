@@ -4,7 +4,7 @@ import creativeCloud from "./images/cc-icon.png";
 
 const GetCredentialApiKey = () => {
   return (
-    <GetCredential className="getCredentialContainer" templateId="664e39607dcc7c0e5a4a035b" >
+    <GetCredential className="getCredentialContainer" templateId="664e39607dcc7c0e5a4a035b" productName="Express Embed SDK" >
 
       <GetCredential.SignIn title="Get credentials" paragraph="Create unique credentials that you will use to call multiple APIs from your application." buttonText="Sign in to create credentials" />
 
@@ -41,7 +41,7 @@ const GetCredentialApiKey = () => {
 
       <GetCredential.UnknownError helpLink="https://some_help_link" helpLinkText="Get Help" className="unKnownError" />
 
-      <GetCredential.Card title="Your credential is ready to use" paragraph="Check the downloads section of your browser for the ZIP file, or find it where you save downloads on your machine." nextStepsLabel="Next steps" nextStepsHref="/credentials/nextsteps" className="card_developer_console">
+      <GetCredential.Card title="Your credential is ready to use" paragraph="Check the downloads section of your browser for the ZIP file, or find it where you save downloads on your machine." className="card_developer_console" nextStepsLabel="Next steps" nextStepsHref="/credentials/nextsteps">
 
         <GetCredential.Card.Side>
           <div style="display : flex ; gap : 16px ; flex-direction : column;">
@@ -63,11 +63,12 @@ const GetCredentialApiKey = () => {
           <GetCredential.Card.CredentialDetails.APIKey heading="API Key" />
           <GetCredential.Card.CredentialDetails.AllowedOrigins heading="Allowed domains" />
           <GetCredential.Card.CredentialDetails.OrganizationName heading="Organization" />
+          <GetCredential.Card.CredentialDetails.ImsOrgID heading="IMS Organization ID" />
         </GetCredential.Card.CredentialDetails>
 
       </GetCredential.Card>
 
-      <GetCredential.Return title="Previously created projects" paragraph="Select a project and access your existing credentials for Firefly - Firefly and Creative Cloud Automation." nextStepsLabel="Next steps" nextStepsHref="/credentials/nextsteps" className="card_developer_console">
+      <GetCredential.Return title="Previously created projects" paragraph="Select a project and access your existing credentials for Firefly - Firefly and Creative Cloud Automation." className="card_developer_console" nextStepsLabel="Next steps" nextStepsHref="/credentials/nextsteps">
 
         <GetCredential.Return.Side>
           <GetCredential.Return.Side.Custom>
@@ -83,6 +84,7 @@ const GetCredentialApiKey = () => {
           <GetCredential.Return.CredentialDetails.APIKey heading="API Key" />
           <GetCredential.Return.CredentialDetails.AllowedOrigins heading="Allowed domains" />
           <GetCredential.Return.CredentialDetails.OrganizationName heading="Organization" />
+          <GetCredential.Return.CredentialDetails.ImsOrgID heading="IMS Organization ID" />
         </GetCredential.Return.CredentialDetails>
 
         <GetCredential.Return.ProjectsDropdown label="Projects" subHeading="Only your projects that contain credentials are shown" />
@@ -102,10 +104,11 @@ const GetCredentialApiKey = () => {
         paragraph="Create unique credentials that you will use to call multiple APIs from your application."
       >
         <GetCredential.RequestAccess.EdgeCase>
-          <GetCredential.RequestAccess.EdgeCase.NoProduct title="Your organization does not have access to Firefly Services" buttonLabel="Contact us to learn more" buttonLink="#someLink" />
-          <GetCredential.RequestAccess.EdgeCase.NotMember title="Access to Firefly Services APIs is not available at this time." buttonLabel="Learn more about Firefly Services" buttonLink="#someLink" />
-          <GetCredential.RequestAccess.EdgeCase.NotSignUp title="Firefly Services APIs is available as part of the beta program. Sign up for the program or log in to an account that has access." buttonLabel="Sign up for the beta" buttonLink="#someLink" />
+          <GetCredential.RequestAccess.EdgeCase.NoProduct title="Your organization does not have access to Express Embed SDK" buttonLabel="Contact us to learn more" buttonLink="#someLink" />
+          <GetCredential.RequestAccess.EdgeCase.NotMember title="Access to Express Embed SDK APIs is not available at this time." buttonLabel="Learn more about Express Embed SDK" buttonLink="#someLink" />
+          <GetCredential.RequestAccess.EdgeCase.NotSignUp title="Express Embed SDK APIs is available as part of the beta program. Sign up for the program or log in to an account that has access." buttonLabel="Sign up for the beta" buttonLink="#someLink" />
         </GetCredential.RequestAccess.EdgeCase>
+
         <GetCredential.RequestAccess.RestrictedAccess
           title="Restricted Access"
           buttonLabel="Request access"
