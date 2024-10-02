@@ -22,7 +22,7 @@ try {
 
     if (siteMetadata.home) {
         topNavMarkdown += '\n- home:\n';
-        topNavMarkdown += `    - [${topNav.home.title}](${topNav.home.path})\n`;
+        topNavMarkdown += `    - [${siteMetadata.home.title}](${siteMetadata.home.path})\n`;
 
         if(siteMetadata.home.hidden) {
             topNavMarkdown += `    - hidden\n`;
