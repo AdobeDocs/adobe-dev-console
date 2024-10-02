@@ -1,4 +1,4 @@
-<Hero slots="heading, text"/>
+<HeroSimple slots="heading, text"/>
 
 # Adobe Developer Console
 
