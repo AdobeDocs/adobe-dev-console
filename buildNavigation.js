@@ -1,25 +1,14 @@
-var nav = require('./build/gatsbyConfig.js');
 const path = require('path');
 const fs = require('node:fs');
 // regex to find sections:
 // subPages:((\s* .*)*)
+
+const { siteMetadata, pathPrefix } = require('./gatsby-config.js');
+
 try {
-    if(!nav) {
-        throw new TypeError("Unable to get nav");
-    }
-
-    if(!nav.gatsbyConfig) {
-        throw new TypeError("Gatsby config not defined");
-    }
-
-    if(!nav.gatsbyConfig.pathPrefix) {
+    if(!pathPrefix) {
         throw new TypeError("pathPrefix not found");
     } 
-
-    console.log(nav.gatsbyConfig);
-    const pathPrefix = nav.gatsbyConfig.pathPrefix;
-    let siteMetadata = nav.gatsbyConfig.siteMetadata ? nav.gatsbyConfig.siteMetadata : {};
-
 
     let topNavMarkdown = ``;
     // TODO: prob need url fixer from gatsby theme
@@ -29,7 +18,7 @@ try {
     // siteMetadata.home
 
     topNavMarkdown += `- pathPrefix:\n`;
-    topNavMarkdown += `    - ${pathPrefix}:\n`;
+    topNavMarkdown += `    - ${pathPrefix}\n`;
 
     if (siteMetadata.home) {
         topNavMarkdown += '\n- home:\n';
@@ -75,7 +64,10 @@ try {
         topNavMarkdown +=  sideNavMarkdown;
     }
 
-    fs.writeFileSync(path.resolve(__dirname + '/src/pages/config.md'), topNavMarkdown);
+    let configFilePath = path.resolve(__dirname + '/src/pages/config.md');
+    fs.writeFileSync(configFilePath, topNavMarkdown);
+    console.log(`Generated file: ${configFilePath}`);
+
 } catch (err) {
     console.error(err);
 }
@@ -83,7 +75,6 @@ try {
 // need to check paths to
 function buildSideNavRecursively(sideNav, depth) {
     let sideNavMarkdown = '';
-    console.log(sideNav)
 
     for (var k in sideNav) {
         let header = sideNav[k].header ? 'header' : ''; 
