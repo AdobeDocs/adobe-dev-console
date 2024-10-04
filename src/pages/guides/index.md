@@ -6,6 +6,7 @@ The ultimate developer destination to access Adobe APIs & SDKs, listen to near r
 
 ## Overview
 
+<Divider />
 
 <DiscoverBlock slots="link, text"/>
 
