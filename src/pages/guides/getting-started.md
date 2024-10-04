@@ -27,7 +27,7 @@ If you are a developer or a system administrator on multiple organizations, you 
 
 The org switcher is located on the top right corner of the UI. Next to the org switcher, you can always check which organization you are using currently and what role you have in that organization. To change the organization you are using, simply click on the org switcher dropdown and select the desired org from the list. 
 
-<InlineAlert slots="text"/>
+<InlineAlert slots="text" variant="info'/>
 
 The projects in an organization belong to that organization. When you are working with multiple organization, be sure to check which organization you have selected in the org switcher.
 
