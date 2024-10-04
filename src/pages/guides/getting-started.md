@@ -48,7 +48,7 @@ The _Home_ screen is where you can easily find information and quick links, incl
 
 #### Quick start
 
-The _Home_ screen also provides "quick start" links to help you get started with some of the most common Console actions. _Quick start_ links are available for: creating an empty project, creating a project using a template, and downloading resources.
+The _Home_ screen also provides 'quick start' links to help you get started with some of the most common Console actions. _Quick start_ links are available for: creating an empty project, creating a project using a template, and downloading resources.
 
 ![](../images/quick-start.png)
 
