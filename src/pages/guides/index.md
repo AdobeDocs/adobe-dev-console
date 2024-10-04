@@ -6,44 +6,42 @@ The ultimate developer destination to access Adobe APIs & SDKs, listen to near r
 
 ## Overview
 
-<Divider />
-
-<DiscoverBlock slots="link, text"/>
+<Discover slots="link, text"/>
 
 [Accessing the Developer Console](getting-started.md)
 
 This guide will give you a quick overview of the Developer Console and how to gain access.
 
 
-<DiscoverBlock slots="link, text"/>
+<Discover slots="link, text"/>
 
 [Authentication Guide](guides/authentication/index.md)
 
 Our authentication guide contains all the information you need to generate access tokens and securely use Adobe services in your application.
 
 
-<DiscoverBlock slots="link, text"/>
+<Discover slots="link, text"/>
 
 [APIs, Events, and services](guides/apis-and-services.md)
 
 Browse all available Adobe APIs, Adobe I/O Events, and other Adobe services that you can integrate into your application.
 
 
-<DiscoverBlock slots="link, text"/>
+<Discover slots="link, text"/>
 
 [Creating Projects](guides/projects/index.md)
 
 A project on the Developer Console corresponds to an application you are building. To leverage the power of Adobe products and technologies in your application, simply add those services (APIs, Events, and Runtime) to your project.
 
 
-<DiscoverBlock slots="link, text"/>  
+<Discover slots="link, text"/>  
 
 [Plugins](guides/plugins/index.md)
 
 Plugins enhance the functionality of Adobe products. End users of the plugins can install them through the marketplace and use them through the product UI. As a developer, you can add a plugin to your project and start building it. 
 
 
-<DiscoverBlock slots="link, text"/>
+<Discover slots="link, text"/>
 
 [App Builder Project Template](guides/projects/projects-template.md)
 
