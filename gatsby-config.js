@@ -10,7 +10,7 @@
  * governing permissions and limitations under the License.
  */
 
-const { createProxyMiddleware } = require("http-proxy-middleware");
+
 
 module.exports = {
   siteMetadata: {
@@ -227,25 +227,5 @@ module.exports = {
   },
   plugins: [`@adobe/gatsby-theme-aio`],
   pathPrefix: process.env.PATH_PREFIX || "/developer-console/docs/",
-  developMiddleware: app => {
-    app.use(
-      "/console/api",
-      createProxyMiddleware({
-        target: "https://developer-stage.adobe.com/console/api",
-        secure: false,
-        changeOrigin: true,
-      })
-    );
-    app.use("/templates", createProxyMiddleware({
-      target: "https://developer-stage.adobe.com/templates",
-      secure: false,
-      changeOrigin: true,
-    }));
 
-    app.use("/ims", createProxyMiddleware({
-      target: "https://ims-na1-stg1.adobelogin.com/ims",
-      secure: false,
-      changeOrigin: true,
-    }));
-  },
 };
