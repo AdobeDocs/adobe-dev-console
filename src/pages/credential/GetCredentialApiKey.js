@@ -1,5 +1,5 @@
 import React from 'react'
-import { GetCredential } from '@adobe/gatsby-theme-aio/src/components/GetCredential';
+import { GetCredential } from '../../@adobe/gatsby-aio-theme/components/GetCredential';
 import creativeCloud from "./images/cc-icon.png";
 
 const GetCredentialApiKey = () => {
@@ -60,10 +60,10 @@ const GetCredentialApiKey = () => {
         <GetCredential.Card.DevConsoleLink heading="Developer Console Project" />
 
         <GetCredential.Card.CredentialDetails heading="Credential details">
-          <GetCredential.Card.CredentialDetails.APIKey heading="API Key" />
           <GetCredential.Card.CredentialDetails.AllowedOrigins heading="Allowed domains" />
-          <GetCredential.Card.CredentialDetails.OrganizationName heading="Organization" />
+          <GetCredential.Card.CredentialDetails.APIKey heading="API Key" />
           <GetCredential.Card.CredentialDetails.ImsOrgID heading="IMS Organization ID" />
+          <GetCredential.Card.CredentialDetails.OrganizationName heading="Organization" />
         </GetCredential.Card.CredentialDetails>
 
       </GetCredential.Card>
@@ -81,10 +81,10 @@ const GetCredentialApiKey = () => {
         </GetCredential.Return.Side>
 
         <GetCredential.Return.CredentialDetails heading="Credential details">
-          <GetCredential.Return.CredentialDetails.APIKey heading="API Key" />
           <GetCredential.Return.CredentialDetails.AllowedOrigins heading="Allowed domains" />
-          <GetCredential.Return.CredentialDetails.OrganizationName heading="Organization" />
+          <GetCredential.Return.CredentialDetails.APIKey heading="API Key" />
           <GetCredential.Return.CredentialDetails.ImsOrgID heading="IMS Organization ID" />
+          <GetCredential.Return.CredentialDetails.OrganizationName heading="Organization" />
         </GetCredential.Return.CredentialDetails>
 
         <GetCredential.Return.ProjectsDropdown label="Projects" subHeading="Only your projects that contain credentials are shown" />

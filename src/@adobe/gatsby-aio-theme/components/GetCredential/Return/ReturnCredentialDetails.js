@@ -9,9 +9,10 @@ import { ReturnScopes } from './ReturnScopes';
 import GetCredentialContext from '../GetCredentialContext';
 import { CardImsOrgID } from '../Card/CardImsOrgID';
 
-const ReturnCredentialDetails = ({ clientDetails, clientIdDetails, clientSecretDetails, organizationDetails, scopesDetails, apiKeyDetails, allowedOriginsDetails, organizationName, allowedOrigins, response, imsOrgID }) => {
+const ReturnCredentialDetails = ({ clientDetails, clientIdDetails, clientSecretDetails, organizationDetails, scopesDetails, apiKeyDetails, allowedOriginsDetails, organizationName, allowedOrigins, response, imsOrgID}) => {
 
   const { selectedOrganization } = useContext(GetCredentialContext);
+  console.log('clientDetails', clientDetails)
 
   return (
     <div css={css`
@@ -19,16 +20,46 @@ const ReturnCredentialDetails = ({ clientDetails, clientIdDetails, clientSecretD
         flex-direction : column;  
         gap: 32px;
       `}>
-      <h4 className="spectrum-Heading spectrum-Heading--sizeS">{clientDetails?.heading}</h4>
-      {apiKeyDetails && <ReturnAPIKey returnCredentialDetails={clientDetails} returnAPIKey={apiKeyDetails} apiKey={response?.workspaces[0]?.credentials[0]?.clientId} />}
-      {allowedOrigins && <ReturnAllowedOrigins returnCredentialDetails={clientDetails} allowedOrigins={allowedOriginsDetails} returnAllowedOrigins={allowedOrigins} />}
-      {clientIdDetails && <ReturnClientId returnCredentialDetails={clientDetails} returnClientId={clientIdDetails} clientId={response?.workspaces[0]?.credentials[0]?.clientId} />}
-      {clientSecretDetails && <ReturnClientSecret returnCredentialDetails={clientDetails} returnClientSecret={clientSecretDetails} response={response} />}
-      {organizationDetails && <ReturnOrganizationName returnCredentialDetails={clientDetails} returnOrganizationName={organizationDetails} organization={organizationName?.name} />}
-      {scopesDetails && <ReturnScopes returnCredentialDetails={clientDetails} returnScopes={scopesDetails} />}
-      {imsOrgID && <CardImsOrgID returnCredentialDetails={clientDetails} cardImsOrgID={imsOrgID} imsOrgId={selectedOrganization?.code} />}
+              
+  <h4 className="spectrum-Heading spectrum-Heading--sizeS">{clientDetails?.heading} </h4>
+
+   {clientDetails.children.map((element) => {
+        switch (element?.type?.name) {
+          case "ReturnAllowedOrigins":
+            return (
+              <ReturnAllowedOrigins returnCredentialDetails={clientDetails} allowedOrigins={allowedOriginsDetails} returnAllowedOrigins={allowedOrigins} />
+            );
+          case "ReturnOrganizationName":
+            return (
+              <ReturnOrganizationName returnCredentialDetails={clientDetails} returnOrganizationName={organizationDetails} organization={organizationName?.name} />
+            );
+          case "CardImsOrgID":
+            return (
+              <CardImsOrgID returnCredentialDetails={clientDetails} cardImsOrgID={imsOrgID} imsOrgId={selectedOrganization?.code} />
+            );
+          case "ReturnAPIKey":
+            return (
+              <ReturnAPIKey returnCredentialDetails={clientDetails} returnAPIKey={apiKeyDetails} apiKey={response?.workspaces[0]?.credentials[0]?.clientId} />
+            );
+          case "ReturnClientId":
+            return (
+              <ReturnClientId returnCredentialDetails={clientDetails} returnClientId={clientIdDetails} clientId={response?.workspaces[0]?.credentials[0]?.clientId} />
+            );
+          case "ReturnClientSecret":
+            return (
+              <ReturnClientSecret returnCredentialDetails={clientDetails} returnClientSecret={clientSecretDetails} response={response} />
+            );
+          case "ReturnScopes":
+            return (
+              <ReturnScopes returnCredentialDetails={clientDetails} returnScopes={scopesDetails} />
+            );
+          default:
+            return null;
+         }
+      })}
     </div>
   )
 }
 
 export { ReturnCredentialDetails };
+

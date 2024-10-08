@@ -81,6 +81,7 @@ export const CredentialDetailsCard = ({
   }, [bool])
 
   console.log('clientDetails', clientDetails)
+  console.log('isCollapse', isCollapse)
 
   return (
     <>
@@ -135,6 +136,7 @@ export const CredentialDetailsCard = ({
                 </div>
               </div>
             </div>
+            <div>{clientDetails.toString()}</div>
             {
               bool &&
               <div role="button" css={css`cursor:pointer`} data-cy="collapse-open" onClick={handleCollapse}>
@@ -142,6 +144,8 @@ export const CredentialDetailsCard = ({
               </div>
             }
           </div>
+
+         
 
           {isCollapse &&
             <>

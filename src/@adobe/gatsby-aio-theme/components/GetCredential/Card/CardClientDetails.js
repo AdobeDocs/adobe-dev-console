@@ -33,45 +33,61 @@ const CardClientDetails = ({
         gap: 32px;
       `}>
       <h4 className="spectrum-Heading spectrum-Heading--sizeS">{clientDetails?.heading}</h4>
-      {apiKeyDetails && (
-        <CardAPIKey
-          cardClientDetails={clientDetails}
-          cardAPIKey={apiKeyDetails}
-          apiKey={response?.['apiKey']}
-        />
-      )}
-      {clientIdDetails && (
-        <CardClientId
-          cardClientDetails={clientDetails}
-          cardClientId={clientIdDetails}
-          clientId={response?.['apiKey']}
-        />
-      )}
-      {allowedOrigins && (
-        <CardAllowedOrigins
-          cardClientDetails={clientDetails}
-          cardAllowedOrigins={allowedOrigins}
-          allowedOrigins={allowedOriginsDetails}
-        />
-      )}
-      {clientSecretDetails && (
-        <CardClientSecret
-          cardClientDetails={clientDetails}
-          cardClientSecret={clientSecretDetails}
-          response={response}
-        />
-      )}
-      {organizationDetails && (
-        <CardOrganizationName
-          cardClientDetails={clientDetails}
-          cardOrganizationName={organizationDetails}
-          organization={organizationName?.name}
-        />
-      )}
-      {scopesDetails && <CardScopes cardClientDetails={clientDetails} cardScopes={scopesDetails} />}
-      {imsOrgID && (
-        <CardImsOrgID cardClientDetails={clientDetails}  cardImsOrgID={imsOrgID} imsOrgId={selectedOrganization?.code} />
-      )}
+
+      {clientDetails.children.map((element) => {
+        switch (element?.type?.name) {
+          case "CardAllowedOrigins":
+            return (
+              <CardAllowedOrigins
+              cardClientDetails={clientDetails}
+              cardAllowedOrigins={allowedOrigins}
+              allowedOrigins={allowedOriginsDetails}
+            />
+            );
+          case "CardOrganizationName":
+            return (
+              <CardOrganizationName
+                cardClientDetails={clientDetails}
+                cardOrganizationName={organizationDetails}
+                organization={organizationName?.name}
+             />
+            );
+          case "CardImsOrgID":
+            return (
+              <CardImsOrgID cardClientDetails={clientDetails}  cardImsOrgID={imsOrgID} imsOrgId={selectedOrganization?.code} />
+            );
+          case "CardAPIKey":
+            return (
+              <CardAPIKey
+               cardClientDetails={clientDetails}
+               cardAPIKey={apiKeyDetails}
+               apiKey={response?.['apiKey']}
+             />
+            );
+          case "CardClientId":
+            return (
+              <CardClientId
+               cardClientDetails={clientDetails}
+               cardClientId={clientIdDetails}
+               clientId={response?.['apiKey']}
+             />
+            );
+          case "CardClientSecret":
+            return (
+              <CardClientSecret
+              cardClientDetails={clientDetails}
+              cardClientSecret={clientSecretDetails}
+              response={response}
+            />
+            );
+          case "CardScopes":
+            return (
+              <CardScopes cardClientDetails={clientDetails} cardScopes={scopesDetails} />
+            );
+          default:
+            return null;
+         }
+      })}
     </div>
   );
 };
