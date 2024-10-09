@@ -136,7 +136,6 @@ export const CredentialDetailsCard = ({
                 </div>
               </div>
             </div>
-            <div>{clientDetails.toString()}</div>
             {
               bool &&
               <div role="button" css={css`cursor:pointer`} data-cy="collapse-open" onClick={handleCollapse}>
