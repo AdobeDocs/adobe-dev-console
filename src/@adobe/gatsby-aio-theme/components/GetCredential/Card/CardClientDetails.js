@@ -22,8 +22,22 @@ const CardClientDetails = ({
   response,
   imsOrgID,
 }) => {
-
   const { selectedOrganization } = useContext(GetCredentialContext);
+
+  const componentsMap = {
+    APIKey: <CardAPIKey cardClientDetails={clientDetails} cardAPIKey={apiKeyDetails} apiKey={response?.apiKey} />,
+    ClientId: <CardClientId cardClientDetails={clientDetails} cardClientId={clientIdDetails} clientId={response?.apiKey} />,
+    AllowedOrigins: <CardAllowedOrigins cardClientDetails={clientDetails} cardAllowedOrigins={allowedOrigins} allowedOrigins={allowedOriginsDetails} />,
+    ClientSecret: <CardClientSecret cardClientDetails={clientDetails} cardClientSecret={clientSecretDetails} response={response} />,
+    OrganizationName: <CardOrganizationName cardClientDetails={clientDetails} cardOrganizationName={organizationDetails} organization={organizationName?.name} />,
+    Scopes: <CardScopes cardClientDetails={clientDetails} cardScopes={scopesDetails} />,
+    ImsOrgID: <CardImsOrgID cardClientDetails={clientDetails} cardImsOrgID={imsOrgID} imsOrgId={selectedOrganization?.code} />
+  };
+
+  const splitedOrderBy = clientDetails?.orderBy?.split(',') || [];
+  const orderedComponents = splitedOrderBy.length > 0
+    ? splitedOrderBy.map(component => componentsMap[component])
+    : Object.values(componentsMap);
 
   return (
     <div
@@ -31,48 +45,10 @@ const CardClientDetails = ({
         display: flex;
         flex-direction: column;
         gap: 32px;
-      `}>
+      `}
+    >
       <h4 className="spectrum-Heading spectrum-Heading--sizeS">{clientDetails?.heading}</h4>
-
-      {apiKeyDetails && (
-        <CardAPIKey
-          cardClientDetails={clientDetails}
-          cardAPIKey={apiKeyDetails}
-          apiKey={response?.['apiKey']}
-        />
-      )}
-      {clientIdDetails && (
-        <CardClientId
-          cardClientDetails={clientDetails}
-          cardClientId={clientIdDetails}
-          clientId={response?.['apiKey']}
-        />
-      )}
-      {allowedOrigins && (
-        <CardAllowedOrigins
-          cardClientDetails={clientDetails}
-          cardAllowedOrigins={allowedOrigins}
-          allowedOrigins={allowedOriginsDetails}
-        />
-      )}
-      {clientSecretDetails && (
-        <CardClientSecret
-          cardClientDetails={clientDetails}
-          cardClientSecret={clientSecretDetails}
-          response={response}
-        />
-      )}
-      {organizationDetails && (
-        <CardOrganizationName
-          cardClientDetails={clientDetails}
-          cardOrganizationName={organizationDetails}
-          organization={organizationName?.name}
-        />
-      )}
-      {scopesDetails && <CardScopes cardClientDetails={clientDetails} cardScopes={scopesDetails} />}
-      {imsOrgID && (
-        <CardImsOrgID cardClientDetails={clientDetails}  cardImsOrgID={imsOrgID} imsOrgId={selectedOrganization?.code} />
-      )}
+      {orderedComponents}
     </div>
   );
 };

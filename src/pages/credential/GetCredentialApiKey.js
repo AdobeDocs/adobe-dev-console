@@ -59,10 +59,10 @@ const GetCredentialApiKey = () => {
 
         <GetCredential.Card.DevConsoleLink heading="Developer Console Project" />
 
-        <GetCredential.Card.CredentialDetails heading="Credential details">
-          <GetCredential.Card.CredentialDetails.AllowedOrigins heading="Allowed domains" />
-          <GetCredential.Card.CredentialDetails.APIKey heading="API Key" />
+        <GetCredential.Card.CredentialDetails heading="Credential details" orderBy='AllowedOrigins,APIKey,ImsOrgID,OrganizationName'>
           <GetCredential.Card.CredentialDetails.ImsOrgID heading="IMS Organization ID" />
+          <GetCredential.Card.CredentialDetails.APIKey heading="API Key" />
+          <GetCredential.Card.CredentialDetails.AllowedOrigins heading="Allowed domains" />
           <GetCredential.Card.CredentialDetails.OrganizationName heading="Organization" />
         </GetCredential.Card.CredentialDetails>
 
@@ -80,10 +80,10 @@ const GetCredentialApiKey = () => {
           <GetCredential.Return.Side.NewCredential heading="Need another credential?" buttonLabel="Create new credential" />
         </GetCredential.Return.Side>
 
-        <GetCredential.Return.CredentialDetails heading="Credential details">
+        <GetCredential.Return.CredentialDetails heading="Credential details" orderBy='ImsOrgID,AllowedOrigins,APIKey,OrganizationName' >
+          <GetCredential.Return.CredentialDetails.ImsOrgID heading="IMS Organization ID" />
           <GetCredential.Return.CredentialDetails.AllowedOrigins heading="Allowed domains" />
           <GetCredential.Return.CredentialDetails.APIKey heading="API Key" />
-          <GetCredential.Return.CredentialDetails.ImsOrgID heading="IMS Organization ID" />
           <GetCredential.Return.CredentialDetails.OrganizationName heading="Organization" />
         </GetCredential.Return.CredentialDetails>
 

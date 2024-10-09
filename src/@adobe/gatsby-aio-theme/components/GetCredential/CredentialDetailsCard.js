@@ -144,8 +144,6 @@ export const CredentialDetailsCard = ({
             }
           </div>
 
-         
-
           {isCollapse &&
             <>
               <hr
