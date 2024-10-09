@@ -1,5 +1,5 @@
 import React from 'react'
-import { GetCredential } from '@adobe/gatsby-theme-aio/src/components/GetCredential';
+import { GetCredential } from '../../@adobe/gatsby-aio-theme/components/GetCredential';
 import firefly from "./images/firefly.png";
 import ps from "./images/ps.png";
 
