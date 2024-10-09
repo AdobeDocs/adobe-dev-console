@@ -37,8 +37,8 @@ const ReturnCredentialDetails = ({
 
   const splitedOrderBy = clientDetails?.orderBy?.split(',') || [];
   const orderedComponents = splitedOrderBy.length > 0
-    ? splitedOrderBy.map(key => componentsMap[key])
-    : Object.values(componentsMap);
+    ? splitedOrderBy?.map(key => componentsMap[key])
+    : Object.values(componentsMap)?.map(key => componentsMap[key]);
 
   return (
     <div

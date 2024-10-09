@@ -37,7 +37,7 @@ const CardClientDetails = ({
   const splitedOrderBy = clientDetails?.orderBy?.split(',') || [];
   const orderedComponents = splitedOrderBy.length > 0
     ? splitedOrderBy.map(component => componentsMap[component])
-    : Object.values(componentsMap);
+    : Object.values(componentsMap)?.map(key => componentsMap[key]);;
 
   return (
     <div
