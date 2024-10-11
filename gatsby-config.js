@@ -28,6 +28,10 @@ module.exports = {
       {
         path: "support/index.md",
         title: "Support"
+      },
+      {
+        path: "redocly-test/index.md",
+        title: "Redocly Test"
       }
     ],
     subPages: [
