@@ -12,16 +12,18 @@ If you have more questions, check out our [frequently asked questions](#faqs) or
 
 ## Table of Contents
 
-+ [Why OAuth Server-to-Server credentials?](#why-oauth-server-to-server-credentials)
-+ [Deperecation Timelines](#deperecation-timelines)
-+ [Migration Overview](#migration-overview)
-   + [Preparation: Find out which applications are using the Service Account (JWT) credentials](#preparation-find-out-which-applications-are-using-the-service-account-jwt-credentials)
-   + [Step 1: Add the new credential to your project](#step-1-add-the-new-credential-to-your-project)
-   + [Step 2: Update your application and delete old credential](#step-2-update-your-application-and-delete-old-credential)
-     + [Update your application](#update-your-application)
-     + [Test if the new credential is working](#test-if-the-new-credential-is-working)
-     + [Delete the old credential](#delete-the-old-credential)
-   + [Cancelling Migration](#cancelling-migration)
+- [Migrating from Service Account (JWT) credential to OAuth Server-to-Server credential](#migrating-from-service-account-jwt-credential-to-oauth-server-to-server-credential)
+  - [Table of Contents](#table-of-contents)
+  - [Why OAuth Server-to-Server credentials?](#why-oauth-server-to-server-credentials)
+  - [Deprecation Timelines](#deprecation-timelines)
+  - [Migration Overview](#migration-overview)
+    - [Preparation: Find out which applications are using the Service Account (JWT) credentials](#preparation-find-out-which-applications-are-using-the-service-account-jwt-credentials)
+    - [Step 1: Add the new credential to your project](#step-1-add-the-new-credential-to-your-project)
+    - [Step 2: Update your application and delete old credential](#step-2-update-your-application-and-delete-old-credential)
+      - [Update your application](#update-your-application)
+      - [Test if the new credential is working](#test-if-the-new-credential-is-working)
+      - [Delete the old credential](#delete-the-old-credential)
+    - [Cancelling Migration](#cancelling-migration)
 
 
 ## Why OAuth Server-to-Server credentials?
@@ -33,7 +35,7 @@ Unlike the Service Account (JWT) credential, the new credential does not use a p
 Lastly, while the new OAuth Server-to-Server credentials do not use expiring certificates, they still allow client secret rotation through the UI and API. Read more about [rotating secrets programmatically](./implementation.md#rotating-client-secrets-programmatically) in our guide on [rotating client secrets](./implementation.md#rotating-client-secrets).
 
 
-|                                                      | OAuth Server-to-Server credential                                                                                         | Service Account (JWT) credential                                                                                   |   |   |
+|                                                      | OAuth Server-to-Server credential                                                                                         | Service Account (JWT) credential                                                                                   |
 |------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
 | Do expiring certificates need to be replaced every year? | This credential does not use public certificates or private key pairs. You are not forced to rotate certificates every year. | You need to rotate the public certificate and private key pair every year. |
 | Generating access tokens for experimentation         | You can generate an access token for quick experimentation with a [one-click button](./implementation.md#generate-access-tokens) on the Developer Console.              | Generating access tokens is a 3-step process spanning the Developer Console UI and your command-line terminal. |
