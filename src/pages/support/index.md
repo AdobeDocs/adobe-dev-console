@@ -18,4 +18,4 @@ On the forums you will find official Adobe developers and knowledgeable communit
 
 ## Bugs and Feature Requests
 
-Log an issue on <https://github.com/AdobeDocs/adobe-dev-console/issues> to report any bugs or request new product features. 
+Log an issue on [Developer Console Github issue](https://github.com/AdobeDocs/adobe-dev-console/issues) to report any bugs or request new product features. 
