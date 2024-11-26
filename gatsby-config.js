@@ -10,6 +10,8 @@
  * governing permissions and limitations under the License.
  */
 
+
+
 module.exports = {
   siteMetadata: {
     pages: [
@@ -224,5 +226,6 @@ module.exports = {
     ]
   },
   plugins: [`@adobe/gatsby-theme-aio`],
-  pathPrefix: process.env.PATH_PREFIX || "/developer-console/docs/"
+  pathPrefix: process.env.PATH_PREFIX || "/developer-console/docs/",
+
 };
