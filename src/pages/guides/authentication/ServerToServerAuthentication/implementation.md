@@ -56,4 +56,7 @@ We recommend using a standard OAuth 2.0 library to implement your application's 
 3. [Authlib](https://github.com/lepture/authlib) (Python)
 4. View more libraries at https://oauth.net/code/
 
+<InlineAlert slots="text"/>
+
+Using industry-standard libraries is the quickest and most secure way of integrating with OAuth. We recommend developers diligently pick the OAuth 2.0 library that works best for their application.
 
