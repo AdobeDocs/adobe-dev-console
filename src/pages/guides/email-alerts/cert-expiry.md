@@ -14,7 +14,7 @@ Upon receiving the email alert, you need to replace the expiring certificate key
 
 <InlineAlert slots="text"/>
 
-Service Account (JWT) credentials have been deprecated in favor of the OAuth Server-to-Server credentials. Your applications using the Service Account (JWT) credentials will stop working after Jan 27, 2025. **You must migrate to the new credential by Jan 27, 2025 in order to ensure your application continues to function. View our [migration guide](../serverToServerAuthentication/migration.md) to know more.**
+Service Account (JWT) credentials have been deprecated in favor of the OAuth Server-to-Server credentials. Your applications using the Service Account (JWT) credentials will stop working after Jan 27, 2025. **You must migrate to the new credential by Jan 27, 2025 in order to ensure your application continues to function. View our [migration guide](../ServerToServerAuthentication/migration.md) to know more.**
 
 ## A step-by-step guide to replacing expiring certificate key pairs
 
@@ -81,7 +81,7 @@ A. A. Visit the Service Account (JWT) credential overview page and look at the l
 A. Unfortunately, these certificate key pairs are used in your custom integrations and applications, which Adobe has no information on or access to. Therefore, the customer needs to carry out the activity to refresh the certificate key pairs.
 
 ### Q. How can I set up automation to refresh the certificates programmatically?
-A. Unfortunately, such a programmatic method is not available at this time and is not planned for Service Account (JWT) credentials. To utilize programmatic secret rotation, we recommend you migrate your application to use the new OAuth Server-to-Server credential. Learn more about the [migration](../authentication/serverToServerAuthentication/migration.md).
+A. Unfortunately, such a programmatic method is not available at this time and is not planned for Service Account (JWT) credentials. To utilize programmatic secret rotation, we recommend you migrate your application to use the new OAuth Server-to-Server credential. Learn more about the [migration](../authentication/ServerToServerAuthentication/migration.md).
 
 ### Q. Why do I keep receiving email alerts about the old certificate key pair even though I replaced the expiring certificate key pair?
 A. Once you successfully replace the expiring certificate in your custom integration or application, be sure to remove it from the Developer Console. The email alerts would stop only once the expiring certificate key pair is removed from the Project on the Developer Console.
