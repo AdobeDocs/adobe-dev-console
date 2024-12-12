@@ -83,6 +83,7 @@ To rotate client secrets through the UI, follow the steps below on the credentia
      ![](../../../images/oauth-server-to-server-credential-check-client-secret-timestamps.png)
 
 4. Once sure that you have successfully replaced the client secret, you can delete the old client secret.
+
      ![](../../../images/oauth-server-to-server-credential-delete-old-client-secret.png)
 
 <InlineAlert slots="text">
