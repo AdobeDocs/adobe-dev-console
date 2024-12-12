@@ -89,3 +89,65 @@ To rotate client secrets through the UI, follow the steps below on the credentia
 <InlineAlert slots="text"/>
 
 Once a client secret is deleted, you cannot restore it. So be extra sure you have replaced the old client secret with the new one in all locations.
+
+
+### Rotating client secrets programmatically
+
+Follow the steps below to rotate client secrets programmatically for the OAuth Server-to-Server credential.
+
+1. Add I/O Management API to your project: This API allows your credential to read, add, and delete its client secrets.
+   
+2. Go to the OAuth Server-to-Server credential overview page and grab the URL. For example - 
+
+     ```
+     https://developer.adobe.com/console/projects/23294/4566206088344958295/credentials/436084/details/oauthservertoserver
+     ```
+
+3. Grab the value of `org id` and `credential id` from the URL by comparing it to the templated URL below.
+   
+     ```
+     https://developer.adobe.com/console/projects/{orgId}/{projectId}/credentials/{credentialId}/details/oauthservertoserver
+     ```
+
+4. Construct the secrets request endpoint by substituting the value of `org id` and `credential id` in the URL below. 
+   
+     ```
+     https://api.adobe.io/console/organizations/{orgId}/credentials/{credentialId}/secrets
+     ```
+     ```
+     https://api.adobe.io/console/organizations/23294/credentials/436084/secrets
+     ```
+
+5. Generate an access token using the existing client secret (see the section on [generating access tokens](#generate-access-tokens)).  Make sure to include scopes that the I/O Management API requires: 
+   
+     ```
+     AdobeID, openid, read_organizations, additional_info.projectedProductContext, additional_info.roles, adobeio_api, read_client_secret, manage_client_secrets
+     ```
+
+6. Call the API to list all existing client secrets. Note: you can grab your `client_id` from the OAuth Server-to-Server credential overview page. 
+   
+     ```curl
+     curl -X GET 'https://api.adobe.io/console/organizations/{orgId}/credentials/{credentialId}/secrets' \
+          -H 'Authorization: Bearer {ACCESS TOKEN GENERATED IN STEP 5}'
+          -H 'x-api-key: {CLIENT ID FROM STEP 6}'
+     ```
+
+7.  Call the API to add another client secret to your credential. The API response contains the `client_secret` that was added and its `uuid`. This `client_secret` will never be returned in plain text by any other API response. However, you can still find it on the Developer Console UI.
+   
+     ```curl
+     curl -X POST 'https://api.adobe.io/console/organizations/{orgId}/credentials/{credentialId}/secrets' \
+          -H 'Authorization: Bearer {ACCESS TOKEN GENERATED IN STEP 5}'
+          -H 'x-api-key: {CLIENT ID FROM STEP 6}'
+     ```
+
+8.  Update your application to use the new client secret. 
+
+9.  Call the API to list all client secrets for your credential. You can confirm that you have successfully updated the client secret in your applications by comparing the last used timestamps for the secrets. Grab the value of the `uuid` field for your older secret that you wish to delete.
+
+10. Call the API to delete the old client secret from your credential by passing the `uuid` in the URL
+    
+     ```curl
+     curl -X DELETE 'https://api.adobe.io/console/organizations/{orgId}/credentials/{credentialId}/secrets/{uuid from step 9}' \
+          -H 'Authorization: Bearer {ACCESS TOKEN GENERATED IN STEP 5}'
+          -H 'x-api-key: {CLIENT ID FROM STEP 6}'
+     ```
