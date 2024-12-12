@@ -154,19 +154,19 @@ module.exports = {
           {
             pages: [
               {
-                path: "guides/authentication/ServerToServerAuthentication/implementation.md",
+                path: "guides/authentication/serverToServerAuthentication/implementation.md",
                 title: "Implementation Guide"
               },
               {
-                path: "guides/authentication/ServerToServerAuthentication/migration.md",
+                path: "guides/authentication/serverToServerAuthentication/migration.md",
                 title: "Migration Guide"
               },
               {
-                path: "guides/authentication/ServerToServerAuthentication/faqs.md",
+                path: "guides/authentication/serverToServerAuthentication/faqs.md",
                 title: "Migration FAQs"
               },
               {
-                path: "guides/authentication/ServerToServerAuthentication/IMS.md",
+                path: "guides/authentication/serverToServerAuthentication/IMS.md",
                 title: "API Reference"
               },
               {
@@ -188,7 +188,7 @@ module.exports = {
                 title: "Service Account (JWT) credential"
               }
             ],
-            path: "guides/authentication/ServerToServerAuthentication/index.md",
+            path: "guides/authentication/serverToServerAuthentication/index.md",
             title: "Server to Server Authentication"
           },
           {
