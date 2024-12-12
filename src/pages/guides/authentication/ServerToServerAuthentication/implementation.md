@@ -36,3 +36,24 @@ Generating access tokens for experimentation with the OAuth Server-to-Server cre
 ### Generating access tokens programmatically
 
 See this cURL request to understand how your integration or application can generate access tokens programmatically. 
+
+```
+curl -X POST 'https://ims-na1.adobelogin.com/ims/token/v3' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -d 'client_id={CLIENT_ID}&client_secret={CLIENT_SECRET}&grant_type=client_credentials&scope={SCOPES}'
+```
+
+Your integration can generate access tokens when needed. However, it is a good practice to cache access tokens for reuse until they expire. Integrations should avoid generating a new access token when a previously generated access token has not expired and can be reused. Adobe can throttle your integration if it generates too many access tokens.
+
+Access tokens usually expire in 24 hours. To check the expiry time of an access token, see the `expires_in` field in the API response returned by the above cURL request. Note: The `expires_in` time is in seconds. See [API reference](./IMS.md#fetching-access-tokens).
+
+### Generating access tokens using standard OAuth2 libraries
+
+We recommend using a standard OAuth 2.0 library to implement your application's access token generation logic. The  OAuth community site https://oauth.net has a huge list of community-maintained OAuth2 libraries. Some widely known and maintained OAuth2 libraries from that list are -
+
+1. [PassportJS](https://github.com/jaredhanson/passport) (Node.js)
+2. [Spring Security](https://spring.io/projects/spring-security) (Java)
+3. [Authlib](https://github.com/lepture/authlib) (Python)
+4. View more libraries at https://oauth.net/code/
+
+
