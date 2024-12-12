@@ -18,3 +18,21 @@ An admin in your organization can manage all OAuth Server-to-Server credentials 
 This name can be modified later in your project by visiting the OAuth Server-to-Server credential overview page.
 
 ![](../../../images/oauth-server-to-server-credential-name-update.png)
+
+### Selecting Product Profiles
+
+Depending on the API or Event you add, you may be asked to select product profiles to assign to your credential. These product profiles govern what data your application can/cannot access in your organization. 
+
+![](../../../images/oauth-server-to-server-credential-product-profiles.png)
+
+The product profile selection works the same way as it does for Service Account (JWT) credentials.
+
+## Generate access tokens
+
+Generating access tokens for experimentation with the OAuth Server-to-Server credential is straightforward. You can use the 'Generate access token' button on the credential overview page or copy the cURL command and use the command line to generate an access token for quick use.
+
+![](../../../images/oauth-server-to-server-credential-generate-access-tokens.png)
+
+### Generating access tokens programmatically
+
+See this cURL request to understand how your integration or application can generate access tokens programmatically. 
