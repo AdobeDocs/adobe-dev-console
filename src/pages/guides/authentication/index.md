@@ -15,9 +15,9 @@ Depending on the Adobe product or service you are integrating into your app, you
    * [OAuth Single Page App credential](./UserAuthentication/implementation.md#oauth-single-page-app-credential)
    * [OAuth Native App credential](./UserAuthentication/implementation.md#oauth-native-app-credential)
 
-2. [Server to server authentication](./ServerToServerAuthentication/index.md)
-   * [OAuth Server to Server credential](./ServerToServerAuthentication/index.md#oauth-server-to-server-credential)
-   * [Service Account (JWT) credential *(deprecated)*](./ServerToServerAuthentication/index.md#service-account-jwt-credential-deprecated)
+2. [Server to server authentication](./serverToServerAuthentication/index.md)
+   * [OAuth Server to Server credential](./serverToServerAuthentication/index.md#oauth-server-to-server-credential)
+   * [Service Account (JWT) credential *(deprecated)*](./serverToServerAuthentication/index.md#service-account-jwt-credential-deprecated)
 
 3. [API key authentication](./APIKeyAuthentication/index.md)
    * [API Key credential](./APIKeyAuthentication/index.md#api-key-credential)
@@ -39,16 +39,16 @@ View our guide on user authentication credentials -
 If your application needs to read or modify data owned by your application or your organization, you can use a server to server authentication credential. Server to server authentication credentials only allow you to access your application's data or your organization's data and, therefore, do not require an end user to sign in.
 
 View our guide on server to server authentication credentials -
-1. [Understanding server to server credentials](./ServerToServerAuthentication/index.md)
-2. [Learning about the different Server to server authentication credential types](./ServerToServerAuthentication/index.md#server-to-server-credential-types)
-3. [Setting up the credential - credential name, product profiles](./ServerToServerAuthentication/implementation.md#setting-up-the-oauth-server-to-server-credential)
-4. [Implementing server to server authentication using standard OAuth2 libraries](./ServerToServerAuthentication/implementation.md#generating-access-tokens-using-standard-oauth2-libraries)
-5. [Rotating client secrets programmatically](./ServerToServerAuthentication/implementation.md#rotating-client-secrets-programmatically)
+1. [Understanding server to server credentials](./serverToServerAuthentication/index.md)
+2. [Learning about the different Server to server authentication credential types](./serverToServerAuthentication/index.md#server-to-server-credential-types)
+3. [Setting up the credential - credential name, product profiles](./serverToServerAuthentication/implementation.md#setting-up-the-oauth-server-to-server-credential)
+4. [Implementing server to server authentication using standard OAuth2 libraries](./serverToServerAuthentication/implementation.md#generating-access-tokens-using-standard-oauth2-libraries)
+5. [Rotating client secrets programmatically](./serverToServerAuthentication/implementation.md#rotating-client-secrets-programmatically)
 
 
 <InlineAlert slots="text"/>
 
-The Service Account (JWT) credentials have been deprecated in favor of the OAuth Server-to-Server credentials. Your applications using the Service Account (JWT) credentials will stop working after Jan 27, 2025. You must migrate to the new credential by **Jan 27, 2025**, to ensure your application continues functioning. [Learn more](./ServerToServerAuthentication/migration.md).
+The Service Account (JWT) credentials have been deprecated in favor of the OAuth Server-to-Server credentials. Your applications using the Service Account (JWT) credentials will stop working after Jan 27, 2025. You must migrate to the new credential by **Jan 27, 2025**, to ensure your application continues functioning. [Learn more](./serverToServerAuthentication/migration.md).
 
 
 ## API key authentication 

@@ -1,21 +1,25 @@
 
 # OAuth Server-to-Server credential implementation guide
 
-The following guide goes over finer implementation details for OAuth Server-to-Server credentials. At the end of the guide is a list of recommended industry-standard OAuth2 libraries. Before you proceed, we recommend you become familiar with the server to server authentication credentials in our [server to server authentication guide](../ServerToServerAuthentication/index.md).
+The following guide goes over finer implementation details for OAuth Server-to-Server credentials. At the end of the guide is a list of recommended industry-standard OAuth2 libraries. Before you proceed, we recommend you become familiar with the server to server authentication credentials in our [server to server authentication guide](./index.md).
 
 ## Table of contents 
 
-+ [Setting up the OAuth Server-to-Server credential](#setting-up-the-oauth-server-to-server-credential)
-+ [Generate access tokens](#generate-access-tokens)
-+ [Generating access tokens programmatically](#generating-access-tokens-programmatically)
-+ [Generating access tokens using standard OAuth2 libraries](#generating-access-tokens-using-standard-oauth2-libraries)
-+ [Rotating client secrets](#rotating-client-secrets)
-+ [Rotating client secrets programmatically](#rotating-client-secrets-programmatically)
+- [OAuth Server-to-Server credential implementation guide](#oauth-server-to-server-credential-implementation-guide)
+  - [Table of contents](#table-of-contents)
+  - [Setting up the OAuth Server-to-Server credential](#setting-up-the-oauth-server-to-server-credential)
+    - [Credential Name](#credential-name)
+    - [Selecting Product Profiles](#selecting-product-profiles)
+  - [Generate access tokens](#generate-access-tokens)
+    - [Generating access tokens programmatically](#generating-access-tokens-programmatically)
+    - [Generating access tokens using standard OAuth2 libraries](#generating-access-tokens-using-standard-oauth2-libraries)
+  - [Rotating client secrets](#rotating-client-secrets)
+    - [Rotating client secrets programmatically](#rotating-client-secrets-programmatically)
 
 
 ## Setting up the OAuth Server-to-Server credential
 
-Depending on the API or an Event to your project on the Adobe Developer Console, you can select the OAuth Server-to-Server credential. The OAuth Server-to-Server credential is available for all APIs and Events supporting the [Service Account (JWT) credential *(deprecated)*](../ServerToServerAuthentication/index.md#service-account-jwt-credential-deprecated).
+Depending on the API or an Event to your project on the Adobe Developer Console, you can select the OAuth Server-to-Server credential. The OAuth Server-to-Server credential is available for all APIs and Events supporting the [Service Account (JWT) credential *(deprecated)*](./index.md#service-account-jwt-credential-deprecated).
 
 ### Credential Name
 

@@ -26,8 +26,11 @@ You can also modify the set of product profiles by returning to your project on 
 
 Adobe supports two server to server authentication credentials. These credentials only differ in the way your application generates the access token, the rest of their functioning is similar. 
 
-1. [OAuth Server-to-Server credential](#oauth-server-to-server-credential)
-2. [Service Account (JWT) credential *(deprecated)*](#service-account-jwt-credential-deprecated)
+- [Server to Server authentication](#server-to-server-authentication)
+  - [Whose data can you access with a server to server credential?](#whose-data-can-you-access-with-a-server-to-server-credential)
+  - [Server to server credential types](#server-to-server-credential-types)
+    - [OAuth Server-to-Server credential](#oauth-server-to-server-credential)
+    - [Service Account (JWT) credential *(deprecated)*](#service-account-jwt-credential-deprecated)
 
 
 ### OAuth Server-to-Server credential
@@ -48,7 +51,7 @@ Read our OAuth Server-to-server credential implementation guide -
 
 <InlineAlert slots="text"/>
 
-The Service Account (JWT) credentials have been deprecated in favor of the OAuth Server-to-Server credentials. Your applications using the Service Account (JWT) credentials will stop working after Jan 27, 2025. You must migrate to the new credential by **Jan 27, 2025**, to ensure your application continues functioning. [Learn more](./ServerToServerAuthentication/migration.md).
+The Service Account (JWT) credentials have been deprecated in favor of the OAuth Server-to-Server credentials. Your applications using the Service Account (JWT) credentials will stop working after Jan 27, 2025. You must migrate to the new credential by **Jan 27, 2025**, to ensure your application continues functioning. [Learn more](./serverToServerAuthentication/migration.md).
 
 Service Account (JWT) credentials rely on the JWT token exchange mechanism to generate access tokens. This credential's details include two secrets a `client_secret` and a `private.key` (part of a public certificate private key pair).
 

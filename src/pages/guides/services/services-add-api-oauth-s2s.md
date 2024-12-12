@@ -24,9 +24,9 @@ Once you have found and chosen an API that you would like to add, select **Next*
 
 ## Configure API
 
-An OAuth Server-to-Server integration lets your application call Adobe services on its own behalf, or on the behalf of an enterprise organization. Learn more on Server to Server authentication [here](../authentication/ServerToServerAuthentication/index.md). 
+An OAuth Server-to-Server integration lets your application call Adobe services on its own behalf, or on the behalf of an enterprise organization. Learn more on Server to Server authentication [here](../authentication/serverToServerAuthentication/index.md). 
 
-For this type of integration, your application can create an access token can be created by making a simple API call to Adobe IMS (see [implementation guide](../authentication/ServerToServerAuthentication/implementation.md)).
+For this type of integration, your application can create an access token can be created by making a simple API call to Adobe IMS (see [implementation guide](../authentication/serverToServerAuthentication/implementation.md)).
 
 
 ### Create a new OAuth Server-to-Server credential
