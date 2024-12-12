@@ -5,12 +5,16 @@ The following guide goes over finer implementation details for OAuth Server-to-S
 
 ## Table of contents 
 
-+ [Setting up the OAuth Server-to-Server credential](#setting-up-the-oauth-server-to-server-credential)
-+ [Generate access tokens](#generate-access-tokens)
-+ [Generating access tokens programmatically](#generating-access-tokens-programmatically)
-+ [Generating access tokens using standard OAuth2 libraries](#generating-access-tokens-using-standard-oauth2-libraries)
-+ [Rotating client secrets](#rotating-client-secrets)
-+ [Rotating client secrets programmatically](#rotating-client-secrets-programmatically)
+- [OAuth Server-to-Server credential implementation guide](#oauth-server-to-server-credential-implementation-guide)
+  - [Table of contents](#table-of-contents)
+  - [Setting up the OAuth Server-to-Server credential](#setting-up-the-oauth-server-to-server-credential)
+    - [Credential Name](#credential-name)
+    - [Selecting Product Profiles](#selecting-product-profiles)
+  - [Generate access tokens](#generate-access-tokens)
+    - [Generating access tokens programmatically](#generating-access-tokens-programmatically)
+    - [Generating access tokens using standard OAuth2 libraries](#generating-access-tokens-using-standard-oauth2-libraries)
+  - [Rotating client secrets](#rotating-client-secrets)
+    - [Rotating client secrets programmatically](#rotating-client-secrets-programmatically)
 
 
 ## Setting up the OAuth Server-to-Server credential
