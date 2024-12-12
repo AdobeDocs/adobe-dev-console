@@ -60,3 +60,27 @@ We recommend using a standard OAuth 2.0 library to implement your application's 
 
 Using industry-standard libraries is the quickest and most secure way of integrating with OAuth. We recommend developers diligently pick the OAuth 2.0 library that works best for their application.
 
+## Rotating client secrets 
+
+The OAuth Server-to-Server credentials provide freedom from automatically expiring certificates used in the Service Account (JWT) credential that must be updated annually. Instead, the OAuth Server-to-Server credential allows you to rotate your client secret as needed. 
+  
+Rotating your application's client secrets is highly recommended in case of a leak or unauthorized access. Furthermore, rotating client secrets periodically is an industry-standard practice that strengthens your application security posture. 
+
+You can rotate secrets for your credential through the Dev Console UI and [programmatically through the API](#rotating-client-secrets-programmatically).
+
+To rotate client secrets through the UI, follow the steps below on the credential overview screen - 
+
+1. Add a new client secret to your credential .
+
+     ![](../../../images/oauth-server-to-server-credential-add-client-secret.png)
+
+     ![](../../../images/oauth-server-to-server-credential-added-client-secret.png)
+
+2. Update your application to replace your old client secret with the new one you added.
+
+3. Check the client secret last used timestamp to make sure your application is no longer using the old client secret.
+
+     ![](../../../images/oauth-server-to-server-credential-check-client-secret-timestamps.png)
+
+4. Once sure that you have successfully replaced the client secret, you can delete the old client secret.
+     ![](../../../images/oauth-server-to-server-credential-delete-old-client-secret.png)
