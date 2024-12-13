@@ -46,12 +46,11 @@ curl -X POST 'https://ims-na1.adobelogin.com/ims/token/v3' \
 
 You do not need a refresh token for OAuth Server-to-Server credentials. You can always request a new access token directly using your *client_id*, *client_secret*, and *scope*. See [fetching access tokens](#fetching-access-tokens).
 
-
 ## List all client secrets
 
 Pre-requisite: You need to add `I/O Management API` to your project for fetching the list of secrets. See [Add API to a Project](../../services/services-add-api-jwt.md)
 
-Note: No `client_secret` values are returned by this API. Only the secret `uuid` and other metadata is returned. 
+Note: No `client_secret` values are returned by this API. Only the secret `uuid` and other metadata is returned.
 
 ### Parameters
 
@@ -113,7 +112,6 @@ Pre-requisite: You need to add `I/O Management API` to your project for adding c
 
 Note: The API response contains the the `client_secret` that was added and its `uuid`. This `client_secret` will never be returned in plain text by any other API response. However, you can still find it on the Developer Console UI.
 
-
 ### Parameters
 
 | Parameter       | Where   | Mandatory | Description                                                                                                                                                                             |
@@ -135,7 +133,6 @@ curl -X POST 'https://api.adobe.io/console/organizations/{org_id}/credentials/{c
 
 201 Created
 
-
 ```json
 {
   "expires_at": "PERMANENT",
@@ -149,7 +146,6 @@ curl -X POST 'https://api.adobe.io/console/organizations/{org_id}/credentials/{c
 ```
 
 Note: the `created_at` and `last_used_at` values are in milliseconds since UNIX epoch.
-
 
 ## Remove client secret from credential
 
