@@ -172,7 +172,7 @@ module.exports = {
               {
                 pages: [
                   {
-                    path: "guides/authentication/JWT/JWTCertificate.md",
+                    path: "guides/authentication/JWT/jwtCertificate.md",
                     title: "Create a Public Key Certificate"
                   },
                   {
