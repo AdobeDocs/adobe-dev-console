@@ -22,7 +22,7 @@ Your JWT must contain the following claims:
 | iss        | _Required_. The issuer, your **Organization ID** from the Adobe Developer Console integration, in the format `org_ident@AdobeOrg`. Identifies your organization that has been configured for access to the Adobe I/O API.|
 | sub        | _Required_. The subject, your **Technical Account ID** from the Adobe Developer Console integration, in the format: `id@techacct.adobe.com`.|
 | aud        | _Required_. The audience for the token, your **API Key** from the Adobe Developer Console integration, in the format: `https://ims-na1.adobelogin.com/c/api_key`.|
-| Metascopes | _Required_. The API-access claim configured for your organization: [JWT Metascopes](Scopes.md), in the format: `"https://ims-na1.adobelogin.com/s/meta_scope": true`|
+| Metascopes | _Required_. The API-access claim configured for your organization: [JWT Metascopes](scope.md), in the format: `"https://ims-na1.adobelogin.com/s/meta_scope": true`|
 
 The following is a sample payload to be signed and encoded.
 

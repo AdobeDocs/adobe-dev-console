@@ -44,7 +44,7 @@
       case "#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md":
         redirectPath = prefixPath + "guides/authentication/OAuth/";
         break;
-      case "#!AdobeDocs/adobeio-auth/master/OAuth/Scopes.md":
+      case "#!AdobeDocs/adobeio-auth/master/OAuth/scope.md":
         redirectPath = prefixPath + "guides/authentication/OAuth/Scopes/";
         break;
       case "#!AdobeDocs/adobeio-auth/master/OAuth/samples/samples.md":
@@ -56,7 +56,7 @@
       case "#!AdobeDocs/adobeio-auth/master/JWT/jwt-certificate.md":
         redirectPath = prefixPath + "guides/authentication/JWT/JWTCertificate/";
         break;
-      case "#!AdobeDocs/adobeio-auth/master/JWT/Scopes.md":
+      case "#!AdobeDocs/adobeio-auth/master/JWT/scope.md":
         redirectPath = prefixPath + "guides/authentication/JWT/Scopes/";
         break;
       case "#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md":
