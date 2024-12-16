@@ -20,9 +20,9 @@ Parameters can be sent in the body or as query parameters. Passing parameters in
 | Parameter       | Mandatory | Description                                                                                                                                                          |
 | --------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `grant_type`    | Yes       | Value should always be `client_credentials`                                                                                                                          |
-| `client_id`     | Yes       | The Client ID obtained from the [Adobe Developer Console](/console)                                                                                                  |
-| `client_secret` | Yes       | The value of client secret obtained from the [Adobe Developer Console](/console)                                                                                     |
-| `scope`         | Yes       | The list of comma separated scopes you are requesting. To see the scopes available to your credential, visit your project on the [Adobe Developer Console](/console) |
+| `client_id`     | Yes       | The Client ID obtained from the [Adobe Developer Console](https://developer.adobe.com/console/)                                                                                                  |
+| `client_secret` | Yes       | The value of client secret obtained from the [Adobe Developer Console](https://developer.adobe.com/console/)                                                                                     |
+| `scope`         | Yes       | The list of comma separated scopes you are requesting. To see the scopes available to your credential, visit your project on the [Adobe Developer Console](https://developer.adobe.com/console/) |
 
 ### Request for OAuth Server-to-Server credential
 
