@@ -168,7 +168,7 @@ Several query parameters are available to you as a developer to customize the us
 
 |Parameter|Mandatory|Description|
 |---|---|---|
-|`client_id`|Yes|The client ID obtained from [Adobe Developer Console](/console).|
+|`client_id`|Yes|The client ID obtained from [Adobe Developer Console](https://developer.adobe.com/console/).|
 |`redirect_uri`| No|The URI to which the user agent is redirected once the authorization completes. Note that this URI must be HTTPS. The supplied value for this parameter is validated against the Redirect URI pattern supplied by you at the time of credential creation . If a redirect URI is not provided with the request or if it does not match against the pattern, Adobe will redirect the response to the Default Redirect URI supplied by you at the time of credential creation.|
 |`scope`|No|The requested scopes in the form of a list of space or comma-delimited, case-sensitive strings. See the section on [OAuth 2.0 Scopes](#scopes) for more information.|
 |`response_type`|No|Possible values are `code`, `token`, `id_token`, `id_token token`, `code id_token`. The default response type for the Authorization code flow is `code`.|
@@ -250,7 +250,7 @@ Parameters can be sent in the body or as query parameters. Passing parameters in
 |`code`|Yes|The value of the `code` query/fragment parameter returned in the callback request from the autorize step | 
 |`grant_type`|Yes|Value should always be `authorization_code`|
 |`authorization`| Required for confidential clients|Basic Authorization header.`Authorization: Basic Base64(clientId:clientSecret)`|
-|`client_id`|Required for PUBLIC clients|The Client ID obtained from the [Adobe Developer Console](/console)|
+|`client_id`|Required for PUBLIC clients|The Client ID obtained from the [Adobe Developer Console](https://developer.adobe.com/console/)|
 |`code_verifier`|Required for PUBLIC clients|Code verifier corresponding to the `code_challenge` sent during [authorize request](#authorize-request).|
 
 
@@ -306,7 +306,7 @@ Once you have fetched the access tokens for a user you may also be provided a re
 |---|---|---|
 |`refresh_token`|Yes|The base64-encoded refresh token received in the response to the initial request for an access token|
 |`grant_type`|Yes|The value is always `refresh_token`|
-|`client_id`|Only for PUBLIC clients|The client ID obtained from [Adobe Developer Console](/console)|
+|`client_id`|Only for PUBLIC clients|The client ID obtained from [Adobe Developer Console](https://developer.adobe.com/console/)|
 |`authorization`|Only for Confidential clients|Basic Authorization header.`Authorization: Basic Base64(clientId:clientSecret)`|
 
 
