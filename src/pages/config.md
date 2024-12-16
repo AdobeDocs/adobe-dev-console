@@ -41,7 +41,7 @@
             - [Migration FAQs](guides/authentication/ServerToServerAuthentication/faqs.md) 
             - [API Reference](guides/authentication/ServerToServerAuthentication/IMS.md) 
             - [Service Account (JWT) credential](guides/authentication/JWT/index.md) 
-                - [Create a Public Key Certificate](guides/authentication/JWT/jwtCertificate.md) 
+                - [Create a Public Key Certificate](guides/authentication/JWT/jwt-certificate.md) 
                 - [JWT Metascopes](guides/authentication/JWT/Scopes.md) 
                 - [JWT Sample Code](guides/authentication/JWT/samples.md) 
         - [API Key Authentication](guides/authentication/APIKeyAuthentication/index.md) 

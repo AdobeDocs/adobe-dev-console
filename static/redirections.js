@@ -53,7 +53,7 @@
       case "#!AdobeDocs/adobeio-auth/master/JWT/JWT.md":
         redirectPath = prefixPath + "guides/authentication/JWT/";
         break;
-      case "#!AdobeDocs/adobeio-auth/master/JWT/jwtCertificate.md":
+      case "#!AdobeDocs/adobeio-auth/master/JWT/jwt-certificate.md":
         redirectPath = prefixPath + "guides/authentication/JWT/JWTCertificate/";
         break;
       case "#!AdobeDocs/adobeio-auth/master/JWT/Scopes.md":
