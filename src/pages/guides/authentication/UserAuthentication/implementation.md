@@ -138,7 +138,7 @@ The following samples demonstrate basic interaction with the Adobe OAuth endpoin
 
 ## OAuth 2.0 Playground
 
-The OAuth 2.0 playground allows you to test out the 3-legged OAuth flow and obtain access tokens for experimentation. Learn more about the playground [here](../Tools/OAuthPlayground.md).
+The OAuth 2.0 playground allows you to test out the 3-legged OAuth flow and obtain access tokens for experimentation. Learn more about the playground [here](../Tools/o-auth-playground.md).
 
 ## Further Reading
 

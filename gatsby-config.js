@@ -198,11 +198,11 @@ module.exports = {
           {
             pages: [
               {
-                path: "guides/authentication/Tools/OAuthPlayground.md",
+                path: "guides/authentication/Tools/o-auth-playground.md",
                 title: "OAuth 2.0 Playground"
               },
               {
-                path: "guides/authentication/Tools/Postman.md",
+                path: "guides/authentication/Tools/postman.md",
                 title: "Postman"
               }
             ],

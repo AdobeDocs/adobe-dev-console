@@ -65,17 +65,17 @@
       case "#!AdobeDocs/adobeio-auth/master/Resources/Tools/ToolsOverview.md":
         redirectPath = prefixPath + "guides/authentication/Tools/";
         break;
-      case "#!AdobeDocs/adobeio-auth/master/Resources/Tools/OAuthPlayground.md":
+      case "#!AdobeDocs/adobeio-auth/master/Resources/Tools/o-auth-playground.md":
         redirectPath =
           prefixPath + "guides/authentication/Tools/OAuthPlayground/";
         break;
-      case "#!AdobeDocs/adobeio-auth/master/Resources/Tools/Postman.md":
+      case "#!AdobeDocs/adobeio-auth/master/Resources/Tools/postman.md":
         redirectPath = prefixPath + "guides/authentication/Tools/Postman/";
         break;
       case "#!AdobeDocs/adobeio-auth/master/Resources/ims.md":
         redirectPath = prefixPath + "guides/authentication/IMS/";
         break;
-      case "#!AdobeDocs/adobeio-auth/master/Resources/Tools/Postman.md":
+      case "#!AdobeDocs/adobeio-auth/master/Resources/Tools/postman.md":
         redirectPath = prefixPath + "guides/authentication/Tools/Postman/";
         break;
       case "#!AdobeDocs/adobeio-auth/master/Resources/ims.md":
