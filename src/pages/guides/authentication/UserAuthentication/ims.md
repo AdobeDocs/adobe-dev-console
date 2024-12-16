@@ -145,7 +145,7 @@ curl -X GET 'https://ims-na1.adobelogin.com/ims/userinfo/v2?client_id={YOUR_CLIE
 |Properties|Projected by scope|Description|
 |---|---|---|
 |`sub`|`openid`|The user ID|
-|`account_type`|`profile`|Can be one of two values:<br/><ul><li>**`ind`:** User is an individual account</li><li>**`ent`:** User is part of an organization</li></ul>|
+|`account_type`|`profile`|Can be one of two values:**`ind`:** User is an individual account**`ent`:** User is part of an organization|
 |`email_verified`|`email`|Whether the user's email address has been verified|
 |`address`|`address`|User's address - currently, only the two-digit country code is returned|
 |`name`|`profile`|User's full name|
@@ -174,10 +174,10 @@ Several query parameters are available to you as a developer to customize the us
 |`response_type`|No|Possible values are `code`, `token`, `id_token`, `id_token token`, `code id_token`. The default response type for the Authorization code flow is `code`.|
 |`state`|Recommended|Client-defined state data that is replayed back to the client. It must not be longer than 4096 characters and does not need to be a JSON object. Typically, Cross-Site Request Forgery (CSRF, XSRF) mitigation is done by cryptographically binding the value of this parameter with a browser cookie.|
 |`nonce`|No|String value used to associate a Client session with an ID Token and to mitigate replay attacks. The value is passed through unmodified from the Authentication Request to the ID Token.|
-|`prompt`|No|Space-delimited, case-sensitive list of ASCII string values that specifies whether Adobe prompts the end-user for authentication or fails the authorize step if user is not authenticated. Supported values: `none`, `login`.<br/><ul><li>`none` → Does not show any UI. Either returns successfully with a valid authentication response or returns with an error.<ul><li>`error=login_required` → No user is logged in.</li><li>`error=consent_required` → User is Logged in, but has not granted access to your app.</li><li>`error=interaction_required` → User is logged in and has granted access to your app, but there is some other action they need to perform (Accept terms of use, etc.).</li></ul></li><li>`login` → Even if the user is authenticated, they will see the login screen.</li><li>No value supplied → Default behavior.</li></ul>|
+|`prompt`|No|Space-delimited, case-sensitive list of ASCII string values that specifies whether Adobe prompts the end-user for authentication or fails the authorize step if user is not authenticated. Supported values: `none`, `login`.`none` → Does not show any UI. Either returns successfully with a valid authentication response or returns with an error.`error=login_required` → No user is logged in.`error=consent_required` → User is Logged in, but has not granted access to your app.`error=interaction_required` → User is logged in and has granted access to your app, but there is some other action they need to perform (Accept terms of use, etc.).`login` → Even if the user is authenticated, they will see the login screen.No value supplied → Default behavior.|
 |`code_challenge_method`|No, defaults to `plain`|Possible values: `S256`, `plain`|
-|`code_challenge`|Required for Public Clients| The `code_challenge` parameter is a security measure to confirm whether the authorize and token requests originated from the same application.<br /><br />A `code_challenge` comes in pair with a `code_verifier`. A `code_verifier` is a random string of at least 43 characters (see [allowed character set](https://datatracker.ietf.org/doc/html/rfc7636#section-4.1)).<br /><br />Based on the `code_challenge_method`, the `code_challenge` can then be according to - <br /><ul><li>If `code_challenge_method` = `plain`, then `code_challenge` = `code_verifier`</li><li>If `code_challenge_method` = `S256`, then `code_challenge` =  `BASE64_URL_ENCODE(SHA256(code_verifier))`</li></ul><br /> <br />The `code_challenge` is sent with the authorize request, while the corresponding `code_verifier` is sent with the [token request](#fetching-access-tokens). For more information, read the [Proof Key for Code Exchange by OAuth Public Clients](https://tools.ietf.org/html/rfc7636) documentation.<br /> You can use [online tools](https://example-app.com/pkce) to experiment with `code_challenge` and `code_verifier`.|
-|`response_mode`|No|Possible values: `query`, `fragment`. <br/>For more information, refer to this [openid documentation](https://openid.net/specs/oauth-v2-multiple-response-types-1_0.html#ResponseModes).<br/><br/>If `response_mode` is not specified, the following defaults are applied:<br/><ul><li>code → query</li><li>token → fragment</li><li>id_token → fragment</li><li>id_token token → fragment</li><li>code id_token → fragment</li></ul>|
+|`code_challenge`|Required for Public Clients| The `code_challenge` parameter is a security measure to confirm whether the authorize and token requests originated from the same application.A `code_challenge` comes in pair with a `code_verifier`. A `code_verifier` is a random string of at least 43 characters (see [allowed character set](https://datatracker.ietf.org/doc/html/rfc7636#section-4.1)).Based on the `code_challenge_method`, the `code_challenge` can then be according to - If `code_challenge_method` = `plain`, then `code_challenge` = `code_verifier`If `code_challenge_method` = `S256`, then `code_challenge` =  `BASE64_URL_ENCODE(SHA256(code_verifier))` The `code_challenge` is sent with the authorize request, while the corresponding `code_verifier` is sent with the [token request](#fetching-access-tokens). For more information, read the [Proof Key for Code Exchange by OAuth Public Clients](https://tools.ietf.org/html/rfc7636) documentation. You can use [online tools](https://example-app.com/pkce) to experiment with `code_challenge` and `code_verifier`.|
+|`response_mode`|No|Possible values: `query`, `fragment`. For more information, refer to this [openid documentation](https://openid.net/specs/oauth-v2-multiple-response-types-1_0.html#ResponseModes).If `response_mode` is not specified, the following defaults are applied:code → querytoken → fragmentid_token → fragmentid_token token → fragmentcode id_token → fragment|
 
 ### Constructing the Request URL for OAuth Web App and OAuth Web Credentials
 
@@ -229,7 +229,7 @@ After the user has authenticated and been granted consent to your application, t
 
 |Response Type (`response_type`)|Parameters|
 |---|---|
-|`token`| `access_token={ACCESS_TOKEN}&state={STATE}&token_type=bearer&expires_in=86399` <br/><br/><ul><li>`token_type` will always be `bearer`.</li><li>`expires_in` is the validity of the token in seconds.</li></ul>|
+|`token`| `access_token={ACCESS_TOKEN}&state={STATE}&token_type=bearer&expires_in=86399` `token_type` will always be `bearer`.`expires_in` is the validity of the token in seconds.|
 |`code`| `code={AUTHORIZATION_CODE}&state={STATE}`|
 |`id_token`|`id_token={ID_TOKEN}&state={STATE}`|
 |`id_token token`|`id_token={ID_TOKEN}&access_token={ACCESS_TOKEN}&state={STATE}&token_type=bearer&expires_in=86399`|
@@ -249,7 +249,7 @@ Parameters can be sent in the body or as query parameters. Passing parameters in
 |---|---|---|
 |`code`|Yes|The value of the `code` query/fragment parameter returned in the callback request from the autorize step | 
 |`grant_type`|Yes|Value should always be `authorization_code`|
-|`authorization`| Required for confidential clients|Basic Authorization header.<br/><br/>`Authorization: Basic Base64(clientId:clientSecret)`|
+|`authorization`| Required for confidential clients|Basic Authorization header.`Authorization: Basic Base64(clientId:clientSecret)`|
 |`client_id`|Required for PUBLIC clients|The Client ID obtained from the [Adobe Developer Console](/console)|
 |`code_verifier`|Required for PUBLIC clients|Code verifier corresponding to the `code_challenge` sent during [authorize request](#authorize-request).|
 
@@ -293,7 +293,7 @@ curl -X POST 'https://ims-na1.adobelogin.com/ims/token/v3?client_id={CLIENT_ID}'
 |`access_token`|Generated access token. By default they expire in 24 hours.|
 |`refresh_token`|Generated refresh token. By default they expire in 14 days.|
 |`token_type`|Token type will always be `bearer`.|
-|`id_token`|Generated ID token.<br/><br/>Present if `openid` is added as scope. See the section on [OAuth 2.0 Scopes ](#scopes) for more information.|
+|`id_token`|Generated ID token.Present if `openid` is added as scope. See the section on [OAuth 2.0 Scopes ](#scopes) for more information.|
 |`expires_in`|Validity of access token in seconds.|
 
 ## Refreshing Access tokens
@@ -307,7 +307,7 @@ Once you have fetched the access tokens for a user you may also be provided a re
 |`refresh_token`|Yes|The base64-encoded refresh token received in the response to the initial request for an access token|
 |`grant_type`|Yes|The value is always `refresh_token`|
 |`client_id`|Only for PUBLIC clients|The client ID obtained from [Adobe Developer Console](/console)|
-|`authorization`|Only for Confidential clients|Basic Authorization header.<br/><br/>`Authorization: Basic Base64(clientId:clientSecret)`|
+|`authorization`|Only for Confidential clients|Basic Authorization header.`Authorization: Basic Base64(clientId:clientSecret)`|
 
 
 ### Request for OAuth Web App credential
@@ -343,7 +343,7 @@ curl -X POST 'https://ims-na1.adobelogin.com/ims/token/v3?client_id={CLIENT_ID}'
 |Property|Description|
 |---|---|
 |`access_token`|Generated access token|
-|`refresh_token`|Generated refresh token.<br/><br/>`offline_access` scope is needed for this to be returned. See the section on [OAuth 2.0 Scopes](#scopes) for more information.|
+|`refresh_token`|Generated refresh token.`offline_access` scope is needed for this to be returned. See the section on [OAuth 2.0 Scopes](#scopes) for more information.|
 |`token_type`|Token type will always be `bearer`.|
 |`expires_in`|Validity of access token in seconds.|
 
@@ -360,7 +360,7 @@ Parameters can be sent in the body or as query parameters. Passing parameters in
 
 |Parameter|Mandatory|Description|
 |---|---|---|
-|`AUTHORIZATION`|Required only for `OAuth Web` and `OAuth WebApp` type credentials|Basic Authorization header.<br/><br/>`Authorization: Basic Base64(clientId:clientSecret)`|
+|`AUTHORIZATION`|Required only for `OAuth Web` and `OAuth WebApp` type credentials|Basic Authorization header.`Authorization: Basic Base64(clientId:clientSecret)`|
 |`client_id`|Required only for `OAuth Android`, `OAuth iOS`, `OAuth Single Page App` and `OAuth Native App` credentials| Your client id|
 |`token`|Yes|The access token or refresh token to be invalidated|
 
