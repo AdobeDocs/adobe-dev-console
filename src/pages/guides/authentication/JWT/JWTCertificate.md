@@ -13,7 +13,7 @@ Open a terminal and execute the following command:
 
 `openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate_pub.crt`
 
-![Generate public certificate](../Images/auth_jwtqs_00.png "Generate Public certificate")
+![Generate public certificate](../Images/auth_jwtqs_00.png)
 
 ## Windows:
 
@@ -30,7 +30,8 @@ Open a terminal and execute the following command:
     
     openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate_pub.crt
     ```  
-    ![Generate public certificate windows](../Images/auth_jwtqs_000.png "Generate Public certificate windows")
+
+    ![Generate public certificate windows](../Images/auth_jwtqs_000.png)
 
 4. Once you&rsquo;ve completed the steps for your chosen platform, continue in the Adobe Developer Console.
 
@@ -38,8 +39,8 @@ Open a terminal and execute the following command:
 
 1. Upload the public certificate (certificate_pub.crt) as a part of creating the integration.
 
-    ![Upload public certificate](../Images/auth_jwtqs_03.png "Upload public certificate")
+    ![Upload public certificate](../Images/auth_jwtqs_03.png)
 
 2. Your integration should now be created with the appropriate public certificate and claims.
 
-    ![Integration created](../Images/auth_jwtqs_04.png "Integration created")
+    ![Integration created](../Images/auth_jwtqs_04.png)
