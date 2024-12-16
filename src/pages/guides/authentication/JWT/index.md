@@ -103,7 +103,7 @@ A failed request can result in a response with an HTTP status of 400 or 401 and 
 |401 invalid_client|Integration does not have the exchange_jwt scope. This indicates an improper client configuration. Contact the Adobe I/O team to resolve it. The client ID and client secret combination is invalid.|
 |400 invalid_token|JWT is missing or cannot be decoded. JWT has expired. In this case, the error_description contains more details. The exp or jti field of the JWT is not an integer.|
 |400 invalid_signature|The JWT signature does not match any certificates attached to the integration. The signature does not match the algorithm specified in the JWT header.|
-|400 invalid_scope|Indicates a problem with the requested scope for the token. Specific scope problems can be:<ul><li>Metascopes in the JWT do not match metascopes in the binding.</li><li>Metascopes in the JWT do not match target client scopes.</li><li>Metascopes in the JWT contain a scope or scopes that do not exist.</li><li>The JWT has no metascopes.</li></ul>|
+|400 invalid_scope|Indicates a problem with the requested scope for the token. Specific scope problems can be:Metascopes in the JWT do not match metascopes in the binding.Metascopes in the JWT do not match target client scopes.Metascopes in the JWT contain a scope or scopes that do not exist.The JWT has no metascopes.|
 |400 bad_request|The JWT payload can be decoded and decrypted, but its contents are incorrect. This can occur when values for fields such as sub, iss, exp, or jti are not in the proper format.|
 
 
