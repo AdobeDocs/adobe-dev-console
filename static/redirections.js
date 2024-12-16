@@ -72,13 +72,13 @@
       case "#!AdobeDocs/adobeio-auth/master/Resources/Tools/Postman.md":
         redirectPath = prefixPath + "guides/authentication/Tools/Postman/";
         break;
-      case "#!AdobeDocs/adobeio-auth/master/Resources/IMS.md":
+      case "#!AdobeDocs/adobeio-auth/master/Resources/ims.md":
         redirectPath = prefixPath + "guides/authentication/IMS/";
         break;
       case "#!AdobeDocs/adobeio-auth/master/Resources/Tools/Postman.md":
         redirectPath = prefixPath + "guides/authentication/Tools/Postman/";
         break;
-      case "#!AdobeDocs/adobeio-auth/master/Resources/IMS.md":
+      case "#!AdobeDocs/adobeio-auth/master/Resources/ims.md":
         redirectPath = prefixPath + "guides/authentication/IMS/";
         break;
       case "#!AdobeDocs/adobeio-console/master/overview.md":

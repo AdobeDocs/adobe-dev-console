@@ -144,7 +144,7 @@ module.exports = {
                 title: "Implementation Guide"
               },
               {
-                path: "guides/authentication/UserAuthentication/IMS.md",
+                path: "guides/authentication/UserAuthentication/ims.md",
                 title: "API Reference"
               }
             ],
@@ -166,7 +166,7 @@ module.exports = {
                 title: "Migration FAQs"
               },
               {
-                path: "guides/authentication/ServerToServerAuthentication/IMS.md",
+                path: "guides/authentication/ServerToServerAuthentication/ims.md",
                 title: "API Reference"
               },
               {

@@ -109,9 +109,9 @@ Each scope your application requests during the authorization workflow, would be
 
 You can always find the scopes your application can request by visiting the credential page and the *Scopes tab*. See our API reference to view some commonly encountered scopes -
 
-1. [Identity scopes](./IMS.md#identity-scopes)
-2. [Creative Cloud Scopes](./IMS.md#creative-cloud)
-3. [Experience Cloud Scopes](./IMS.md#experience-cloud)
+1. [Identity scopes](./ims.md#identity-scopes)
+2. [Creative Cloud Scopes](./ims.md#creative-cloud)
+3. [Experience Cloud Scopes](./ims.md#experience-cloud)
 
 ## Standard OAuth2 libraries
 
@@ -148,7 +148,7 @@ There are several great resources to get more familiar with the OAuth2.0 framewo
 + [Proof Key for Code Exchange by OAuth Public Clients - RFC 7636](https://datatracker.ietf.org/doc/html/rfc7636)
 + [StackOverflow](https://stackoverflow.com/questions/tagged/oauth-2.0)
 + Authentication API Reference
-  + [Authorize Request](../IMS.md#authorize-request)
-  + [Fetching Access Tokens](../IMS.md#fetching-access-tokens-for-user-authentication-credentials)
-  + [Refreshing Access Tokens](../IMS.md#refreshing-access-tokens)
-  + [Revoking a Token](../IMS.md#token-revocation)
+  + [Authorize Request](../ims.md#authorize-request)
+  + [Fetching Access Tokens](../ims.md#fetching-access-tokens-for-user-authentication-credentials)
+  + [Refreshing Access Tokens](../ims.md#refreshing-access-tokens)
+  + [Revoking a Token](../ims.md#token-revocation)
