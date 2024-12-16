@@ -42,7 +42,7 @@
             - [API Reference](guides/authentication/ServerToServerAuthentication/IMS.md) 
             - [Service Account (JWT) credential](guides/authentication/JWT/index.md) 
                 - [Create a Public Key Certificate](guides/authentication/JWT/jwt-certificate.md) 
-                - [JWT Metascopes](guides/authentication/JWT/scope.md) 
+                - [JWT Metascopes](guides/authentication/JWT/scopes.md) 
                 - [JWT Sample Code](guides/authentication/JWT/samples.md) 
         - [API Key Authentication](guides/authentication/APIKeyAuthentication/index.md) 
         - [Tools](guides/authentication/Tools/index.md) 

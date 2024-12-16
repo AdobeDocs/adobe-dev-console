@@ -176,7 +176,7 @@ module.exports = {
                     title: "Create a Public Key Certificate"
                   },
                   {
-                    path: "guides/authentication/JWT/scope.md",
+                    path: "guides/authentication/JWT/scopes.md",
                     title: "JWT Metascopes"
                   },
                   {
