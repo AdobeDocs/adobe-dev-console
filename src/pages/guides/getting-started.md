@@ -40,7 +40,7 @@ In order to create and manage projects easily, this section introduces key areas
 
 ### Home
 
-After successfully logging in to [Adobe Developer Console](/console), you will arrive at the _Home_ screen. 
+After successfully logging in to [Adobe Developer Console](https://developer.adobe.com/console), you will arrive at the _Home_ screen. 
 
 The _Home_ screen is where you can easily find information and quick links, including top-navigation links to Projects and Downloads.
 
