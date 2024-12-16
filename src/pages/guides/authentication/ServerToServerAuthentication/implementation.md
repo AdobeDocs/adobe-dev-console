@@ -45,7 +45,7 @@ curl -X POST 'https://ims-na1.adobelogin.com/ims/token/v3' \
 
 Your integration can generate access tokens when needed. However, it is a good practice to cache access tokens for reuse until they expire. Integrations should avoid generating a new access token when a previously generated access token has not expired and can be reused. Adobe can throttle your integration if it generates too many access tokens.
 
-Access tokens usually expire in 24 hours. To check the expiry time of an access token, see the `expires_in` field in the API response returned by the above cURL request. Note: The `expires_in` time is in seconds. See [API reference](./IMS.md#fetching-access-tokens).
+Access tokens usually expire in 24 hours. To check the expiry time of an access token, see the `expires_in` field in the API response returned by the above cURL request. Note: The `expires_in` time is in seconds. See [API reference](./ims.md#fetching-access-tokens).
 
 ### Generating access tokens using standard OAuth2 libraries
 

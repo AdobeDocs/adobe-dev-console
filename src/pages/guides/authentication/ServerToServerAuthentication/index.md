@@ -44,7 +44,7 @@ Read our OAuth Server-to-server credential implementation guide -
 1. [Generating access tokens using cURL](./implementation.md#generate-access-tokens)
 2. [Generating access tokens programmatically using standard OAuth2 libraries](./implementation.md#rotating-client-secrets-programmatically)
 3. [Migrating from Service Account (JWT) credentials to OAuth Server-to-Server credentials](./migration.md)
-4. [API reference](./IMS.md)
+4. [API reference](./ims.md)
 
 
 ### Service Account (JWT) credential *(deprecated)*
