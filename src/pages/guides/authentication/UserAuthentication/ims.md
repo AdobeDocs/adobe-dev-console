@@ -145,7 +145,7 @@ curl -X GET 'https://ims-na1.adobelogin.com/ims/userinfo/v2?client_id={YOUR_CLIE
 |Properties|Projected by scope|Description|
 |---|---|---|
 |`sub`|`openid`|The user ID|
-|`account_type`|`profile`|Can be one of two values:**`ind`:** User is an individual account**`ent`:** User is part of an organization|
+|`account_type`|`profile`|Can be one of two values:**`ind`:** User is an individual account **`ent`:** User is part of an organization|
 |`email_verified`|`email`|Whether the user's email address has been verified|
 |`address`|`address`|User's address - currently, only the two-digit country code is returned|
 |`name`|`profile`|User's full name|
