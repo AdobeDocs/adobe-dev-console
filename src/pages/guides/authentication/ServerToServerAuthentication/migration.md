@@ -4,7 +4,7 @@ The Service Account (JWT) credentials have been deprecated in favor of the new O
 
 The new OAuth Server-to-Server credentials simplify all aspects of application development - experimentation, implementation, and maintenance. See the section on [Why OAuth Server-to-Server credentials?](#why-oauth-server-to-server-credentials) below to learn more.
 
-While the Service Account (JWT) credentials have been marked as deprecated, they will continue to work until **Jan 27, 2025**. Therefore you must migrate your application or integration to use the new OAuth Server-to-Server credential before Jan 27, 2025. See the section on [deprecation timelines](#deperecation-timelines) below to learn more.
+While the Service Account (JWT) credentials have been marked as deprecated, they will continue to work until **Jun 30, 2025**. Therefore you must migrate your application or integration to use the new OAuth Server-to-Server credential before Jun 30, 2025. See the section on [deprecation timelines](#deperecation-timelines) below to learn more.
 
 Migrating your applications to the OAuth Server-to-Server credential is a simple two-step process that enables a zero downtime migration for your applications and integrations. Please read our [migration guide](#migration-overview) below to familiarize yourself with the migration process.
 
@@ -45,12 +45,12 @@ Lastly, while the new OAuth Server-to-Server credentials do not use expiring cer
 
 <InlineAlert slots="text"/>
 
-Your applications using the Service Account (JWT) credentials will stop working after Jan 27, 2025.
+Your applications using the Service Account (JWT) credentials will stop working after Jun 30, 2025.
 
 
-| | May 1, 2023 - Jun 2, 2024 | Jun 3, 2024 - Jan 26, 2024 | Jan 27, 2025 (end of life) |
+| | May 1, 2023 - Jun 2, 2024 | Jun 3, 2024 - Jun 29, 2025 | Jun 30, 2025 (end of life) |
 |-|------------------------------|---------------------------------|-------------------------------|
-| Existing applications using a Service Account (JWT) credential |   Existing applications using the Service Account (JWT) credential will continue to work. |   Existing applications using the Service Account (JWT) credential will continue to work.  |  **Existing applications cannot refresh expiring certificates after Jan 27, 2025, and will stop working**.  |
+| Existing applications using a Service Account (JWT) credential |   Existing applications using the Service Account (JWT) credential will continue to work. |   Existing applications using the Service Account (JWT) credential will continue to work.  |  **Existing applications cannot refresh expiring certificates after Jun 30, 2025, and will stop working**.  |
 | New applications creating a Service Account (JWT) credential   |  A new Service Account (JWT) credential can be added to the project.  |  A new Service Account (JWT) credential **cannot** be created or added to the project.  |  A new Service Account (JWT) credential **cannot** be created or added to the project.  |
 
 ## Migration Overview
