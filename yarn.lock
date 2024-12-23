@@ -42,7 +42,7 @@ __metadata:
 
 "@adobe/gatsby-theme-aio@npm:^4.14.18":
   version: 4.14.18
-  resolution: "@adobe/gatsby-theme-aio@npm:4.14.19"
+  resolution: "@adobe/gatsby-theme-aio@npm:4.14.18"
   dependencies:
     "@adobe/focus-ring-polyfill": ^0.1.5
     "@adobe/gatsby-source-github-file-contributors": ^0.3.1
