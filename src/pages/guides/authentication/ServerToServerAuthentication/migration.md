@@ -6,6 +6,10 @@ The new OAuth Server-to-Server credentials simplify all aspects of application d
 
 While the Service Account (JWT) credentials have been marked as deprecated, they will continue to work until **Jun 30, 2025**. Therefore you must migrate your application or integration to use the new OAuth Server-to-Server credential before Jun 30, 2025. See the section on [deprecation timelines](#deperecation-timelines) below to learn more.
 
+<InlineAlert slots="text"/>
+
+Note: The end-of-life date for JWT credentials has been extended from Jan 27, 2025, to Jun 30, 2025.
+
 Migrating your applications to the OAuth Server-to-Server credential is a simple two-step process that enables a zero downtime migration for your applications and integrations. Please read our [migration guide](#migration-overview) below to familiarize yourself with the migration process.
 
 If you have more questions, check out our [frequently asked questions](#faqs) or visit the Adobe Developer Console [forums](https://experienceleaguecommunities.adobe.com/t5/adobe-developer-console/ct-p/adobe-io-console).
@@ -45,13 +49,15 @@ Lastly, while the new OAuth Server-to-Server credentials do not use expiring cer
 
 <InlineAlert slots="text"/>
 
-Your applications using the Service Account (JWT) credentials will stop working after Jun 30, 2025.
+Your applications using the Service Account (JWT) credentials will stop working after Jun 30, 2025. 
+Note: The end-of-life date for JWT credentials has been extended from Jan 27, 2025, to Jun 30, 2025.
 
-
-| | May 1, 2023 - Jun 2, 2024 | Jun 3, 2024 - Jun 29, 2025 | Jun 30, 2025 (end of life) |
-|-|------------------------------|---------------------------------|-------------------------------|
-| Existing applications using a Service Account (JWT) credential |   Existing applications using the Service Account (JWT) credential will continue to work. |   Existing applications using the Service Account (JWT) credential will continue to work.  |  **Existing applications cannot refresh expiring certificates after Jun 30, 2025, and will stop working**.  |
-| New applications creating a Service Account (JWT) credential   |  A new Service Account (JWT) credential can be added to the project.  |  A new Service Account (JWT) credential **cannot** be created or added to the project.  |  A new Service Account (JWT) credential **cannot** be created or added to the project.  |
+| Timeline     | Event                                         | Impact on existing & new applications |
+|--------------|-----------------------------------------------|---------------------------------------|
+| May 1, 2023  | Deprecation and end-of-life date announced.   | Existing applications using JWT continue to work. New applications can still create new JWT credentials. |
+| Jun 3, 2024  | New JWT credentials cannot be created.        | Existing applications using JWT continue to work.  New applications cannot create new JWT credentials. |
+| Jun 30, 2025 | JWT credentials are end-of-life.              | Applications using JWT can no longer refresh certificates and will stop working when existing certificates expire. Any JWT credential that expires will be automatically converted to an OAuth Server-to-server credential. |
+| Mar 1, 2026  | All JWT credentials stop working.  | Regardless of certificate validity, any application using JWT will stop working *on* March 1, 2026. |
 
 ## Migration Overview
 

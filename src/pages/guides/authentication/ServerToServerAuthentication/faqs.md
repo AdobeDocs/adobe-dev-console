@@ -7,6 +7,7 @@
 + [Benefits of the new credential](#benefits-of-the-new-credential)
 + [Migration next steps](#migration-next-steps)
 + [Migrating vendor applications](#migrating-vendor-applications)
++ [Migrating Auto-generated projects](#migrating-auto-generated-projects)
 + [Adobe assistance](#adobe-assistance)
 
 
@@ -36,7 +37,7 @@ No. Any integration or application using the Service Account (JWT) credential wi
 
 
 ### What is the deadline to migrate to the new credential? 
-You must migrate your application to use the new OAuth Server-to-Server credential before June 30, 2025, to ensure your application does not face any downtime. See [migration guide](./migration.md).
+You must migrate your application to use the new OAuth Server-to-Server credential before June 30, 2025, to ensure your application does not face any downtime. See [deprecation timelines](./migration.md#deperecation-timelines). See [migration guide](./migration.md).
 
 
 
@@ -44,6 +45,9 @@ You must migrate your application to use the new OAuth Server-to-Server credenti
 
 Projects on the Developer Console still containing any Service Account (JWT) credentials will be 'frozen' after June 30, 2025. This will disable certificate rotation for your application or any other action to modify the Project or the credential. The ability to migrate will, however, still be available. Once you migrate your application, the Project will be 'unfrozen' again.
 
+Furthermore, Adobe will automatically convert any Service Account (JWT) credential with expired certificates to an OAuth Server-to-Server credential.
+
+Finally, on Mar 1, 2026, all JWT credentials (regardless of certificate validity) will stop working.
 
 
 ### We can currently create new Service Account (JWT) credentials even though they are marked as deprecated. Is it recommended? 
@@ -156,6 +160,14 @@ Until June 3, 2024, customers can still create Service Account (JWT) credentials
 
 Therefore, we recommend enhancing your application before June3, 2024. You must add support to use the new credential and support for customers to migrate from the old credential to the new credential.
 
+
+## Migrating Auto-generated projects
+
+### Do we need to migrate auto-generated projects?
+No. Adobe will migrate all auto-generated projects without needing your action. 
+
+### When will Adobe migrate auto-generated projects?
+Adobe will migrate all auto-generated projects before Jun 30, 2025.
 
 
 ## Adobe assistance
