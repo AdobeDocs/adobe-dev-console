@@ -4,7 +4,7 @@
 
 The Service Account (JWT) credentials have been deprecated in favor of the OAuth Server-to-Server credentials. Your applications using the Service Account (JWT) credentials will stop working after Jan 27, 2025. You must migrate to the new credential by **Jan 27, 2025**, to ensure your application continues functioning. [Learn more](./ServerToServerAuthentication/migration.md).
 
-To establish a secure service-to-service Adobe I/O API session, you must create a JSON Web Token (JWT) that encapsulates the identity of your integration, and then exchange it for an access token. Every request to an Adobe service must include the access token in the `Authorization` header, along with the API Key (Client ID) that was generated when you created the [Service Account Integration](../ServiceAccountIntegration.md) in the [Adobe Developer Console](https://developer.adobe.com/console/).
+To establish a secure service-to-service Adobe I/O API session, you must create a JSON Web Token (JWT) that encapsulates the identity of your integration, and then exchange it for an access token. Every request to an Adobe service must include the access token in the `Authorization` header, along with the API Key (Client ID) that was generated when you created the [Service Account Integration](../service-accountIntegration.md) in the [Adobe Developer Console](https://developer.adobe.com/console/).
 
 ## Authentication Workflow
 

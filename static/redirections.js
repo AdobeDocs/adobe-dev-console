@@ -38,8 +38,8 @@
       case "#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/OAuthIntegration.md":
         redirectPath = prefixPath + "guides/authentication/OAuthIntegration/";
         break;
-      case "#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/ServiceAccountIntegration.md":
-        redirectPath = prefixPath + "guides/authentication/ServiceAccountIntegration/";
+      case "#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/service-accountIntegration.md":
+        redirectPath = prefixPath + "guides/authentication/service-accountIntegration/";
         break;
       case "#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md":
         redirectPath = prefixPath + "guides/authentication/OAuth/";
