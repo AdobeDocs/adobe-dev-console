@@ -79,7 +79,7 @@ To find out which of your Adobe applications and integrations are using the Serv
 
 Perform the steps below for each application/project you have identified. If a project is not in use, we recommend deleting the project or the Service Account (JWT) credential in the project.
 
-Note: you do not have to worry about auto-generated projects. Adobe will automatically migrate those during the migration window.
+Note: you do not have to worry about auto-generated projects. Adobe will automatically migrate all auto-generated projects before June 30, 2025.
 
 ### Step 1: Add the new credential to your project
 
