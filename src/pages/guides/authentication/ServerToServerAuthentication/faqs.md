@@ -41,13 +41,13 @@ You must migrate your application to use the new OAuth Server-to-Server credenti
 
 
 
-### What happens if we do not migrate our application by Jun 30, 2025? 
+### What happens if we do not migrate our integration by Jun 30, 2025? 
 
-Projects on the Developer Console still containing any Service Account (JWT) credentials will be 'frozen' after June 30, 2025. This will disable certificate rotation for your application or any other action to modify the Project or the credential. The ability to migrate will, however, still be available. Once you migrate your application, the Project will be 'unfrozen' again.
+After June 30, 2025, you can no longer refresh certificates for integrations using Service Account (JWT) credentials. Your integration will stop working once existing certificates expire. 
 
-Furthermore, Adobe will automatically convert any Service Account (JWT) credential with expired certificates to an OAuth Server-to-Server credential.
+After this date, Adobe will automatically convert Service Account (JWT) credentials with expired certificates to OAuth Server-to-Server credentials.
 
-Finally, on Mar 1, 2026, all JWT credentials (regardless of certificate validity) will stop working.
+Note: On March 1, 2026, Adobe will convert any remaining Service Account (JWT) credentials, including those with valid certificates, to OAuth Server-to-Server credentials. As a result, any integration still using Service Account (JWT) credentials will stop working on this date.
 
 
 ### We can currently create new Service Account (JWT) credentials even though they are marked as deprecated. Is it recommended? 
@@ -164,7 +164,7 @@ Therefore, we recommend enhancing your application before June3, 2024. You must 
 ## Migrating Auto-generated projects
 
 ### Do we need to migrate auto-generated projects?
-No. Adobe will migrate all auto-generated projects without needing your action. 
+No. Adobe will migrate all auto-generated projects without needing your action. However, you may be required to upgrade the version of your Adobe Experience Manager (AEM) or Adobe Campaign as a pre-requisite.
 
 ### When will Adobe migrate auto-generated projects?
 Adobe will migrate all auto-generated projects before Jun 30, 2025.

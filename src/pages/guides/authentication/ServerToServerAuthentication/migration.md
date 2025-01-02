@@ -52,12 +52,22 @@ Lastly, while the new OAuth Server-to-Server credentials do not use expiring cer
 Your applications using the Service Account (JWT) credentials will stop working after Jun 30, 2025. 
 Note: The end-of-life date for JWT credentials has been extended from Jan 27, 2025, to Jun 30, 2025.
 
-| Timeline     | Event                                         | Impact on existing & new applications |
-|--------------|-----------------------------------------------|---------------------------------------|
-| May 1, 2023  | Deprecation and end-of-life date announced.   | Existing applications using JWT continue to work. New applications can still create new JWT credentials. |
-| Jun 3, 2024  | New JWT credentials cannot be created.        | Existing applications using JWT continue to work.  New applications cannot create new JWT credentials. |
-| Jun 30, 2025 | JWT credentials are end-of-life.              | Applications using JWT can no longer refresh certificates and will stop working when existing certificates expire. Any JWT credential that expires will be automatically converted to an OAuth Server-to-server credential. |
-| Mar 1, 2026  | All JWT credentials stop working.  | Regardless of certificate validity, any application using JWT will stop working *on* March 1, 2026. |
+
+1. **May 1, 2023**
+   * Adobe announces the deprecation of Service Account (JWT) credentials. The deprecation timelines and the end-of-life date are also announced. 
+   * All existing integrations using Service Account (JWT) credentials continue to work.
+
+2. **June 3, 2024** 
+   * After June 3, 2024, you cannot create new Service Account (JWT) credentials.
+   * All existing integrations using Service Account (JWT) credentials continue to work.
+
+3. **June 30, 2025 (End of Life)**
+   * After June 30, 2025, you cannot refresh certificates for integrations using Service Account (JWT) credentials. Your integrations will stop working once existing certificates expire.
+   * After June 30, 2025, Adobe will automatically convert Service Account (JWT) credentials with expired certificates to OAuth Server-to-Server credentials.
+
+4. **March 1, 2026**
+   * On March 1, 2026, Adobe will convert any remaining Service Account (JWT) credentials, including those with valid certificates, to OAuth Server-to-Server credentials. As a result, any integration still using Service Account (JWT) credentials will stop working on this date.
+
 
 ## Migration Overview
 
