@@ -4,7 +4,7 @@ The Service Account (JWT) credentials have been deprecated in favor of the new O
 
 The new OAuth Server-to-Server credentials simplify all aspects of application development - experimentation, implementation, and maintenance. See the section on [Why OAuth Server-to-Server credentials?](#why-oauth-server-to-server-credentials) below to learn more.
 
-While the Service Account (JWT) credentials have been marked as deprecated, they will continue to work until **Jun 30, 2025**. Therefore you must migrate your application or integration to use the new OAuth Server-to-Server credential before Jun 30, 2025. See the section on [deprecation timelines](#deperecation-timelines) below to learn more.
+While the Service Account (JWT) credentials have been marked as deprecated, they will continue to work until **Jun 30, 2025**. Therefore you must migrate your application or integration to use the new OAuth Server-to-Server credential before Jun 30, 2025. See the section on [deprecation timelines](#deprecation-timelines) below to learn more.
 
 Migrating your applications to the OAuth Server-to-Server credential is a simple two-step process that enables a zero downtime migration for your applications and integrations. Please read our [migration guide](#migration-overview) below to familiarize yourself with the migration process.
 
@@ -13,7 +13,7 @@ If you have more questions, check out our [frequently asked questions](#faqs) or
 ## Table of Contents
 
 + [Why OAuth Server-to-Server credentials?](#why-oauth-server-to-server-credentials)
-+ [Deperecation Timelines](#deperecation-timelines)
++ [Deperecation Timelines](#deprecation-timelines)
 + [Migration Overview](#migration-overview)
    + [Preparation: Find out which applications are using the Service Account (JWT) credentials](#preparation-find-out-which-applications-are-using-the-service-account-jwt-credentials)
    + [Step 1: Add the new credential to your project](#step-1-add-the-new-credential-to-your-project)
