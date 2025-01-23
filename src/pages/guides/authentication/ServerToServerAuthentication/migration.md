@@ -1,10 +1,10 @@
 # Migrating from Service Account (JWT) credential to OAuth Server-to-Server credential
 
-The Service Account (JWT) credentials have been deprecated in favor of the new OAuth Server-to-Server credentials. 
+The Service Account (JWT) credentials have been deprecated in favor of the new OAuth Server-to-Server credentials. They will reach end of life on June 30, 2025.
 
 The new OAuth Server-to-Server credentials simplify all aspects of application development - experimentation, implementation, and maintenance. See the section on [Why OAuth Server-to-Server credentials?](#why-oauth-server-to-server-credentials) below to learn more.
 
-While the Service Account (JWT) credentials have been marked as deprecated, they will continue to work until **Jan 27, 2025**. Therefore you must migrate your application or integration to use the new OAuth Server-to-Server credential before Jan 27, 2025. See the section on [deprecation timelines](#deperecation-timelines) below to learn more.
+While the Service Account (JWT) credentials have been marked as deprecated, they will continue to work until **Jun 30, 2025**. Therefore you must migrate your application or integration to use the new OAuth Server-to-Server credential before Jun 30, 2025. See the section on [deprecation timelines](#deprecation-timelines) below to learn more.
 
 Migrating your applications to the OAuth Server-to-Server credential is a simple two-step process that enables a zero downtime migration for your applications and integrations. Please read our [migration guide](#migration-overview) below to familiarize yourself with the migration process.
 
@@ -12,18 +12,16 @@ If you have more questions, check out our [frequently asked questions](#faqs) or
 
 ## Table of Contents
 
-- [Migrating from Service Account (JWT) credential to OAuth Server-to-Server credential](#migrating-from-service-account-jwt-credential-to-oauth-server-to-server-credential)
-  - [Table of Contents](#table-of-contents)
-  - [Why OAuth Server-to-Server credentials?](#why-oauth-server-to-server-credentials)
-  - [Deprecation Timelines](#deprecation-timelines)
-  - [Migration Overview](#migration-overview)
-    - [Preparation: Find out which applications are using the Service Account (JWT) credentials](#preparation-find-out-which-applications-are-using-the-service-account-jwt-credentials)
-    - [Step 1: Add the new credential to your project](#step-1-add-the-new-credential-to-your-project)
-    - [Step 2: Update your application and delete old credential](#step-2-update-your-application-and-delete-old-credential)
-      - [Update your application](#update-your-application)
-      - [Test if the new credential is working](#test-if-the-new-credential-is-working)
-      - [Delete the old credential](#delete-the-old-credential)
-    - [Cancelling Migration](#cancelling-migration)
++ [Why OAuth Server-to-Server credentials?](#why-oauth-server-to-server-credentials)
++ [Deperecation Timelines](#deprecation-timelines)
++ [Migration Overview](#migration-overview)
+   + [Preparation: Find out which applications are using the Service Account (JWT) credentials](#preparation-find-out-which-applications-are-using-the-service-account-jwt-credentials)
+   + [Step 1: Add the new credential to your project](#step-1-add-the-new-credential-to-your-project)
+   + [Step 2: Update your application and delete old credential](#step-2-update-your-application-and-delete-old-credential)
+     + [Update your application](#update-your-application)
+     + [Test if the new credential is working](#test-if-the-new-credential-is-working)
+     + [Delete the old credential](#delete-the-old-credential)
+   + [Cancelling Migration](#cancelling-migration)
 
 
 ## Why OAuth Server-to-Server credentials?
@@ -44,16 +42,23 @@ Lastly, while the new OAuth Server-to-Server credentials do not use expiring cer
 
 ## Deprecation Timelines
 
-
 <InlineAlert slots="text"/>
 
-Your applications using the Service Account (JWT) credentials will stop working after Jan 27, 2025.
+The end of life date for Service Account (JWT) credentials has been extended from Jan 27, 2025, to Jun 30, 2025, to give customers more time to migrate. You must migrate your integrations to use OAuth Server-to-Server credentials before June 30, 2025 to avoid any downtime.
 
 
-| | May 1, 2023 - Jun 2, 2024 | Jun 3, 2024 - Jan 26, 2024 | Jan 27, 2025 (end of life) |
-|-|------------------------------|---------------------------------|-------------------------------|
-| Existing applications using a Service Account (JWT) credential |   Existing applications using the Service Account (JWT) credential will continue to work. |   Existing applications using the Service Account (JWT) credential will continue to work.  |  **Existing applications cannot refresh expiring certificates after Jan 27, 2025, and will stop working**.  |
-| New applications creating a Service Account (JWT) credential   |  A new Service Account (JWT) credential can be added to the project.  |  A new Service Account (JWT) credential **cannot** be created or added to the project.  |  A new Service Account (JWT) credential **cannot** be created or added to the project.  |
+1. **May 1, 2023**
+   * Adobe announces the deprecation of Service Account (JWT) credentials. The deprecation timelines and the end-of-life date are also announced. 
+   * All existing integrations using Service Account (JWT) credentials continue to work.
+
+2. **June 3, 2024** 
+   * After June 3, 2024, you cannot create new Service Account (JWT) credentials.
+   * All existing integrations using Service Account (JWT) credentials continue to work.
+
+3. **June 30, 2025 (End of Life)**
+   * After June 30, 2025, you cannot refresh certificates for integrations using Service Account (JWT) credentials. Your integrations will stop working once existing certificates expire.
+   * Furthermore, Adobe will automatically convert Service Account (JWT) credentials to OAuth Server-to-Server credentials when certificates expire or on March 1, 2026, whichever comes first.
+
 
 ## Migration Overview
 
@@ -71,7 +76,7 @@ To find out which of your Adobe applications and integrations are using the Serv
 
 Perform the steps below for each application/project you have identified. If a project is not in use, we recommend deleting the project or the Service Account (JWT) credential in the project.
 
-Note: you do not have to worry about auto-generated projects. Adobe will automatically migrate those during the migration window.
+Note: you do not have to worry about auto-generated projects. Adobe will automatically migrate all auto-generated projects before June 30, 2025.
 
 ### Step 1: Add the new credential to your project
 
