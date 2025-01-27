@@ -55,7 +55,7 @@ Access tokens usually expire in 24 hours. To check the expiry time of an access 
 
 ### Generating access tokens using standard OAuth2 libraries
 
-We recommend using a standard OAuth 2.0 library to implement your application's access token generation logic. The  OAuth community site https://oauth.net has a huge list of community-maintained OAuth2 libraries. Some widely known and maintained OAuth2 libraries from that list are -
+We recommend using a standard OAuth 2.0 library to implement your application's access token generation logic. The  OAuth community site [https://oauth.net](https://oauth.net/) has a huge list of community-maintained OAuth2 libraries. Some widely known and maintained OAuth2 libraries from that list are -
 
 1. [PassportJS](https://github.com/jaredhanson/passport) (Node.js)
 2. [Spring Security](https://spring.io/projects/spring-security) (Java)

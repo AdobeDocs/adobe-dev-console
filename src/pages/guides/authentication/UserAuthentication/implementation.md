@@ -115,7 +115,7 @@ You can always find the scopes your application can request by visiting the cred
 
 ## Standard OAuth2 libraries
 
-The  OAuth community site https://oauth.net has a huge list of community-maintained OAuth2 libraries. Some widely known and maintained OAuth2 libraries from that list are -
+The  OAuth community site [https://oauth.net](https://oauth.net/) has a huge list of community-maintained OAuth2 libraries. Some widely known and maintained OAuth2 libraries from that list are -
 
 1. [Passport OAuth2](https://github.com/jaredhanson/passport-oauth2) (Javascript)
 2. [PassportJS](https://github.com/jaredhanson/passport) (Node.js)
