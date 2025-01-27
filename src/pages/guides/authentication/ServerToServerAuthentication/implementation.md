@@ -4,6 +4,12 @@
 The following guide goes over finer implementation details for OAuth Server-to-Server credentials. At the end of the guide is a list of recommended industry-standard OAuth2 libraries. Before you proceed, we recommend you become familiar with the server to server authentication credentials in our [server to server authentication guide](./index.md)
 
 ## Table of contents
++ [Setting up the OAuth Server-to-Server credential](#setting-up-the-oauth-server-to-server-credential)
++ [Generate access tokens](#generate-access-tokens)
++ [Generating access tokens programmatically](#generating-access-tokens-programmatically)
++ [Generating access tokens using standard OAuth2 libraries](#generating-access-tokens-using-standard-oauth2-libraries)
++ [Rotating client secrets](#rotating-client-secrets)
++ [Rotating client secrets programmatically](#rotating-client-secrets-programmatically)
 
 ## Setting up the OAuth Server-to-Server credential
 
@@ -54,7 +60,7 @@ We recommend using a standard OAuth 2.0 library to implement your application's 
 1. [PassportJS](https://github.com/jaredhanson/passport) (Node.js)
 2. [Spring Security](https://spring.io/projects/spring-security) (Java)
 3. [Authlib](https://github.com/lepture/authlib) (Python)
-4. View more libraries at https://oauth.net/code/
+4. View more libraries at [https://oauth.net/code/] (https://oauth.net/code/)
 
 <InlineAlert slots="text"/>
 
