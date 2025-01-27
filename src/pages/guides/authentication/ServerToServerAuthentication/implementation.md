@@ -60,7 +60,7 @@ We recommend using a standard OAuth 2.0 library to implement your application's 
 1. [PassportJS](https://github.com/jaredhanson/passport) (Node.js)
 2. [Spring Security](https://spring.io/projects/spring-security) (Java)
 3. [Authlib](https://github.com/lepture/authlib) (Python)
-4. View more libraries at [https://oauth.net/code/] (https://oauth.net/code/)
+4. View more libraries at [https://oauth.net/code/](https://oauth.net/code/)
 
 <InlineAlert slots="text"/>
 
