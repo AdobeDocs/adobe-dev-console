@@ -89,7 +89,7 @@ You can specify a default redirect URI of up to 256 characters. It must be an ab
 
 <InlineAlert slots="text"/>
 
-The *Default redirect URI* MUST be hosted on a secure server (HTTPS), even if it is only a localhost instance. For example, https://example.com/redirect/, https://localhost/redirect/. 
+The *Default redirect URI* MUST be hosted on a secure server (HTTPS), even if it is only a localhost instance. For example, [https://example.com/redirect/](https://example.com/redirect/), https://localhost/redirect/. 
 
 ### Redirect URI pattern
 
@@ -120,7 +120,7 @@ The  OAuth community site https://oauth.net has a huge list of community-maintai
 1. [Passport OAuth2](https://github.com/jaredhanson/passport-oauth2) (Javascript)
 2. [PassportJS](https://github.com/jaredhanson/passport) (Node.js)
 3. [Spring Security](https://spring.io/projects/spring-security) (Java)
-4. View more libraries at https://oauth.net/code/
+4. View more libraries at [https://oauth.net/code/](https://oauth.net/code/)
 
 <InlineAlert slots="text"/>
 

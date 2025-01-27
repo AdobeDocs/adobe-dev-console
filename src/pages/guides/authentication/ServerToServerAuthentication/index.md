@@ -26,11 +26,9 @@ You can also modify the set of product profiles by returning to your project on 
 
 Adobe supports two server to server authentication credentials. These credentials only differ in the way your application generates the access token, the rest of their functioning is similar. 
 
-- [Server to Server authentication](#server-to-server-authentication)
-  - [Whose data can you access with a server to server credential?](#whose-data-can-you-access-with-a-server-to-server-credential)
-  - [Server to server credential types](#server-to-server-credential-types)
-    - [OAuth Server-to-Server credential](#oauth-server-to-server-credential)
-    - [Service Account (JWT) credential *(deprecated)*](#service-account-jwt-credential-deprecated)
+-
+    1. [OAuth Server-to-Server credential](#oauth-server-to-server-credential)
+    2. [Service Account (JWT) credential *(deprecated)*](#service-account-jwt-credential-deprecated)
 
 
 ### OAuth Server-to-Server credential
