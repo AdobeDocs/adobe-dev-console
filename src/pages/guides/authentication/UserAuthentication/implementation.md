@@ -99,7 +99,7 @@ A *Redirect URI pattern* is a URI path (or comma-separated list of URI paths) to
 
 <InlineAlert slots="text"/>
   
-You can use wildcards in the redirect URI pattern to club multiple redirect URIs together. Remember to escape periods "(**.**)" with "**\\**." For example, "**https://example\\.com/**".
+You can use wildcards in the redirect URI pattern to club multiple redirect URIs together. Remember to escape periods (**.**) with **\\**. For example, **https://example\\.com/**.
 
 ## OAuth 2.0 Scopes
 
