@@ -84,7 +84,7 @@ A *Redirect URI pattern* is a URI path (or comma-separated list of paths) to whi
 
 <InlineAlert slots="text"/>
   
-You must escape periods (**.**) with **\\**. For example, **https://example\\.com/**.
+You must escape periods (`**.**`) with `**\\**`. For example, `**https://example\\.com/**`.
 
 ### Web
 

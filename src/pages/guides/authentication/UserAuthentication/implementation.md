@@ -99,7 +99,7 @@ A *Redirect URI pattern* is a URI path (or comma-separated list of URI paths) to
 
 <InlineAlert slots="text"/>
   
-You can use wildcards in the redirect URI pattern to club multiple redirect URIs together. Remember to escape periods (**.**) with **\\**. For example, **https://example\\.com/**.
+You can use wildcards in the redirect URI pattern to club multiple redirect URIs together. Remember to escape periods (`**.**`) with `**\\**`. For example, `**https://example\\.com/**`.
 
 ## OAuth 2.0 Scopes
 
@@ -148,7 +148,7 @@ There are several great resources to get more familiar with the OAuth2.0 framewo
 + [Proof Key for Code Exchange by OAuth Public Clients - RFC 7636](https://datatracker.ietf.org/doc/html/rfc7636)
 + [StackOverflow](https://stackoverflow.com/questions/tagged/oauth-2.0)
 + Authentication API Reference
-  + [Authorize Request](../ims.md#authorize-request)
-  + [Fetching Access Tokens](../ims.md#fetching-access-tokens-for-user-authentication-credentials)
-  + [Refreshing Access Tokens](../ims.md#refreshing-access-tokens)
-  + [Revoking a Token](../ims.md#token-revocation)
+  + [Authorize Request](./ims.md#authorize-request)
+  + [Fetching Access Tokens](./ims.md#fetching-access-tokens-for-user-authentication-credentials)
+  + [Refreshing Access Tokens](./ims.md#refreshing-access-tokens)
+  + [Revoking a Token](./ims.md#token-revocation)
