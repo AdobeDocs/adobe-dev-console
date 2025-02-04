@@ -12,8 +12,8 @@ publish()
     url="${home}${path_prefix}${relative_filename}"
 
     echo ""
-    echo "curl -XPOST -vi --header \"x-content-source-authorization: stage\" ${url}"
-    curl -XPOST -vi --header "x-content-source-authorization: stage" "${url}"
+    echo "curl -XPOST -vi --header \"x-content-source-authorization: eds-migration\" ${url}"
+    curl -XPOST -vi --header "x-content-source-authorization: eds-migration" "${url}"
 }
 
 # TODO: may want to only certain types of files up 
