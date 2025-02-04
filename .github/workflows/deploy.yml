@@ -99,7 +99,7 @@ jobs:
           cmd: buildNavigation
       - name: Publish markdown files in ./src/pages
         run: |
-            bash .github/scripts/publish-mds.sh "./src/pages" "${{ needs.set-state.outputs.path_prefix }}"
+            bash .github/scripts/publish-mds-stage.sh "./src/pages" "${{ needs.set-state.outputs.path_prefix }}"
 
         
       # - name: Gatsby Cache
