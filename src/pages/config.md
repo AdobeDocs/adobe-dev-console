@@ -2,7 +2,7 @@
     - /developer-console/docs/
 
 - pages:
-    - [Developer Console](/developer-console)
+    - [Developer Console](https://developer.adobe.com/developer-console/)
     - [Authentication Guide](guides/authentication/index.md)
     - [Documentation](guides/index.md)
     - [Support](support/index.md)
