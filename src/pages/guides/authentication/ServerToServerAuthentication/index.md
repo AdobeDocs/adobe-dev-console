@@ -41,14 +41,14 @@ Read our OAuth Server-to-server credential implementation guide -
 1. [Generating access tokens using cURL](./implementation.md#generate-access-tokens)
 2. [Generating access tokens programmatically using standard OAuth2 libraries](./implementation.md#rotating-client-secrets-programmatically)
 3. [Migrating from Service Account (JWT) credentials to OAuth Server-to-Server credentials](./migration.md)
-4. [API reference](./IMS.md)
+4. [API reference](./ims.md)
 
 
 ### Service Account (JWT) credential *(deprecated)*
 
 <InlineAlert slots="text"/>
 
-The Service Account (JWT) credentials have been deprecated in favor of the OAuth Server-to-Server credentials. Your applications using the Service Account (JWT) credentials will stop working after Jun 30, 2025. You must migrate to the new credential by **Jun 30, 2025**, to ensure your application continues functioning. [Learn more](./ServerToServerAuthentication/migration.md).
+The Service Account (JWT) credentials have been deprecated in favor of the OAuth Server-to-Server credentials. Your applications using the Service Account (JWT) credentials will stop working after Jun 30, 2025. You must migrate to the new credential by **Jun 30, 2025**, to ensure your application continues functioning. [Learn more](../ServerToServerAuthentication/migration.md).
 
 Service Account (JWT) credentials rely on the JWT token exchange mechanism to generate access tokens. This credential's details include two secrets a `client_secret` and a `private.key` (part of a public certificate private key pair).
 

@@ -25,7 +25,7 @@
 openid,AdobeID,read_organizations,additional_info.projectedProductContext,additional_info.job_function
 ```
 
-*Note: If you are not sure about scope, refer to [Scope Reference](../OAuth/Scopes.md).*
+*Note: If you are not sure about scope, refer to [Scope Reference](../OAuth/scopes.md).*
 
 ![pm-4](../Images/PM_4.png)
 
@@ -39,7 +39,7 @@ openid,AdobeID,read_organizations,additional_info.projectedProductContext,additi
 
 ## JWT Access Token
 ### Steps
-1. Go to [Adobe Developer Console](/console)
+1. Go to [Adobe Developer Console](https://developer.adobe.com/console)
 
 2. Open the Service Account Integration for which you want to generate an access token.
 
@@ -90,4 +90,3 @@ curl https://stock.adobe.io/Rest/Media/1/Search/Files?locale=en_US%26search_para
  ![pmw-3](../Images/PMW_3.png)
  
  *Note: You can import any CURL Request into Postman by following the above steps.*
- 

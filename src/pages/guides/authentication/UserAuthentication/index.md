@@ -23,7 +23,7 @@ Once you have successfully integrated with 3-legged OAuth in your application, t
 4. At this point, the user decides whether to approve or reject granting permissions to your application.
 5. Adobe *redirects* the user back to your application to notify whether the user granted the permissions. The URL Adobe uses to redirect the user is determined by the default redirect URI or the redirect URI pattern you set up.
 
-For instructions to integrate the authorize step in your application, please visit our [Authorize Request](./IMS.md#authorize-request) section on the Authentication API Reference page.
+For instructions to integrate the authorize step in your application, please visit our [Authorize Request](./ims.md#authorize-request) section on the Authentication API Reference page.
 
 ## Fetching user access tokens
 
@@ -32,7 +32,7 @@ Once the user approves the scopes requested by your application, Adobe redirects
 Your application reads the value of the `code` query parameter and issues a token request to Adobe Identity Management Services (IMS) token endpoint.
 IMS returns a response with a user access token and, optionally, a refresh token.
 
-Please visit the [Fetching Access Tokens](./IMS.md#fetching-access-tokens) section on the Authentication API Reference page for instructions to fetch access tokens using the authorization code.
+Please visit the [Fetching Access Tokens](./ims.md#fetching-access-tokens) section on the Authentication API Reference page for instructions to fetch access tokens using the authorization code.
 
 ## Fetching new access tokens using a refresh token
 
@@ -42,7 +42,7 @@ If your application has access to the `offline_access` scope, your application w
 2. Once the current access tokens expire, your application makes another request to the IMS token endpoint with the refresh token and receives a fresh pair of access and refresh tokens.
 3. Your application must securely store the new refresh token and use it in your next refresh token request to generate access tokens indefinitely.
 
-For instructions to refresh access tokens once they expire, please visit the [Refreshing Access Tokens](./IMS.md#refreshing-access-tokens) section on the Authentication API Reference page.
+For instructions to refresh access tokens once they expire, please visit the [Refreshing Access Tokens](./ims.md#refreshing-access-tokens) section on the Authentication API Reference page.
 
 
 ## Applying for Adobe approval and adding beta users to your application
@@ -72,4 +72,4 @@ Once the user has revoked their consent, your application can no longer refresh 
 
 ## Revoking access tokens or refresh tokens 
 
-If you need to revoke a particular access token or refresh token, please visit the [Token Revocation](./IMS.md#token-revocation) section on the Authentication API Reference page.
+If you need to revoke a particular access token or refresh token, please visit the [Token Revocation](./ims.md#token-revocation) section on the Authentication API Reference page.

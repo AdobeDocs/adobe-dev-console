@@ -89,7 +89,7 @@ You can specify a default redirect URI of up to 256 characters. It must be an ab
 
 <InlineAlert slots="text"/>
 
-The *Default redirect URI* MUST be hosted on a secure server (HTTPS), even if it is only a localhost instance. For example, https://example.com/redirect/, https://localhost/redirect/. 
+The *Default redirect URI* MUST be hosted on a secure server (HTTPS), even if it is only a localhost instance. For example, [https://example.com/redirect/](https://example.com/redirect/), https://localhost/redirect/. 
 
 ### Redirect URI pattern
 
@@ -109,18 +109,18 @@ Each scope your application requests during the authorization workflow, would be
 
 You can always find the scopes your application can request by visiting the credential page and the *Scopes tab*. See our API reference to view some commonly encountered scopes -
 
-1. [Identity scopes](./IMS.md#identity-scopes)
-2. [Creative Cloud Scopes](./IMS.md#creative-cloud)
-3. [Experience Cloud Scopes](./IMS.md#experience-cloud)
+1. [Identity scopes](./ims.md#identity-scopes)
+2. [Creative Cloud Scopes](./ims.md#creative-cloud)
+3. [Experience Cloud Scopes](./ims.md#experience-cloud)
 
 ## Standard OAuth2 libraries
 
-The  OAuth community site https://oauth.net has a huge list of community-maintained OAuth2 libraries. Some widely known and maintained OAuth2 libraries from that list are -
+The  OAuth community site [https://oauth.net](https://oauth.net/) has a huge list of community-maintained OAuth2 libraries. Some widely known and maintained OAuth2 libraries from that list are -
 
 1. [Passport OAuth2](https://github.com/jaredhanson/passport-oauth2) (Javascript)
 2. [PassportJS](https://github.com/jaredhanson/passport) (Node.js)
 3. [Spring Security](https://spring.io/projects/spring-security) (Java)
-4. View more libraries at https://oauth.net/code/
+4. View more libraries at [https://oauth.net/code/](https://oauth.net/code/)
 
 <InlineAlert slots="text"/>
 
@@ -138,7 +138,7 @@ The following samples demonstrate basic interaction with the Adobe OAuth endpoin
 
 ## OAuth 2.0 Playground
 
-The OAuth 2.0 playground allows you to test out the 3-legged OAuth flow and obtain access tokens for experimentation. Learn more about the playground [here](../Tools/OAuthPlayground.md).
+The OAuth 2.0 playground allows you to test out the 3-legged OAuth flow and obtain access tokens for experimentation. Learn more about the playground [here](../Tools/o-auth-playground.md).
 
 ## Further Reading
 
@@ -148,7 +148,7 @@ There are several great resources to get more familiar with the OAuth2.0 framewo
 + [Proof Key for Code Exchange by OAuth Public Clients - RFC 7636](https://datatracker.ietf.org/doc/html/rfc7636)
 + [StackOverflow](https://stackoverflow.com/questions/tagged/oauth-2.0)
 + Authentication API Reference
-  + [Authorize Request](../IMS.md#authorize-request)
-  + [Fetching Access Tokens](../IMS.md#fetching-access-tokens-for-user-authentication-credentials)
-  + [Refreshing Access Tokens](../IMS.md#refreshing-access-tokens)
-  + [Revoking a Token](../IMS.md#token-revocation)
+  + [Authorize Request](./ims.md#authorize-request)
+  + [Fetching Access Tokens](./ims.md#fetching-access-tokens-for-user-authentication-credentials)
+  + [Refreshing Access Tokens](./ims.md#refreshing-access-tokens)
+  + [Revoking a Token](./ims.md#token-revocation)

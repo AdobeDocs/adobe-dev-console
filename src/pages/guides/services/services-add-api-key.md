@@ -30,7 +30,7 @@ An API key is the only client credential required for these services, and integr
 
 To configure an API using API key authorization, you must provide *Allowed domains*&mdash;a list of domains that are allowed to access this API, separated by commas.
 
-The domains should be entered without the protocol (`http://` of `https://`), but should include `www`. For example: www.domain1.com, www.domain2.com.
+The domains should be entered without the protocol (`http://` of `https://`), but should include `www`. For example:[www.domain1.com](http://www.domain1.com/), [www.domain2.com](http://www.domain2.com/).
 
 Once the list of *Allowed domains* is complete, select **Save configured API** to complete the configuration.
 

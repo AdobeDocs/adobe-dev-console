@@ -14,6 +14,7 @@
   "dependencies": {
     "@adobe/gatsby-theme-aio": "^4.14.18",
     "gatsby": "4.22.0",
+    "glob": "11.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
@@ -31,7 +32,9 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test:links": "remark src/pages --quiet --frail",
-    "lint": "docker run --rm -e RUN_LOCAL=true --env-file '.github/super-linter.env' -v \"$PWD\":/tmp/lint github/super-linter:slim-v4.10.1"
+    "lint": "docker run --rm -e RUN_LOCAL=true --env-file '.github/super-linter.env' -v \"$PWD\":/tmp/lint github/super-linter:slim-v4.10.1",
+    "buildNavigation": "node buildNavigation.js",
+    "buildRedirections": "node buildRedirections.js"
   },
   "remarkConfig": {
     "plugins": [
