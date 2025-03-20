@@ -22,6 +22,9 @@ Depending on the Adobe product or service you are integrating into your app, you
 3. [API key authentication](./APIKeyAuthentication/index.md)
    * [API Key credential](./APIKeyAuthentication/index.md#api-key-credential)
 
+4. Admin authentication
+   * Enterprise Web App credential
+
 
 ## User authentication
 
@@ -59,3 +62,18 @@ View our guide on API key credentials -
 1. [Understanding different uses of the API key credential](./APIKeyAuthentication/index.md#understanding-different-uses-of-the-api-key-credential)
 2. [Understanding allowed origins](./APIKeyAuthentication/index.md#understanding-allowed-origins)
 
+
+
+## Admin authentication 
+
+If your application needs to read or modify the data owned by an Adobe customer (IMS organization), it can do so using an admin authentication credential. However, before your application can view or edit the customer's data, the customer admin would need to provide explicit 'consent' to your application.
+
+<InlineAlert slots="text"/>
+
+Currently, Admin authentication is available only for Adobe Technology Partner Program partners. Sign up [here](TODO).
+
+View our guide on admin authentication credentials -
+1. Understanding the admin consent workflow
+2. Implementing the Enterprise Web App credential
+3. Understanding default redirect URI and redirect URI pattern
+4. Understand the purpose of a test technical account
