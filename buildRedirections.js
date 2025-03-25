@@ -11,23 +11,26 @@ try {
     let results = globSync(__dirname + '/src/pages/**/*.md');
     let data = [];
 
-    results.forEach(result => {
-        const nonNormalizedMdFilePath = result.replace(__dirname + '/src/pages', pathPrefix);
-        const mdFilePath = path.resolve(nonNormalizedMdFilePath);
+    results.forEach(mdFilePath => {
+        mdFilePath = mdFilePath.replace(__dirname + '/src/pages', pathPrefix);
+        mdFilePath = path.resolve(mdFilePath);
 
         // Fixes paths that don't end in a trailing slash but should.
-        // index.md has a directory-level URL that needs a trailing slash
-        if(mdFilePath.includes('index.md')) {
+        // index.md is a directory-level URL that needs a trailing slash
+        if(mdFilePath.endsWith('index.md')) {
             const source = mdFilePath.replace('/index.md', '');
             data.push({
                 "Source" : source,
                 "Destination" : source + '/'
             });
+            data.push({
+                "Source" : source + '/index',
+                "Destination" : source + '/'
+            });
         }
-
         // Fixes paths that end in a trailing slash but shouldn't.
         // skip any index.md or config.md as they don't need redirect
-        if(!mdFilePath.includes('index.md') && !mdFilePath.includes('config.md')) {
+        else if(!mdFilePath.endsWith('config.md')) {
             const source = mdFilePath.replace('.md', '/');
             data.push({
                 "Source" : source,
