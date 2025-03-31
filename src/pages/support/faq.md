@@ -1,6 +1,6 @@
 # Frequently Asked Questions
 
-This document provides answers to frequently asked questions about Adobe Developer Console. This is a great place to start when troubleshooting a problem with Console. If you are unable to find the answer you're looking for, please refer to the [Support overview](../support/index.md) for additional resources.
+This document provides answers to frequently asked questions about Adobe Developer Console. This is a great place to start when troubleshooting a problem with Console. If you are unable to find the answer you're looking for, please refer to the [Support overview](../support/) for additional resources.
 
 ## Questions
 
@@ -94,9 +94,9 @@ For information on how to manage developers in the admin console, see the [manag
 
 ### Why can't I add an XD plugin to my project?
 
-XD plugins are currently only available to create as personal projects. This feature will be available to enterprise organizations soon. To begin building an XD plugin, visit the [plugins overview](../guides/plugins/index.md). 
+XD plugins are currently only available to create as personal projects. This feature will be available to enterprise organizations soon. To begin building an XD plugin, visit the [plugins overview](../guides/plugins/). 
 
-Quickly navigate between personal projects and your organization’s projects through the “org switcher” in the top-right corner of Console. For a walk through of Console UI elements, see the [getting started guide](../guides/getting-started.md).
+Quickly navigate between personal projects and your organization’s projects through the “org switcher” in the top-right corner of Console. For a walk through of Console UI elements, see the [getting started guide](../guides/getting-started).
 
 ### Why can't I add Adobe I/O Runtime to my project?	
 
@@ -116,7 +116,7 @@ Certain Adobe products may need to create projects in Developer Console inside y
 
 ### How do I know if I should use JWT or OAuth?	
 
-The authentication method depends on the type of app you're building. To learn more about authentication and authorization, read the [authentication documentation](../guides/authentication/index.md).
+The authentication method depends on the type of app you're building. To learn more about authentication and authorization, read the [authentication documentation](../guides/authentication/).
 
 ### Why can't I change the name of my App Builder app?
 
@@ -124,7 +124,7 @@ The app name is used to generate the URL for your project. We also leverage the 
 
 ### Where did my integrations and plugins go?	
 
-Integrations and plugins are now projects. Go to **Projects** in the UI to find all of your existing integrations & plugins. To learn more about projects, read the [projects overview](../guides/projects/index.md).
+Integrations and plugins are now projects. Go to **Projects** in the UI to find all of your existing integrations & plugins. To learn more about projects, read the [projects overview](../guides/projects/).
 
 ### Where can I find the sample code for OAuth authentication?
 

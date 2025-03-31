@@ -26,7 +26,7 @@ For example, the DC SDK (Shown as *Services SDK* in the image below) provides 5,
 
 To learn more about individual APIs, including details related to trial programs and quotas, please be sure to read the API-specific documentation provided within Console. To easily access API documentation, select **View documentation** in the *Getting started* section of the API overview or select **View docs** while adding an API to your project.
 
-For a complete guide to adding services, such as APIs, Events, and Runtime to your projects, begin by reading the [services overview](services/index.md).
+For a complete guide to adding services, such as APIs, Events, and Runtime to your projects, begin by reading the [services overview](services/).
 
 
 

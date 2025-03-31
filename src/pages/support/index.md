@@ -8,7 +8,7 @@ If you have questions about how to use Adobe Developer Console or you are lookin
 
 Access a knowledge base of frequently asked questions and find answers to some of the most common questions asked by other Adobe Developer Console users. This is a great place to start when needing answers to a question. 
 
-Visit the [Adobe Developer Console FAQ](faq.md) to learn more.
+Visit the [Adobe Developer Console FAQ](faq) to learn more.
 
 ## Developer Forums
 

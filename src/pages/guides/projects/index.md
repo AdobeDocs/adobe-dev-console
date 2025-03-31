@@ -24,7 +24,7 @@ All development work in Adobe Developer Console is done as part of a Project. Th
 
 Projects are a common framework within enterprise and personal developer organizations. Projects created under an enterprise organization are owned by the organization and are visible to other organization members. In contrast, Projects belonging to a developer organization are visible only to you.
 
-If you are a developer or a system administrator on multiple organizations, you can view the Projects that are owned by those organizations. The Projects you see on the Developer Console depends on the organization you have currently selected in the [org switcher](../getting-started.md#switching-between-your-organizations). Use the org switcher to view the organizations to which you belong to and easily switch between them.
+If you are a developer or a system administrator on multiple organizations, you can view the Projects that are owned by those organizations. The Projects you see on the Developer Console depends on the organization you have currently selected in the [org switcher](../getting-started#switching-between-your-organizations). Use the org switcher to view the organizations to which you belong to and easily switch between them.
 
 <InlineAlert slots="text"/>
 
@@ -92,7 +92,7 @@ Auto-generated Projects containing Service Account (JWT) credentials will be mig
 
 Think of an empty Project as an open canvas or "blank slate" into which you can add events, runtime, plugins, APIs, and more to create custom applications.
 
-To get started, follow the steps provided in the guide for [creating an empty Project](projects-empty.md).
+To get started, follow the steps provided in the guide for [creating an empty Project](projects-empty).
 
 ### Templated Projects
 
@@ -100,7 +100,7 @@ To streamline the creation of Projects, Adobe Developer Console provides templat
 
 **Note:** Templated Projects are currently only available for enterprise organizations.
 
-To get started, follow the steps provided in the guide for [creating a templated Project](projects-template.md).
+To get started, follow the steps provided in the guide for [creating a templated Project](projects-template).
 
 
 ## View and manage a Project
@@ -148,7 +148,7 @@ Currently, the Developer Console only records service activity when
 
 We do not yet track service activity when
 1. Your App Builder app action is invoked, nor any other activities of App Builder apps. 
-2. Your integration calls Adobe APIs. However, you can find this information under the [Insights](../insights.md) tab in a Project. 
+2. Your integration calls Adobe APIs. However, you can find this information under the [Insights](../insights) tab in a Project. 
 
 Also, we do not yet track any service activity for 
 1. Any Creative Cloud app plugins (Adobe Express add-ons, UXP apps, or ZXP apps)
@@ -167,12 +167,12 @@ Once you have completed development on your Project and your application is read
 2. Approval process for OAuth credentials
 3. Approval process for App Builder applications
 
-To read more about the approval process, visit the [Project approvals](approval.md) documentation.
+To read more about the approval process, visit the [Project approvals](approval) documentation.
 
 
 ### Beta users
 
-When building a Project containing OAuth credentials, Console enables you to select and manage a group of beta users, giving them access to your integration while it is still `In Development`. To learn more, read the [beta users overview](beta-users.md).
+When building a Project containing OAuth credentials, Console enables you to select and manage a group of beta users, giving them access to your integration while it is still `In Development`. To learn more, read the [beta users overview](beta-users).
 
 
 ## Delete a Project

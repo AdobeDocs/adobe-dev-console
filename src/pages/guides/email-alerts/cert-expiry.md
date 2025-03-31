@@ -14,7 +14,7 @@ Upon receiving the email alert, you need to replace the expiring certificate key
 
 <InlineAlert slots="text"/>
 
-Service Account (JWT) credentials have been deprecated in favor of the OAuth Server-to-Server credentials. Your applications using the Service Account (JWT) credentials will stop working after Jun 30, 2025. **You must migrate to the new credential by Jun 30, 2025 in order to ensure your application continues to function. View our [migration guide](../../authentication/ServerToServerAuthentication/migration.md) to know more.**
+Service Account (JWT) credentials have been deprecated in favor of the OAuth Server-to-Server credentials. Your applications using the Service Account (JWT) credentials will stop working after Jun 30, 2025. **You must migrate to the new credential by Jun 30, 2025 in order to ensure your application continues to function. View our [migration guide](../../authentication/ServerToServerAuthentication/migration) to know more.**
 
 ## A step-by-step guide to replacing expiring certificate key pairs
 
@@ -75,13 +75,13 @@ A. Unfortunately, Adobe cannot tell which custom integrations or applications ar
 A. A good starting point to identify the developers/admins who worked on a project is by looking at who created or last modified the Project on the Project overview screen. Furthermore, the Project Activity Logs, retained for up to a year, show a more granular view of who made what changes to a Project. Note: Information about the Project's creator may be missing for historical projects.
 
 ### Q. How can I verify if the Project on the Dev Console is actually being used?
-A. A. Visit the Service Account (JWT) credential overview page and look at the last access token generated at timestamp. This will tell you when was this project and credential last used to generate an access token. You can also visit the Insights tab in a Project to see recent activity (API calls, Events Delivered, etc.) involving the credentials contained in the Project. See our documentation on [Insights](../insights.md) to know more.
+A. A. Visit the Service Account (JWT) credential overview page and look at the last access token generated at timestamp. This will tell you when was this project and credential last used to generate an access token. You can also visit the Insights tab in a Project to see recent activity (API calls, Events Delivered, etc.) involving the credentials contained in the Project. See our documentation on [Insights](../insights) to know more.
 
 ### Q. Can Adobe replace the certificate key pairs for us?
 A. Unfortunately, these certificate key pairs are used in your custom integrations and applications, which Adobe has no information on or access to. Therefore, the customer needs to carry out the activity to refresh the certificate key pairs.
 
 ### Q. How can I set up automation to refresh the certificates programmatically?
-A. Unfortunately, such a programmatic method is not available at this time and is not planned for Service Account (JWT) credentials. To utilize programmatic secret rotation, we recommend you migrate your application to use the new OAuth Server-to-Server credential. Learn more about the [migration](../authentication/ServerToServerAuthentication/migration.md).
+A. Unfortunately, such a programmatic method is not available at this time and is not planned for Service Account (JWT) credentials. To utilize programmatic secret rotation, we recommend you migrate your application to use the new OAuth Server-to-Server credential. Learn more about the [migration](../authentication/ServerToServerAuthentication/migration).
 
 ### Q. Why do I keep receiving email alerts about the old certificate key pair even though I replaced the expiring certificate key pair?
 A. Once you successfully replace the expiring certificate in your custom integration or application, be sure to remove it from the Developer Console. The email alerts would stop only once the expiring certificate key pair is removed from the Project on the Developer Console.
@@ -90,8 +90,8 @@ A. Once you successfully replace the expiring certificate in your custom integra
 A. To view all the Projects with certificate key pairs that are expiring within the next 30 days, apply the filter 'Expiring public certificates' on the list of Projects screen.
 
 ### Q. Can email alerts be sent to developers in my organization so that they can act on these alerts directly?
-A. Yes, developers and other users in the organization can be added as email alert recipients. Once added to the list of email alert recipients, the Developer Console will notify them too. Furthermore, all system administrators will also be notified and cannot be removed from the list of recipients. See the section on [adding users as email alert recipients](./index.md#adding-an-email-alert-recipient) for more information.
+A. Yes, developers and other users in the organization can be added as email alert recipients. Once added to the list of email alert recipients, the Developer Console will notify them too. Furthermore, all system administrators will also be notified and cannot be removed from the list of recipients. See the section on [adding users as email alert recipients](./#adding-an-email-alert-recipient) for more information.
 
 ### Q. I receive too many email alerts about expiring certificates. Can I turn off these emails?
-A. We understand that not all Projects are production critical; some may be created by developers for experimentation or demoing purposes. For non-critical Projects, we recommend going to the Project overview screen and clicking on the `Pause email alerts` button to turn off email alerts for a Project. See the section on [pausing email alerts](./index.md#pausing-email-alerts-for-a-project) for more information.
+A. We understand that not all Projects are production critical; some may be created by developers for experimentation or demoing purposes. For non-critical Projects, we recommend going to the Project overview screen and clicking on the `Pause email alerts` button to turn off email alerts for a Project. See the section on [pausing email alerts](./#pausing-email-alerts-for-a-project) for more information.
 

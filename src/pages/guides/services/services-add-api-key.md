@@ -50,19 +50,19 @@ Now that you have added an API, you can return to the *Project overview* (or *Wo
 
 You can select the specific API from the left navigation to view its details or remove the API using the **Remove API** button in the top-right corner.
 
-You can also select the specific credential type from under *Credentials* in the left navigation to view the *Credential details* and perform other actions (view API key, etc.) as needed. For more information on accessing credentials, please read the [credentials overview](../credentials.md).
+You can also select the specific credential type from under *Credentials* in the left navigation to view the *Credential details* and perform other actions (view API key, etc.) as needed. For more information on accessing credentials, please read the [credentials overview](../credentials).
 
 ## Insights
 
 Adobe Developer Console automatically generates valuable insights related to API usage for each enterprise project (or individual workspace when working in a templated project), as well as for each personal project, including XD Plugins.
 
-To learn more about insights, begin by reading the [insights overview](../insights.md).
+To learn more about insights, begin by reading the [insights overview](../insights).
 
 ## Next steps
 
-With an API successfully added, you can follow the same workflow steps to add additional APIs, or return to the [services overview](../services/index.md) to select another type of service to add to your project.
+With an API successfully added, you can follow the same workflow steps to add additional APIs, or return to the [services overview](../services/) to select another type of service to add to your project.
 
-If you have completed development on your project and are ready to submit your application for approval, please read the [project approval guide](../projects/approval.md) to get started.
+If you have completed development on your project and are ready to submit your application for approval, please read the [project approval guide](../projects/approval) to get started.
 
 
 

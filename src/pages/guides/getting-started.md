@@ -1,6 +1,6 @@
 # Accessing the Adobe Developer Console
 
-To start building your application that integrates with Adobe products and services you would first need to log in to the Developer Console and then [create a project](./projects/index.md).
+To start building your application that integrates with Adobe products and services you would first need to log in to the Developer Console and then [create a project](./projects/).
 
 ## Logging in to the Developer Console
 
@@ -76,7 +76,7 @@ Each individual project is shown on a card that includes the title of the projec
 
 You can use the sort functionality to change the order in which projects are displayed, and you can begin working on a new project by selecting **Create new project**.
 
-For more information on projects, being by reading the [projects overview](projects/index.md).
+For more information on projects, being by reading the [projects overview](projects/).
 
 ![](../images/projects.png)
 
@@ -84,6 +84,6 @@ For more information on projects, being by reading the [projects overview](proje
 
 The _APIs and services_ screen provides access to all available APIs, Events and services for Adobe products and technologies, with which you can develop applications. It can be accessed by selecting selecting **APIs and services** in the top navigation.
 
-To learn more about available APIs and services, read the [APIs and services overview](apis-and-services.md).
+To learn more about available APIs and services, read the [APIs and services overview](apis-and-services).
 
 ![APIs and services](../images/apis-and-services.png)

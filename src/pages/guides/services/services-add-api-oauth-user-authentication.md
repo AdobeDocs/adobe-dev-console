@@ -22,7 +22,7 @@ Once you have found and chosen an API that you would like to add, select **Next*
 
 ## Configure API
 
-OAuth User authentication credentials allows your end-users to sign in to your integration with an Adobe ID and your integration to receive an access token. With the access token, your integration will be able to call Adobe APIs and access content on behalf of the logged-in user. For more information, read the [OAuth User authentication credentials guide](../authentication/UserAuthentication/index.md).
+OAuth User authentication credentials allows your end-users to sign in to your integration with an Adobe ID and your integration to receive an access token. With the access token, your integration will be able to call Adobe APIs and access content on behalf of the logged-in user. For more information, read the [OAuth User authentication credentials guide](../authentication/UserAuthentication/).
 
 To configure an API using OAuth 2.0 User authentication, you must first select the platforms where you want to use this integration: Web App, Single Page App, or Native App. 
 
@@ -113,7 +113,7 @@ Now that you have added an API, you can return to the *Project overview* (or *Wo
 
 You can select the specific API from the left navigation to view its details or remove the API using the **Remove API** button in the top-right corner.
 
-You can also select the specific credential type from under *Credentials* in the left navigation to view the *Credential details* and perform other actions (view Client ID, retrieve client secret, etc.) as needed. For more information on accessing credentials, please read the [credentials overview](../credentials.md).
+You can also select the specific credential type from under *Credentials* in the left navigation to view the *Credential details* and perform other actions (view Client ID, retrieve client secret, etc.) as needed. For more information on accessing credentials, please read the [credentials overview](../credentials).
 
 ![](../../images/services-api-oauth-user-auth-credential-overview.png)
 
@@ -125,13 +125,13 @@ You can also view the scopes available to your credential on the scopes tab.
 
 Adobe Developer Console automatically generates valuable insights related to API usage for each enterprise project (or individual workspace when working in a templated project), as well as for each personal project, including XD Plugins.
 
-To learn more about insights, begin by reading the [insights overview](../insights.md).
+To learn more about insights, begin by reading the [insights overview](../insights).
 
 ## Next steps
 
-With an API successfully added, you can follow the same workflow steps to add additional APIs or return to the [services overview](../services/index.md) to select another type of service to add to your project.
+With an API successfully added, you can follow the same workflow steps to add additional APIs or return to the [services overview](../services/) to select another type of service to add to your project.
 
-If you have completed development on your project and are ready to submit your application for approval, please read the [project approval guide](../projects/approval.md) to get started.
+If you have completed development on your project and are ready to submit your application for approval, please read the [project approval guide](../projects/approval) to get started.
 
 
 

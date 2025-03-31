@@ -16,13 +16,13 @@ This article walks you through the steps to set up a **Service Account** connect
 
 ### Step 1: Create a project in Adobe Developer Console
 
-Integrations are now created as part of a "project" within Adobe Developer Console. For complete steps to creating a project in Console, begin by reading the [Adobe Developer Console getting started guide](../getting-started.md) and [projects overview](../projects/index.md). 
+Integrations are now created as part of a "project" within Adobe Developer Console. For complete steps to creating a project in Console, begin by reading the [Adobe Developer Console getting started guide](../getting-started.md) and [projects overview](../projects/). 
 
 Once you have created a project, you will be able to add services including APIs, Adobe I/O Events registrations, and Adobe I/O Runtime.
 
 ### Step 2: Add an API to your project using Service Account authentication
 
-To add an API that uses Service Account (JWT) authentication, follow the steps outlined in the guide for [adding an API to a project using Service Account authentication](../services/services-add-api-jwt.md).
+To add an API that uses Service Account (JWT) authentication, follow the steps outlined in the guide for [adding an API to a project using Service Account authentication](../services/services-add-api-jwt).
 
 During the API configuration process, you will be able to generate a key pair and download the private key.
 
@@ -30,7 +30,7 @@ When the API has been successfully connected, you will be able to access the new
     
 ### Step 3: Try It
 
-In order to try out the connection, follow the steps in the [Adobe Developer Console credentials guide](../credentials.md) for generating a JWT token and copy the *Sample cURL command* provided.
+In order to try out the connection, follow the steps in the [Adobe Developer Console credentials guide](../credentials) for generating a JWT token and copy the *Sample cURL command* provided.
 
 Next, open Postman and select Import &gt; Paste Raw Text and paste the copied curl command. Select **Import** to continue.
 

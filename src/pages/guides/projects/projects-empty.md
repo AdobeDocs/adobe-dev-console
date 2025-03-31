@@ -2,7 +2,7 @@
 
 This guide provides step-by-step instructions for creating an empty project in Adobe Developer Console.
 
-**Note:** To create a project using a template, please follow the steps in the guide for [creating a project using a template](projects-template.md).
+**Note:** To create a project using a template, please follow the steps in the guide for [creating a project using a template](projects-template).
 
 ## Select organization
 
@@ -48,8 +48,8 @@ Once the project has been deleted, you are returned to the project list and an a
 
 With a new project created, you can start using Adobe services, adding APIs, events, or plugins, and enabling Runtime using the **Add to Project** button on the left-side of the overview or the quick action buttons provided in the center of the screen.
 
-To learn more about working with services including steps for adding APIs, events, and runtime, please begin by reading the [services overview](../services/index.md).
+To learn more about working with services including steps for adding APIs, events, and runtime, please begin by reading the [services overview](../services/).
 
-If you are interested in building a Plugin, please visit the [plugins overview](../plugins/index.md) for a complete guide to creating, updating, and distributing plugins.
+If you are interested in building a Plugin, please visit the [plugins overview](../plugins/) for a complete guide to creating, updating, and distributing plugins.
 
 ![](../../images/empty-project-add-to-project.png)
