@@ -50,4 +50,4 @@ Upon successful submission on your Plugin, you will return to the **Distribute**
 
 Plugin submissions are reviewed by Adobe and a response is provided within 10 business days. Once your plugin has been approved, it will be published and available for installation by users (unless you selected to publish your plugin manually at a later date). 
 
-Now that you have successfully updated and resubmitted a plugin, you can repeat the creation and distribution steps to create additional plugins or create other applications using Adobe Developer Console. To learn more about creating projects within Console, please begin by reading the [projects overview](../projects/index.md).
+Now that you have successfully updated and resubmitted a plugin, you can repeat the creation and distribution steps to create additional plugins or create other applications using Adobe Developer Console. To learn more about creating projects within Console, please begin by reading the [projects overview](../projects/).

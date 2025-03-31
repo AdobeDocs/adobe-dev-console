@@ -4,7 +4,7 @@ In order to streamline the creation of projects, Adobe Developer Console provide
 
 This guide outlines the steps necessary to create a project using a template. 
 
-**Note:** If you do not wish to use a template and would like to create an empty project, please follow the steps in the [empty project guide](projects-empty.md).
+**Note:** If you do not wish to use a template and would like to create an empty project, please follow the steps in the [empty project guide](projects-empty).
 
 ## Select organization
 
@@ -114,7 +114,7 @@ Once a workspace is selected, the **Workspace overview** opens showing informati
 
 To begin adding services to your project, you can use the **Add service** button in the left navigation or select one of the quick start buttons. (If you have added Runtime to your workspace, the Runtime option will appear greyed out in the dropdown and the quick start buttons will not be shown.) 
 
-For detailed information on working with services, please read the [services documentation](../services/index.md).
+For detailed information on working with services, please read the [services documentation](../services/).
 
 ![](../../images/workspace-add-service.png)
 
@@ -122,13 +122,13 @@ For detailed information on working with services, please read the [services doc
 
 Adobe Developer Console automatically generates valuable insights related to API and runtime usage for each workspace within a templated project. 
 
-To learn more about accessing insights, read the [insights overview](../insights.md).
+To learn more about accessing insights, read the [insights overview](../insights).
 
 ## Approval
 
 Once you have finished developing your project, you can begin the approval process to publish your app to production. 
 
-For more information, please read the [guide on project approval](approval.md).
+For more information, please read the [guide on project approval](approval).
 
 ## Delete project
 

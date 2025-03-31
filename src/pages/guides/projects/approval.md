@@ -8,7 +8,7 @@ There are three different approval processes within Adobe Developer Console, dep
 
 2. **Applications for publication:** Building an application for distribution to general users on the Adobe Exchange requires approval from the Adobe Review team before it can be published. Please refer to the [applications for publication](#applications-for-publication) approval process outlined in this document.
 
-3. **Plugin distribution:** Plugins must be submitted for review and approval before they can be published to the plugin marketplace. For detailed instructions on how to submit a plugin for approval, follow the steps provided in the [plugin distribution guide](../plugins/plugin-distribution.md).
+3. **Plugin distribution:** Plugins must be submitted for review and approval before they can be published to the plugin marketplace. For detailed instructions on how to submit a plugin for approval, follow the steps provided in the [plugin distribution guide](../plugins/plugin-distribution).
 
 ## App Builder applications approval process
 
@@ -42,7 +42,7 @@ In order for an application to be available to public users, it must first be ap
 
 Select **Approval** from the left navigation to view the submission details. These details include information about the application that will be shown to end users and the Adobe Review team. 
 
-**Note:** You will need to complete a public profile before you can submit your app or integration for approval. If you have not already completed a public profile, you will be prompted to do so before completing the approval process. The information from this profile will appear on the consent screen that users will view when using your app. To learn more about creating a public profile, please visit the [public profile overview](../public-profile.md).
+**Note:** You will need to complete a public profile before you can submit your app or integration for approval. If you have not already completed a public profile, you will be prompted to do so before completing the approval process. The information from this profile will appear on the consent screen that users will view when using your app. To learn more about creating a public profile, please visit the [public profile overview](../public-profile).
 
 Once the submission details have been completed, select **Submit for approval** to continue the approval process.
 

@@ -42,13 +42,13 @@ The starter project includes the basic folder structure for a plugin as well as 
 
 ### Create FastSpring account (optional)
 
-If you plan to sell your Photoshop plugin, you will need to set up a FastSpring account and enter the key into your public profile. For more information, please read the [public profile overview](../public-profile.md).
+If you plan to sell your Photoshop plugin, you will need to set up a FastSpring account and enter the key into your public profile. For more information, please read the [public profile overview](../public-profile).
 
 ![](../../images/plugin-photoshop-fastspring.png)
 
 ## Distribute plugin
 
-When you have finished building your plugin, it is time to submit the plugin for review and distribution. For detailed instructions on how to submit your plugin for distribution, please see the [plugin distribution](plugin-distribution.md) guide.
+When you have finished building your plugin, it is time to submit the plugin for review and distribution. For detailed instructions on how to submit your plugin for distribution, please see the [plugin distribution](plugin-distribution) guide.
 
 ![](../../images/plugin-distribute-docs.png)
 

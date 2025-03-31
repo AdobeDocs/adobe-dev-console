@@ -10,7 +10,7 @@ Adobe I/O Runtime requires a license. Please contact your Adobe sales representa
 
 Runtime can be enabled for an empty project from the **Project overview**. You can select **Runtime** from the **Add to Project** dropdown menu in the left navigation, or select **Enable runtime** from the quick start menu in the center or the screen. After selecting Runtime using one of these options, you will be taken to the Runtime overview where you can begin to configure Runtime, as shown in the [Get started with Runtime](#get-started-with-runtime) section found later in this document.
 
-For more information on creating an empty project, please begin by reading the [projects overview](../projects/index.md).
+For more information on creating an empty project, please begin by reading the [projects overview](../projects/).
 
 ![](../../images/runtime-empty-project.png)
 
@@ -28,7 +28,7 @@ Once your project has been saved, the **Project overview** will be visible, show
 
 When you select a workspace you will be taken to the **Workspace overview** which will show the newly created Runtime instance. Selecting the Runtime instance will take you to the Runtime overview where you can begin to configure Runtime, as shown in the [Get started with Runtime](#get-started-with-runtime) section found later in this document.
 
-For more information on creating a templated project, please begin by reading the [projects overview](../projects/index.md).
+For more information on creating a templated project, please begin by reading the [projects overview](../projects/).
 
 ## Enable Runtime for a workspace
 
@@ -36,7 +36,7 @@ When working on a templated project, you can add multiple workspaces depending o
 
 If you would like to enable Runtime for an additional workspace, ensure that **Include Runtime namespace** is checked before selecting **Save** on the **Add workspace to project** dialog.
 
-For more information on adding workspaces to a templated project, please read the guide for [creating a templated project](../projects/projects-template.md).
+For more information on adding workspaces to a templated project, please read the guide for [creating a templated project](../projects/projects-template).
 
 ![](../../images/runtime-add-workspace.png)
 
@@ -62,10 +62,10 @@ Currently it is not possible to remove Runtime from a project or workspace withi
 
 Adobe Developer Console automatically generates valuable insights related to Runtime usage for each project or individual workspace within a templated project.
 
-To learn more about insights, begin by reading the [insights overview](../insights.md).
+To learn more about insights, begin by reading the [insights overview](../insights).
 
 ## Next steps
 
-With Runtime successfully added to your project or workspace, you can now return to the [services overview](../services/index.md) to select another type of service to add to your project.
+With Runtime successfully added to your project or workspace, you can now return to the [services overview](../services/) to select another type of service to add to your project.
 
-If you have completed development on your project and are ready to submit your application for approval, please read the [project approval guide](../projects/approval.md) to get started.
+If you have completed development on your project and are ready to submit your application for approval, please read the [project approval guide](../projects/approval) to get started.

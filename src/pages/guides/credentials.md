@@ -4,7 +4,7 @@ Once you have successfully added APIs to your project or workspace, you can retu
 
 <InlineAlert slots="text"/>
 
-To view credentials for events, select the specific event registration from the left navigation and then select the *Credentials* tab. For more information on working with events, including viewing event credentials, follow the [guide for adding events to a project](services/services-add-event.md).
+To view credentials for events, select the specific event registration from the left navigation and then select the *Credentials* tab. For more information on working with events, including viewing event credentials, follow the [guide for adding events to a project](services/services-add-event).
 
 ![](../images/credentials-project-overview.png)
 
@@ -52,4 +52,4 @@ The API key *Credential details* display any products or services connected usin
 
 ## Next steps
 
-To add additional services to your project or workspace, please visit the [services overview](services/index.md).
+To add additional services to your project or workspace, please visit the [services overview](services/).

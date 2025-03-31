@@ -30,7 +30,7 @@ The next step in configuring your event registration is to configure the authent
 
 <InlineAlert slots="text"/>
 
-To learn more about authentication and available types, visit the [authentication documentation](../authentication/index.md).
+To learn more about authentication and available types, visit the [authentication documentation](../authentication/).
 
 To configure an Event using OAuth 2.0 user authentication credential, you must first select the platform where you want to use this integration: Web App, Single Page App, or Native App. Please note, depending on the selected event provider not all platform choices may be available. 
 
@@ -78,6 +78,6 @@ The *Debug Tracing* tab shows details related to recent requests and responses r
 
 ## Next steps
 
-Now that you have successfully added events to your project or workspace, you can follow this workflow again to add additional event registrations, or return to the [services overview](../services/index.md) to select another type of service to add to your project.
+Now that you have successfully added events to your project or workspace, you can follow this workflow again to add additional event registrations, or return to the [services overview](../services/) to select another type of service to add to your project.
 
-If you have completed development on your project and are ready to submit your application for approval, please read the [project approval guide](../projects/approval.md) to get started.
+If you have completed development on your project and are ready to submit your application for approval, please read the [project approval guide](../projects/approval) to get started.

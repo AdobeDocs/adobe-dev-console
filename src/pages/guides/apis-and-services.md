@@ -16,7 +16,7 @@ The *Events* tab shows Adobe and custom events available for your organization. 
 
 ## Plugins
 
-The *Plugins* tab shows those Adobe products that currently support plugin creation and submission via the Adobe Developer Console. To find out more, please visit the [plugin overview](plugins/index.md).
+The *Plugins* tab shows those Adobe products that currently support plugin creation and submission via the Adobe Developer Console. To find out more, please visit the [plugin overview](plugins/).
 
 ## Runtime
 
