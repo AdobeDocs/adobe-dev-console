@@ -24,7 +24,7 @@ Access to some APIs is based on licenses. Meaning either the licenses your compa
 
 APIs can be connected to your app in multiple ways, depending on the API or the type of app that you are building. Occasionally APIs will provide multiple connection options, allowing you to choose the type of connection that works best for your application. To learn more about each of these authentication methods or API connections, read the [authentication documentation](../authentication/).
 
-* [Add an API using OAuth Server-to-Server credential](services-add-api-oauth-s2s)
+* [Add an API using OAuth Server-to-Server credential](services-add-api-oauth-s2-s)
 * [Add an API using OAuth User authentication credential](services-add-api-oauth-user-authentication)
 * [Add an API using API Key authentication](services-add-api-key)
 
