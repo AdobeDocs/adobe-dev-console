@@ -32,12 +32,12 @@ A credential is used to uniquely identify your integration to Adobe. To use an A
 
 ### Will my Adobe integrations or applications stop working immediately?
 
-No. Any integration or application using the Service Account (JWT) credential will continue to work until June 30, 2025. See [deprecation timelines](./migration.md#deperecation-timelines). See section on [migration next steps](#migration-next-steps).
+No. Any integration or application using the Service Account (JWT) credential will continue to work until June 30, 2025. See [deprecation timelines](./migration#deperecation-timelines). See section on [migration next steps](#migration-next-steps).
 
 
 
 ### What is the deadline to migrate to the new credential? 
-You must migrate your application to use the new OAuth Server-to-Server credential before June 30, 2025, to ensure your application does not face any downtime. See [deprecation timelines](./migration.md#deperecation-timelines). See [migration guide](./migration.md).
+You must migrate your application to use the new OAuth Server-to-Server credential before June 30, 2025, to ensure your application does not face any downtime. See [deprecation timelines](./migration#deperecation-timelines). See [migration guide](./migration).
 
 
 
@@ -48,7 +48,7 @@ After June 30, 2025, you can no longer refresh certificates for integrations usi
 Furthermore, Adobe will automatically convert Service Account (JWT) to OAuth Server-to-Server credentials when certificates expire or on March 1, 2026, whichever comes first.
 
 ### We can currently create new Service Account (JWT) credentials even though they are marked as deprecated. Is it recommended? 
-No. Creating any new Service Account (JWT) credentials is not recommended. All Service Account (JWT) credentials, whether old or new, will stop working after June 30, 2025. We recommend you avoid migrating your application again and use the new OAuth Server-to-Server credential from the beginning. See our [implementation guide](./implementation.md).
+No. Creating any new Service Account (JWT) credentials is not recommended. All Service Account (JWT) credentials, whether old or new, will stop working after June 30, 2025. We recommend you avoid migrating your application again and use the new OAuth Server-to-Server credential from the beginning. See our [implementation guide](./implementation).
 
 
 
@@ -58,7 +58,7 @@ No. Creating any new Service Account (JWT) credentials is not recommended. All S
 
 
 ### What are the benefits of using the OAuth Server-to-Server credential? 
-You can read more about OAuth Server-to-Server credentials in our [implementation guide](./implementation.md). You can view the comparison between the OAuth Server-to-Server credential and the Service Account (JWT) credential [here](./migration.md#why-oauth-server-to-server-credentials).
+You can read more about OAuth Server-to-Server credentials in our [implementation guide](./implementation). You can view the comparison between the OAuth Server-to-Server credential and the Service Account (JWT) credential [here](./migration#why-oauth-server-to-server-credentials).
 
 
 
@@ -66,17 +66,17 @@ You can read more about OAuth Server-to-Server credentials in our [implementatio
 ### Can I programmatically rotate certificates for Service Account (JWT) credential? 
 No such ability is currently available. There are no plans to add such ability either. 
 
-Instead, we recommend switching to the new credential that does not use expiring certificates and allows you to [rotate client secrets](./implementation.md#rotating-client-secrets) through the UI and API ([programmatically](./implementation.md#rotating-client-secrets-programmatically)).
+Instead, we recommend switching to the new credential that does not use expiring certificates and allows you to [rotate client secrets](./implementation#rotating-client-secrets) through the UI and API ([programmatically](./implementation#rotating-client-secrets-programmatically)).
 
 
 
 ### Can I programmatically rotate client secrets for OAuth Server-to-Server credentials? 
-Absolutely. View our guide on rotating client secrets programmatically [here](./implementation.md#rotating-client-secrets-programmatically).
+Absolutely. View our guide on rotating client secrets programmatically [here](./implementation#rotating-client-secrets-programmatically).
 
 
 
 ### What should I do if my client secrets get leaked? 
-We recommend immediately [rotating your application's client secret](./implementation.md#rotating-client-secrets) and contacting Adobe customer support if you wish to invalidate any existing tokens.
+We recommend immediately [rotating your application's client secret](./implementation#rotating-client-secrets) and contacting Adobe customer support if you wish to invalidate any existing tokens.
 
 
 
@@ -91,7 +91,7 @@ There are primarily three categories of integrations and custom applications tha
     
     These are integrations provided out-of-the-box by Adobe that require a Service Account (JWT) credential to function. Example: Integration between AEM and Adobe Target, Integration between AEM and Adobe Stock, User sync tool, etc.
     
-    For these integrations Adobe already supports the OAuth Server-to-Server credentials and allows you to migrate. Apart from our general-purpose [migration guide](./migration.md), you can also refer to the migration guide for [AEM customers](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/jwt-credentials-deprecation-in-adobe-developer-console) and [User Sync tool customers](https://github.com/adobe-apiplatform/user-sync.py/blob/user-guide-wip/en/user-manual/connect_adobe.md).
+    For these integrations Adobe already supports the OAuth Server-to-Server credentials and allows you to migrate. Apart from our general-purpose [migration guide](./migration), you can also refer to the migration guide for [AEM customers](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/jwt-credentials-deprecation-in-adobe-developer-console) and [User Sync tool customers](https://github.com/adobe-apiplatform/user-sync.py/blob/user-guide-wip/en/user-manual/connect_adobe).
 
 2.	**Integrations developed by vendors**
 
@@ -101,7 +101,7 @@ There are primarily three categories of integrations and custom applications tha
 
 3.	**Custom integrations or applications**
 
-    These are integrations or application custom developed by an IT/development team in your organization. You are responsible for migrating these integrations. See our general-purpose [migration guide](./migration.md).
+    These are integrations or application custom developed by an IT/development team in your organization. You are responsible for migrating these integrations. See our general-purpose [migration guide](./migration).
 
 
 
@@ -129,7 +129,7 @@ There are a few ways to see if a Project is actively being used:
 
 1. Open an impacted Project and view the 'Last service activity' date on the overview page. You can also see this information on the list of Projects page. 
 2. Visit the Service Account (JWT) credential overview page and look at the last access token generated at timestamp. This will tell you when this Project was last used to generate an access token. 
-3. Visit the Insights tab in a Project to see recent activity (API calls, Events Delivered, etc.) involving the credentials contained in the Project. See our documentation on [Insights](../../insights.md) to know more. 
+3. Visit the Insights tab in a Project to see recent activity (API calls, Events Delivered, etc.) involving the credentials contained in the Project. See our documentation on [Insights](../../insights) to know more. 
 
 
 

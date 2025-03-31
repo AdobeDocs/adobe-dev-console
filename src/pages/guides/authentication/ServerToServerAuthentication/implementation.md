@@ -1,7 +1,7 @@
 
 # OAuth Server-to-Server credential implementation guide
 
-The following guide goes over finer implementation details for OAuth Server-to-Server credentials. At the end of the guide is a list of recommended industry-standard OAuth2 libraries. Before you proceed, we recommend you become familiar with the server to server authentication credentials in our [server to server authentication guide](./index.md)
+The following guide goes over finer implementation details for OAuth Server-to-Server credentials. At the end of the guide is a list of recommended industry-standard OAuth2 libraries. Before you proceed, we recommend you become familiar with the server to server authentication credentials in our [server to server authentication guide](./)
 
 ## Table of contents
 + [Setting up the OAuth Server-to-Server credential](#setting-up-the-oauth-server-to-server-credential)
@@ -13,7 +13,7 @@ The following guide goes over finer implementation details for OAuth Server-to-S
 
 ## Setting up the OAuth Server-to-Server credential
 
-Depending on the API or an Event to your project on the Adobe Developer Console, you can select the OAuth Server-to-Server credential. The OAuth Server-to-Server credential is available for all APIs and Events supporting the [Service Account (JWT) credential *(deprecated)*](./index.md#service-account-jwt-credential-deprecated).
+Depending on the API or an Event to your project on the Adobe Developer Console, you can select the OAuth Server-to-Server credential. The OAuth Server-to-Server credential is available for all APIs and Events supporting the [Service Account (JWT) credential *(deprecated)*](./#service-account-jwt-credential-deprecated).
 
 ### Credential Name
 
@@ -51,7 +51,7 @@ curl -X POST 'https://ims-na1.adobelogin.com/ims/token/v3' \
 
 Your integration can generate access tokens when needed. However, it is a good practice to cache access tokens for reuse until they expire. Integrations should avoid generating a new access token when a previously generated access token has not expired and can be reused. Adobe can throttle your integration if it generates too many access tokens.
 
-Access tokens usually expire in 24 hours. To check the expiry time of an access token, see the `expires_in` field in the API response returned by the above cURL request. Note: The `expires_in` time is in seconds. See [API reference](./ims.md#fetching-access-tokens).
+Access tokens usually expire in 24 hours. To check the expiry time of an access token, see the `expires_in` field in the API response returned by the above cURL request. Note: The `expires_in` time is in seconds. See [API reference](./ims#fetching-access-tokens).
 
 ### Generating access tokens using standard OAuth2 libraries
 
