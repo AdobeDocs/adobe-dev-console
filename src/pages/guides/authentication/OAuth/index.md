@@ -3,4 +3,4 @@
 
 <InlineAlert slots="text"/>
 
-The information on this page has been moved to our [user authentication guide](../UserAuthentication/index.md). 
+The information on this page has been moved to our [user authentication guide](../UserAuthentication/). 
