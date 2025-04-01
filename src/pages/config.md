@@ -19,7 +19,7 @@
             - [Distribute a Plugin](guides/plugins/plugin-distribution) 
             - [Update a Plugin](guides/plugins/plugin-update) 
         - [Services](guides/services/) 
-            - [Add API using OAuth Server-to-Server credential](guides/services/services-add-api-oauth-s2-s) 
+            - [Add API using OAuth Server-to-Server credential](guides/services/services-add-api-oauth-s2s) 
             - [Add API using API Key credential](guides/services/services-add-api-key) 
             - [Add API using OAuth User authentication credential](guides/services/services-add-api-oauth-user-authentication) 
             - [Add Events](guides/services/services-add-event) 
