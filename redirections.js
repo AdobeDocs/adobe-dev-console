@@ -38,13 +38,13 @@
       case "#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/OAuthIntegration.md":
         redirectPath = prefixPath + "guides/authentication/OAuthIntegration/";
         break;
-      case "#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/ServiceAccountIntegration.md":
-        redirectPath = prefixPath + "guides/authentication/ServiceAccountIntegration/";
+      case "#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/service-account-integration.md":
+        redirectPath = prefixPath + "guides/authentication/service-account-integration/";
         break;
       case "#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md":
         redirectPath = prefixPath + "guides/authentication/OAuth/";
         break;
-      case "#!AdobeDocs/adobeio-auth/master/OAuth/Scopes.md":
+      case "#!AdobeDocs/adobeio-auth/master/OAuth/scopes.md":
         redirectPath = prefixPath + "guides/authentication/OAuth/Scopes/";
         break;
       case "#!AdobeDocs/adobeio-auth/master/OAuth/samples/samples.md":
@@ -53,10 +53,10 @@
       case "#!AdobeDocs/adobeio-auth/master/JWT/JWT.md":
         redirectPath = prefixPath + "guides/authentication/JWT/";
         break;
-      case "#!AdobeDocs/adobeio-auth/master/JWT/JWTCertificate.md":
+      case "#!AdobeDocs/adobeio-auth/master/JWT/jwt-certificate.md":
         redirectPath = prefixPath + "guides/authentication/JWT/JWTCertificate/";
         break;
-      case "#!AdobeDocs/adobeio-auth/master/JWT/Scopes.md":
+      case "#!AdobeDocs/adobeio-auth/master/JWT/scopes.md":
         redirectPath = prefixPath + "guides/authentication/JWT/Scopes/";
         break;
       case "#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md":
@@ -65,20 +65,20 @@
       case "#!AdobeDocs/adobeio-auth/master/Resources/Tools/ToolsOverview.md":
         redirectPath = prefixPath + "guides/authentication/Tools/";
         break;
-      case "#!AdobeDocs/adobeio-auth/master/Resources/Tools/OAuthPlayground.md":
+      case "#!AdobeDocs/adobeio-auth/master/Resources/Tools/o-auth-playground.md":
         redirectPath =
           prefixPath + "guides/authentication/Tools/OAuthPlayground/";
         break;
-      case "#!AdobeDocs/adobeio-auth/master/Resources/Tools/Postman.md":
+      case "#!AdobeDocs/adobeio-auth/master/Resources/Tools/postman.md":
         redirectPath = prefixPath + "guides/authentication/Tools/Postman/";
         break;
-      case "#!AdobeDocs/adobeio-auth/master/Resources/IMS.md":
+      case "#!AdobeDocs/adobeio-auth/master/Resources/ims.md":
         redirectPath = prefixPath + "guides/authentication/IMS/";
         break;
-      case "#!AdobeDocs/adobeio-auth/master/Resources/Tools/Postman.md":
+      case "#!AdobeDocs/adobeio-auth/master/Resources/Tools/postman.md":
         redirectPath = prefixPath + "guides/authentication/Tools/Postman/";
         break;
-      case "#!AdobeDocs/adobeio-auth/master/Resources/IMS.md":
+      case "#!AdobeDocs/adobeio-auth/master/Resources/ims.md":
         redirectPath = prefixPath + "guides/authentication/IMS/";
         break;
       case "#!AdobeDocs/adobeio-console/master/overview.md":
