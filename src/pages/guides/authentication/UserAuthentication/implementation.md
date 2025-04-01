@@ -1,6 +1,6 @@
 # User Authentication Implementation Guide
 
-The following guide goes over finer implementation details for user authentication credentials. At the end of this guide is a list of recommended industry-standard OAuth2 libraries. Before proceeding, we recommend you familiarize yourself with the 3-legged OAuth flow in our  [user authentication guide](../UserAuthentication/).
+The following guide goes over finer implementation details for user authentication credentials. At the end of this guide is a list of recommended industry-standard OAuth2 libraries. Before proceeding, we recommend you familiarize yourself with the 3-legged OAuth flow in our  [user authentication guide](../UserAuthentication/index.md).
 
 ## User authentication credential types
 
@@ -109,9 +109,9 @@ Each scope your application requests during the authorization workflow, would be
 
 You can always find the scopes your application can request by visiting the credential page and the *Scopes tab*. See our API reference to view some commonly encountered scopes -
 
-1. [Identity scopes](./ims#identity-scopes)
-2. [Creative Cloud Scopes](./ims#creative-cloud)
-3. [Experience Cloud Scopes](./ims#experience-cloud)
+1. [Identity scopes](./ims.md#identity-scopes)
+2. [Creative Cloud Scopes](./ims.md#creative-cloud)
+3. [Experience Cloud Scopes](./ims.md#experience-cloud)
 
 ## Standard OAuth2 libraries
 
@@ -138,7 +138,7 @@ The following samples demonstrate basic interaction with the Adobe OAuth endpoin
 
 ## OAuth 2.0 Playground
 
-The OAuth 2.0 playground allows you to test out the 3-legged OAuth flow and obtain access tokens for experimentation. Learn more about the playground [here](../Tools/o-auth-playground).
+The OAuth 2.0 playground allows you to test out the 3-legged OAuth flow and obtain access tokens for experimentation. Learn more about the playground [here](../Tools/o-auth-playground.md).
 
 ## Further Reading
 
@@ -148,7 +148,7 @@ There are several great resources to get more familiar with the OAuth2.0 framewo
 + [Proof Key for Code Exchange by OAuth Public Clients - RFC 7636](https://datatracker.ietf.org/doc/html/rfc7636)
 + [StackOverflow](https://stackoverflow.com/questions/tagged/oauth-2.0)
 + Authentication API Reference
-  + [Authorize Request](./ims#authorize-request)
-  + [Fetching Access Tokens](./ims#fetching-access-tokens-for-user-authentication-credentials)
-  + [Refreshing Access Tokens](./ims#refreshing-access-tokens)
-  + [Revoking a Token](./ims#token-revocation)
+  + [Authorize Request](./ims.md#authorize-request)
+  + [Fetching Access Tokens](./ims.md#fetching-access-tokens-for-user-authentication-credentials)
+  + [Refreshing Access Tokens](./ims.md#refreshing-access-tokens)
+  + [Revoking a Token](./ims.md#token-revocation)

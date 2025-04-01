@@ -24,7 +24,7 @@ To begin the distribution process, select **Distribute** from the left navigatio
 
 ### Public profile
 
-Distributing a plugin requires you to complete a public profile before you can submit your plugin listing. The information in your public profile tells users about who created your plugin. A commerce account can also be set up for paid plugins. If you have not already created a public profile, select **Complete your public profile** and read the [public profile overview](../public-profile) for more information.
+Distributing a plugin requires you to complete a public profile before you can submit your plugin listing. The information in your public profile tells users about who created your plugin. A commerce account can also be set up for paid plugins. If you have not already created a public profile, select **Complete your public profile** and read the [public profile overview](../public-profile.md) for more information.
 
 ![](../../images/plugin-distribute.png)
 
@@ -44,7 +44,7 @@ Once you have gathered your files and created your public profile, you're ready 
 
 ### Listing Information
 
-**Note:** Previously listings included a Publisher Information tab. This tab has been replaced by the public profile. To learn more about creating a public profile, please visit the [public profile overview](../public-profile).
+**Note:** Previously listings included a Publisher Information tab. This tab has been replaced by the public profile. To learn more about creating a public profile, please visit the [public profile overview](../public-profile.md).
 
 The **Listing Information** tab requires you to complete the details related to your plugin, including the plugin name and description, plugin categories, supported languages, and version details (in the event that you later decide to release an update to your plugin).
 
@@ -58,7 +58,7 @@ The listing information is also where you are able to upload plugin icons and sc
 
 If you are submitting a Photoshop plugin, the listing information includes a **Commerce** section, requiring you to define how users can get your plugin. Using the **Purchase method** dropdown, you can select **Free** or **Paid** for your plugin. Selecting **Paid** also requires you to specify a price.
 
-**Note:** If you select **Paid** as the purchase method, you must complete the commerce information in your public profile. For more information on completing your public profile, read the [public profile overview](../public-profile).
+**Note:** If you select **Paid** as the purchase method, you must complete the commerce information in your public profile. For more information on completing your public profile, read the [public profile overview](../public-profile.md).
 
 ![](../../images/plugin-photoshop-purchase-method.png)
 
@@ -100,7 +100,7 @@ Upon successful submission on your plugin, you return to the **Distribute** page
 
 The distribute screen now also displays **+ Add new version** in the top-right corner of the screen. 
 
-**Note:** Adobe Developer Console supports versioning for plugins, but attempting to add a new version while the current plugin is "In Review" will result in a "Plugin already in review" warning. Any new versions that are submitted will replace the version currently in review, moving your submission to the back of the queue. To lear more about versioning, see the documentation on [updating plugins](plugin-update).
+**Note:** Adobe Developer Console supports versioning for plugins, but attempting to add a new version while the current plugin is "In Review" will result in a "Plugin already in review" warning. Any new versions that are submitted will replace the version currently in review, moving your submission to the back of the queue. To lear more about versioning, see the documentation on [updating plugins](plugin-update.md).
 
 ![](../../images/plugin-distribute-success.png)
 
@@ -108,4 +108,4 @@ The distribute screen now also displays **+ Add new version** in the top-right c
 
 Plugin submissions are reviewed by Adobe and a response is provided within 10 business days. Once your plugin has been approved, it will be published and available for installation by users (unless you selected to publish your plugin manually at a later date). 
 
-Now that you have successfully created and distributed a plugin, you can repeat the creation and distribution steps to create additional plugins or you can update an existing plugin by submitting a new version for review. To learn more, refer to the documentation for [updating an existing plugin](plugin-update).
+Now that you have successfully created and distributed a plugin, you can repeat the creation and distribution steps to create additional plugins or you can update an existing plugin by submitting a new version for review. To learn more, refer to the documentation for [updating an existing plugin](plugin-update.md).
