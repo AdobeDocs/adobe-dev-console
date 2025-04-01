@@ -2,4 +2,4 @@
 
 <InlineAlert slots="text"/>
 
-The information on this page has been moved to our [user authentication implementation guide](../UserAuthentication/implementation#oauth-20-scopes). 
+The information on this page has been moved to our [user authentication implementation guide](../UserAuthentication/implementation.md#oauth-20-scopes). 

@@ -26,19 +26,19 @@ If you have more questions, check out our [frequently asked questions](#faqs) or
 
 ## Why OAuth Server-to-Server credentials?
 
-The new OAuth Server-to-Server credentials rely on the OAuth 2.0 client credentials grant. Therefore, you can use industry-standard [OAuth 2.0 libraries](./implementation#generating-access-tokens-using-standard-oauth2-libraries) to implement access token generation in your application.
+The new OAuth Server-to-Server credentials rely on the OAuth 2.0 client credentials grant. Therefore, you can use industry-standard [OAuth 2.0 libraries](./implementation.md#generating-access-tokens-using-standard-oauth2-libraries) to implement access token generation in your application.
 
 Unlike the Service Account (JWT) credential, the new credential does not use a public certificate and private key pair to generate access tokens. As an application developer, you do not have to periodically rotate the public certificates and private key pairs when they expire. Also, the credential setup process is greatly simplified, and you do not have to download and save the private key on your machine. 
 
-Lastly, while the new OAuth Server-to-Server credentials do not use expiring certificates, they still allow client secret rotation through the UI and API. Read more about [rotating secrets programmatically](./implementation#rotating-client-secrets-programmatically) in our guide on [rotating client secrets](./implementation#rotating-client-secrets).
+Lastly, while the new OAuth Server-to-Server credentials do not use expiring certificates, they still allow client secret rotation through the UI and API. Read more about [rotating secrets programmatically](./implementation.md#rotating-client-secrets-programmatically) in our guide on [rotating client secrets](./implementation.md#rotating-client-secrets).
 
 
 |                                                      | OAuth Server-to-Server credential                                                                                         | Service Account (JWT) credential                                                                                   |
 |------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
 | Do expiring certificates need to be replaced every year? | This credential does not use public certificates or private key pairs. You are not forced to rotate certificates every year. | You need to rotate the public certificate and private key pair every year. |
-| Generating access tokens for experimentation         | You can generate an access token for quick experimentation with a [one-click button](./implementation#generate-access-tokens) on the Developer Console.           | Generating access tokens is a 3-step process spanning the Developer Console UI and your command-line terminal. |
-| Generating access tokens in your application         | You can use [standard OAuth 2.0 libraries](./implementation#generating-access-tokens-using-standard-oauth2-libraries) to generate access tokens in your application programmatically.| You can implement access token generation programmatically by reading our documentation. |
-| Rotating client secrets programmatically             | You can rotate client secrets on-demand through the Dev Console UI and API. [Learn more](./implementation#rotating-client-secrets-programmatically).| You can rotate the public certificate and private key pair manually through the UI. |
+| Generating access tokens for experimentation         | You can generate an access token for quick experimentation with a [one-click button](./implementation.md#generate-access-tokens) on the Developer Console.              | Generating access tokens is a 3-step process spanning the Developer Console UI and your command-line terminal. |
+| Generating access tokens in your application         | You can use [standard OAuth 2.0 libraries](./implementation.md#generating-access-tokens-using-standard-oauth2-libraries) to generate access tokens in your application programmatically.| You can implement access token generation programmatically by reading our documentation. |
+| Rotating client secrets programmatically             | You can rotate client secrets on-demand through the Dev Console UI and API. [Learn more](./implementation.md#rotating-client-secrets-programmatically).| You can rotate the public certificate and private key pair manually through the UI. |
 
 ## Deprecation Timelines
 
@@ -98,7 +98,7 @@ Adding an equivalent OAuth Server-to-Server credential will not impact your runn
 
    * At this point, you can use either credential to generate access tokens. This ensures that your running application can continue generating access tokens using the Service Account (JWT).
 
-   * Meanwhile, you can test the new credential by generating access tokens using the Developer Console UI or a cURL command. We also recommend reading our [implementation guide](./implementation) that points to several [standard OAuth 2.0 libraries](./implementation#generating-access-tokens-using-standard-oauth2-libraries) to generate access tokens programmatically.
+   * Meanwhile, you can test the new credential by generating access tokens using the Developer Console UI or a cURL command. We also recommend reading our [implementation guide](./implementation.md) that points to several [standard OAuth 2.0 libraries](./implementation.md#generating-access-tokens-using-standard-oauth2-libraries) to generate access tokens programmatically.
 
 ### Step 2: Update your application and delete old credential
 

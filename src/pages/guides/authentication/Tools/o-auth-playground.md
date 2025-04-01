@@ -10,11 +10,11 @@ The OAuth 2.0 Playground is an Adobe internet utility that enables developers to
 
 2. Go to the [Adobe Developer Console](https://developer.adobe.com/console/)
 
-3. Create a project within Console. For complete steps to creating a project in Console, begin by reading the [Adobe Developer Console getting started guide](../../getting-started) and [projects overview](../../projects/). 
+3. Create a project within Console. For complete steps to creating a project in Console, begin by reading the [Adobe Developer Console getting started guide](../../getting-started.md) and [projects overview](../../projects/index.md). 
 
 4. Once you have created a project, you will be able to add services including APIs, Adobe I/O Events registrations, and Adobe I/O Runtime. Add an API to your project and then select the services with which you wish to integrate (such as Adobe Analytics > OAuth 2.0 Integration)
 
-    To add an API that uses OAuth authentication and authorization, follow the steps outlined in the guide for [adding an API to a project using OAuth authentication](../../services/services-add-api-oauth).
+    To add an API that uses OAuth authentication and authorization, follow the steps outlined in the guide for [adding an API to a project using OAuth authentication](../../services/services-add-api-oauth.md).
 
     When the API has been successfully connected, you will be able to access the newly generated credentials including Client ID and Client Secret.
 
