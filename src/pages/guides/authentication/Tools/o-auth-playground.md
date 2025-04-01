@@ -8,7 +8,7 @@ The OAuth 2.0 Playground is an Adobe internet utility that enables developers to
   
     ![op-1](../Images/OP_1.png)
 
-2. Go to the [Adobe Developer Console](/console)
+2. Go to the [Adobe Developer Console](https://developer.adobe.com/console/)
 
 3. Create a project within Console. For complete steps to creating a project in Console, begin by reading the [Adobe Developer Console getting started guide](../../getting-started.md) and [projects overview](../../projects/index.md). 
 

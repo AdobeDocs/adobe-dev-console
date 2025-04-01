@@ -31,7 +31,9 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test:links": "remark src/pages --quiet --frail",
-    "lint": "docker run --rm -e RUN_LOCAL=true --env-file '.github/super-linter.env' -v \"$PWD\":/tmp/lint github/super-linter:slim-v4.10.1"
+    "lint": "docker run --rm -e RUN_LOCAL=true --env-file '.github/super-linter.env' -v \"$PWD\":/tmp/lint github/super-linter:slim-v4.10.1",
+    "buildNavigation": "node buildNavigation.js",
+    "buildRedirections": "node buildRedirections.js"
   },
   "remarkConfig": {
     "plugins": [
@@ -40,6 +42,7 @@
   },
   "packageManager": "yarn@3.2.2",
   "devDependencies": {
+    "glob": "11.0.0",
     "remark-cli": "^11.0.0",
     "remark-validate-links": "^12.1.0"
   }

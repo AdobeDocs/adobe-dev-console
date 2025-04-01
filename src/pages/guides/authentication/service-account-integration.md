@@ -1,6 +1,5 @@
 # Service Account Connection
 
-
 <InlineAlert slots="text"/>
 
 Service Account (JWT) credentials have been deprecated in favor of the OAuth Server-to-Server credentials. Your applications using the Service Account (JWT) credentials will stop working after Jun 30, 2025. **You must migrate to the new credential by Jun 30, 2025 in order to ensure your application continues to function. View our [migration guide](../ServerToServerAuthentication/migration.md) to know more.**
@@ -54,6 +53,3 @@ The response body includes your newly generated access token (`access_token`).
 <InlineAlert slots="text"/>
 
 Check the documentation for the specific API service for which you’re hitting authenticated endpoints to find what other parameters are expected. Most of them need an `x-api-key`, which will be the same as your `client_id`.
-
-
-

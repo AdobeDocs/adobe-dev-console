@@ -2,9 +2,9 @@
 
 <InlineAlert slots="text"/>
 
-The Service Account (JWT) credentials have been deprecated in favor of the OAuth Server-to-Server credentials. Your applications using the Service Account (JWT) credentials will stop working after Jun 30, 2025. You must migrate to the new credential by **Jun 30, 2025**, to ensure your application continues functioning. [Learn more](./ServerToServerAuthentication/migration.md).
+The Service Account (JWT) credentials have been deprecated in favor of the OAuth Server-to-Server credentials. Your applications using the Service Account (JWT) credentials will stop working after Jun 30, 2025. You must migrate to the new credential by **Jun 30, 2025**, to ensure your application continues functioning. [Learn more](../ServerToServerAuthentication/migration.md).
 
-To establish a secure service-to-service Adobe I/O API session, you must create a JSON Web Token (JWT) that encapsulates the identity of your integration, and then exchange it for an access token. Every request to an Adobe service must include the access token in the `Authorization` header, along with the API Key (Client ID) that was generated when you created the [Service Account Integration](../ServiceAccountIntegration) in the [Adobe Developer Console](/console).
+To establish a secure service-to-service Adobe I/O API session, you must create a JSON Web Token (JWT) that encapsulates the identity of your integration, and then exchange it for an access token. Every request to an Adobe service must include the access token in the `Authorization` header, along with the API Key (Client ID) that was generated when you created the [Service Account Integration](../service-account-integration.md) in the [Adobe Developer Console](https://developer.adobe.com/console/).
 
 ## Authentication Workflow
 
@@ -22,7 +22,7 @@ Your JWT must contain the following claims:
 | iss        | _Required_. The issuer, your **Organization ID** from the Adobe Developer Console integration, in the format `org_ident@AdobeOrg`. Identifies your organization that has been configured for access to the Adobe I/O API.|
 | sub        | _Required_. The subject, your **Technical Account ID** from the Adobe Developer Console integration, in the format: `id@techacct.adobe.com`.|
 | aud        | _Required_. The audience for the token, your **API Key** from the Adobe Developer Console integration, in the format: `https://ims-na1.adobelogin.com/c/api_key`.|
-| Metascopes | _Required_. The API-access claim configured for your organization: [JWT Metascopes](Scopes.md), in the format: `"https://ims-na1.adobelogin.com/s/meta_scope": true`|
+| Metascopes | _Required_. The API-access claim configured for your organization: [JWT Metascopes](scopes.md), in the format: `"https://ims-na1.adobelogin.com/s/meta_scope": true`|
 
 The following is a sample payload to be signed and encoded.
 
@@ -40,7 +40,7 @@ The following is a sample payload to be signed and encoded.
 
 The JWT must be signed and base-64 encoded for inclusion in the access request. The JWT libraries provide functions to perform these tasks.
 
-- The token must be signed using the private key for a digital signing certificate that is associated with your API key. You can associate more than one certificate with an API key. If you do so, you can use the private key of any associated certificate to sign your JWT. For more information about private key/public certificate, see [Create a public key certificate](../JWT/JWTCertificate/#using-the-public-key-certificate-for-service-account-integration).
+- The token must be signed using the private key for a digital signing certificate that is associated with your API key. You can associate more than one certificate with an API key. If you do so, you can use the private key of any associated certificate to sign your JWT. For more information about private key/public certificate, see [Create a public key certificate](./jwt-certificate.md#using-the-public-key-certificate-for-service-account-integration).
 
 **Algorithm**: **RS256** (RSA Signature with SHA-256) is an asymmetric algorithm, and it uses a public/private key pair: the identity provider has a private (secret) key used to generate the signature, and the consumer of the JWT (i.e. Adobe Developer Console) gets a public key to validate the signature.
 
@@ -103,7 +103,7 @@ A failed request can result in a response with an HTTP status of 400 or 401 and 
 |401 invalid_client|Integration does not have the exchange_jwt scope. This indicates an improper client configuration. Contact the Adobe I/O team to resolve it. The client ID and client secret combination is invalid.|
 |400 invalid_token|JWT is missing or cannot be decoded. JWT has expired. In this case, the error_description contains more details. The exp or jti field of the JWT is not an integer.|
 |400 invalid_signature|The JWT signature does not match any certificates attached to the integration. The signature does not match the algorithm specified in the JWT header.|
-|400 invalid_scope|Indicates a problem with the requested scope for the token. Specific scope problems can be:<ul><li>Metascopes in the JWT do not match metascopes in the binding.</li><li>Metascopes in the JWT do not match target client scopes.</li><li>Metascopes in the JWT contain a scope or scopes that do not exist.</li><li>The JWT has no metascopes.</li></ul>|
+|400 invalid_scope|Indicates a problem with the requested scope for the token. Specific scope problems can be:Metascopes in the JWT do not match metascopes in the binding.Metascopes in the JWT do not match target client scopes.Metascopes in the JWT contain a scope or scopes that do not exist.The JWT has no metascopes.|
 |400 bad_request|The JWT payload can be decoded and decrypted, but its contents are incorrect. This can occur when values for fields such as sub, iss, exp, or jti are not in the proper format.|
 
 

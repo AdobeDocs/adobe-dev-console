@@ -144,7 +144,7 @@ module.exports = {
                 title: "Implementation Guide"
               },
               {
-                path: "guides/authentication/UserAuthentication/IMS.md",
+                path: "guides/authentication/UserAuthentication/ims.md",
                 title: "API Reference"
               }
             ],
@@ -166,17 +166,17 @@ module.exports = {
                 title: "Migration FAQs"
               },
               {
-                path: "guides/authentication/ServerToServerAuthentication/IMS.md",
+                path: "guides/authentication/ServerToServerAuthentication/ims.md",
                 title: "API Reference"
               },
               {
                 pages: [
                   {
-                    path: "guides/authentication/JWT/JWTCertificate.md",
+                    path: "guides/authentication/JWT/jwt-certificate.md",
                     title: "Create a Public Key Certificate"
                   },
                   {
-                    path: "guides/authentication/JWT/Scopes.md",
+                    path: "guides/authentication/JWT/scopes.md",
                     title: "JWT Metascopes"
                   },
                   {
@@ -198,11 +198,11 @@ module.exports = {
           {
             pages: [
               {
-                path: "guides/authentication/Tools/OAuthPlayground.md",
+                path: "guides/authentication/Tools/o-auth-playground.md",
                 title: "OAuth 2.0 Playground"
               },
               {
-                path: "guides/authentication/Tools/Postman.md",
+                path: "guides/authentication/Tools/postman.md",
                 title: "Postman"
               }
             ],

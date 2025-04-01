@@ -38,9 +38,9 @@ Once you have selected a platform, you will be required to provide a *Redirect U
 
 <InlineAlert slots="text"/>
 
-The *Redirect URI* must use HTTPS (for example, **https://redirect.com/uri/et**) and cannot be a regular expression.
+The *Redirect URI* must use HTTPS (for example, [https://redirect.com/uri/et](https://redirect.com/uri/et)) and cannot be a regular expression.
 
-After entering a redirect that matches the appropriate formatting, you can then select **Next** to proceed with event configuration.
+After entering a redirect that matches the appropriate formatting, you can then select Next to proceed with event configuration.
 
 ![](../../images/events-configure-auth.png)
 

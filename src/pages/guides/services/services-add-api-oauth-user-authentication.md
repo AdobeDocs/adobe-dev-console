@@ -74,7 +74,7 @@ A *Default redirect URI* is the URL of the page or script (usually at the root o
 
 <InlineAlert slots="text"/>
 
-The *Default redirect URI* MUST be hosted on a secure server (HTTPS), even if it is only a localhost instance. For example, **https://redirect.com/uri/etc**. 
+The *Default redirect URI* MUST be hosted on a secure server (HTTPS), even if it is only a localhost instance. For example, [https://redirect.com/uri/etc](https://redirect.com/uri/etc). 
 
 ### OAuth 2.0 Redirect URI pattern
 
