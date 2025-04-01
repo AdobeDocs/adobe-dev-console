@@ -2,4 +2,4 @@
 
 <InlineAlert slots="text"/>
 
-This page has been removed. Learn about the API Key credential on our guide on [API Key authentication](./APIKeyAuthentication/).
+This page has been removed. Learn about the API Key credential on our guide on [API Key authentication](./APIKeyAuthentication/index.md).
