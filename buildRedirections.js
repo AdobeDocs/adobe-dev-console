@@ -1,7 +1,7 @@
 const path = require('path');
-const fs = require('node:fs');
 const { pathPrefix } = require('./gatsby-config.js');
 const { globSync }= require('glob');
+const { writeRedirectionsFile } = require('./scriptUtils.js');
 
 try {
     if(!pathPrefix) {
@@ -39,17 +39,7 @@ try {
         }
     });
 
-    let redirectionsData = 
-    {
-        "total" : data.length,
-        "offset": 0,
-        "limit": data.length,
-        "data" : data,
-        ":type": "sheet"
-    };
-
-    let redirectionsFilePath = path.resolve(__dirname + '/src/pages/redirects.json');
-    fs.writeFileSync(redirectionsFilePath, JSON.stringify(redirectionsData));
+    writeRedirectionsFile(data);
 
 } catch (err) {
     console.error(err);
