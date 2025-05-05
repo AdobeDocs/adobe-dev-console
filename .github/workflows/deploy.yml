@@ -121,20 +121,20 @@ jobs:
       - name: Clean cache on stage
         if: needs.set-state.outputs.clean_cache == 'true' && needs.set-state.outputs.deploy_stage == 'true'
         run: |
-          bash .github/scripts/process-mds.sh cache stage ${{ needs.set-state.outputs.branch_short_ref }} "${{ needs.set-state.outputs.path_prefix }}"
+            bash .github/scripts/process-mds.sh cache stage ${{ needs.set-state.outputs.branch_short_ref }} "${{ needs.set-state.outputs.path_prefix }}"
 
       - name: Clean cache on prod
         if: needs.set-state.outputs.clean_cache == 'true' && needs.set-state.outputs.deploy_prod == 'true'
         run: |
-          bash .github/scripts/process-mds.sh cache prod ${{ needs.set-state.outputs.branch_short_ref }} "${{ needs.set-state.outputs.path_prefix }}"
+            bash .github/scripts/process-mds.sh cache prod ${{ needs.set-state.outputs.branch_short_ref }} "${{ needs.set-state.outputs.path_prefix }}"
 
       - name: Deploy to stage
         if: needs.set-state.outputs.deploy_stage == 'true'
         run: |
-          bash .github/scripts/process-mds.sh preview stage ${{ needs.set-state.outputs.branch_short_ref }} "${{ needs.set-state.outputs.path_prefix }}"
+            bash .github/scripts/process-mds.sh preview stage ${{ needs.set-state.outputs.branch_short_ref }} "${{ needs.set-state.outputs.path_prefix }}"
 
       - name: Deploy to prod
         if: needs.set-state.outputs.deploy_prod == 'true'
-        run: |
-          bash .github/scripts/process-mds.sh preview prod ${{ needs.set-state.outputs.branch_short_ref }} "${{ needs.set-state.outputs.path_prefix }}"
-          bash .github/scripts/process-mds.sh live prod ${{ needs.set-state.outputs.branch_short_ref }} "${{ needs.set-state.outputs.path_prefix }}"
+        run: |            
+            bash .github/scripts/process-mds.sh preview prod ${{ needs.set-state.outputs.branch_short_ref }} "${{ needs.set-state.outputs.path_prefix }}"
+            bash .github/scripts/process-mds.sh live prod ${{ needs.set-state.outputs.branch_short_ref }} "${{ needs.set-state.outputs.path_prefix }}"

@@ -99,6 +99,6 @@ To learn more about insights, begin by reading the [insights overview](../insigh
 
 ## Next steps
 
-With an API successfully added, you can follow the same workflow steps to add additional APIs, or return to the [services overview](../services/index.md) to select another type of service to add to your project.
+With an API successfully added, you can follow the same workflow steps to add additional APIs, or return to the [services overview](index.md) to select another type of service to add to your project.
 
 If you have completed development on your project and are ready to submit your application for approval, please read the [project approval guide](../projects/approval.md) to get started.
