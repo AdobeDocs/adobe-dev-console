@@ -78,6 +78,6 @@ The *Debug Tracing* tab shows details related to recent requests and responses r
 
 ## Next steps
 
-Now that you have successfully added events to your project or workspace, you can follow this workflow again to add additional event registrations, or return to the [services overview](../services/index.md) to select another type of service to add to your project.
+Now that you have successfully added events to your project or workspace, you can follow this workflow again to add additional event registrations, or return to the [services overview](index.md) to select another type of service to add to your project.
 
 If you have completed development on your project and are ready to submit your application for approval, please read the [project approval guide](../projects/approval.md) to get started.

@@ -33,7 +33,9 @@
     "test:links": "remark src/pages --quiet --frail",
     "lint": "docker run --rm -e RUN_LOCAL=true --env-file '.github/super-linter.env' -v \"$PWD\":/tmp/lint github/super-linter:slim-v4.10.1",
     "buildNavigation": "node buildNavigation.js",
-    "buildRedirections": "node buildRedirections.js"
+    "buildRedirections": "node buildRedirections.js",
+    "renameFiles": "node renameFiles.js",
+    "normalizeLinks": "node normalizeLinks.js"
   },
   "remarkConfig": {
     "plugins": [
