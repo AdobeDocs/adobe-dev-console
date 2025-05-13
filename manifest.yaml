@@ -1,14 +1,8 @@
 type: navigation
 order: 1
-title: ADP Dev Console documentation
+title: ADP Dev Console 
 pages:
   - title: Developer Console
-    url: /developer-console
-
-  - title: Authentication Guide
-    url: /src/pages/guides/authentication/index.md
-
-  - title: Documentation
     url: /src/pages/guides/index.md
     pages:
       - title: Getting Started
