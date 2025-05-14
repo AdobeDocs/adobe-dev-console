@@ -1,0 +1,101 @@
+type: navigation
+order: 1
+title: ADP Dev Console 
+pages:
+  - title: Developer Console
+    url: /src/pages/guides/index.md
+    pages:
+      - title: Getting Started
+        url: /src/pages/guides/getting-started.md
+      - title: Projects
+        url: /src/pages/guides/projects/index.md
+        pages:
+          - title: Create an Empty Project
+            url: /src/pages/guides/projects/projects-empty.md
+          - title: Create a Templated Project
+            url: /src/pages/guides/projects/projects-template.md
+          - title: Projects Approval
+            url: /src/pages/guides/projects/approval.md
+          - title: Beta Users
+            url: /src/pages/guides/projects/beta-users.md
+      - title: Plugins
+        url: /src/pages/guides/plugins/index.md
+        pages:
+          - title: Distribute a Plugin
+            url: /src/pages/guides/plugins/plugin-distribution.md
+          - title: Update a Plugin
+            url: /src/pages/guides/plugins/plugin-update.md
+      - title: Services
+        url: /src/pages/guides/services/index.md
+        pages:
+          - title: Add API using OAuth Server-to-Server credential
+            url: /src/pages/guides/services/services-add-api-oauth-s2s.md
+          - title: Add API using API Key credential
+            url: /src/pages/guides/services/services-add-api-key.md
+          - title: Add API using OAuth User authentication credential
+            url: /src/pages/guides/services/services-add-api-oauth-user-authentication.md
+          - title: Add Events
+            url: /src/pages/guides/services/services-add-event.md
+          - title: Enable Runtime
+            url: /src/pages/guides/services/services-enable-runtime.md
+      - title: Email Alerts
+        url: /src/pages/guides/email-alerts/index.md
+        pages:
+          - title: Certificate Expiry
+            url: /src/pages/guides/email-alerts/cert-expiry.md
+      - title: Credentials
+        url: /src/pages/guides/credentials.md
+      - title: Insights
+        url: /src/pages/guides/insights.md
+      - title: APIs and services
+        url: /src/pages/guides/apis-and-services.md
+      - title: Public Profile
+        url: /src/pages/guides/public-profile.md
+      - title: Quota
+        url: /src/pages/guides/quota.md
+
+  - title: Authentication
+    url: /src/pages/guides/authentication/index.md
+    pages:
+      - title: User Authentication
+        url: /src/pages/guides/authentication/UserAuthentication/index.md
+        pages:
+          - title: Implementation Guide
+            url: /src/pages/guides/authentication/UserAuthentication/implementation.md
+          - title: API Reference
+            url: /src/pages/guides/authentication/UserAuthentication/ims.md
+      - title: Server to Server Authentication
+        url: /src/pages/guides/authentication/ServerToServerAuthentication/index.md
+        pages:
+          - title: Implementation Guide
+            url: /src/pages/guides/authentication/ServerToServerAuthentication/implementation.md
+          - title: Migration Guide
+            url: /src/pages/guides/authentication/ServerToServerAuthentication/migration.md
+          - title: Migration FAQs
+            url: /src/pages/guides/authentication/ServerToServerAuthentication/faqs.md
+          - title: API Reference
+            url: /src/pages/guides/authentication/ServerToServerAuthentication/ims.md
+          - title: Service Account (JWT) credential
+            url: /src/pages/guides/authentication/JWT/index.md
+            pages:
+              - title: Create a Public Key Certificate
+                url: /src/pages/guides/authentication/JWT/jwt-certificate.md
+              - title: JWT Metascopes
+                url: /src/pages/guides/authentication/JWT/scopes.md
+              - title: JWT Sample Code
+                url: /src/pages/guides/authentication/JWT/samples.md
+      - title: API Key Authentication
+        url: /src/pages/guides/authentication/APIKeyAuthentication/index.md
+      - title: Tools
+        url: /src/pages/guides/authentication/Tools/index.md
+        pages:
+          - title: OAuth 2.0 Playground
+            url: /src/pages/guides/authentication/Tools/o-auth-playground.md
+          - title: Postman
+            url: /src/pages/guides/authentication/Tools/postman.md
+
+  - title: Support
+    url: /src/pages/support/index.md
+    pages:
+      - title: FAQ
+        url: /src/pages/support/faq.md
