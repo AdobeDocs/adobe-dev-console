@@ -4,7 +4,7 @@ Adobe I/O Runtime is Adobe’s serverless computing platform. Runtime enables yo
 
 <InlineAlert slots="text"/>
 
-Adobe I/O Runtime requires a license. Please contact your Adobe sales representative for more details.
+Adobe I/O Runtime is part of [Adobe Developer App Builder](https://helpx.adobe.com/legal/product-descriptions/adobe-developer-app-builder.html) and requires a license. Please contact your Adobe sales representative for more details.
 
 ## Enable Runtime for an empty project
 
