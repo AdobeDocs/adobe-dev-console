@@ -22,17 +22,9 @@ However, no access to data is given out by default. Instead, when you create a s
 
 You can also modify the set of product profiles by returning to your project on the Adobe Developer Console. As an admin, you can manage the product profiles assigned to different applications by visiting the [Adobe Admin Console](https://adminconsole.adobe.com/) > Users > API credentials tab.
 
-## Server to server credential types
+## OAuth Server-to-Server credential
 
-Adobe supports two server to server authentication credentials. These credentials only differ in the way your application generates the access token, the rest of their functioning is similar. 
-
-1. [OAuth Server-to-Server credential](#oauth-server-to-server-credential)
-2. [Service Account (JWT) credential *(deprecated)*](#service-account-jwt-credential-deprecated)
-
-
-### OAuth Server-to-Server credential
-
-The OAuth Server-to-Server credential relies on the OAuth 2.0 `client_credentials` grant type to generate access tokens. To generate an access token, your application can make a single HTTP request with your `client_id` and `client_secret` and `scopes`.
+Adobe supports the OAuth Server-to-Server to credential to perform server-to-server authentication. The OAuth Server-to-Server credential relies on the OAuth 2.0 `client_credentials` grant type to generate access tokens. To generate an access token, your application can make a single HTTP request with your `client_id` and `client_secret` and `scopes`.
 
 As the token generation logic uses your `client_secret`, this logic must be implemented on a secure backend server to prevent malicious actors from accessing your secrets. We recommend using standard OAuth libraries to implement access token generation.
 
@@ -42,21 +34,3 @@ Read our OAuth Server-to-server credential implementation guide -
 2. [Generating access tokens programmatically using standard OAuth2 libraries](./implementation.md#rotating-client-secrets-programmatically)
 3. [Migrating from Service Account (JWT) credentials to OAuth Server-to-Server credentials](./migration.md)
 4. [API reference](./ims.md)
-
-
-### Service Account (JWT) credential *(deprecated)*
-
-<InlineAlert slots="text"/>
-
-The Service Account (JWT) credentials have been deprecated in favor of the OAuth Server-to-Server credentials. Your applications using the Service Account (JWT) credentials will stop working after Jun 30, 2025. You must migrate to the new credential by **Jun 30, 2025**, to ensure your application continues functioning. [Learn more](migration.md).
-
-Service Account (JWT) credentials rely on the JWT token exchange mechanism to generate access tokens. This credential's details include two secrets a `client_secret` and a `private.key` (part of a public certificate private key pair).
-
-The token generation logic first requires your application to construct a JWT token signed by your private.key. This token is then exchanged for an access token by making an HTTP Request to Adobe Identity Management Services (IMS).
-
-As the token generation logic uses your `client_secret`, this logic must be implemented on a secure backend server to prevent malicious actors from accessing your secrets.
-
-Read our Service Account (JWT) credential implementation guide -
-
-1. [Generating access tokens programmatically](../JWT/index.md)
-2. [Migrating from Service Account (JWT) credentials to OAuth Server-to-Server credentials](./migration.md)

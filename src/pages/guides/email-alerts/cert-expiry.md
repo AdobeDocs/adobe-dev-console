@@ -1,5 +1,13 @@
 # Certificate Expiry Overview
 
+<InlineAlert slots="text"/>
+
+As of June 30, 2025, Service Account (JWT) credentials have reached their end of life and are no longer supported. All server-to-server integrations must use the [OAuth Server-to-Server credentials](../authentication/ServerToServerAuthentication/implementation.md). The following guide is retained for historical reference. You will be unable to refresh certificates for Service Account (JWT) credentials anymore.
+
+<InlineAlert slots="text"/>
+
+If you received an email about expiring certificates, this is your last chance to [migrate your integration](../authentication/ServerToServerAuthentication/migration.md) to use an OAuth Server-to-Server credential. After your certificates expire, Adobe will automatically convert your integration to OAuth Server-to-Server credentials, breaking your integration if it still relies on the old Service Account (JWT) credential.
+
 Several services on the Adobe Developer Console require using the Service Account (JWT) credential for service-to-service authentication. The Service Account (JWT) credential utilizes a public certificate and a private key pair in order to authenticate your custom integration or application.
 
 Custom integrations and applications need to use the certificate key pair to sign and generate a JWT token which is then exchanged for an Adobe IMS access token. Once exchanged, the application can then use the Adobe IMS access token to make calls to Adobe's APIs.

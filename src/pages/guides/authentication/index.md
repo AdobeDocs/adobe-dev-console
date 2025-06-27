@@ -17,7 +17,6 @@ Depending on the Adobe product or service you are integrating into your app, you
 
 2. [Server to server authentication](./ServerToServerAuthentication/index.md)
    * [OAuth Server to Server credential](./ServerToServerAuthentication/index.md#oauth-server-to-server-credential)
-   * [Service Account (JWT) credential *(deprecated)*](./ServerToServerAuthentication/index.md#service-account-jwt-credential-deprecated)
 
 3. [API key authentication](./APIKeyAuthentication/index.md)
    * [API Key credential](./APIKeyAuthentication/index.md#api-key-credential)
@@ -48,7 +47,7 @@ View our guide on server to server authentication credentials -
 
 <InlineAlert slots="text"/>
 
-The Service Account (JWT) credentials have been deprecated in favor of the OAuth Server-to-Server credentials. Your applications using the Service Account (JWT) credentials will stop working after Jun 30, 2025. You must migrate to the new credential by **Jun 30, 2025**, to ensure your application continues functioning. [Learn more](./ServerToServerAuthentication/migration.md).
+As of June 30, 2025, Service Account (JWT) credentials have reached their end of life and are no longer supported. All server-to-server integrations must use the [OAuth Server-to-Server credentials](../authentication/ServerToServerAuthentication/implementation.md). View the [migration guide](../authentication/ServerToServerAuthentication/migration.md) to know more.
 
 
 ## API key authentication 

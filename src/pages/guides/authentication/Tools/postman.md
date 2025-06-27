@@ -37,29 +37,6 @@ openid,AdobeID,read_organizations,additional_info.projectedProductContext,additi
 
 ![pm-6](../Images/PM_6.png)
 
-## JWT Access Token
-### Steps
-1. Go to [Adobe Developer Console](https://developer.adobe.com/console)
-
-2. Open the Service Account Integration for which you want to generate an access token.
-
-![pmj-1](../Images/PM_JWT_1.png)
-
-3. Click on the JWT tab, paste the entire private key file content including the `-----BEGIN PRIVATE KEY-----` and `-----END PRIVATE KEY-----` and click on `Generate JWT`.
-
-![pmj-2](../Images/PM_JWT_2.png)
-
-4. Copy the `Sample CURL command` and open Postman. (*Mac and Linux user can also paste the CURL command in terminal and get the access token.*)
-
-![pmj-3](../Images/PM_JWT_3.png)
-
-5. Click on `Import` -> `Paste Raw Text` and paste the CURL command.
- 
-![pmj-4](../Images/PM_JWT_4.png)
-
-6. Click on `Send`. You will receive an access token.
-
-![pmj-5](../Images/PM_JWT_5.png)
 
 ## CURL Requests in Windows
 

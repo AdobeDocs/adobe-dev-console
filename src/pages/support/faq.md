@@ -22,21 +22,16 @@ This document provides answers to frequently asked questions about Adobe Develop
     - [Why can't I create a project for my organization?](#why-cant-i-create-a-project-for-my-organization)
     - [Why can't I add an XD plugin to my project?](#why-cant-i-add-an-xd-plugin-to-my-project)
     - [Why can't I add Adobe I/O Runtime to my project?](#why-cant-i-add-adobe-io-runtime-to-my-project)
-    - [I want to generate my own JWT. How do I do that?](#i-want-to-generate-my-own-jwt-how-do-i-do-that)
     - [Why do I see a Read Only label on some of my projects? Even some that I created?](#why-do-i-see-a-read-only-label-on-some-of-my-projects-even-some-that-i-created)
     - [Why do I see an Auto-generated label on some of my projects?](#why-do-i-see-an-auto-generated-label-on-some-of-my-projects)
-    - [How do I know if I should use JWT or OAuth?](#how-do-i-know-if-i-should-use-jwt-or-oauth)
     - [Why can't I change the name of my App Builder app?](#why-cant-i-change-the-name-of-my-app-builder-app)
     - [Where did my integrations and plugins go?](#where-did-my-integrations-and-plugins-go)
     - [Where can I find the sample code for OAuth authentication?](#where-can-i-find-the-sample-code-for-oauth-authentication)
-    - [How to use the private key for generating a JWT?](#how-to-use-the-private-key-for-generating-a-jwt)
     - [What do Default Redirect URI and the Redirect URI Pattern mean?](#what-do-default-redirect-uri-and-the-redirect-uri-pattern-mean)
 
 ### Services
 
 * [Why is the service I want to use greyed out?](#why-is-the-service-i-want-to-use-greyed-out)
-* [I want to generate my own JWT. How do I do that?](#i-want-to-generate-my-own-jwt-how-do-i-do-that)
-* [How do I know if I should use JWT or OAuth?](#how-do-i-know-if-i-should-use-jwt-or-oauth)
 * [Why can't I add Adobe I/O Runtime to my project?](#why-cant-i-add-adobe-io-runtime-to-my-project)
 * [How do I delete Runtime from my project or workspace?](#how-do-i-delete-runtime-from-my-project-or-workspace)
 
@@ -50,7 +45,6 @@ This document provides answers to frequently asked questions about Adobe Develop
 ### Authentication
 
 * [Where can I find the sample code for OAuth authentication?](#where-can-i-find-the-sample-code-for-oauth-authentication)
-* [How to use the private key for generating a JWT?](#how-to-use-the-private-key-for-generating-a-jwt)
 * [What do Default Redirect URI and the Redirect URI Pattern mean?](#what-do-default-redirect-uri-and-the-redirect-uri-pattern-mean)
 
 
@@ -102,10 +96,6 @@ Quickly navigate between personal projects and your organization’s projects th
 
 Adobe I/O Runtime is only available for enterprise customers and requires a license. Please contact your Adobe sales representative for more details.
 
-### I want to generate my own JWT. How do I do that?	
-
-Head to Service Account (JWT) in the Credentials section to see your credential details and generate the JWT.
-
 ### Why do I see a Read Only label on some of my projects? Even some that I created?	
 
 A project or workspace is set to *Read Only* if you have not been granted access to all services within the project or workspace. Work with your organization's administrators to determine which services and product profiles you should have access to.
@@ -113,10 +103,6 @@ A project or workspace is set to *Read Only* if you have not been granted access
 ### Why do I see an Auto-generated label on some of my projects?
 
 Certain Adobe products may need to create projects in Developer Console inside your organization. These auto-generated projects are visible, but cannot be edited, by normal organization users. 
-
-### How do I know if I should use JWT or OAuth?	
-
-The authentication method depends on the type of app you're building. To learn more about authentication and authorization, read the [authentication documentation](../guides/authentication/index.md).
 
 ### Why can't I change the name of my App Builder app?
 
@@ -129,10 +115,6 @@ Integrations and plugins are now projects. Go to **Projects** in the UI to find 
 ### Where can I find the sample code for OAuth authentication?
 
 There are currently code samples available for [NodeJS](https://github.com/AdobeDocs/adobe-dev-console/tree/main/samples/adobe-auth-node) and [Python](https://github.com/AdobeDocs/adobe-dev-console/tree/main/samples/adobe-auth-python).
-
-### How to use the private key for generating a JWT?
-
-Please copy the full content of private key including `-----BEGIN PRIVATE KEY-----` and `-----END PRIVATE KEY-----` to generate a correct JWT token.
 
 ### What do Default Redirect URI and the Redirect URI Pattern mean?
 

@@ -75,15 +75,6 @@ pages:
             url: /src/pages/guides/authentication/ServerToServerAuthentication/faqs.md
           - title: API Reference
             url: /src/pages/guides/authentication/ServerToServerAuthentication/ims.md
-          - title: Service Account (JWT) credential
-            url: /src/pages/guides/authentication/JWT/index.md
-            pages:
-              - title: Create a Public Key Certificate
-                url: /src/pages/guides/authentication/JWT/jwt-certificate.md
-              - title: JWT Metascopes
-                url: /src/pages/guides/authentication/JWT/scopes.md
-              - title: JWT Sample Code
-                url: /src/pages/guides/authentication/JWT/samples.md
       - title: API Key Authentication
         url: /src/pages/guides/authentication/APIKeyAuthentication/index.md
       - title: Tools
