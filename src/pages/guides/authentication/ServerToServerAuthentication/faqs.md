@@ -17,7 +17,7 @@
 
 
 ### What's happening?  
-In May 2023, Adobe announced the deprecation and end of life of Service Account (JWT) credentials. This means that any of your integrations or custom applications using a Service Account (JWT) credential will need to migrate to the new OAuth Server-to-Server credential before Jun 30, 2025. 
+As of June 30, 2025, Service Account (JWT) credentials have reached their end of life and are no longer supported. All server-to-server integrations must use the [OAuth Server-to-Server credentials](../authentication/ServerToServerAuthentication/implementation.md). View the [migration guide](../authentication/ServerToServerAuthentication/migration.md) to know more.
 
 
 
@@ -32,12 +32,12 @@ A credential is used to uniquely identify your integration to Adobe. To use an A
 
 ### Will my Adobe integrations or applications stop working immediately?
 
-No. Any integration or application using the Service Account (JWT) credential will continue to work until June 30, 2025. See [deprecation timelines](./migration.md#deperecation-timelines). See section on [migration next steps](#migration-next-steps).
+No. Any integration or application using the Service Account (JWT) credential will stop working after current certificates expire, or March 1, 2026 (whichever is earlier). See [deprecation timelines](./migration.md#deperecation-timelines). See section on [migration next steps](#migration-next-steps).
 
 
 
 ### What is the deadline to migrate to the new credential? 
-You must migrate your application to use the new OAuth Server-to-Server credential before June 30, 2025, to ensure your application does not face any downtime. See [deprecation timelines](./migration.md#deperecation-timelines). See [migration guide](./migration.md).
+The deadline to migrate has passed. If you integration is already broken or about to break after certificates expire, you must migrate it to use the new OAuth Server-to-Server credential as soon as possible. See [deprecation timelines](./migration.md#deperecation-timelines). See [migration guide](./migration.md).
 
 
 
@@ -45,11 +45,7 @@ You must migrate your application to use the new OAuth Server-to-Server credenti
 
 After June 30, 2025, you can no longer refresh certificates for integrations using Service Account (JWT) credentials. Your integration will stop working once existing certificates expire. 
 
-Furthermore, Adobe will automatically convert Service Account (JWT) to OAuth Server-to-Server credentials when certificates expire or on March 1, 2026, whichever comes first.
-
-### We can currently create new Service Account (JWT) credentials even though they are marked as deprecated. Is it recommended? 
-No. Creating any new Service Account (JWT) credentials is not recommended. All Service Account (JWT) credentials, whether old or new, will stop working after June 30, 2025. We recommend you avoid migrating your application again and use the new OAuth Server-to-Server credential from the beginning. See our [implementation guide](./implementation.md).
-
+Furthermore, Adobe will automatically convert Service Account (JWT) to OAuth Server-to-Server credentials when certificates expire or on March 1, 2026 (whichever is earlier), breaking any integration still relying on the old credentials.
 
 
 
@@ -59,16 +55,6 @@ No. Creating any new Service Account (JWT) credentials is not recommended. All S
 
 ### What are the benefits of using the OAuth Server-to-Server credential? 
 You can read more about OAuth Server-to-Server credentials in our [implementation guide](./implementation.md). You can view the comparison between the OAuth Server-to-Server credential and the Service Account (JWT) credential [here](./migration.md#why-oauth-server-to-server-credentials).
-
-
-
-
-### Can I programmatically rotate certificates for Service Account (JWT) credential? 
-No such ability is currently available. There are no plans to add such ability either. 
-
-Instead, we recommend switching to the new credential that does not use expiring certificates and allows you to [rotate client secrets](./implementation.md#rotating-client-secrets) through the UI and API ([programmatically](./implementation.md#rotating-client-secrets-programmatically)).
-
-
 
 ### Can I programmatically rotate client secrets for OAuth Server-to-Server credentials? 
 Absolutely. View our guide on rotating client secrets programmatically [here](./implementation.md#rotating-client-secrets-programmatically).

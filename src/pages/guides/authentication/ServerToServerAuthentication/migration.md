@@ -1,10 +1,11 @@
 # Migrating from Service Account (JWT) credential to OAuth Server-to-Server credential
 
-The Service Account (JWT) credentials have been deprecated in favor of the new OAuth Server-to-Server credentials. They will reach end of life on June 30, 2025.
+
+As of June 30, 2025, Service Account (JWT) credentials have reached their end of life and are no longer supported. All server-to-server integrations must use the OAuth Server-to-Server credentials.
 
 The new OAuth Server-to-Server credentials simplify all aspects of application development - experimentation, implementation, and maintenance. See the section on [Why OAuth Server-to-Server credentials?](#why-oauth-server-to-server-credentials) below to learn more.
 
-While the Service Account (JWT) credentials have been marked as deprecated, they will continue to work until **Jun 30, 2025**. Therefore you must migrate your application or integration to use the new OAuth Server-to-Server credential before Jun 30, 2025. See the section on [deprecation timelines](#deprecation-timelines) below to learn more.
+Service Account (JWT) credentials will not work after current certificates expire or March 1, 2026, whichever is earlier. Therefore, you must migrate your integration to use the new OAuth Server-to-Server credential ASAP.
 
 Migrating your applications to the OAuth Server-to-Server credential is a simple two-step process that enables a zero downtime migration for your applications and integrations. Please read our [migration guide](#migration-overview) below to familiarize yourself with the migration process.
 
@@ -42,11 +43,6 @@ Lastly, while the new OAuth Server-to-Server credentials do not use expiring cer
 
 ## Deprecation Timelines
 
-<InlineAlert slots="text"/>
-
-The end of life date for Service Account (JWT) credentials has been extended from Jan 27, 2025, to Jun 30, 2025, to give customers more time to migrate. You must migrate your integrations to use OAuth Server-to-Server credentials before June 30, 2025 to avoid any downtime.
-
-
 1. **May 1, 2023**
    * Adobe announces the deprecation of Service Account (JWT) credentials. The deprecation timelines and the end-of-life date are also announced. 
    * All existing integrations using Service Account (JWT) credentials continue to work.
@@ -57,7 +53,7 @@ The end of life date for Service Account (JWT) credentials has been extended fro
 
 3. **June 30, 2025 (End of Life)**
    * After June 30, 2025, you cannot refresh certificates for integrations using Service Account (JWT) credentials. Your integrations will stop working once existing certificates expire.
-   * Furthermore, Adobe will automatically convert Service Account (JWT) credentials to OAuth Server-to-Server credentials when certificates expire or on March 1, 2026, whichever comes first.
+   * Adobe will automatically convert Service Account (JWT) credentials to OAuth Server-to-Server credentials after certificates expire or on March 1, 2026 (whichever is earlier), breaking any integration still relying on the old credentials.
 
 
 ## Migration Overview
