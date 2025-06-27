@@ -2,4 +2,4 @@
 
 <InlineAlert slots="text"/>
 
-Service Account (JWT) credentials have been deprecated in favor of the OAuth Server-to-Server credentials. View our [migration guide](../authentication/ServerToServerAuthentication/migration.md) to know more. The new version of this guide that uses OAuth Server-to-Server credentials is now available here - [**Add API to project using OAuth Server-to-Server credentials**](services-add-api-oauth-s2s.md).
+As of June 30, 2025, Service Account (JWT) credentials have reached their end of life and are no longer supported. All server-to-server integrations must use the [OAuth Server-to-Server credentials](../authentication/ServerToServerAuthentication/implementation.md). View the [migration guide](../authentication/ServerToServerAuthentication/migration.md) to know more. The new version of this guide that uses OAuth Server-to-Server credentials is now available here - [**Add API to project using OAuth Server-to-Server credentials**](services-add-api-oauth-s2s.md).

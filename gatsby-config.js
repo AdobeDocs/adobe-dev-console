@@ -168,24 +168,6 @@ module.exports = {
               {
                 path: "guides/authentication/ServerToServerAuthentication/ims.md",
                 title: "API Reference"
-              },
-              {
-                pages: [
-                  {
-                    path: "guides/authentication/JWT/jwt-certificate.md",
-                    title: "Create a Public Key Certificate"
-                  },
-                  {
-                    path: "guides/authentication/JWT/scopes.md",
-                    title: "JWT Metascopes"
-                  },
-                  {
-                    path: "guides/authentication/JWT/samples.md",
-                    title: "JWT Sample Code"
-                  }
-                ],
-                path: "guides/authentication/JWT/index.md",
-                title: "Service Account (JWT) credential"
               }
             ],
             path: "guides/authentication/ServerToServerAuthentication/index.md",
