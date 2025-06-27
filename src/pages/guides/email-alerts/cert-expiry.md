@@ -20,10 +20,6 @@ The certificate key pairs generated on the Developer Console expire after a year
 
 Upon receiving the email alert, you need to replace the expiring certificate key pair with a new pair in a timely fashion to ensure all your custom integrations and applications continue to work. See this step-by-step guide on replacing certificate key pairs for more detailed instructions.
 
-<InlineAlert slots="text"/>
-
-Service Account (JWT) credentials have been deprecated in favor of the OAuth Server-to-Server credentials. Your applications using the Service Account (JWT) credentials will stop working after Jun 30, 2025. **You must migrate to the new credential by Jun 30, 2025 in order to ensure your application continues to function. View our [migration guide](../authentication/ServerToServerAuthentication/migration.md) to know more.**
-
 ## A step-by-step guide to replacing expiring certificate key pairs
 
 ### Step 1: Identify application and Project maintainers
