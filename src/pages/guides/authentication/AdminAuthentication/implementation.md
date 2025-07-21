@@ -96,8 +96,12 @@ The following cURL command generates access tokens for the technical account set
 
 ```cURL
 curl -X POST 'https://ims-na1.adobelogin.com/ims/token/v3'
--H 'Content-Type: application/x-www-form-urlencoded'
--d 'grant_type=client_credentials&client_id=<YOUR_CLIENT_ID>&client_secret=<YOUR_CLIENT_SECRET>&scope=<COMMA_SEPARATED_SCOPES>'
+     -H 'Content-Type: application/x-www-form-urlencoded'
+     -d 'grant_type=client_credentials'
+     -d 'client_id=<YOUR_CLIENT_ID>'
+     -d 'client_secret=<YOUR_CLIENT_SECRET>'
+     -d 'scope=<COMMA_SEPARATED_SCOPES>'
+     -d 'org_id=<ORG_ID_EXTRACTED_FROM_A_VERIFIED_ID_TOKEN>'
 ```
 
 Sample response
