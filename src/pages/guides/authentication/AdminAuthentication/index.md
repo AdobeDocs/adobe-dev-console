@@ -11,9 +11,9 @@ Note: Admin authentication and the Enterprise Web App credential is only availab
 
 Admin authentication enables partner-built apps to read and modify Adobe enterprise customer data. Previously, enterprise customer data could only be manipulated through server to server authentication. Therefore, a customer had to build the app themsleves or plug in their server-to-server credentials in partner-built apps. 
 
-With Admin authentication a partner application can now have a single set of credentials and multiple customers could install the app easily by providing consent to it. The customer no longer needs to supply their credentials to partner apps, thereby, strenghting their security posture.
+With Admin authentication a partner application can have a single credential and multiple customers can install the app. The customer no longer needs to supply their credentials to partner apps, thereby, strenghting their security posture. Furthermore, the partner apps built with Admin authentication are click-to-install apps which can be installed without the help of an IT department on the customer organization.
 
-To better understand the differences and similarities of admin authenticaton, let's compare it to other supported authentication types.
+To better understand the nuances of admin authentication, let's compare it to other supported authentication types.
 
 |                                 | Who builds the app?              | What data can the app access?  | How is data access governed?                                                                                                                                                      |
 |---------------------------------|----------------------------------|--------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -52,5 +52,4 @@ Note: The customer admin can visit the [Adobe Exchange manage page](https://exch
 
 1. Read the [implementation guide](implementation.md) to start implementing the Enterprise Web App credential.
 2. Read the [API Reference](ims.md) to view the HTTP request to generate access tokens and supported query parameters and error codes in redirect.
-3. Visit the [FAQ page](faq.md) for conceptual questions, troubleshooting your app, and advanced scenarios.
-4. Read our [submission guide](TODO) to submit you app for Adobe review.
+3. Read the [submission guide](https://www.adobe.com/go/dd_ExperienceCloud_Submissions) to submit you app for Adobe review.
