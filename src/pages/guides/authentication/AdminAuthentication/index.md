@@ -1,12 +1,16 @@
 # Admin authentication
 
-If you are an Adobe Technology Partner Program (TPP) partner and your application needs to read or modify data owned by an Adobe enterprise customer organization, you can use an Admin authentication credential. Before your application can access customer data, an administrator from the customer’s organization must explicitly grant consent to your application.
+Admin authentication enables partner-built apps to read and modify Adobe enterprise customer data with their explicit consent. 
 
-Note: Before the partner app can access customer data, the customer admin must explicitly consent to the app and assign relevant product profiles. Furthermore, the admin can modify the assigned product profiles or revoke the consent altogether at any time.
+If you are an Adobe Technology Partner Program (TPP) partner and your application needs to read or modify data owned by an Adobe enterprise customer organization, you can use an Admin authentication credential. 
+
+However, before your application can access customer data, an administrator from the customer’s organization must explicitly grant consent to your application and assign relevant product profiles. 
+
+Note: The admin always remains in control and can modify the assigned product profiles or revoke your app's consent at any time.
 
 <InlineAlert slots="text"/>
 
-Note: Admin authentication and the Enterprise Web App credential is only available to Adobe Technology Partner Program (TPP) partners.
+Admin authentication and the Enterprise Web App credential is only available to Adobe Technology Partner Program (TPP) partners.
 
 
 ## Whose data can you access with Admin authentication?
