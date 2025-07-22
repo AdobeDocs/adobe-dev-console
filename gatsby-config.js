@@ -180,6 +180,24 @@ module.exports = {
           {
             pages: [
               {
+                path: "guides/authentication/AdminAuthentication/implementation.md",
+                title: "Implementation Guide"
+              },
+              {
+                path: "guides/authentication/AdminAuthentication/samples.md",
+                title: "Sample code"
+              },
+              {
+                path: "guides/authentication/AdminAuthentication/ims.md",
+                title: "API Reference"
+              }
+            ],
+            path: "guides/authentication/AdminAuthentication/index.md",
+            title: "Admin Authentication"
+          },
+          {
+            pages: [
+              {
                 path: "guides/authentication/Tools/o-auth-playground.md",
                 title: "OAuth 2.0 Playground"
               },

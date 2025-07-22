@@ -67,14 +67,12 @@ Once the admin provides consent and is redirected back to your app, a few query 
 
 The `admin_consent` parameter will not be present in the redirect in cases of error. Instead the `error` parameter will be present and the error code will be supplied as the value. Look at the [API reference](ims.md#error-codes) to view all error codes and what they mean.
 
-1. The `state` parameter is set to the value you supplied in the consent URL. 
-
-The parameter is used to prevent Cross-site Request Forgery (CSRF) attacks. To validate it, 
+2. The `state` parameter is set to the value you supplied in the consent URL. The parameter is used to prevent Cross-site Request Forgery (CSRF) attacks. To validate it:
    1. Send the `state` parameter and the user's session ID (stored in browser cookies or local storage) to your backend server. 
    2. On your backend server, compare the state value in the redirect to the version saved in the user’s session on your server. 
    3. If the values do not match, you must terminate the consent workflow and reject the redirect.
    
-1. The `id_token` parameter is only present if the admin provided consent to your application. To validate it
+3. The `id_token` parameter is only present if the admin provided consent to your application. To validate it:
    1. Send the `id_token` parameter and the user's session ID (stored in browser cookies or local storage) to your backend server. 
    2. On your backend server, inspect the `id_token` and validate its signature (view [sample code](samples.md)).
    3. On your backend server, extract the value of the `nonce` claim from the `id_token` (view [sample code](samples.md)). Compare the value of the `nonce` claim to the version saved in the user’s session on your server.
@@ -82,7 +80,7 @@ The parameter is used to prevent Cross-site Request Forgery (CSRF) attacks. To v
 
 <InlineAlert slots="text"/>
 
-Verifying the redirect is critical to the security of your application and Adobe customer data. View our [code samples](samples.md) (available in NodeJS, Python, and Java) to learn how to implement the verification logic in your application.
+Verifying the redirect is critical to the security of your application and Adobe customer data. View our [code samples](samples.md) (available in [NodeJS](samples.md#nodejs), [Python](samples.md#python), and [Java](samples.md#java)) to learn how to implement the verification logic in your application.
    
 
 ### Step 3: Generating access tokens after the admin consents
@@ -149,19 +147,13 @@ Programmatic rotation of Enterprise Web App client secrets is not currently supp
 
 Once the consent screen loads the admin can provide consent to your app or cancel the workflow. In either case and even in cases of error, the admin will be redirected back to your application. 
 
-The default redirect URI is used if no specific `redirect_uri` is passed in the consent URL. It is also used in case an error occurs during the consent workflow.
-
-The default redirect URI must be an absolute HTTPS URL without wildcards, up to 256 characters. For example: `https://localhost`, `https://localhost:8000`, `https://example.com/redirect`.
+The default redirect URI is used if no specific `redirect_uri` is passed in the consent URL. It is also used in case an error occurs during the consent workflow. The default redirect URI must be an absolute HTTPS URL without wildcards, up to 256 characters. For example: `https://localhost`, `https://localhost:8000`, `https://example.com/redirect`.
 
 However, if a `redirect_uri` was specified in the consent URL and matches one of the redirect URL patterns configured in your credential, Adobe will redirect the admin to the specified redirect URL. 
 
-The redirect URL pattern is a comma-separated list of URIs with wildcards used to validate any `redirect_uri` specified in the consent URL. 
+The redirect URL pattern is a comma-separated list of URIs with wildcards used to validate any `redirect_uri` specified in the consent URL. The redirect URL pattern can be up to 512 characters. It must contain `https` URLs and supports wildcards to combine multiple redirect URLs together. 
 
-The redirect URL pattern can be up to 512 characters. It must contain `https` URLs and supports wildcards to combine multiple redirect URLs together. 
-
-As each redirect URI pattern is treated as a regex, any Periods `.` in the pattern must be escaped as `\\.`.
-
-For security reasons, wildcards are not allowed in subdomains or HTTP port, they're only allowed in the HTTP path. For example: `https://data\\.myapp\\.com/redirect/*`.
+As each redirect URI pattern is treated as a regex, any Periods `.` in the pattern must be escaped as `\\.`. For security reasons, wildcards are not allowed in subdomains or HTTP port, they're only allowed in the HTTP path. For example: `https://data\\.myapp\\.com/redirect/*`.
 
 ### Implementing security features during the redirect
 
