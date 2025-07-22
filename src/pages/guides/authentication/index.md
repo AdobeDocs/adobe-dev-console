@@ -22,9 +22,7 @@ Depending on the Adobe product or service you are integrating into your app, you
    * [API Key credential](./APIKeyAuthentication/index.md#api-key-credential)
 
 4. [Admin authentication](./AdminAuthentication/index.md)
-   * [Enterprise Web App credential](#TODO)
-
-TODO: fix links
+   * [Enterprise Web App credential](./AdminAuthentication/index.md#enterprise-web-app-credential)
 
 ## User authentication
 
