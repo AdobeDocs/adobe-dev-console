@@ -67,10 +67,7 @@ View our guide on API key credentials -
 
 If you are an Adobe Technology Program Partner and your application needs to read or modify the data of an Adobe enterprise customer, you can do so using an admin authentication credential. However, before your application can view or edit the customer's data, a customer admin would need to provide explicit 'consent' to your application.
 
-TODO: fix links
-
-View our guide on user authentication credentials -
-1. [Understanding OAuth 2.0 `authorization_code` grant flow (3-legged OAuth)](./UserAuthentication/index.md)
-2. [Learning about the different user authentication credential types](./UserAuthentication/implementation.md#user-authentication-credential-types)
-3. [Understanding default redirect URI and redirect URI pattern](./UserAuthentication/implementation.md#understanding-default-redirect-uri-and-redirect-uri-patterns)
-4. [Implementing user authentication using standard OAuth2 libraries](./UserAuthentication/implementation.md#standard-oauth2-libraries)
+View our guide on admin authentication credentials -
+1. [Understanding admin authentication credentials](./AdminAuthentication/index.md)
+2. [Understanding how the Enterprise Web App credential works](./AdminAuthentication/index.md#enterprise-web-app-credential)
+3. [Implementing the Enterprise Web App credential](./AdminAuthentication/implementation.md)
