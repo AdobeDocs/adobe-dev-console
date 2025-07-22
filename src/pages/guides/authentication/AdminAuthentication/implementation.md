@@ -65,7 +65,7 @@ Once the admin provides consent and is redirected back to your app, a few query 
 
 1. The `admin_consent` parameter is set to `true` if the admin provided consent to your application, and `false` if the admin cancelled the workflow. 
 
-The `admin_consent` parameter will not be present in the redirect in cases of error. Instead the `error` parameter will be present and the error code will be supplied as the value. Look at the [API reference](ims.md#error-codes) to view all error codes and what they mean.
+   The `admin_consent` parameter will not be present in the redirect in cases of error. Instead the `error` parameter will be present and the error code will be supplied as the value. Look at the [API reference](ims.md#error-codes) to view all error codes and what they mean.
 
 2. The `state` parameter is set to the value you supplied in the consent URL. The parameter is used to prevent Cross-site Request Forgery (CSRF) attacks. To validate it:
    1. Send the `state` parameter and the user's session ID (stored in browser cookies or local storage) to your backend server. 
