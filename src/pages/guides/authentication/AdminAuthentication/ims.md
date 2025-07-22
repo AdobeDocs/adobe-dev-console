@@ -2,7 +2,7 @@
 
 Following is an API reference for Adobe Identity Management Services (IMS) APIs.
 
-## Consent URL parameters
+## Consent URL
 
 ### Base URL
 

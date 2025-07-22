@@ -52,7 +52,7 @@ Note: You must be an Adobe Technology Partner Program (TPP) partner to use the E
 
 The consent workflow starts when the customer admin visits the partner app and clicks on the 'Connect with Adobe' button. You must construct the consent URL and embed it into the 'Connect with Adobe' button. To construct the consent URL, follow these steps: 
 
-1. The Adobe IMS consent endpoint for the Enterprise Web App credential is https://id.adobe.com/consent.
+1. The Adobe IMS consent endpoint for the Enterprise Web App credential is [https://id.adobe.com/consent](https://id.adobe.com/consent).
 2. Append these query parameters to the consent URL: `client_id`, `scope`, `state`, `nonce`, and optionally `redirect_uri`.
    1. Copy the value of `client_id` and `scope` from the Enterprise Web App credential overview page.
    2. Generate cryptographically secure random values for the `state` and `nonce` parameters. Store these securely in the user’s session on your backend. Furthermore, to retrieve the user's session later, store the session identifier in the user's browser (such as a secure cookie or encrypted local storage).

@@ -212,6 +212,23 @@ if __name__ == "__main__":
 
 ### Add these dependencies to your pom.xml
 
+
+```xml
+<dependencies>
+  <dependency>
+    <groupId>com.auth0</groupId>
+    <artifactId>java-jwt</artifactId>
+    <version>4.4.0</version>
+  </dependency>
+  <dependency>
+    <groupId>com.auth0</groupId>
+    <artifactId>jwks-rsa</artifactId>
+    <version>0.22.0</version>
+  </dependency>
+</dependencies>
+
+```
+
 ### Verify the redirect
 
 ```java
