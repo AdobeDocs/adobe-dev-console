@@ -2,34 +2,30 @@
 
 The following guide contains code samples in NodeJS, Python, and Java that can be used to verify the parameters in the redirect. 
 
+All of the code samples on this page assume that the user's session id is stored in browser cookies (`Secure`, `HttpOnly`, and `SameSite=Strict`). Therefore, the session id will be easily available to the backend server because the browser will send the cookies in redirect request.
+
 <InlineAlert slots="text"/>
 
 Note: Always verify the `state`, `nonce`, and signature of the ID token on the backend. Do not expose this logic client-side.
 
-
-<InlineAlert slots="text"/>
-
-All code samples assume that the user's session ID is stored in browser cookies. Therefore when Adobe IMS redirects back to the partner app, the backend server of the partner app receives a HTTP request with the cookies from the user's browser and can identify the user's session.
-
 + [NodeJS](#nodejs)
-  + [Install the required packages](#install-the-required-packages)
-  + [Verify the redirect](#verify-the-redirect)
+  + [Install NodeJS packages](#install-nodejs-packages)
+  + [Verify the redirect - NodeJS](#verify-the-redirect---nodejs)
 + [Python](#python)
-  + [Install the required packages](#install-the-required-packages-1)
-  + [Verify the redirect](#verify-the-redirect-1)
+  + [Install Python packages](#install-python-packages)
+  + [Verify the redirect - Python](#verify-the-redirect---python)
 + [Java](#java)
   + [Add these dependencies to your pom.xml](#add-these-dependencies-to-your-pomxml)
-  + [Verify the redirect](#verify-the-redirect-2)
-
+  + [Verify the redirect - Java](#verify-the-redirect---java)
 
 ## NodeJS
 
-### Install the required packages
+### Install NodeJS packages
 ```bash
 npm install jsonwebtoken axios jose
 ```
 
-### Verify the redirect
+### Verify the redirect - NodeJS
 
 ```js
 const axios = require('axios');
@@ -127,12 +123,12 @@ async function getPublicKeyFromJwk(jwk) {
 
 ## Python
 
-### Install the required packages
+### Install Python packages
 ```bash
 pip install pyjwt requests cryptography
 ```
 
-### Verify the redirect
+### Verify the redirect - Python
 
 ```python
 import requests
@@ -229,7 +225,7 @@ if __name__ == "__main__":
 
 ```
 
-### Verify the redirect
+### Verify the redirect - Java
 
 ```java
 import com.auth0.jwk.Jwk;
