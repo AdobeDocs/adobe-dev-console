@@ -5,7 +5,7 @@ The following guide goes over finer implementation details for the Enterprise We
 ## Table of contents
 
 + [Prerequisites and set up instructions](#prerequisites-and-set-up-instructions)
-+ [Implementing the consent worklfow](#implementing-the-consent-worklfow)
++ [Implementing the consent workflow](#implementing-the-consent-workflow)
   + [Step 1: Building the consent URL](#step-1-building-the-consent-url)
   + [Step 2: Verifying the redirect](#step-2-verifying-the-redirect)
   + [Step 3: Generating access tokens after the admin consents](#step-3-generating-access-tokens-after-the-admin-consents)
@@ -15,7 +15,7 @@ The following guide goes over finer implementation details for the Enterprise We
   + [Implementing security features during the redirect](#implementing-security-features-during-the-redirect)
   + [Refreshing access tokens](#refreshing-access-tokens)
   + [What happens when admin revokes consent](#what-happens-when-admin-revokes-consent)
-  + [Testing the app before publishinig](#testing-the-app-before-publishinig)
+  + [Testing the app before publishing](#testing-the-app-before-publishing)
   + [Restrictions after you publish the app](#restrictions-after-you-publish-the-app)
 
 
@@ -29,11 +29,9 @@ Note: You must be an Adobe Technology Partner Program (TPP) partner to use the E
 
 ![](../../../images/enterprise-web-app-apis-and-services.png)
 
-2. Find the API or service with which you wish to integrate and click on Create Project. If the API or service supports Admin authentication, you'll see the option to select Admin authentication. If not, please reach out to your Adobe representative to log an enhancement request.
+2. Find the API or service with which you wish to integrate and click on Create Project. If Admin authentication is available for the API you selected, it will appear as an option. If not, contact your Adobe representative to log an enhancement request.
 
 ![](../../../images/enterprise-web-app-admin-auth.png)
-
-// TODO fix screenshot (see left panel shows OAuth Server to Server)
    
 3. Once you select Admin authentication, the Enterprise Web App credential will be automatically selected on the next screen. Here you can supply the name of your app as it will appear on the Consent screen during testing. You can change your app name later and also at the time of app submission.
 
@@ -48,31 +46,39 @@ Note: You must be an Adobe Technology Partner Program (TPP) partner to use the E
 ![](../../../images/enterprise-web-app-credential-overview.png)
 
 
-## Implementing the consent worklfow
+## Implementing the consent workflow
 
 ### Step 1: Building the consent URL
 
-The consent workflow starts when the customer admin visits the partner app and clicks on the Connect with Adobe button. You must build the consent URL and embed it in the Connect with Adobe button. Here's how - 
+The consent workflow starts when the customer admin visits the partner app and clicks on the 'Connect with Adobe' button. You must construct the consent URL and embed it into the 'Connect with Adobe' button. To construct the consent URL, follow these steps: 
 
-1. The Adobe IMS consent screen for the Enterprise Web App credential is located at https://id.adobe.com/consent. (// TODO confirm) 
-2. Append the query parameters `client_id`, `scope`, `state`, `nonce`, and `redirect_uri` (optional) to the above URL.
-   1. You can find the value of `client_id` and `scope` on the Enterprise Web App credential overview page.
-   2. You must generate cryptographically secure random strings for the value of `state` and `nonce` parameters and store these values in the user session on the backend. In order to retrieve the user's session later, you must also store the user's session ID in the browser (cookies or local storage).
-   3. You can optionally specify a `redirect_uri` in the consent URL to redirect the admin to a URL different from your default redirect URI. The supplied URL must match one of the redirect URL patterns configured in the credential.
-3. Embed the consent URL in the Connect with Adobe button for the admin to click.
+1. The Adobe IMS consent endpoint for the Enterprise Web App credential is https://id.adobe.com/consent.
+2. Append these query parameters to the consent URL: `client_id`, `scope`, `state`, `nonce`, and optionally `redirect_uri`.
+   1. Copy the value of `client_id` and `scope` from the Enterprise Web App credential overview page.
+   2. Generate cryptographically secure random values for the `state` and `nonce` parameters. Store these securely in the user’s session on your backend. Furthermore, to retrieve the user's session later, store a session identifier (such as a secure cookie or encrypted local storage value) to tie the consent response to that user.
+   3. Optionally specify a `redirect_uri` in the consent URL to redirect the admin to a URL different from your default redirect URI. The supplied URL must match one of the redirect URL patterns configured in the credential.
+3. Embed the consent URL in the 'Connect with Adobe' button for the admin to click.
 
 ### Step 2: Verifying the redirect
 
-Once the admin provides consent and is redirected back to your app, a few query parameters will be appended to the redirect URL containing information on whether the admin consented to your app or not. The query parameters will also contain information critical to verifying the legitmacy of the redirect.
+Once the admin provides consent and is redirected back to your app, a few query parameters will be appended to the redirect URL containing information on whether the admin consented to your app or not. The query parameters will also contain information critical to verifying the authenticity of the redirect.
 
-1. The `admin_consent` parameter is set to `true` if the admin provided consent to your application, and `false` if the admin cancelled the workflow. The `admin_consent` parameter will not be present in the redirect in cases of error. Instead the `error` parameter will be present and the error code will be supplied as the value. Look at the [API reference](ims.md#) (// TODO link to exact section) to view all error codes and what they mean.
+1. The `admin_consent` parameter is set to `true` if the admin provided consent to your application, and `false` if the admin cancelled the workflow. 
 
-2. The `state` query parameter will be appended to the redirect URL if you specified it in the consent URL. The `state` parameter is used to prevent Cross-site Request Forgery (CSRF) attacks. To validate it, you must send the `state` parameter and the user's session ID (stored in browser cookies or local storage) to your backend server. Your backend server must match the value of the `state` parameter in the redirect to the one stored in the user's session on your backend server. If the values do not match, you must terminate the consent workflow and not trust the redirect.
+The `admin_consent` parameter will not be present in the redirect in cases of error. Instead the `error` parameter will be present and the error code will be supplied as the value. Look at the [API reference](ims.md#error-codes) to view all error codes and what they mean.
+
+1. The `state` parameter is set to the value you supplied in the consent URL. 
+
+The parameter is used to prevent Cross-site Request Forgery (CSRF) attacks. To validate it, 
+   1. Send the `state` parameter and the user's session ID (stored in browser cookies or local storage) to your backend server. 
+   2. On your backend server, compare the state value in the redirect to the version saved in the user’s session on your server. 
+   3. If the values do not match, you must terminate the consent workflow and reject the redirect.
    
-3. The `id_token` parameter is only present if the admin provided consent to your application. To validate it, you must send the `id_token` parameter and the user's session ID (stored in browser cookies or local storage) to your backend server. Your backend server must - 
-   1. Inspect the `id_token` and validate its signature (view sample code here).
-   2. Inspect the `id_token` and extract the value of the `nonce` claim from the token (view sample code here). Match the value of the `nonce` claim to what is stored in the user's session on your backend server. If the values do not match, terminate the consent workflow.
-   3. If the singature of the `id_token` is not valid or the value of the `nonce` claim doe not match, you must terminate the consent worklow and not trust the redirect.
+1. The `id_token` parameter is only present if the admin provided consent to your application. To validate it
+   1. Send the `id_token` parameter and the user's session ID (stored in browser cookies or local storage) to your backend server. 
+   2. On your backend server, inspect the `id_token` and validate its signature (view [sample code](samples.md)).
+   3. On your backend server, extract the value of the `nonce` claim from the `id_token` (view [sample code](samples.md)). Compare the value of the `nonce` claim to the version saved in the user’s session on your server.
+   4. If the signature of the `id_token` is not valid or the value of the `nonce` claim does not match, you must terminate the consent workflow and reject the redirect.
 
 <InlineAlert slots="text"/>
 
@@ -81,14 +87,14 @@ Verifying the redirect is critical to the security of your application and Adobe
 
 ### Step 3: Generating access tokens after the admin consents
 
-Once you have verified the redirect, you are ready to generate access tokens. Now, you can store the mapping of the customer account in your identity to the customer's Adobe org ID.
+Once you have verified the redirect, you are ready to generate access tokens. At this stage, your backend system can persist the mapping between the customer account and the Adobe org id.
 
 <InlineAlert slots="text"/>
 
-While the Adobe customer org ID is easily available through other means, you must never trust an org_id value which was not extracted from a valid `id_token` received in the redirect. This attack vector can be exploited by a malicious customer to link their account to another customer's org and exchange data.
+While the Adobe customer org ID is easily available through other means, you must never trust an org id value which was not extracted from a valid `id_token` received in the redirect. Trusting an org id from another source opens up your app to be exploited by a malicious customer, who can link their account to another customer's org and exchange data.
 
 
-The customer `org_id` can be extracted from the `id_token` by inspecting it. The value of the `org_id`, along with your `client_id`, `client_secret`, and `scopes` can be used to then generate access tokens on behalf of the customer. 
+The customer org id can be extracted from the `org_id` claim in the `id_token`. The value of the `org_id`, along with your `client_id`, `client_secret`, and `scopes` are then used to generate access tokens on behalf of the customer. 
 
 The following cURL command generates access tokens for the technical account set up in the customer org. The HTTP response for the cURL request contains 
 1. The `access_token` you can use to call Adobe APIs on the customer's behalf.
@@ -116,7 +122,7 @@ Sample response
 
 Rotating client secrets periodically is recommended because your application will deal with Adobe customer data. Furthermore, you must rotate your client secret immediately if you believe it has been compromised. 
 
-Client secret for the Enterprise Web App credential can be rotated through the Dev Console UI. To rotate client secrets through the UI, follow the steps below on the Enterprise Web App credential overview screen - 
+Client secret for the Enterprise Web App credential can be rotated through the Dev Console UI. To rotate client secrets through the UI, follow the steps below on the Enterprise Web App credential overview screen: 
 
 1. Add a new client secret to your credential.
 
@@ -124,18 +130,18 @@ Client secret for the Enterprise Web App credential can be rotated through the D
 ![](../../../images/enterprise-web-app-client-secret-add.png)
 
 
-1. Update your application to replace your old client secret with the new one you added.
-2. Check the client secret last used timestamp to make sure your application is no longer using the old client secret.
-3. Once sure that you have successfully replaced the client secret, you can delete the old client secret.
-
-![](../../../images/enterprise-web-app-client-secret-delete.png)
+2. Update your application to replace your old client secret with the new one you added.
+3. Check the client secret last used timestamp to make sure your application is no longer using the old client secret.
+4. Once you've confirmed your application is using the new secret, you can safely delete the old one.
 
 <InlineAlert slots="text"/>
 
 Once a client secret is deleted, you cannot restore it. So be extra sure you have replaced the old client secret with the new one in all locations.
 
+![](../../../images/enterprise-web-app-client-secret-delete.png)
+
 ### Rotating client secrets programmatically 
-Unfortunately, rotating client secrets programmatically for the Enterprise Web App credential is currently not possible. 
+Programmatic rotation of Enterprise Web App client secrets is not currently supported.
 
 ## Understanding key concepts of the Enterprise Web App Credential
 
@@ -143,11 +149,19 @@ Unfortunately, rotating client secrets programmatically for the Enterprise Web A
 
 Once the consent screen loads the admin can provide consent to your app or cancel the workflow. In either case and even in cases of error, the admin will be redirected back to your application. 
 
-If a `redirect_uri` was not specified in the consent URL or in cases of error, Adobe will redirect the admin to the default redirect URI configured in your credential. The default redirect URI can be up to 256 characters. It must be a `https` URL and absolute URL without wildcards. For example: `https://localhost`, `https://localhost:8000`, `https://example.com/redirect`.
+The default redirect URI is used if no specific `redirect_uri` is passed in the consent URL. It is also used in case an error occurs during the consent workflow.
+
+The default redirect URI must be an absolute HTTPS URL without wildcards, up to 256 characters. For example: `https://localhost`, `https://localhost:8000`, `https://example.com/redirect`.
 
 However, if a `redirect_uri` was specified in the consent URL and matches one of the redirect URL patterns configured in your credential, Adobe will redirect the admin to the specified redirect URL. 
 
-The redirect URL pattern is a comma-separated list of URI path regexs used to validate any `redirect_uri` you request in the consent URL. The redirect URL pattern can be up to 512 characters. It must contain `https` URLs and supports wildcards to club multiple redirect URLs together. As each redirect URI pattern is treated as a regex, you must escape periods in the redirect URL patterns (**.**) with **\\**. Also for security reasons, wildcards are not allowed in subdomains or HTTP port, they're only allowed in the HTTP path. For example: `https://example\\.com/redirect/*`.
+The redirect URL pattern is a comma-separated list of URIs with wildcards used to validate any `redirect_uri` specified in the consent URL. 
+
+The redirect URL pattern can be up to 512 characters. It must contain `https` URLs and supports wildcards to combine multiple redirect URLs together. 
+
+As each redirect URI pattern is treated as a regex, any Periods `.` in the pattern must be escaped as `\\.`.
+
+For security reasons, wildcards are not allowed in subdomains or HTTP port, they're only allowed in the HTTP path. For example: `https://data\\.myapp\\.com/redirect/*`.
 
 ### Implementing security features during the redirect
 
@@ -164,32 +178,43 @@ The Enterprise Web App credential enables partner apps to generate access tokens
 
 ### What happens when admin revokes consent
 
-As soon as a customer admin revokes consent, the partner app can no longer generate access tokens on behalf of that customer. Furthermore, the technical account which was created in the customer org during the consent is also deleted.
+As soon as a customer admin revokes consent, the partner app can no longer generate access tokens on behalf of that customer. Any existing access tokens may continue to work for up to an hour.
 
-Note: any existing access tokens may continue to work for up to an hour. However, since the technical account is deleted, they may not be of much use. The partner app will cease to have any access to the customer data within an hour of the admin revoking the consent.
+Furthermore, when the consent is revoked, the technical account created in the customer org during the consent is also deleted.
 
-### Testing the app before publishinig
+Lastly, since the partner app is not notified when the consent is revoked, we recommend that your app handles token errors gracefully and prompt for reauthorization if needed.
+
+<InlineAlert slots="text"/>
+
+The partner app will cease to have any access to the customer data within an hour of the admin revoking the consent.
+
+### Testing the app before publishing
 
 After you have created a Project on the Developer Console and set up an Enterprise Web App credential, you can add a Test technical account to the credential.
 
 Usually when a customer installs a partner built app, the partner owns the credential and the customer owns the technical account. However, for testing, the partner can "install" the app in their own organization and a test technical account will be created.
 
-There are multiple ways to create a test technical account - 
-1. Click on the Generate access token for testing button on the Enterprise Web App Credential overview page.
-2. Use the credential playground - Learn how to generate access tokens tab on the Enterprise Web App Credential overview page.
-3. Provide consent to your own application by triggering the consent workflow out of band. 
+You can create a test technical account in several ways:
+1. Click on the 'Generate access token for testing' button on the Enterprise Web App Credential overview page.
+2. Use the credential playground - 'Learn how to generate access token' tab on the Enterprise Web App Credential overview page.
+3. Provide consent to your own application by manually visiting the consent URL as an admin in your own organization. 
 
 Once a test technical account is set up, you can assign product profiles to it by visiting the Test technical account tab on the Enterprise Web App Credential overview page. 
 
-Note: Adding or removing product profiles to the test technical account has no effect on the product profiles customer admins assign to technical accounts in their org. Furthermore, removing the test technical account from the Enterprise Web App credential does not affect any technical accounts on customer orgs that were created when the customer admin consented to your app. 
+Your organization's admin can view and manage the product profiles assigned to the test technical account on the [Adobe Admin Console](https://adminconsole.adobe.com) > Users > API credentials tab.
+
+Note: 
+
+1. Adding or removing product profiles to the test technical account has no effect on the product profiles customer admins assign to the technical accounts in their orgs. 
+2. Furthermore, removing the test technical account from the Enterprise Web App credential does not affect any technical accounts on customer orgs that were created when customer admins provided consent to your app. 
 
 ### Restrictions after you publish the app
 
-During development, Adobe does not allow customers to consent to your app since their data can be at risk. Adobe only allows customers to consent to apps that are reviewed by Adobe and are now in production.
+To safeguard Adobe customer data, Adobe only allows customers to consent to your app after your app has been reviewed by Adobe. Each app starts out 'In Development' and is promoted to 'In Production' only after it passes the Adobe review. 
 
 So, once you finish developing your app and are ready to publish, you must fill out listing details and submit the app for Adobe review. See our [submission guide](https://www.adobe.com/go/dd_ExperienceCloud_Submissions) for instructions.
 
-After you submit the app for review or once it is published, a few restrictions are applied to the Enterprise Web app credential in the Project. 
+After you submit your app for review or once the app is published, the following restrictions apply to the Enterprise Web app credential in your Project.
 
 1. You cannot add or remove APIs connected to the Enterprise Web App credential.
-2. You cannot remove the Adobe Exchange redirect URL pattern added to the list of patterns.
+2. You cannot remove the Adobe Exchange redirect URL pattern added to the list of redirect URL patterns.
