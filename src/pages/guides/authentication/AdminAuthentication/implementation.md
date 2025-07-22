@@ -55,7 +55,7 @@ The consent workflow starts when the customer admin visits the partner app and c
 1. The Adobe IMS consent endpoint for the Enterprise Web App credential is https://id.adobe.com/consent.
 2. Append these query parameters to the consent URL: `client_id`, `scope`, `state`, `nonce`, and optionally `redirect_uri`.
    1. Copy the value of `client_id` and `scope` from the Enterprise Web App credential overview page.
-   2. Generate cryptographically secure random values for the `state` and `nonce` parameters. Store these securely in the user’s session on your backend. Furthermore, to retrieve the user's session later, store a session identifier (such as a secure cookie or encrypted local storage value) to tie the consent response to that user.
+   2. Generate cryptographically secure random values for the `state` and `nonce` parameters. Store these securely in the user’s session on your backend. Furthermore, to retrieve the user's session later, store the session identifier in the user's browser (such as a secure cookie or encrypted local storage).
    3. Optionally specify a `redirect_uri` in the consent URL to redirect the admin to a URL different from your default redirect URI. The supplied URL must match one of the redirect URL patterns configured in the credential.
 3. Embed the consent URL in the 'Connect with Adobe' button for the admin to click.
 
