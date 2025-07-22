@@ -27,9 +27,9 @@ https://id.adobe.com/consent
 
 | Query Parameter | Always present | Description                                                                                                                                                        | Possible values                                     |
 |-----------------|----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|
-| admin_consent   | No             | Denotes whether the admin consented to the partner app or not. This parameter is not present in the redirect if there was an error during the consent workflow     | yes, no                                             |
-| error           | No             | Denotes the error which occured during the consent workflow. This parameter is only present if there was an error in the redirect workflow.                        | See table below for all possible values.            |
-| state           | Yes            | Adobe echos back the value of the state parameter you supplied                                                                                                     | Same as the value you supplied in the consent URL.  |
+| admin_consent   | No             | Denotes whether the admin consented to the partner app or not. This parameter is not present in the redirect if there was an error during the consent workflow     | true, false                                         |
+| error           | No             | Denotes the error which occurred during the consent workflow. This parameter is only present if there was an error in the redirect workflow.                        | See table below for all possible values.            |
+| state           | Yes            | Adobe echoes back the value of the state parameter you supplied                                                                                                     | Same as the value you supplied in the consent URL.  |
 | id_token        | No             | Adobe provides an id token to enable the partner app to generate access tokens. This parameter is only present if the admin provided consent to your application.  | A well formed JSON web token.                       |
 
 ### Error codes
@@ -41,8 +41,8 @@ https://id.adobe.com/consent
 | invalid_redirect_uri      |  Returned when the redirect URI provided in the consent URL does not match the redirect URL pattern configured on the Enterprise Web App credential.      |
 | insufficient_privilege    |  Returned when the logged in user is not an admin and does not have the appropriate role to grant consent to the partner app.                             |
 | incompatible_account_type |  Returned when the logged in user account is not a company or school account. Note: only company or school accounts can provide consent to a partner app. |
-| missing_state_param       |  Returned when the partner app did not provid a state query parameter in the consent URL.                                                                 |
-| error                     |  Retuerned when an unknown error occured.
+| missing_state_param       |  Returned when the partner app did not provide a state query parameter in the consent URL.                                                                 |
+| error                     |  Returned when an unknown error occurred.
 
 
 ## Generate Access Token Request

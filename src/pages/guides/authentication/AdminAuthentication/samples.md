@@ -4,7 +4,12 @@ The following guide contains code samples in NodeJS, Python, and Java that can b
 
 <InlineAlert slots="text"/>
 
-All the examples below assume that the user's session ID is stored in browser cookies. So when Adobe IMS redirects back to the partner app, the backend server of the partner app receives a HTTP request with the cookies from the user's browser and therefore knows the user's session ID.
+Note: Always verify the `state`, `nonce`, and signature of the ID token on the backend. Do not expose this logic client-side.
+
+
+<InlineAlert slots="text"/>
+
+All code samples assume that the user's session ID is stored in browser cookies. Therefore when Adobe IMS redirects back to the partner app, the backend server of the partner app receives a HTTP request with the cookies from the user's browser and can identify the user's session.
 
 + [NodeJS](#nodejs)
   + [Install the required packages](#install-the-required-packages)
