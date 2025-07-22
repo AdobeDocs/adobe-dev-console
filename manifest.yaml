@@ -77,6 +77,15 @@ pages:
             url: /src/pages/guides/authentication/ServerToServerAuthentication/ims.md
       - title: API Key Authentication
         url: /src/pages/guides/authentication/APIKeyAuthentication/index.md
+      - title: Admin Authentication
+        url: /src/pages/guides/authentication/AdminAuthentication/index.md
+        pages:
+          - title: Implementation Guide
+            url: /src/pages/guides/authentication/AdminAuthentication/implementation.md
+          - title: API Reference
+            url: /src/pages/guides/authentication/AdminAuthentication/ims.md
+          - title: Sample Code
+            url: /src/pages/guides/authentication/AdminAuthentication/samples.md
       - title: Tools
         url: /src/pages/guides/authentication/Tools/index.md
         pages:
