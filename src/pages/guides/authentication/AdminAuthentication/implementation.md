@@ -52,10 +52,10 @@ Note: You must be an Adobe Technology Partner Program (TPP) partner to use the E
 
 The consent workflow starts when the customer admin visits the partner app and clicks on the 'Connect with Adobe' button. You must construct the consent URL and embed it into the 'Connect with Adobe' button. To construct the consent URL, follow these steps: 
 
-1. The Adobe IMS consent endpoint for the Enterprise Web App credential is https://id.adobe.com/consent.
+1. The Adobe IMS consent endpoint for the Enterprise Web App credential is [https://id.adobe.com/consent](https://id.adobe.com/consent).
 2. Append these query parameters to the consent URL: `client_id`, `scope`, `state`, `nonce`, and optionally `redirect_uri`.
    1. Copy the value of `client_id` and `scope` from the Enterprise Web App credential overview page.
-   2. Generate cryptographically secure random values for the `state` and `nonce` parameters. Store these securely in the user’s session on your backend. Furthermore, to retrieve the user's session later, store a session identifier (such as a secure cookie or encrypted local storage value) to tie the consent response to that user.
+   2. Generate cryptographically secure random values for the `state` and `nonce` parameters. Store these securely in the user’s session on your backend. Furthermore, to retrieve the user's session later, store the session identifier in the user's browser (such as a secure cookie or encrypted local storage).
    3. Optionally specify a `redirect_uri` in the consent URL to redirect the admin to a URL different from your default redirect URI. The supplied URL must match one of the redirect URL patterns configured in the credential.
 3. Embed the consent URL in the 'Connect with Adobe' button for the admin to click.
 
@@ -65,7 +65,7 @@ Once the admin provides consent and is redirected back to your app, a few query 
 
 1. The `admin_consent` parameter is set to `true` if the admin provided consent to your application, and `false` if the admin cancelled the workflow. 
 
-The `admin_consent` parameter will not be present in the redirect in cases of error. Instead the `error` parameter will be present and the error code will be supplied as the value. Look at the [API reference](ims.md#error-codes) to view all error codes and what they mean.
+   The `admin_consent` parameter will not be present in the redirect in cases of error. Instead the `error` parameter will be present and the error code will be supplied as the value. Look at the [API reference](ims.md#error-codes) to view all error codes and what they mean.
 
 2. The `state` parameter is set to the value you supplied in the consent URL. The parameter is used to prevent Cross-site Request Forgery (CSRF) attacks. To validate it:
    1. Send the `state` parameter and the user's session ID (stored in browser cookies or local storage) to your backend server. 
