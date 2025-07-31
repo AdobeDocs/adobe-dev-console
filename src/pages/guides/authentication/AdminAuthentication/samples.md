@@ -29,17 +29,16 @@ npm install jsonwebtoken axios jose
 
 ```js
 const axios = require('axios');
-const jwt = require('jsonwebtoken');
-const { importJWK } = require('jose');
+const { jwtVerify, importJWK } = require('jose');
 
 /**
  * Verifies:
  * 1. session.state === state
  * 2. id token is valid
  * 3. session.nonce === payload.nonce
- * 
+ *
  * Returns org_id from token if valid
- * 
+ *
  * @param {string} idToken - The id_token from the redirect
  * @param {object} session - Contains expected `state` and `nonce`
  * @param {string} state - State from the redirect
@@ -52,25 +51,24 @@ async function verifyRedirect(idToken, session, state) {
   }
 
   // Step 2: Decode header to get kid
-  const decodedHeader = jwt.decode(idToken, { complete: true });
-  if (!decodedHeader?.header?.kid) {
+  const decodedHeader = JSON.parse(Buffer.from(idToken.split('.')[0], 'base64').toString());
+  if (!decodedHeader?.kid) {
     throw new Error('Invalid id token: missing kid');
   }
 
-  const kid = decodedHeader.header.kid;
+  const kid = decodedHeader.kid;
 
   // Step 3: Fetch JWKS and get matching key
   const keys = await fetchAdobeKeys();
+
   const jwk = keys.find(k => k.kid === kid);
   if (!jwk) {
     throw new Error(`No matching JWK found for kid: ${kid}`);
   }
 
-  // Step 4: Convert to public key
-  const publicKey = await getPublicKeyFromJwk(jwk);
-
-  // Step 5: Verify id token signature
-  const payload = jwt.verify(idToken, publicKey, {
+  // Step 4: Import JWK and verify token
+  const publicKey = await importJWK(jwk, jwk.alg);
+  const { payload } = await jwtVerify(idToken, publicKey, {
     algorithms: ['RS256'],
   });
 
@@ -80,11 +78,11 @@ async function verifyRedirect(idToken, session, state) {
   }
 
   // Step 7: Return org_id
-  if (!payload.org_id) {
+  if (!payload.orgId) {
     throw new Error('org_id claim missing in id_token');
   }
 
-  return payload.org_id;
+  return payload.orgId;
 }
 
 /**
@@ -95,12 +93,7 @@ async function fetchAdobeKeys() {
   return response.data.keys;
 }
 
-/**
- * Convert JWK to a usable public key
- */
-async function getPublicKeyFromJwk(jwk) {
-  return await importJWK(jwk, jwk.alg);
-}
+
 
 // Example usage
 (async () => {
@@ -137,71 +130,72 @@ from jwt import PyJWKClient
 
 ADOBE_JWKS_URL = "https://ims-na1.adobelogin.com/ims/keys"
 
-def verify_redirect(id_token: str, session: dict, state: str) -> str:
-    """
-    Verifies:
-    1. session.state == state
-    2. id token is valid via Adobe public keys
-    3. session.nonce == token's nonce
-    4. Returns org_id from the token if all checks pass
+def verify_redirect(id_token: str, session: dict, state: str, client_id: str) -> str:
+  """
+  Verifies:
+  1. session.state == state
+  2. id token is valid via Adobe public keys
+  3. session.nonce == token's nonce
+  4. Returns org_id from the token if all checks pass
 
-    :param id_token: The id_token returned from the redirect
-    :param session: Dict with 'state' and 'nonce' keys
-    :param state: The 'state' query parameter from redirect
-    :return: org_id claim from the id_token
-    :raises RedirectVerificationError: on any failure
-    """
+  :param id_token: The id_token returned from the redirect
+  :param session: Dict with 'state' and 'nonce' keys
+  :param state: The 'state' query parameter from redirect
+  :return: org_id claim from the id_token
+  :raises RedirectVerificationError: on any failure
+  """
 
-    # Step 1: Check state
-    if session.get('state') != state:
-        raise RedirectVerificationError("State mismatch")
+  # Step 1: Check state
+  if session.get('state') != state:
+    raise RedirectVerificationError("State mismatch")
 
-    # Step 2: Load signing key using PyJWKClient
-    try:
-        jwk_client = PyJWKClient(ADOBE_JWKS_URL)
-        signing_key = jwk_client.get_signing_key_from_jwt(id_token)
-    except Exception as e:
-        raise RedirectVerificationError(f"JWK retrieval/lookup failed: {e}")
+  # Step 2: Load signing key using PyJWKClient
+  try:
+    jwk_client = PyJWKClient(ADOBE_JWKS_URL)
+    signing_key = jwk_client.get_signing_key_from_jwt(id_token)
+  except Exception as e:
+    raise RedirectVerificationError(f"JWK retrieval/lookup failed: {e}")
 
-    # Step 3: Verify id_token signature
-    try:
-        decoded = jwt.decode(
-            id_token,
-            signing_key.key,
-            algorithms=["RS256"]
-        )
-    except jwt.PyJWTError as e:
-        raise RedirectVerificationError(f"id token verification failed: {e}")
+  # Step 3: Verify id_token signature
+  try:
+    decoded = jwt.decode(
+      id_token,
+      signing_key.key,
+      audience=client_id,
+      algorithms=["RS256"]
+    )
+  except jwt.PyJWTError as e:
+    raise RedirectVerificationError(f"id token verification failed: {e}")
 
-    # Step 4: Nonce check
-    if session.get('nonce') != decoded.get('nonce'):
-        raise RedirectVerificationError("Nonce mismatch")
+  # Step 4: Nonce check
+  if session.get('nonce') != decoded.get('nonce'):
+    raise RedirectVerificationError("Nonce mismatch")
 
-    # Step 5: Return org_id
-    org_id = decoded.get('org_id')
-    if not org_id:
-        raise RedirectVerificationError("org_id claim missing in token")
+  # Step 5: Return org_id
+  org_id = decoded.get('orgId')
+  if not org_id:
+    raise RedirectVerificationError("orgId claim missing in token")
 
-    return org_id
+  return org_id
 
 class RedirectVerificationError(Exception):
-    pass
+  pass
 
 # Example usage
 if __name__ == "__main__":
-    id_token = "your.id.token.here"
-    session = {
-        "state": "xyz123",
-        "nonce": "abc456"
-    }
-    state = "xyz123"
+  id_token = "your.id.token.here"
+  session = {
+    "state": "xyz123",
+    "nonce": "abc456"
+  }
+  state = "xyz123"
+  client_id = "your.application.client.id"
 
-    try:
-        org_id = verify_redirect(id_token, session, state)
-        print("Verified org_id:", org_id)
-    except RedirectVerificationError as e:
-        print("Redirect verification failed:", e)
-
+  try:
+    org_id = verify_redirect(id_token, session, state, client_id)
+    print("Verified org_id:", org_id)
+  except RedirectVerificationError as e:
+    print("Redirect verification failed:", e)
 ```
 
 ## Java
@@ -283,9 +277,9 @@ public class VerifyRedirect {
         }
 
         // Step 6: Return org_id
-        String orgId = verifiedJwt.getClaim("org_id").asString();
+        String orgId = verifiedJwt.getClaim("orgId").asString();
         if (orgId == null || orgId.isEmpty()) {
-            throw new Exception("org_id claim missing in token");
+            throw new Exception("orgId claim missing in token");
         }
 
         return orgId;
