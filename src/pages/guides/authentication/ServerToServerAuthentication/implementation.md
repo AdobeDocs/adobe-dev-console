@@ -13,7 +13,7 @@ The following guide goes over finer implementation details for OAuth Server-to-S
 
 ## Setting up the OAuth Server-to-Server credential
 
-Depending on the API or an Event to your project on the Adobe Developer Console, you can select the OAuth Server-to-Server credential. The OAuth Server-to-Server credential is available for all APIs and Events supporting the [Service Account (JWT) credential *(deprecated)*](./index.md#service-account-jwt-credential-deprecated).
+Depending on the API or an Event to your project on the Adobe Developer Console, you can select the OAuth Server-to-Server credential. The OAuth Server-to-Server credential is available for all APIs and Events supporting the [Service Account (JWT) credential *(deprecated)*](index.md#service-account-jwt-credential-deprecated).
 
 ### Credential Name
 

@@ -17,7 +17,7 @@
 
 
 ### What's happening?  
-As of June 30, 2025, Service Account (JWT) credentials have reached their end of life and are no longer supported. All server-to-server integrations must use the [OAuth Server-to-Server credentials](../authentication/ServerToServerAuthentication/implementation.md). View the [migration guide](../authentication/ServerToServerAuthentication/migration.md) to know more.
+As of June 30, 2025, Service Account (JWT) credentials have reached their end of life and are no longer supported. All server-to-server integrations must use the [OAuth Server-to-Server credentials](../../authentication/ServerToServerAuthentication/implementation.md). View the [migration guide](../../authentication/ServerToServerAuthentication/migration.md) to know more.
 
 
 
@@ -32,12 +32,12 @@ A credential is used to uniquely identify your integration to Adobe. To use an A
 
 ### Will my Adobe integrations or applications stop working immediately?
 
-No. Any integration or application using the Service Account (JWT) credential will stop working after current certificates expire, or March 1, 2026 (whichever is earlier). See [deprecation timelines](./migration.md#deperecation-timelines). See section on [migration next steps](#migration-next-steps).
+No. Any integration or application using the Service Account (JWT) credential will stop working after current certificates expire, or March 1, 2026 (whichever is earlier). See [deprecation timelines](migration.md#deprecation-timelines). See section on [migration next steps](#migration-next-steps).
 
 
 
 ### What is the deadline to migrate to the new credential? 
-The deadline to migrate has passed. If you integration is already broken or about to break after certificates expire, you must migrate it to use the new OAuth Server-to-Server credential as soon as possible. See [deprecation timelines](./migration.md#deperecation-timelines). See [migration guide](./migration.md).
+The deadline to migrate has passed. If you integration is already broken or about to break after certificates expire, you must migrate it to use the new OAuth Server-to-Server credential as soon as possible. See [deprecation timelines](migration.md#deprecation-timelines). See [migration guide](migration.md).
 
 
 
@@ -54,15 +54,15 @@ Furthermore, Adobe will automatically convert Service Account (JWT) to OAuth Ser
 
 
 ### What are the benefits of using the OAuth Server-to-Server credential? 
-You can read more about OAuth Server-to-Server credentials in our [implementation guide](./implementation.md). You can view the comparison between the OAuth Server-to-Server credential and the Service Account (JWT) credential [here](./migration.md#why-oauth-server-to-server-credentials).
+You can read more about OAuth Server-to-Server credentials in our [implementation guide](implementation.md). You can view the comparison between the OAuth Server-to-Server credential and the Service Account (JWT) credential [here](migration.md#why-oauth-server-to-server-credentials).
 
 ### Can I programmatically rotate client secrets for OAuth Server-to-Server credentials? 
-Absolutely. View our guide on rotating client secrets programmatically [here](./implementation.md#rotating-client-secrets-programmatically).
+Absolutely. View our guide on rotating client secrets programmatically [here](implementation.md#rotating-client-secrets-programmatically).
 
 
 
 ### What should I do if my client secrets get leaked? 
-We recommend immediately [rotating your application's client secret](./implementation.md#rotating-client-secrets) and contacting Adobe customer support if you wish to invalidate any existing tokens.
+We recommend immediately [rotating your application's client secret](implementation.md#rotating-client-secrets) and contacting Adobe customer support if you wish to invalidate any existing tokens.
 
 
 
