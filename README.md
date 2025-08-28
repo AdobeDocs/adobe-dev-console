@@ -56,6 +56,8 @@ Once all three servers are running, navigate to http://localhost:3000
 
 Validates markdown syntax, links, content structure, and Adobe style guidelines.
 
+**Troubleshooting**: If pages are not showing up as expected, check lint warnings to identify potential issues.
+
 ## Navigation
 
 To update navigation structure:
