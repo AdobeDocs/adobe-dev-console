@@ -1,42 +1,91 @@
-# Adobe I/O Documentation Template
+# Adobe Developer Console Documentation
 
-This is a site template built with the [Adobe I/O Theme](https://github.com/adobe/aio-theme).
+Adobe Developer Console documentation site deployed to EDS.
+The production address is https://developer.adobe.com/developer-console/docs/
 
-View the [demo](https://adobedocs.github.io/dev-site-documentation-template/) running on Github Pages.  
+## Quick Start
 
-## Where to ask for help
+For local development, you need to start three servers:
 
-The slack channel #adobeio-onsite-onboarding is our main point of contact for help. Feel free to join the channel and ask any questions. 
-
-## How to develop
-
-For local development, simply use :
-```
-$ npm install
-$ npm run dev
+1. **Main dev server** (this repo):
+```bash
+npm run dev
 ```
 
-For the documentation developer, please read these sections on how to:
-- [Arrange the structure content of your docs](https://github.com/adobe/aio-theme#content-structure)
-- [Linking to pages](https://github.com/adobe/aio-theme#links)
-- [Using assets](https://github.com/adobe/aio-theme-aio#assets)
-- [Setting Global Navigation](https://github.com/adobe/aio-theme#global-navigation)
-- [Setting Side Navigation](https://github.com/adobe/aio-theme#side-navigation)
-- [Using content blocks](https://github.com/adobe/aio-theme#jsx-blocks)
-- [Notes on using Markdown](https://github.com/adobe/aio-theme#writing-enhanced-markdown)
-
-For more in-depth [instructions](https://github.com/adobe/aio-theme#getting-started).
-
-## How to deploy
-
-For any team that wishes to deploy to the adobe.io and stage.adobe.io website, they must be in contact with the dev-site team. Teams will be given a path that will follow the pattern `adobe.io/{product}/`. This will allow doc developers to setup their subpaths to look something like:
-```
-adobe.io/{product}/docs
-adobe.io/{product}/community
-adobe.io/{product}/community/code_of_conduct
-adobe.io/{product}/community/contribute
+2. **ADP Devsite** ([adp-devsite](https://github.com/AdobeDocs/adp-devsite)):
+```bash
+git clone https://github.com/AdobeDocs/adp-devsite
+cd adp-devsite
+npm install
+npm run dev
 ```
 
-### Launching a deploy
+3. **Runtime connector** ([devsite-runtime-connector](https://github.com/aemsites/devsite-runtime-connector)):
+```bash
+git clone https://github.com/aemsites/devsite-runtime-connector
+cd devsite-runtime-connector
+npm install
+npm run dev
+```
 
-You can deploy using the GitHub actions deploy workflow see [deploy instructions](https://github.com/adobe/aio-theme#deploy-to-azure-storage-static-websites).
+Once all three servers are running, navigate to http://localhost:3000
+
+## Commands
+
+**Development**
+- `npm run dev` - Start local server (requires other services above)
+
+**Content Management**
+- `npm run buildNavigation` - Generate navigation structure (one-time Gatsby migration only)
+- `npm run buildRedirections` - Build URL redirections (one-time Gatsby migration only)
+- `npm run renameFiles` - Rename files to Adobe conventions
+- `npm run normalizeLinks` - Normalize internal/external links
+
+**Validation**
+- `npm run lint` - Run linting checks
+
+**Site Features**
+- `npm run buildSiteWideBanner` - Generate site-wide banner
+
+*All commands use `@AdobeDocs/adp-devsite-utils` for standardized tooling.*
+
+## Linting
+
+**Automated**: Runs on PRs when `src/pages/**` files change
+**Manual**: `npm run lint`
+
+Validates markdown syntax, links, content structure, and Adobe style guidelines.
+
+**Troubleshooting**: If pages are not showing up as expected, check lint warnings to identify potential issues.
+
+## Navigation
+
+To update navigation structure:
+1. Edit `src/pages/config.md` directly
+
+*Note: `npm run buildNavigation` is only needed for initial Gatsby migration.*
+
+## Redirects
+
+To manage URL redirections:
+1. Edit `src/pages/redirects.json` directly
+
+*Note: `npm run buildRedirections` is only needed for initial Gatsby migration.*
+
+## Deployment
+
+**Staging**:
+- Actions > Deployment > Run workflow
+- Can deploy from any branch to staging
+- Uses incremental builds from last commit by default
+- Use `deployAll` function for full rebuild if needed
+- **URL**: `developer-stage.adobe.com/developer-console/docs/`
+
+**Production**:
+- Automatically deploys from `main` branch
+- Uses incremental builds from last commit
+- **URL**: `developer.adobe.com/developer-console/docs/`
+
+## Support
+
+Join `#adobe-developer-website` Slack channel for help.
