@@ -46,7 +46,6 @@
             - [Sample Code](guides/authentication/AdminAuthentication/samples.md)
             - [API Reference](guides/authentication/AdminAuthentication/ims.md) 
         - [Tools](guides/authentication/Tools/index.md) 
-            - [OAuth 2.0 Playground](guides/authentication/Tools/o-auth-playground.md) 
             - [Postman](guides/authentication/Tools/postman.md) 
     - [Support](support/index.md) 
         - [FAQ](support/faq.md) 
