@@ -352,7 +352,7 @@ curl -X POST 'https://ims-na1.adobelogin.com/ims/token/v3?client_id={CLIENT_ID}'
 
 Use this API to revoke an access token or refresh token.
 
-**Note:** Users can also revoke your application's access to their data by visiting the [Connected Applications](https://accounts.adobe.com/security/connected-applications#) page on their Adobe account. In case a user revokes access to your application and then visits your application - the authorization workflow will prompt the user for their consent again.
+**Note:** Users can also revoke your application's access to their data by visiting the [Connected Applications](https://account.adobe.com/security/connected-applications#) page on their Adobe account. In case a user revokes access to your application and then visits your application - the authorization workflow will prompt the user for their consent again.
 
 ### Parameters
 
