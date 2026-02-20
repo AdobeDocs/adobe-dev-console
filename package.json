@@ -27,9 +27,13 @@
     "buildRedirections": "npx --yes github:AdobeDocs/adp-devsite-utils buildRedirections -v",
     "renameFiles": "npx --yes github:AdobeDocs/adp-devsite-utils renameFiles -v",
     "normalizeLinks": "npx --yes github:AdobeDocs/adp-devsite-utils normalizeLinks -v",
-    "checkLinks": "npx --yes github:AdobeDocs/adp-devsite-utils checkLinks -v",
     "buildSiteWideBanner": "npx --yes github:AdobeDocs/adp-devsite-utils buildSiteWideBanner -v",
-    "lint": "npx --yes github:AdobeDocs/adp-devsite-utils runLint -v"
+    "lint": "npx --yes github:AdobeDocs/adp-devsite-utils runLint -v",
+    "lint:errorOnly": "npx --yes github:AdobeDocs/adp-devsite-utils runLint",
+    "link:skipdeadlinks": "npx --yes github:AdobeDocs/adp-devsite-utils runLint --skip-dead-links -v",
+    "link:deadlinkonly": "npx --yes github:AdobeDocs/adp-devsite-utils runLint --dead-links-only -v",
+    "redirectCheck:stage": "npx --yes github:AdobeDocs/adp-devsite-utils redirectChecker stage --verbose",
+    "redirectCheck:prod": "npx --yes github:AdobeDocs/adp-devsite-utils redirectChecker prod --verbose"
   },
   "packageManager": "yarn@3.2.2",
   "devDependencies": {
