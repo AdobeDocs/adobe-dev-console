@@ -4,7 +4,7 @@ Once you have completed development on your project, your application is ready f
 
 There are three different approval processes within Adobe Developer Console, depending on the type of application that you have built:
 
-1. **App Builder applications:** Projects built using the App Builder template are built by an organization for use within that organization. Therefore, App Builder applications require approvals by the enterprise organization administrator only. Please follow the approval process for [App Builder applications](#app-builder-applications-approval-process) outlined in this document.
+1. **App Builder applications:** Projects built using the App Builder template are built by an organization for use within that organization. Therefore, App Builder applications require approvals by the System administrator role only. Please follow the approval process for [App Builder applications](#app-builder-applications-approval-process) outlined in this document.
 
 2. **Applications for publication:** Building an application for distribution to general users on the Adobe Exchange requires approval from the Adobe Review team before it can be published. Please refer to the [applications for publication](#applications-for-publication) approval process outlined in this document.
 
