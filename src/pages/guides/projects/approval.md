@@ -28,7 +28,7 @@ You will be returned to the *Approval* screen, where the *Status* of your applic
 
 ![](../../images/approval-in-review.png)
 
-Following a review by your organization administrators, your application will either be approved and published or rejected. If the application is rejected, your admin will be able to include a note telling you what went wrong, allowing you to fix the error and submit for approval again.
+Following a review by your System administrators, your application will either be approved and published or rejected. If the application is rejected, your admin will be able to include a note telling you what went wrong, allowing you to fix the error and submit for approval again.
 
 ![](../../images/approval-app-rejected.png)
 
