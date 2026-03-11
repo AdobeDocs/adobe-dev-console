@@ -1,5 +1,6 @@
 {
-  "name": "dev-docs-template",
+    "private": true,
+    "name": "adobe-dev-console",
   "version": "1.0.0",
   "license": "Apache-2.0",
   "repository": {
