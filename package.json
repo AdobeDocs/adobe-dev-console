@@ -1,42 +1,29 @@
 {
-  "private": true,
-  "name": "adobe-dev-console",
+  "name": "dev-docs-template",
   "version": "1.0.0",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AdobeDocs/adobe-dev-console"
+    "url": "https://github.com/AdobeDocs/dev-docs-template"
   },
   "author": {
-    "name": "Stephan Ringel",
-    "url": "https://github.com/icaraps"
-  },
-  "dependencies": {
-    "@adobe/gatsby-theme-aio": "^4.14.18",
-    "gatsby": "4.22.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  },
-  "resolutions": {
-    "sharp": "0.33.0",
-    "gatsby-sharp": "1.12.0"
+    "name": "Tim Kim",
+    "url": "https://github.com/timkim"
   },
   "scripts": {
-    "dev": "node ./dev.mjs",
+    "dev": "npx --yes github:AdobeDocs/adp-devsite-utils dev",
     "buildNavigation": "npx --yes github:AdobeDocs/adp-devsite-utils buildNavigation -v",
     "buildRedirections": "npx --yes github:AdobeDocs/adp-devsite-utils buildRedirections -v",
     "renameFiles": "npx --yes github:AdobeDocs/adp-devsite-utils renameFiles -v",
     "normalizeLinks": "npx --yes github:AdobeDocs/adp-devsite-utils normalizeLinks -v",
     "buildSiteWideBanner": "npx --yes github:AdobeDocs/adp-devsite-utils buildSiteWideBanner -v",
+    "buildSiteMetadata": "npx --yes github:AdobeDocs/adp-devsite-utils buildSiteMetadata -v",
+    "buildContributors": "npx --yes github:AdobeDocs/adp-devsite-utils buildContributors -v",
     "lint": "npx --yes github:AdobeDocs/adp-devsite-utils runLint -v",
     "lint:errorOnly": "npx --yes github:AdobeDocs/adp-devsite-utils runLint",
     "link:skipdeadlinks": "npx --yes github:AdobeDocs/adp-devsite-utils runLint --skip-dead-links -v",
     "link:deadlinkonly": "npx --yes github:AdobeDocs/adp-devsite-utils runLint --dead-links-only -v",
     "redirectCheck:stage": "npx --yes github:AdobeDocs/adp-devsite-utils redirectChecker stage --verbose",
     "redirectCheck:prod": "npx --yes github:AdobeDocs/adp-devsite-utils redirectChecker prod --verbose"
-  },
-  "packageManager": "yarn@3.2.2",
-  "devDependencies": {
-    "glob": "11.0.0"
   }
 }
