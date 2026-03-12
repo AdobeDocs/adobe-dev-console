@@ -13,8 +13,6 @@ package-lock.json
 yarn-error.log
 .pnp.*
 .yarn/*
-yarn.lock
-package-lock.json
 
 # keep in repo
 !.gitignore
@@ -46,6 +44,3 @@ local-test.yml
 # yalc
 .yalc
 yalc.lock
-
-# json files
-adp-site-metadata.json
