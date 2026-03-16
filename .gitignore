@@ -1,3 +1,4 @@
+
 # OS and IDE generated files #
 ##############################
 .DS_Store
@@ -12,8 +13,6 @@ package-lock.json
 yarn-error.log
 .pnp.*
 .yarn/*
-yarn.lock
-package-lock.json
 
 # keep in repo
 !.gitignore
@@ -46,6 +45,6 @@ local-test.yml
 .yalc
 yalc.lock
 
-# Added by update-bot
+#txt
 linter-output.txt
 linter-report.txt
