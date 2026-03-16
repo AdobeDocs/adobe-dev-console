@@ -13,6 +13,7 @@ package-lock.json
 yarn-error.log
 .pnp.*
 .yarn/*
+yarn.lock
 
 # keep in repo
 !.gitignore
@@ -45,6 +46,6 @@ local-test.yml
 .yalc
 yalc.lock
 
-#txt
+# Added by update-bot
 linter-output.txt
 linter-report.txt
