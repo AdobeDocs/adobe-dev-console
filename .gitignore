@@ -13,8 +13,6 @@ package-lock.json
 yarn-error.log
 .pnp.*
 .yarn/*
-yarn.lock
-package-lock.json
 
 # keep in repo
 !.gitignore
@@ -47,5 +45,6 @@ local-test.yml
 .yalc
 yalc.lock
 
-# json files
-adp-site-metadata.json
+#txt
+linter-output.txt
+linter-report.txt
