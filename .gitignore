@@ -11,7 +11,6 @@
 node_modules
 package-lock.json
 yarn-error.log
-yarn.lock
 .pnp.*
 .yarn/*
 
@@ -46,6 +45,6 @@ local-test.yml
 .yalc
 yalc.lock
 
-# txt
+#txt
 linter-output.txt
 linter-report.txt
