@@ -1,11 +1,10 @@
 {
-  "private": true,
-  "name": "adobe-dev-console",
+  "name": "dev-docs-template",
   "version": "1.0.0",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AdobeDocs/adobe-dev-console"
+    "url": "https://github.com/AdobeDocs/dev-docs-template"
   },
   "author": {
     "name": "Tim Kim",
