@@ -66,7 +66,7 @@ Only APIs and Events that require Adobe approval allow you to change your applic
 
 ## End-user revoking consent to your application
 
-Users can revoke their consent to your application by visiting the [Connected Applications](https://accounts.adobe.com/security/connected-applications#) page.
+Users can revoke their consent to your application by visiting the [Connected Applications](https://account.adobe.com/security/connected-applications#) page.
 
 Once the user has revoked their consent, your application can no longer refresh access tokens on this user's behalf. If the user launches your application again, the authorization workflow will begin afresh and ask the user for their consent again.
 

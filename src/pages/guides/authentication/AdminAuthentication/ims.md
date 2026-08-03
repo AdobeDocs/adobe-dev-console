@@ -32,6 +32,19 @@ https://id.adobe.com/consent
 | state           | Yes            | Adobe echoes back the value of the state parameter you supplied                                                                                                     | Same as the value you supplied in the consent URL.  |
 | id_token        | No             | Adobe provides an id token to enable the partner app to generate access tokens. This parameter is only present if the admin provided consent to your application.  | A well formed JSON web token.                       |
 
+
+### Id Token Claims
+
+| Claim Name       | Description                                                                                                                           | Type                               |
+|------------------|---------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|
+| iss              | The issuer of the id token. This will always be `https://ims-na1.adobelogin.com/ims`                                                  | String |
+| sub              | The subject. More specifically, it's the technical account id of the consenting org.                                                  | String                           |
+| aud              | The token audience, or the application that is supposed to use this token. This will always be the client ID of the partner app.      | String                           |
+| exp              | Unix seconds timestamp representing the expiry date of the token                                                                           | Integer                         |
+| iat              | Unix seconds timestamp representing the timestamp when the token was issued                                                                   | Integer                         |
+| org_id          | The organization ID of the customer who provided consent to the partner app. This is used to generate access tokens for this customer. | String                      |
+| nonce            | The nonce value provided in the consent URL. This is used to protect against replay attacks.                                          | String                           |
+
 ### Error codes
 
 

@@ -17,9 +17,8 @@
 
 
 ### What's happening?  
+
 As of June 30, 2025, Service Account (JWT) credentials have reached their end of life and are no longer supported. All server-to-server integrations must use the [OAuth Server-to-Server credentials](../../authentication/ServerToServerAuthentication/implementation.md). View the [migration guide](../../authentication/ServerToServerAuthentication/migration.md) to know more.
-
-
 
 ### What is a credential? 
 While building an integration, developers need to call Adobe APIs from their application. To call Adobe APIs, their integration must uniquely identify itself to Adobe. This ensures that only your application can retrieve your data from us.  
